@@ -6,6 +6,7 @@ html {
   padding: 0;
   font-family: Arial, sans-serif;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  scroll-behavior: smooth;
 }
 
 /* Home Page */
@@ -31,6 +32,7 @@ html {
   justify-content: space-around; /* Align content to the left */
   /* gap:100px; */
   align-items: center;
+  flex-flow:row wrap;
   padding-left: 150px; /* Padding to give some space from the left edge */
   box-sizing: border-box; /* Ensure padding doesn't cause overflow */
  /* Required to position the logo absolutely */
@@ -39,7 +41,30 @@ html {
 .hero-content {
   max-width: 50%; /* Restrict the content to the left half */
 }
+.scroll{
+  width:100%;
+  display:flex;
+  justify-content: center;
+  /* margin:-150px; */
+  transform:translate(-120px,150%);
+  position:relative;
+  left:0;
 
+}
+.scroll>a{
+  text-decoration: none;
+  color:white;
+  border-radius:50%;
+  background-color: #0D0D0C;
+  transform: scale(2.5);
+  width:15px;
+  height: 15px;
+  box-shadow: 0 1px 2px darkslategray;
+  transition:transform 1s;
+}
+.scroll>a:hover{
+    transform:translateY(-50%) scale(2.5);
+}
 .hero-section h1 {
   font-size: 3em;
   margin: 0;

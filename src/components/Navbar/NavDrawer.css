@@ -1,0 +1,21 @@
+/* NavigationDrawer.css */
+
+.drawer-content {
+  width: 250px;
+  height: 100%;
+  padding: 20px;
+  background-color: #0d0707;
+  color: white;
+}
+
+.menu-item {
+  cursor: pointer;
+}
+
+.drawer-content .MuiListItem-root {
+  margin: 10px 0;
+}
+
+.drawer-content .MuiListItemIcon-root {
+  color: white;
+}

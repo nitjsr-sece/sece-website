@@ -1,0 +1,106 @@
+/* HomePage.css */
+
+/* General styling */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  scroll-behavior: smooth;
+}
+
+/* Home Page */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure the home page takes full width */
+}
+
+/* Burger Button Styling */
+
+/* Burger Button Styling */
+/* Menu Button Styling */
+
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../assets/home-page.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow:row wrap;
+  padding-left: 150px;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+.scroll{
+  width:100%;
+  display:flex;
+  justify-content: center;
+  /* margin:-150px; */
+  transform:translate(-120px,120%);
+  position:relative;
+  left:0;
+
+}
+.scroll>a{
+  text-decoration: none;
+  color:white;
+  border-radius:50%;
+  background-color: #0D0D0C;
+  transform: scale(2.5);
+  width:15px;
+  height: 15px;
+  box-shadow: 0 1px 2px darkslategray;
+  transition:transform 1s;
+}
+.scroll>a:hover{
+    transform:translateY(-50%) scale(2.5);
+}
+.hero-section h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+
+/* Content Section */
+.content-section {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.content-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.content-section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-section p {
+  margin: 5px 0;
+}

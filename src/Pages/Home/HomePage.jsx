@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./HomePage.css";
-import logo from "../../assets/logo-moon.png";
+import logo from "../../assets/bulb.png";
+import hand from "../../assets/hand.png";
 import NavDrawer from "../../components/Navbar/NavDrawer";
 import { IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuButton from "../../components/MenuButton/MenuButton";
 import { IoIosArrowRoundDown } from "react-icons/io";
+import { FaInstagram } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
+import { AiOutlineYoutube } from "react-icons/ai";
+import { CiFacebook } from "react-icons/ci";
 const HomePage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -25,10 +30,29 @@ const HomePage = () => {
         <div className="hero-content">
           <h1>SECE : WHERE INNOVATION MEETS EXCELLENCE</h1>
         </div>
+        <div className="logo-hand">
         <div className="logo">
           <img src={logo} alt="Society Logo" />
         </div>
+        <div className="hand">
+          <img src={hand} alt="hand image" />
+        </div>
+        </div>
         <div className="scroll">
+          <div className="social">
+            <a href="https://www.instagram.com/secenitjsr/" target="_blank">
+        <FaInstagram style={{color:"#e41146",fontSize:"2rem"}}/>
+        </a>
+        <a href="https://www.linkedin.com/company/sece-nitjsr" target="_blank">
+        <CiLinkedin  style={{color:"#0A66C2",fontSize:"2rem"}}/>
+        </a>
+        <a href="https://www.youtube.com/@SECENITJamshedpur" target="_blank">
+        <AiOutlineYoutube style={{color:"#FF0000",fontSize:"2rem"}}/>
+        </a>
+        <a href="https://www.facebook.com/secenitjsr/" target="_blank">
+        <CiFacebook style={{color:"#0165E1",fontSize:"2rem"}}/>
+        </a>
+        </div>
  <a href="#About">
 <IoIosArrowRoundDown />
 </a>

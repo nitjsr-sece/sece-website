@@ -119,7 +119,10 @@ img {
   font-size: 3em;
   margin: 0;
 }
-
+.about-header{
+  /* transform:translateY(-30%); */
+  /* z-index:-1; */
+}
 /* Content Section */
 .content-section {
   width: 100%;
@@ -163,7 +166,9 @@ img {
   align-items: center;
   margin-bottom: 50px;
 }
-
+.content-right{
+  display:grid;
+}
 .left-align {
   flex-direction: row; /* Image on the left, text on the right */
 }
@@ -183,6 +188,7 @@ img {
   font-size: 1.2em;
   line-height: 1.6;
   margin: 0 20px;
+  justify-self: flex-end;
 }
 
 /* Button Container */
@@ -218,13 +224,3 @@ img {
 }
 
 /* Footer Section */
-.footer-section {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.footer-section p {
-  margin: 5px 0;
-}

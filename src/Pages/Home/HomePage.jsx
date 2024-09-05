@@ -14,6 +14,7 @@ import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { CiFacebook } from "react-icons/ci";
+import Footer from "../../components/Footer/Footer";
 const HomePage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -105,7 +106,7 @@ const HomePage = () => {
               alt="Second Image"
               className="content-image"
             />
-            <div>
+            <div className="content-right">
               <h2 className="content-heading">Events</h2>
               <p className="content-text">
                 The Society of Electronics and Communication Engineering (SECE)
@@ -152,10 +153,7 @@ const HomePage = () => {
         </div>
 
         {/* Third Section - Footer */}
-        <div className="footer-section">
-          <p>© 2024 [College Society Name]. All Rights Reserved.</p>
-          <p>Contact us: [email@example.com]</p>
-        </div>
+        <Footer/>
       </div>
     </>
   );

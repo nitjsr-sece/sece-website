@@ -3,7 +3,10 @@ import "./MenuButton.css"
 
 const MenuButton = ({onClick}) => {
   return (
-    <div class="menu-button" onClick={onClick} >
+    <div class="menu-button" onClick={() => {
+      console.log('Menu button clicked');
+      onClick() ;
+    }} >
         <div class="menu-line"></div>
         <div class="menu-line"></div>
         <div class="menu-line"></div>

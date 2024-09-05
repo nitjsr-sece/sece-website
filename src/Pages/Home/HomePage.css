@@ -23,7 +23,6 @@ html {
 /* Burger Button Styling */
 /* Menu Button Styling */
 
-
 /* Hero Section */
 .hero-section {
   height: 100vh;
@@ -34,10 +33,10 @@ html {
   background-repeat: no-repeat;
   color: white;
   display: flex;
-  justify-content:center;
-  gap:0;
+  justify-content: center;
+  gap: 0;
   /* align-items: center; */
-  flex-flow:row wrap;
+  flex-flow: row wrap;
   padding-left: 150px;
   box-sizing: border-box;
   overflow: clip;
@@ -45,102 +44,177 @@ html {
 
 .hero-content {
   width: 50%;
-  display:flex;
+  display: flex;
   align-content: center;
 
   margin-right: -8%;
 }
-h1{
+h1 {
   text-align: center;
-  display:flex;
+  display: flex;
   align-content: center;
   box-sizing: border-box;
-  padding-top:30%;
+  padding-top: 30%;
 }
-.logo-hand{
- width:50%;
- position:relative;
- right:-15%;
- 
- transform: scale(1.4);
+.logo-hand {
+  width: 50%;
+  position: relative;
+  right: -15%;
 
- /* margin-left:-10%; */
+  transform: scale(1.4);
+
+  /* margin-left:-10%; */
 }
-.hand{
-  position:absolute;
-  top:17%;
+.hand {
+  position: absolute;
+  top: 17%;
   width: 100%;
   height: 50%;
-  margin-top:10%
+  margin-top: 10%;
 }
-.logo{
-  position:absolute;
+.logo {
+  position: absolute;
   transform: scale(0.7);
-  width:100%;
+  width: 100%;
   height: 40%;
-  left:-10%;
-  top:16%;
-
+  left: -10%;
+  top: 16%;
 }
-img{
+img {
   max-height: 500px;
 }
-.scroll{
-  width:100%;
-  display:flex;
+.scroll {
+  width: 100%;
+  display: flex;
   /* justify-content: center; */
   /* margin:-150px; */
-  transform:translate(-120px,80%);
-  position:relative;
-  left:0;
-  
+  transform: translate(-120px, 80%);
+  position: relative;
+  left: 0;
 }
-.social{
+.social {
   justify-self: flex-start;
 }
-.social>*{
+.social > * {
   display: inline-block;
-  margin:10px;
+  margin: 10px;
   transform: translateY(-50%);
 }
-.scroll>a{
+.scroll > a {
   text-decoration: none;
-  color:white;
-  border-radius:50%;
-  background-color: #0D0D0C;
+  color: white;
+  border-radius: 50%;
+  background-color: #0d0d0c;
   transform: scale(2.5);
-  width:15px;
+  width: 15px;
   height: 15px;
-  margin:0 auto;
+  margin: 0 auto;
   box-shadow: 0 1px 2px darkslategray;
-  transition:transform 1s;
+  transition: transform 1s;
 }
-.scroll>a:hover{
-    transform:translateY(-50%) scale(2.5);
+.scroll > a:hover {
+  transform: translateY(-50%) scale(2.5);
 }
 .hero-section h1 {
   font-size: 3em;
   margin: 0;
 }
 
-
 /* Content Section */
 .content-section {
-  padding: 60px 20px;
-  background-color: #f4f4f4;
-  text-align: center;
+  width: 100%;
+  background-image: url("../../assets/about-bg.png");
+  background-size: cover; /* or use contain if you want to see the entire image without cropping */
+  background-position: top; /* Keep the top part of the image visible */
+  background-repeat: no-repeat;
+  padding-top: 20px; /* Add some padding to ensure content doesn't touch the top */
 }
 
-.content-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+.content-header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
 }
 
-.content-section p {
+.content-header img {
+  position: relative;
+  max-height: 100%; /* Ensure it fits within the header */
+  width: auto;
+  border: none;
+}
+
+/* Heading Styles */
+.content-heading {
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Funky font */
+  font-size: 2.5rem; /* Larger font size */
+  color: #ff6347; /* Tomato color */
+  text-align: center; /* Center align */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  margin: 20px 0; /* Spacing around heading */
+  letter-spacing: 1px; /* Slight letter spacing */
+}
+
+.content-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.left-align {
+  flex-direction: row; /* Image on the left, text on the right */
+}
+
+.right-align {
+  flex-direction: row-reverse; /* Image on the right, text on the left */
+}
+
+.content-image {
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-text {
+  width: 65%;
   font-size: 1.2em;
   line-height: 1.6;
-  margin: 0 auto;
-  max-width: 800px;
+  margin: 0 20px;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between buttons */
+  margin-top: 20px; /* Space above buttons */
+}
+
+/* Button Styling */
+.button {
+  background-color: #ff6347; /* Tomato color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px; /* Rounded corners */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background-color: #e53e43; /* Darker tomato color */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.button:active {
+  background-color: #c53030; /* Even darker color on click */
+  transform: scale(0.95); /* Slightly shrink on click */
 }
 
 /* Footer Section */

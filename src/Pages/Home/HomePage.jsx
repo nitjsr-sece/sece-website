@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./HomePage.css";
-import logo from "../../assets/bulb.png";
+import logo from "../../assets/logo-moon.png";
 import hand from "../../assets/hand.png";
 import about_logo from "../../assets/about-logo.png";
 import about_photo from "../../assets/about-photo.png";

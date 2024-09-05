@@ -123,104 +123,13 @@ img {
   /* transform:translateY(-30%); */
   /* z-index:-1; */
 }
-/* Content Section */
-.content-section {
-  width: 100%;
-  background-image: url("../../assets/about-bg.png");
-  background-size: cover; /* or use contain if you want to see the entire image without cropping */
-  background-position: top; /* Keep the top part of the image visible */
-  background-repeat: no-repeat;
-  padding-top: 20px; /* Add some padding to ensure content doesn't touch the top */
-}
-
-.content-header {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-}
-
-.content-header img {
-  position: relative;
-  max-height: 100%; /* Ensure it fits within the header */
-  width: auto;
-  border: none;
-}
-
-/* Heading Styles */
-.content-heading {
-  font-family: "Comic Sans MS", cursive, sans-serif; /* Funky font */
-  font-size: 2.5rem; /* Larger font size */
-  color: #ff6347; /* Tomato color */
-  text-align: center; /* Center align */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
-  margin: 20px 0; /* Spacing around heading */
-  letter-spacing: 1px; /* Slight letter spacing */
-}
-
-.content-block {
-  display: flex;
-  align-items: center;
-  margin-bottom: 50px;
-}
 .content-right{
-  display:grid;
+  display: grid;
 }
-.left-align {
-  flex-direction: row; /* Image on the left, text on the right */
-}
-
-.right-align {
-  flex-direction: row-reverse; /* Image on the right, text on the left */
-}
-
-.content-image {
-  width: 30%;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.content-text {
-  width: 65%;
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin: 0 20px;
+.content-right>p{
   justify-self: flex-end;
 }
+/* Content Section */
 
-/* Button Container */
-.button-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px; /* Space between buttons */
-  margin-top: 20px; /* Space above buttons */
-}
-
-/* Button Styling */
-.button {
-  background-color: #ff6347; /* Tomato color */
-  color: white;
-  padding: 10px 20px;
-  border-radius: 25px; /* Rounded corners */
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect */
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.button:hover {
-  background-color: #e53e43; /* Darker tomato color */
-  transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
-.button:active {
-  background-color: #c53030; /* Even darker color on click */
-  transform: scale(0.95); /* Slightly shrink on click */
-}
 
 /* Footer Section */

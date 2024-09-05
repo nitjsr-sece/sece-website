@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-section">
           <h2 className="footer-title">Society of Electronics and Communications Engineering</h2>
-          <p className="footer-email">contact@yourorganization.com</p>
+          <p className="footer-email">sece.student@nitjsr.ac.in</p>
         </div>
 
         <div className="footer-section">

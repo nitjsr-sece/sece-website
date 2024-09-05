@@ -12,6 +12,7 @@
   background-color: #422828; /* Background color of the button */
   border: none;
   border-radius: 100%;
+  z-index: 1005;
   cursor: pointer;
 }
 

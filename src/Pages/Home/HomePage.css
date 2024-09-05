@@ -131,5 +131,21 @@ img {
 }
 /* Content Section */
 
+.button {
+  background-color: #ff6347; /* Tomato color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px; /* Rounded corners */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: background-color 0.3s, transform 0.3s;
+}
 
+.button:hover {
+  background-color: #e53e43; /* Darker tomato color */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
 /* Footer Section */

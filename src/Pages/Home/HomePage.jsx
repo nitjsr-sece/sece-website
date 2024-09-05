@@ -18,6 +18,7 @@ import { CiFacebook } from "react-icons/ci";
 import { motion } from "framer-motion";
 
 
+import Footer from "../../components/Footer/Footer";
 const HomePage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -129,9 +130,11 @@ const HomePage = () => {
           >
             <div className="text-center lg:text-left">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Events</h2>
+              <div className="content-right">
               <p className="text-lg leading-relaxed text-gray-700 mb-6">
                 The Society of Electronics and Communication Engineering (SECE) conducts a series of events throughout the year, offering students a platform to showcase their talents and unlock their potential. We organize a variety of workshops, webinars, and competitions on diverse topics ranging from electronics, coding to fun events designed to enhance the technical and programming skills of students.
               </p>
+              </div>
               <a
                 href="/events"
                 className="inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition-colors duration-300"
@@ -189,10 +192,7 @@ const HomePage = () => {
         </div>
       </div>
         {/* Third Section - Footer */}
-        <div className="footer-section">
-          <p>© 2024 [College Society Name]. All Rights Reserved.</p>
-          <p>Contact us: [sece.student@nitjsr.ac.in]</p>
-        </div>
+        <Footer/>
       </div>
     </>
   );

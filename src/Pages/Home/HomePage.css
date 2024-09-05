@@ -119,18 +119,17 @@ img {
   font-size: 3em;
   margin: 0;
 }
-
+.about-header{
+  /* transform:translateY(-30%); */
+  /* z-index:-1; */
+}
+.content-right{
+  display: grid;
+}
+.content-right>p{
+  justify-self: flex-end;
+}
 /* Content Section */
 
 
 /* Footer Section */
-.footer-section {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.footer-section p {
-  margin: 5px 0;
-}

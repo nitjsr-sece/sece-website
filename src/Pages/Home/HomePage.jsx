@@ -36,14 +36,27 @@ const HomePage = () => {
         {/* First Section */}
         <div className="hero-section">
           <div className="hero-content">
-            <h1>SECE : WHERE INNOVATION MEETS EXCELLENCE</h1>
+            <motion.h1
+            whileInView={{ opacity: 1, x: 0}}
+            initial={{ opacity: 0, x: -200}}
+            transition={{ duration: 1}}
+            >
+              SECE : WHERE INNOVATION MEETS EXCELLENCE</motion.h1>
           </div>
           <div className="logo-hand">
-            <div className="logo">
-              <img src={logo} alt="Society Logo" />
-            </div>
+            <motion.div className="logo">
+              <motion.img 
+              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: -150}}
+              transition={{ duration: 1}}
+              src={logo} alt="Society Logo" />
+            </motion.div>
             <div className="hand">
-              <img src={hand} alt="hand image" />
+              <motion.img 
+              whileInView={{ opacity: 1, y: 0}}
+              initial={{ opacity: 0, y: 150}}
+              transition={{ duration: 1}}
+              src={hand} alt="hand image" />
             </div>
           </div>
           <div className="scroll">
@@ -91,7 +104,7 @@ const HomePage = () => {
             alt="About Us"
             className="mx-auto max-w-xs lg:max-w-md"
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: -200 }}
+            initial={{ opacity: 0, y: -100 }}
             transition={{ duration: 1 }}
           />
         </div>

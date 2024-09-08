@@ -15,11 +15,15 @@ import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { CiFacebook } from "react-icons/ci";
+
+import { motion, px } from "framer-motion";
+
 import { motion } from "framer-motion";
 import { SparklesCore } from "./meteors";
 
 
 import Footer from "../../components/Footer/Footer";
+import { Divider } from "@mui/material";
 const HomePage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -111,7 +115,7 @@ const HomePage = () => {
 
         <div
         className="bg-gray-100 py-8 bg-cover bg-center"
-        style={{ backgroundImage: `url(${aboutBg})` }}
+        // style={{ backgroundImage: `url(${aboutBg})` }}
         id="About">
         <div className="text-center py-8">
           <motion.img
@@ -131,11 +135,13 @@ const HomePage = () => {
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2 px-4"
           >
-            <img
-              src={about_photo}
-              alt="About Us"
-              className="rounded-lg shadow-lg"
-            />
+           <div className="about-photo-container">
+              <img
+                src={about_photo}
+                alt="About Us"
+                className="about-photo"
+              />
+           </div>
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
@@ -143,13 +149,13 @@ const HomePage = () => {
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2 px-4 mt-4 lg:mt-0"
           >
-            <p className="text-lg leading-relaxed text-gray-700">
+            <p className="text-lg leading-relaxed text-gray-700 about-content">
               Welcome to the Society of Electronics and Communication Engineering, where innovation meets excellence in the realm of advancing technology. Our vision is to create a space where fresh ideas can be turned into reality through passion and determination. We organize a variety of events, workshops, and webinars throughout the year to keep students informed about the latest industry trends in the field of electronics and software. This enables students to explore both domains and gain a clear understanding of their career paths.
             </p>
           </motion.div>
         </div>
 
-        <div className="flex flex-wrap items-center py-8 px-4 lg:px-8">
+        <div className="flex flex-wrap items-center py-8 px-4 event-container lg:px-8">
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}
@@ -159,16 +165,18 @@ const HomePage = () => {
             <div className="text-center lg:text-left">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Events</h2>
               <div className="content-right">
-              <p className="text-lg leading-relaxed text-gray-700 mb-6">
+              <p className="text-lg leading-relaxed text-gray-700 mb-6 events-content">
                 The Society of Electronics and Communication Engineering (SECE) conducts a series of events throughout the year, offering students a platform to showcase their talents and unlock their potential. We organize a variety of workshops, webinars, and competitions on diverse topics ranging from electronics, coding to fun events designed to enhance the technical and programming skills of students.
               </p>
               </div>
-              <a
-                href="/events"
-                className="button"
-              >
-                Explore Events
-              </a>
+              <div className="event-btn-container">
+                <a
+                  href="/events"
+                  className="events-button"
+                >
+                  Explore Events
+                </a>
+              </div>
             </div>
           </motion.div>
           <motion.div
@@ -180,11 +188,11 @@ const HomePage = () => {
             <img
               src={event_photos}
               alt="Events"
-              className="rounded-lg shadow-lg"
+              className="event-photo"
+              // className="rounded-lg shadow-lg"
             />
           </motion.div>
         </div>
-
         <div className=" py-8 px-4 lg:px-8" id="Nexus">
           <div className="flex flex-wrap items-center">
             <motion.div
@@ -196,7 +204,7 @@ const HomePage = () => {
               <img
                 src={nexus_photo}
                 alt="Nexus Event"
-                className="rounded-lg shadow-lg"
+                className="nexus-photo"
               />
             </motion.div>
             <motion.div
@@ -205,16 +213,18 @@ const HomePage = () => {
               transition={{ duration: 1 }}
               className="w-full lg:w-1/2 px-4"
             >
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Nexus</h2>
-              <p className="text-lg leading-relaxed text-gray-700 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 ">Nexus</h2>
+              <p className="text-lg leading-relaxed text-gray-700 mb-6 nexus-event-content">
                 Nexus is the official fest of Electronics and Communication Engineering department at NIT Jamshedpur, usually held in October or November. Nexus is known for its exclusive events that attract participants across the campus. This three-day fest offers a variety of events and competitions ranging from technical challenges and coding competitions to fun games, culminating with a vibrant cultural night.
               </p>
-              <a 
-                href="/nexus" 
-                className="button"
-              >
-                Discover Nexus
-              </a>
+              <div className="nexus-btn-container">
+                <a 
+                  href="/nexus" 
+                  className="nexus-button"
+                >
+                  Discover Nexus
+                </a>
+              </div>
             </motion.div>
           </div>
         </div>

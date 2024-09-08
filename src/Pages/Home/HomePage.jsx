@@ -15,7 +15,11 @@ import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { CiFacebook } from "react-icons/ci";
+
 import { motion, px } from "framer-motion";
+
+import { motion } from "framer-motion";
+import { SparklesCore } from "./meteors";
 
 
 import Footer from "../../components/Footer/Footer";
@@ -35,7 +39,19 @@ const HomePage = () => {
 
       <div className="home-page">
         {/* First Section */}
-        <div className="hero-section">
+        <div className="h-[46rem] relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <div className="w-full absolute inset-0 h-screen">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+      </div>
+      <div className="hero-section">
           <div className="hero-content">
             <motion.h1
             whileInView={{ opacity: 1, x: 0}}
@@ -93,6 +109,8 @@ const HomePage = () => {
               <IoIosArrowRoundDown />
             </a>
           </div>
+    </div>
+        
         </div>
 
         <div

@@ -54,9 +54,10 @@ const HomePage = () => {
             initial={{ opacity: 0, x: -200}}
             transition={{ duration: 1}}
             >
-            <h4>
-              SOCIETY OF ELECTRONICS AND COMMUNICATION ENGINEERING 
-              </h4>
+            <p className="nerko-one-regular">
+              SOCIETY OF ELECTRONICS AND COMMUNICATION ENGINEERING
+              <p className="bebas-neue-regular">"WHERE INNOVATION MEETS EXCELLENCE"</p>
+            </p>
               </motion.h1>
           </div>
           <div className="logo-hand">
@@ -76,7 +77,7 @@ const HomePage = () => {
             </div>
           </div>
           <div className="scroll">
-            <div className="social">
+            {/* <div className="social">
               <a 
               className="hover:text-white text-[#e41146] transition-all ease-in-out duration-500"
               href="https://www.instagram.com/secenitjsr/" target="_blank">
@@ -103,8 +104,8 @@ const HomePage = () => {
                 href="https://www.facebook.com/secenitjsr/" target="_blank">
                 <CiFacebook style={{ fontSize: "2rem" }} />
               </a>
-            </div>
-            <a href="#About">
+            </div> */}
+            <a className="arrow" href="#About">
               <IoIosArrowRoundDown />
             </a>
           </div>

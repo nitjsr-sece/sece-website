@@ -4,6 +4,11 @@
     padding-top: 40px;
     text-align: center;
   }
+
+  .pb-3{
+    background-color: #333;
+    padding-bottom: 0.75rem;
+  }
   
   .footer-container {
     display: flex;
@@ -52,6 +57,7 @@
   } */
   
   .social-footer{
+    margin-top: 17px;
     display: flex;
     justify-content: center;
   }

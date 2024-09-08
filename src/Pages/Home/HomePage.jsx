@@ -54,7 +54,10 @@ const HomePage = () => {
             initial={{ opacity: 0, x: -200}}
             transition={{ duration: 1}}
             >
-              SECE : WHERE INNOVATION MEETS EXCELLENCE</motion.h1>
+            <h4>
+              SOCIETY OF ELECTRONICS AND COMMUNICATION ENGINEERING
+              </h4>
+              </motion.h1>
           </div>
           <div className="logo-hand">
             <motion.div className="logo">

@@ -55,7 +55,7 @@ const HomePage = () => {
             transition={{ duration: 1}}
             >
             <h4>
-              SOCIETY OF ELECTRONICS AND COMMUNICATION ENGINEERING
+              SOCIETY OF ELECTRONICS AND COMMUNICATION ENGINEERING 
               </h4>
               </motion.h1>
           </div>

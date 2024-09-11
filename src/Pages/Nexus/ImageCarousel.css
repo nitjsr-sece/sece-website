@@ -1,0 +1,50 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Adjust this width if needed */
+  margin: auto;
+  /* border: 2px solid black; */
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; /* 1:1 Aspect Ratio (Square) */
+  position: relative;
+}
+
+.carousel-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+.carousel-arrows {
+  position: absolute;
+  bottom: 20px; /* Adjust this value to fit your design */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.arrow-button {
+  background-color: red; /* Red background for arrows */
+  color: white; /* White color for arrows */
+  border: none;
+  height: 40px; /* Increase height to fit icons */
+  width: 40px; /* Increase width to fit icons */
+  border-radius: 50%; /* Ensures the container is round */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px; /* Adjust icon size if needed */
+  margin: 0 15px; /* Gap between the arrows */
+}
+
+.arrow-button:hover {
+  background-color: darkred; /* Darker red on hover */
+}

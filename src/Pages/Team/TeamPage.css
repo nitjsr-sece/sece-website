@@ -1,0 +1,60 @@
+.team-page {
+  width: 100%;
+  height: 100%;
+}
+
+/* First section with background image */
+.team-page__hero {
+  background-image: url("../../assets/home-page.png"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* Links at the top right */
+.team-page__links {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.team-page__links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.team-page__links a:hover {
+  text-decoration: underline;
+}
+
+/* Middle section content */
+.team-page__content {
+    background-image: url("../../assets/about-bg.png"); /* Replace with your image path */
+  background-size: cover;
+  background-position: top;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.team-page__content h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.team-page__content p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Footer section */
+.team-page__footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}

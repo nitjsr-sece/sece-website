@@ -58,8 +58,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer-bottom bg-black bottom-0 flex justify-center items-center h-10 w-1/2 md:w-full text-sm">
-        <p>&copy; {new Date().getFullYear()} SECE. All rights reserved.</p>
+      <div className="footer-bottom bg-grey bottom-0 flex justify-center items-center h-10 w-1/2 md:w-full text-sm">
+        <p className='footer-content-sece'>&copy; {new Date().getFullYear()} SECE. All rights reserved.</p>
       </div>
     </footer>
   );

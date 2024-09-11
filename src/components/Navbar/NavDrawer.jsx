@@ -61,7 +61,7 @@ const NavDrawer = ({ open, onClose }) => {
                <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText 
                   primary={item.text} 
-                  className="transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:text-gray-300"
+                  className="transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:text-gray-300 navbar-contents" style={{padding:"0.2rem"}}
                   />
               </ListItem>
             </motion.div>

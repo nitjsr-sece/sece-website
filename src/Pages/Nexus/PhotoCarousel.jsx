@@ -27,7 +27,7 @@ const PhotoCarousel = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 2500,
+    speed: 4000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,

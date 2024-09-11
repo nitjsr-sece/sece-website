@@ -27,9 +27,9 @@ import filmnexus1 from "../../assets/NexusPage/events/filmnexus1.jpg";
 import filmnexus2 from "../../assets/NexusPage/events/filmnexus2.jpg";
 import filmnexus3 from "../../assets/NexusPage/events/filmnexus3.jpg";
 
-import eboltbgmi1 from "../../assets/NexusPage/events/filmnexus1.jpg";
-import eboltbgmi2 from "../../assets/NexusPage/events/filmnexus1.jpg";
-import eboltbgmi3 from "../../assets/NexusPage/events/filmnexus1.jpg";
+import eboltbgmi1 from "../../assets/NexusPage/events/bgmi1.jpg";
+import eboltbgmi2 from "../../assets/NexusPage/events/bgmi2.jpg";
+import eboltbgmi3 from "../../assets/NexusPage/events/bgmi3.jpg";
 
 // Sample data for the events
 const events = [

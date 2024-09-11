@@ -104,7 +104,7 @@ const HomePage = () => {
                 <CiFacebook style={{ fontSize: "2rem" }} />
               </a>
             </div>
-            <a href="#About">
+            <a href="#About" className="scroll-btn">
               <IoIosArrowRoundDown />
             </a>
           </div>
@@ -152,7 +152,7 @@ const HomePage = () => {
           </motion.div>
         </div>
 
-        <div className="flex flex-wrap items-center py-8 px-4 lg:px-8">
+        <div className="flex flex-wrap items-center py-8 px-4 lg:px-8" id="Events">
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}

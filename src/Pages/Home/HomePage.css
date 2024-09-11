@@ -55,6 +55,7 @@ h1 {
   align-content: center;
   box-sizing: border-box;
   padding-top: 30%;
+  font-size:3rem;
 }
 .logo-hand {
   width: 50%;
@@ -254,4 +255,59 @@ img {
 }
 #Nexus{
   margin-top: 8rem;
+}
+@media only screen and (max-width:850px){
+  #Events{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .hand{
+    display: none;
+  }
+  .logo-hand{
+    width: 60%;
+    position: relative;
+    left:-22%;
+    /* top:-20%; */
+    transform: scale(0.8);
+    
+    height: fit-content;
+    /* width: fit-content; */
+  }
+  .logo{
+    position:absolute;
+    left:50%;
+  
+  }
+  h1{
+    padding-top: 60%;
+    box-sizing: border-box;
+  }
+  html{
+    font-size:6px;
+   
+  }
+ 
+  .scroll>a{
+    width:fit-content;
+    height: fit-content;
+    
+  }
+  .scroll{
+    /* transform: translate(0px, 80%); */
+    /* display: none; */
+    align-self: flex-end;
+    justify-self: flex-end;
+    position:absolute;
+    top:95%;
+    transform: translateY(-100%);
+  }
+  .social{
+    display:none;
+    
+  }
+  .hero-section{
+    padding-left: 100px;
+    flex-direction: column-reverse;
+  }
 }

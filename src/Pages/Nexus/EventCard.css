@@ -1,0 +1,35 @@
+.event-card {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 1200px; /* Adjust as needed */
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.event-card.reverse {
+  flex-direction: row-reverse; /* Reverse the order of the carousel and content */
+}
+
+.event-card-carousel {
+  flex: 1;
+}
+
+.event-card-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9; /* Adjust as needed */
+}
+
+.event-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.event-description {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+}

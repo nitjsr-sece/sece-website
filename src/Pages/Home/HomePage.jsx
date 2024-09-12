@@ -6,7 +6,7 @@ import about_logo from "../../assets/about-logo.png";
 import about_photo from "../../assets/about-photo.png";
 import nexus_photo from "../../assets/nexus-photo.png";
 import event_photos from "../../assets/event-photos.png";
-import aboutBg from '../../assets/about-bg.png';
+import aboutBg from "../../assets/about-bg.png";
 
 import NavDrawer from "../../components/Navbar/NavDrawer";
 import MenuButton from "../../components/MenuButton/MenuButton";
@@ -207,7 +207,7 @@ const HomePage = () => {
         </div>
       </div>
         {/* Third Section - Footer */}
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

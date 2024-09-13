@@ -10,7 +10,7 @@ import EventCard from "./EventCard";
 import sponsorLogo1 from "../../assets/NexusPage/sponsor1.png"
 import sponsorLogo2 from "../../assets/NexusPage/sponsor2.png";
 import sponsorLogo3 from "../../assets/NexusPage/sponsor3.png";
-
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import events from "./Events";
 
 const NexusPage = () => {
@@ -28,9 +28,14 @@ const NexusPage = () => {
           <a href="#gallery">Gallery</a>
           <a href="#sponsors">Sponsors</a>
         </nav>
+   <div className="nexus-scroll" style={{color:"white"}}>
+   <a href="#nexus-section" className="scroll-btn">
+              <ArrowDropDownIcon/>
+            </a>
+   </div>
       </section>
 
-      <section className="nexus-section">
+      <section className="nexus-section" id="nexus-section">
         <div className="nexus-content">
           <div className="nexus-content-item" id="events">
             <h2>Events</h2>

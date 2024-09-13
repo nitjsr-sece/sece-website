@@ -7,7 +7,7 @@ import "./NexusPage.css";
 import PhotoCarousel from "./PhotoCarousel";
 import EventCard from "./EventCard";
 
-import sponsorLogo1 from "../../assets/NexusPage/sponsor1.png";
+import sponsorLogo1 from "../../assets/NexusPage/sponsor1.png"
 import sponsorLogo2 from "../../assets/NexusPage/sponsor2.png";
 import sponsorLogo3 from "../../assets/NexusPage/sponsor3.png";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -20,7 +20,6 @@ const NexusPage = () => {
   };
   return (
     <div className="nexus-container">
-      {/* Drawer */}
       <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
       <MenuButton onClick={() => toggleDrawer(true)} />
       <section className="nexus-hero">

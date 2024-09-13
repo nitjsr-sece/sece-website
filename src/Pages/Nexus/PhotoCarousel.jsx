@@ -2,25 +2,25 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
-import photo1 from "../../assets/NexusPage/gallery/1.png";
-import photo2 from "../../assets/NexusPage/gallery/2.png";
-import photo3 from "../../assets/NexusPage/gallery/3.png";
-import photo4 from "../../assets/NexusPage/gallery/4.png";
-import photo5 from "../../assets/NexusPage/gallery/5.png";
-import photo6 from "../../assets/NexusPage/gallery/6.jpg";
-import photo7 from "../../assets/NexusPage/gallery/7.jpg";
-import photo8 from "../../assets/NexusPage/gallery/8.jpg";
-import photo9 from "../../assets/NexusPage/gallery/9.jpg";
-import photo10 from "../../assets/NexusPage/gallery/10.jpg";
-import photo11 from "../../assets/NexusPage/gallery/11.jpg";
-import photo12 from "../../assets/NexusPage/gallery/12.jpg";
-import photo13 from "../../assets/NexusPage/gallery/13.jpg";
-import photo14 from "../../assets/NexusPage/gallery/14.jpg";
-import photo15 from "../../assets/NexusPage/gallery/15.jpg";
-import photo16 from "../../assets/NexusPage/gallery/16.jpg";
-import photo17 from "../../assets/NexusPage/gallery/17.jpg";
-import photo18 from "../../assets/NexusPage/gallery/18.jpg";
+import photo1 from "../../assets/NexusPage/compressed_gallery/1.jpg"
+// import photo1 from "../../assets/NexusPage/gallery/1.png";
+import photo2 from "../../assets/NexusPage/compressed_gallery/2.jpg";
+import photo3 from "../../assets/NexusPage/compressed_gallery/3.jpg"
+import photo4 from "../../assets/NexusPage/compressed_gallery/4.jpg";
+import photo5 from "../../assets/NexusPage/compressed_gallery/5.jpg";
+import photo6 from "../../assets/NexusPage/compressed_gallery/6.jpg";
+import photo7 from "../../assets/NexusPage/compressed_gallery/7.jpg";
+import photo8 from "../../assets/NexusPage/compressed_gallery/8.jpg";
+import photo9 from "../../assets/NexusPage/compressed_gallery/9.jpg";
+import photo10 from "../../assets/NexusPage/compressed_gallery/10.jpg";
+import photo11 from "../../assets/NexusPage/compressed_gallery/11.jpg";
+import photo12 from "../../assets/NexusPage/compressed_gallery/12.jpg";
+import photo13 from "../../assets/NexusPage/compressed_gallery/11.jpg";
+import photo14 from "../../assets/NexusPage/compressed_gallery/3.jpg";
+import photo15 from "../../assets/NexusPage/compressed_gallery/2.jpg";
+import photo16 from "../../assets/NexusPage/compressed_gallery/4.jpg";
+import photo17 from "../../assets/NexusPage/compressed_gallery/5.jpg";
+import photo18 from "../../assets/NexusPage/compressed_gallery/10.jpg";
 import "./PhotoCarousel.css"; // Import the CSS file for styling
 
 const PhotoCarousel = () => {

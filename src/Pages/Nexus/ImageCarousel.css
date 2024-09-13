@@ -34,8 +34,7 @@
   background-color: red; /* Red background for arrows */
   color: white; /* White color for arrows */
   border: none;
-  height: 40px; /* Increase height to fit icons */
-  width: 40px; /* Increase width to fit icons */
+  padding:0.5rem;
   border-radius: 50%; /* Ensures the container is round */
   display: flex;
   align-items: center;

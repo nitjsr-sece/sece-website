@@ -1,5 +1,8 @@
 /* NexusPage.css */
-
+/* body{
+  background-color: #333;
+  color: white;
+} */
 .nexus-container {
   font-family: "Arial", sans-serif;
 }
@@ -49,13 +52,12 @@
 
 .nexus-section {
   padding: 60px 40px;
-  background-image: url("../../assets/about-bg.png"); /* Add background image for the whole section */
+  /* background-image: url("../../assets/about-bg.png"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #333;
 }
-
 .nexus-content {
   display: flex;
   flex-direction: column;
@@ -66,7 +68,7 @@
   padding: 30px;
   /* background-color: rgba(255, 255, 255, 0.9); Slight transparency */
   border: 1px solid #ddd;
-  background-image: url("../../assets/about-bg.png"); /* Apply background image */
+  /* background-image: url("../../assets/about-bg.png");  */
   background-size: cover;
   background-position: center;
   border-radius: 12px;

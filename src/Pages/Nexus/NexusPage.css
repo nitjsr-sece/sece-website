@@ -1,5 +1,8 @@
 /* NexusPage.css */
-
+/* body{
+  background-color: #333;
+  color: white;
+} */
 .nexus-container {
   font-family: "Arial", sans-serif;
 }
@@ -7,9 +10,10 @@
 .nexus-hero {
   height: 100vh; /* 100% of viewport height */
   width: 100vw; /* 100% of viewport width */
-  background-image: url("../../assets/NexusPage/bg-image2.png"); /* Replace with your image URL */
-  background-size: cover;
-  background-position: center;
+  background-image: url("../../assets/NexusPage/bg-image.png"); /* Replace with your image URL */
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:left;
   background-attachment: fixed;
   display: flex;
   justify-content: flex-end;
@@ -17,7 +21,12 @@
   padding: 20px;
   position: relative;
 }
-
+.nexus-scroll{
+  justify-self: center;
+  align-self: flex-end;
+  transform: translateX(-45vw) scale(3.5);
+  /* margin:0 auto; */
+}
 .nexus-nav {
   display: flex;
   gap: 20px;
@@ -47,15 +56,15 @@
   width: 100%;
 }
 
+
 .nexus-section {
   padding: 60px 40px;
-  background-image: url("../../assets/about-bg.png"); /* Add background image for the whole section */
+  /* background-image: url("../../assets/about-bg.png"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #333;
 }
-
 .nexus-content {
   display: flex;
   flex-direction: column;
@@ -66,7 +75,7 @@
   padding: 30px;
   /* background-color: rgba(255, 255, 255, 0.9); Slight transparency */
   border: 1px solid #ddd;
-  background-image: url("../../assets/about-bg.png"); /* Apply background image */
+  /* background-image: url("../../assets/about-bg.png"); Apply background image */
   background-size: cover;
   background-position: center;
   border-radius: 12px;

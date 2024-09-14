@@ -1,35 +1,35 @@
 // Import event photos
-import digimon1 from "../../assets/NexusPage/events/digimon1.jpg";
-import digimon2 from "../../assets/NexusPage/events/digimon2.jpg";
-import digimon3 from "../../assets/NexusPage/events/digimon3.jpg";
+import digimon1 from "../../assets/NexusPage/compressed_events/digimon1.jpg"
+import digimon2 from "../../assets/NexusPage/compressed_events/digimon2.jpg";
+import digimon3 from "../../assets/NexusPage/compressed_events/digimon3.jpg";
 
-import codexus1 from "../../assets/NexusPage/events/codexus1.jpg";
-import codexus2 from "../../assets/NexusPage/events/codexus2.jpg";
-import codexus3 from "../../assets/NexusPage/events/codexus3.jpg";
+import codexus1 from "../../assets/NexusPage/compressed_events/codexus1.jpg";
+import codexus2 from "../../assets/NexusPage/compressed_events/codexus2.jpg";
+import codexus3 from "../../assets/NexusPage/compressed_events/codexus3.jpg";
 
-import pairup1 from "../../assets/NexusPage/events/pairup1.jpg";
-import pairup2 from "../../assets/NexusPage/events/pairup2.jpg";
-import pairup3 from "../../assets/NexusPage/events/pairup3.jpg";
+import pairup1 from "../../assets/NexusPage/compressed_events/pup1.jpg";
+import pairup2 from "../../assets/NexusPage/compressed_events/pup2.jpg";
+import pairup3 from "../../assets/NexusPage/compressed_events/pup3.jpg";
 
-import talenthunt1 from "../../assets/NexusPage/events/talenthunt1.jpg";
-import talenthunt2 from "../../assets/NexusPage/events/talenthunt2.jpg";
-import talenthunt3 from "../../assets/NexusPage/events/talenthunt3.jpg";
+import talenthunt1 from "../../assets/NexusPage/compressed_events/th1.jpg";
+import talenthunt2 from "../../assets/NexusPage/compressed_events/th2.jpg";
+import talenthunt3 from "../../assets/NexusPage/compressed_events/th3.jpg";
 
-import perfectpixel1 from "../../assets/NexusPage/events/perfectpixel1.jpg";
-import perfectpixel2 from "../../assets/NexusPage/events/perfectpixel2.jpg";
-import perfectpixel3 from "../../assets/NexusPage/events/perfectpixel3.jpg";
+import perfectpixel1 from "../../assets/NexusPage/compressed_events/pp1.jpg";
+import perfectpixel2 from "../../assets/NexusPage/compressed_events/pp2.jpg";
+import perfectpixel3 from "../../assets/NexusPage/compressed_events/pp3.jpg";
 
-import crypticcircuit1 from "../../assets/NexusPage/events/crypticcircuit1.jpg";
-import crypticcircuit2 from "../../assets/NexusPage/events/crypticcircuit2.jpg";
-import crypticcircuit3 from "../../assets/NexusPage/events/crypticcircuit3.jpg";
+import crypticcircuit1 from "../../assets/NexusPage/compressed_events/cc1.jpg";
+import crypticcircuit2 from "../../assets/NexusPage/compressed_events/cc2.jpg";
+import crypticcircuit3 from "../../assets/NexusPage/compressed_events/cc3.jpg";
 
-import filmnexus1 from "../../assets/NexusPage/events/filmnexus1.jpg";
-import filmnexus2 from "../../assets/NexusPage/events/filmnexus2.jpg";
-import filmnexus3 from "../../assets/NexusPage/events/filmnexus3.jpg";
+import filmnexus1 from "../../assets/NexusPage/compressed_events/fn1.jpg";
+import filmnexus2 from "../../assets/NexusPage/compressed_events/fn2.jpg";
+import filmnexus3 from "../../assets/NexusPage/compressed_events/fn3.jpg";
 
-import eboltbgmi1 from "../../assets/NexusPage/events/bgmi1.jpg";
-import eboltbgmi2 from "../../assets/NexusPage/events/bgmi2.jpg";
-import eboltbgmi3 from "../../assets/NexusPage/events/bgmi3.jpg";
+import eboltbgmi1 from "../../assets/NexusPage/compressed_events/bgmi1.jpg";
+import eboltbgmi2 from "../../assets/NexusPage/compressed_events/bgmi2.jpg";
+import eboltbgmi3 from "../../assets/NexusPage/compressed_events/bgmi3.jpg";
 
 // Sample data for the events
 const events = [

@@ -109,6 +109,9 @@ img {
   /* box-shadow: 0 1px 2px darkslategray; */
   transition: transform 1s;
 }
+.scroll-btn{
+  transform: scale(2.5);
+}
 .scroll > a:hover {
   transform: translateY(-50%) scale(2.5);
 }

@@ -5,15 +5,15 @@
 
 /* First section with background image */
 .team-page__hero {
-  background-image: url("../../assets/home-page.png"); /* Replace with your image path */
+  background-image: url("../../assets/Member/Batch2k21-22.JPG"); /* Replace with your image path */
   background-size: cover;
-  background-position: center;
+  background-position: top;
+  background-attachment: fixed;
   width: 100%;
   height: 100vh;
   position: relative;
 }
 
-/* Links at the top right */
 .team-page__links {
   position: absolute;
   top: 20px;
@@ -31,17 +31,26 @@
 .team-page__links a:hover {
   text-decoration: underline;
 }
-
-/* Middle section content */
-.team-page__content {
-    background-image: url("../../assets/about-bg.png"); /* Replace with your image path */
+.member-info{
+  padding-top:6rem;
+}
+.member-name{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.member-por{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+/* .team-page__content {
+  background-image: url("../../assets/about-bg.png");
   background-size: cover;
   background-position: top;
   padding: 40px 20px;
   text-align: center;
-}
+} */
 
-.team-page__content h2 {
+/* .team-page__content h2 {
   margin-bottom: 20px;
   font-size: 28px;
 }
@@ -49,12 +58,24 @@
 .team-page__content p {
   font-size: 16px;
   line-height: 1.5;
-}
+} */
 
-/* Footer section */
 .team-page__footer {
   background-color: #333;
   color: white;
   padding: 10px 20px;
   text-align: center;
+}
+@media only screen and (max-width:850px){
+  .member-info{
+    padding-top:12rem;
+  }
+  .member-name{
+    font-size: 3.125rem;
+    line-height: 2.75rem;
+  }
+  .member-por{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }

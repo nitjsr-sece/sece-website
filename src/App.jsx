@@ -10,6 +10,7 @@ import "./index.css";
 
 function App() {
   return (
+    <>
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -19,6 +20,7 @@ function App() {
         <Route path="/team" element={<TeamPage />} />
       </Routes>
     </Router>
+    </>
   );
 }
 

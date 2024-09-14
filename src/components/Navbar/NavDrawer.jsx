@@ -1,27 +1,34 @@
 import React from "react";
-import { Drawer, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import {
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import MemoryIcon from "@mui/icons-material/Memory";
-import GroupsIcon from '@mui/icons-material/Groups';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import InfoIcon from '@mui/icons-material/Info';
-import HomeIcon from '@mui/icons-material/Home';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-import { motion } from 'framer-motion';
+import GroupsIcon from "@mui/icons-material/Groups";
+import InfoIcon from "@mui/icons-material/Info";
+import HomeIcon from "@mui/icons-material/Home";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import "./NavDrawer.css";
 
 const NavDrawer = ({ open, onClose }) => {
+  const navigate = useNavigate();
+
+  // Menu items without the Calendar
   const menuItems = [
-    { text: "Home", icon: <HomeIcon /> },
-    { text: "About", icon: <InfoIcon /> },
-    { text: "Events", icon: <EmojiEventsIcon /> },
-    { text: "Nexus", icon: <MemoryIcon /> },
-    { text: "Calendar", icon: <CalendarMonthIcon /> },
-    { text: "Team", icon: <GroupsIcon /> },
+    { text: "Home", icon: <HomeIcon />, route: "/" },
+    { text: "Events", icon: <EmojiEventsIcon />, route: "/events" },
+    { text: "Nexus", icon: <MemoryIcon />, route: "/nexus" },
+    { text: "Team", icon: <GroupsIcon />, route: "/team" },
   ];
 
   const drawerVariants = {
     open: { x: 0, opacity: 1 },
-    closed: { x: '-100%', opacity: 0 },
+    closed: { x: "-100%", opacity: 0 },
   };
 
   const itemVariants = {
@@ -29,16 +36,21 @@ const NavDrawer = ({ open, onClose }) => {
     visible: { opacity: 1, x: 0 },
   };
 
+  const handleNavigation = (route) => {
+    navigate(route);
+    onClose(); // Close the drawer after navigating
+  };
+
   return (
     <Drawer
       anchor="left"
       open={open}
       onClose={onClose}
-      sx={{ 
-        '& .MuiDrawer-paper': {
-          backgroundColor: 'transparent',
-          boxShadow: 'none',
-        }
+      sx={{
+        "& .MuiDrawer-paper": {
+          backgroundColor: "transparent",
+          boxShadow: "none",
+        },
       }}
     >
       <motion.div
@@ -57,12 +69,17 @@ const NavDrawer = ({ open, onClose }) => {
               animate="visible"
               transition={{ delay: index * 0.2, duration: 0.3 }}
             >
-               <ListItem button className="group cursor-pointer">
-               <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText 
-                  primary={item.text} 
-                  className="transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:text-gray-300 navbar-contents" style={{padding:"0.2rem"}}
-                  />
+              <ListItem
+                button
+                className="group cursor-pointer"
+                onClick={() => handleNavigation(item.route)} // Navigate on click
+              >
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText
+                  primary={item.text}
+                  className="transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:text-gray-300 navbar-contents"
+                  style={{ padding: "0.2rem" }}
+                />
               </ListItem>
             </motion.div>
           ))}

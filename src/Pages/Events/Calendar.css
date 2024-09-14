@@ -1,0 +1,92 @@
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  background-image: url("../../assets/about-bg.png"); /* Replace with your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+}
+
+.calendar-heading {
+  font-family: "Pacifico", cursive;
+  /* border: 2px solid black; */
+  padding-top: 0;
+  font-size: 3rem;
+  color: #ff6f61;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0; /* Removed default margin */
+  margin-bottom: 20px; /* Adjusted spacing between heading and calendar */
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 900px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.month {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: #e0f7fa;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1.5rem;
+}
+
+.month:hover {
+  background-color: #b3e5fc;
+  transform: scale(1.05);
+}
+
+.events {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.events h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #333;
+  border-bottom: 2px solid #ff6f61;
+  padding-bottom: 5px;
+}
+
+.events ul {
+  list-style: none;
+  padding: 0;
+}
+
+.event-item {
+  margin: 5px 0;
+  font-size: 1.2rem;
+  color: #555;
+  position: relative;
+}
+
+.event-item::before {
+  content: "•";
+  position: absolute;
+  left: -20px;
+  color: #ff6f61;
+  font-size: 1.5rem;
+}

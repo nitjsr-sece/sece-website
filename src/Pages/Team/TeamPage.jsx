@@ -78,9 +78,9 @@ const TeamPage = () => {
                   />
                 </div>
 
-                <div className="h-[65%] w-full bg-gradient-to-r from-sky-500 to-blue-500 text-white flex flex-col items-center pt-24">
-                  <h2 className="text-lg font-bold mb-2">{member.Name}</h2>
-                  <p className="text-sm">{member.POR}</p>
+                <div className="h-[65%] w-full bg-gradient-to-r from-sky-500 to-blue-500 text-white flex flex-col items-center member-info">
+                  <h2 className="font-bold mb-2 member-name">{member.Name}</h2>
+                  <p className="member-por">{member.POR}</p>
 
                   <div className="flex gap-4 mt-2">
                     <a

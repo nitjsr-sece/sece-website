@@ -8,8 +8,6 @@ import nexus_photo from "../../assets/nexus-photo.png";
 import event_photos from "../../assets/event-photos.png";
 import aboutBg from "../../assets/about-bg.png";
 
-import NavDrawer from "../../components/Navbar/NavDrawer";
-import MenuButton from "../../components/MenuButton/MenuButton";
 import { IoIosArrowRoundDown } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
@@ -22,17 +20,12 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 import Footer from "../../components/Footer/Footer";
 const HomePage = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
-  const toggleDrawer = (isOpen) => {
-    setDrawerOpen(isOpen);
-  };
+  
 
   return (
     <>
       {/* Drawer */}
-      <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
-      <MenuButton onClick={() => toggleDrawer(true)} />
+      
 
       <div className="home-page">
         {/* First Section */}

@@ -31,7 +31,17 @@
 .team-page__links a:hover {
   text-decoration: underline;
 }
-
+.member-info{
+  padding-top:6rem;
+}
+.member-name{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.member-por{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 /* .team-page__content {
   background-image: url("../../assets/about-bg.png");
   background-size: cover;
@@ -55,4 +65,17 @@
   color: white;
   padding: 10px 20px;
   text-align: center;
+}
+@media only screen and (max-width:850px){
+  .member-info{
+    padding-top:12rem;
+  }
+  .member-name{
+    font-size: 3.125rem;
+    line-height: 2.75rem;
+  }
+  .member-por{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }

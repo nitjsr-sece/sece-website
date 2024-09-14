@@ -1,0 +1,47 @@
+.event-card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 100%; /* Ensure the card does not exceed container width */
+}
+
+.event-card__left {
+  flex: 0 0 42%; /* Fix the width of the left section to 40% of the card width */
+}
+
+.event-card__image {
+  width: 100%; /* Make sure the image takes up the full width of the left section */
+  height: 320px; /* Fixed height to ensure all images are the same size */
+  object-fit: cover;
+}
+
+.event-card__right {
+  flex: 1; /* Take up the remaining width */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-height: 320px; /* Match the height of the image for consistent sizing */
+  overflow-y: auto; /* Add scroll if content exceeds height */
+}
+
+.event-card__heading {
+  font-family: "Lobster", cursive;
+  font-size: 1.5rem; /* Slightly smaller font size to fit better */
+  margin: 0 0 10px 0;
+  color: #333;
+  position: relative;
+  padding-bottom: 5px; /* Space for underline */
+}
+
+.event-card__heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: orange; /* Color of the underline */
+}

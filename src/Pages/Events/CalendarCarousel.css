@@ -1,0 +1,102 @@
+.calendar-carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-heading {
+  text-align: center;
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.month-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.month-name {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.days-of-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.day-name {
+  font-weight: bold;
+  text-align: center;
+  color: #666;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  width: 100%;
+}
+
+.calendar-day {
+  width: 100%; /* Ensures that each day takes up equal space */
+  padding: 10px 0; /* Adjust padding for better alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.calendar-day.highlight {
+  background-color: #ffa500; /* Highlight color */
+  color: white;
+}
+
+.calendar-day.selected {
+  border: 2px solid #333; /* Selected date border */
+}
+
+.calendar-day.empty {
+  background-color: transparent;
+  cursor: default;
+  pointer-events: none; /* Prevent pointer events on empty cells */
+}
+
+.event-details {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 27%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.custom-prev {
+  left: 150px;
+}
+
+.custom-next {
+  right: 150px;
+}

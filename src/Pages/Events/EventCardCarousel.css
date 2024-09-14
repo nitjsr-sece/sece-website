@@ -1,0 +1,32 @@
+.event-card-carousel {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.custom-arrow {
+  color: #ff6347;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.custom-prev {
+  left: -50px;
+}
+
+.custom-next {
+  right: -50px;
+}
+
+.custom-arrow:hover {
+  color: #ff4500;
+}
+
+.custom-arrow:active {
+  color: #d94b3a;
+}

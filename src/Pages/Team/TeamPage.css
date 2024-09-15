@@ -73,9 +73,11 @@
   .member-name{
     font-size: 3.125rem;
     line-height: 2.75rem;
+    padding:1rem;
   }
   .member-por{
     font-size: 1.875rem;
     line-height: 2.25rem;
+    padding:1rem;
   }
 }

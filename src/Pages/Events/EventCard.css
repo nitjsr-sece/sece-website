@@ -5,10 +5,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   max-width: 100%; /* Ensure the card does not exceed container width */
+  flex-flow:row wrap;
 }
 
 .event-card__left {
   flex: 0 0 42%; /* Fix the width of the left section to 40% of the card width */
+  
 }
 
 .event-card__image {
@@ -34,6 +36,8 @@
   color: #333;
   position: relative;
   padding-bottom: 5px; /* Space for underline */
+  width:60%;
+  display:inline-block;
 }
 
 .event-card__heading::after {

@@ -8,20 +8,12 @@
 .custom-arrow {
   color: #ff6347;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  display:inline-block;
   z-index: 1;
   transition: color 0.3s ease;
+
 }
 
-.custom-prev {
-  left: -50px;
-}
-
-.custom-next {
-  right: -50px;
-}
 
 .custom-arrow:hover {
   color: #ff4500;
@@ -29,4 +21,10 @@
 
 .custom-arrow:active {
   color: #d94b3a;
+}
+.custom-prev{
+  /* margin-right:3rem; */
+}
+.custom-next{
+  /* margin-left: 1rem; */
 }

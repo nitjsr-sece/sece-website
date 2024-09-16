@@ -19,16 +19,12 @@ import { motion } from "framer-motion";
 import { SparklesCore } from "./meteors";
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-
+import Navbar2 from "../../components/Navbar2"
 import Footer from "../../components/Footer/Footer";
 const HomePage = () => {
-  
 
   return (
     <>
-      {/* Drawer */}
-      <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
-      <MenuButton onClick={() => toggleDrawer(true)} />
 
       <div className="home-page">
       <Navbar2/>

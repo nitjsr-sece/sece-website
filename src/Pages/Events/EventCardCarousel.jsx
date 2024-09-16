@@ -1,12 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
-import EventCard from "./EventCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./EventCardCarousel.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-
+import "./EventCard.css";
 import events from "./Events";
 
 const EventCardCarousel = () => {
@@ -34,16 +33,30 @@ const EventCardCarousel = () => {
       <Slider {...settings} ref={sliderRef}>
         {events.map((event, index) => (
           <div key={index}>
-            <EventCard
-              image={event.image}
-              heading={event.name}
-              content={event.description}
-            />
+          
+      <div className="event-card">
+      <div className="event-card__left">
+     
+        <img src={event.image} alt={event.name} className="event-card__image" />
+      </div>
+      <div className="event-card__right">
+        <div className="event-card-header">
+      <div className="custom-arrow custom-prev" onClick={handlePrevClick}>
+        <ArrowBackIosIcon style={{ fontSize:"2.5rem" }} />
+      </div>
+        <h3 className="event-card__heading">{event.name}</h3>
+        <div className="custom-arrow custom-next" onClick={handleNextClick}>
+        <ArrowForwardIosIcon style={{ fontSize:"2.5rem" }} />
+      </div>
+      </div>
+        <p className="event-card__content">{event.description}</p>
+      </div>
+    </div>
           </div>
         ))}
       </Slider>
 
-      {/* Custom Arrows */}
+
       <div className="custom-arrow custom-prev" onClick={handlePrevClick}>
         <ArrowBackIosIcon style={{ fontSize: 20 }} />
       </div>

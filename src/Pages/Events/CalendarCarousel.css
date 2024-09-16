@@ -26,6 +26,10 @@
   font-size: 2rem;
   margin-bottom: 10px;
   color: #444;
+  width:20%;
+  margin-right: auto;
+  margin-left:auto;
+  display:inline-block;
 }
 
 .days-of-week {
@@ -87,10 +91,13 @@
 }
 
 .custom-arrow {
+
   position: absolute;
-  top: 23%;
+
   cursor: pointer;
+  display:inline-block;
 }
+
 
 .custom-prev {
   left: 100px;

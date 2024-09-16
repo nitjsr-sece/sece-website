@@ -7,7 +7,7 @@ import about_photo from "../../assets/about-photo.png";
 import nexus_photo from "../../assets/nexus-photo.png";
 import event_photos from "../../assets/event-photos.png";
 import aboutBg from "../../assets/about-bg.png";
-import Navbar2 from "../../components/Navbar2";
+
 import NavDrawer from "../../components/Navbar/NavDrawer";
 import MenuButton from "../../components/MenuButton/MenuButton";
 import { IoIosArrowRoundDown } from "react-icons/io";
@@ -22,17 +22,14 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 import Footer from "../../components/Footer/Footer";
 const HomePage = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
-  const toggleDrawer = (isOpen) => {
-    setDrawerOpen(isOpen);
-  };
+  
 
   return (
     <>
       {/* Drawer */}
-      {/* <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
-      <MenuButton onClick={() => toggleDrawer(true)} /> */}
+      <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
+      <MenuButton onClick={() => toggleDrawer(true)} />
+
       <div className="home-page">
       <Navbar2/>
 

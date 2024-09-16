@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react';
+import { motion } from 'framer-motion';
 import "./TeamPage.css"; 
 import Footer from "../../components/Footer/Footer";
 import { FaEnvelope, FaLinkedin } from 'react-icons/fa'; 
 import { Batch2K25, Batch2K26 } from './index';
-import Navbar2 from "../../components/Navbar2.jsx"
+import Navbar2 from "../../components/Navbar2.jsx";
+
 const TeamPage = () => {
   const batches = {
     'Batch 2K21-2K25': Batch2K25,
@@ -11,7 +13,6 @@ const TeamPage = () => {
   };
 
   const [selectedBatch, setSelectedBatch] = useState('Batch 2K21-2K25');
-
   const sectionRef = useRef(null);
 
   const handleBatchChange = (e) => {
@@ -23,10 +24,25 @@ const TeamPage = () => {
     sectionRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, 
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 }, 
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
     <div className="team-page scroll-smooth">
-        <Navbar2/>
-      <section className=" text-white  flex flex-col items-center">
+      <Navbar2 />
+      <section className="text-white flex flex-col items-center">
         <div className="team-page__links flex space-x-6">
           <a
             href="#section1"
@@ -63,18 +79,26 @@ const TeamPage = () => {
             </select>
           </div>
 
-          <div className="flex flex-wrap gap-12 justify-center items-center mt-16 member-card">
+          <motion.div
+            className="flex flex-wrap gap-12 justify-center items-center mt-16 member-card"
+            variants={containerVariants}
+            initial="hidden" 
+            animate="visible" 
+            key={selectedBatch} 
+          >
             {batches[selectedBatch].map((member, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="relative h-[350px] w-[275px] flex flex-col justify-center items-center shadow-lg rounded-2xl overflow-hidden group bg-white transition-all duration-300 hover:shadow-2xl"
+                variants={cardVariants} 
               >
                 <div className="h-[35%] w-full bg-gradient-to-br from-gray-600 to-gray-800 flex justify-center items-center"></div>
 
                 <div className="absolute top-8 z-10 bg-transparent">
                   <img
                     src={member.Img}
-                    alt={member.Name} loading='lazy'
+                    alt={member.Name}
+                    loading="lazy"
                     className="object-cover object-top h-[175px] w-[175px] rounded-full group-hover:scale-110 transition-transform duration-500 ease-in-out"
                   />
                 </div>
@@ -100,9 +124,9 @@ const TeamPage = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 

@@ -19,7 +19,6 @@ import { motion } from "framer-motion";
 import { SparklesCore } from "./meteors";
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import Navbar2 from "../../components/Navbar2"
 import Footer from "../../components/Footer/Footer";
 const HomePage = () => {
 
@@ -143,7 +142,7 @@ const HomePage = () => {
               <div className="event-btn-container">
               <a
                 href="/events"
-                className="events-button"
+                className="events-button transition-all ease-in duration-300"
               >
                 Explore Events
               </a>
@@ -191,7 +190,7 @@ const HomePage = () => {
               <div className="nexus-btn-container">
                 <a 
                   href="/nexus" 
-                  className="nexus-button"
+                  className="nexus-button transition-all ease-in duration-300"
                 >
                   Discover Nexus
                 </a>

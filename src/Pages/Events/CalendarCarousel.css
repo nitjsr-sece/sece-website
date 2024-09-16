@@ -26,7 +26,7 @@
   font-size: 2rem;
   margin-bottom: 10px;
   color: #444;
-  width:20%;
+  width:fit-content;
   margin-right: auto;
   margin-left:auto;
   display:inline-block;
@@ -92,17 +92,8 @@
 
 .custom-arrow {
 
-  position: absolute;
+ 
 
   cursor: pointer;
   display:inline-block;
-}
-
-
-.custom-prev {
-  left: 100px;
-}
-
-.custom-next {
-  right: 100px;
 }

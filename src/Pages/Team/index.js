@@ -1,9 +1,9 @@
 import Img1 from '../../assets/Member/PXL_20240911_162148868 - Ankit Kumar.jpg';
 import Img2 from '../../assets/Member/IMG_20240912_205949 - Manish Kumar.jpg';
-import Img3 from '../../assets/Member/IMG_20240601_195440 - Anshu Kumari.jpg';
+import Img3 from '../../assets/Member/anshu.jpg';
 import Img4 from '../../assets/Member/SECE - 043Rishav Kumar.jpg';
 import Img5 from '../../assets/Member/110346 - KAIF BEEN JAWED.jpg';
-import Img6 from '../../assets/Member/IMG_2038 - GIPASHU ARYAN.jpg';
+import Img6 from "../../assets/Member/gipashu.jpg"
 import Img7 from '../../assets/Member/20240809_200319 - Anurag Sarkar.jpg';
 import Img8 from '../../assets/Member/PHOTO-2024-02-18-20-14-38 - Shashwat.jpg';
 import Img9 from '../../assets/Member/IMG_0637-1-edited-small - Ashish Satpathy.jpg';
@@ -14,7 +14,7 @@ import Img13 from '../../assets/Member/IMG_20240307_121027 - Ankit Raj.jpg';
 import Img14 from '../../assets/Member/IMG_20240912_212854 - 092_Shruti Dwivedi.jpg';
 import Img15 from '../../assets/Member/IMG_8820_-_Shristy_Singh.jpg';
 import Img16 from '../../assets/Member/IMG-20240407-WA0011 - Indrani.jpg';
-import Img17 from '../../assets/Member/Abhisheksece - ABHISHEK KUMAR.jpeg';
+import Img17 from '../../assets/Member/abhishek.jpg';
 
 
 import Img18 from '../../assets/Member/IMG_20240912_170814 - Priyanshu Dev.jpg';
@@ -27,14 +27,14 @@ import Img24 from '../../assets/Member/IMG_20240805_023300-removebg-preview - Ma
 import Img25 from '../../assets/Member/IMG-20230305-WA0096~4 - Hrishita Singh.jpg';
 import Img26 from '../../assets/Member/8464255f-d473-4f2e-b6f5-c9edee5cf474 - JACKLINE D. KERKETTA.jpeg';
 import Img27 from '../../assets/Member/khushicrush - Khushi.jpg';
-import Img28 from '../../assets/Member/eceb2539-4f72-4d6b-b4c6-ed382214831d - NIKHIL KRISHNA VAMSI NUKALA.jpeg';
+import Img28 from '../../assets/Member/nikhil.jpg';
 import Img29 from '../../assets/Member/1000594762-01 - shrinkhala shringar.jpeg';
 import Img30 from '../../assets/Member/jayprofilepic - Jaykant Mishra.jpg';
 import Img31 from '../../assets/Member/IMG_20240825_002526 - MAINAK MISHRA.jpg';
 import Img32 from '../../assets/Member/IMG20231111193950~3 - GAUTAM KUMAR.jpg';
 import Img33 from '../../assets/Member/Photo from Yagnesh - M YAGNESH.jpg';
 import Img34 from '../../assets/Member/image - Neha Singh.jpg';
-import Img35 from '../../assets/Member/1f1b16c6-b8bd-415c-bb76-dbb049ef8cfd - NUNAVATHU VENKATA ADITYA.jpeg';
+import Img35 from "../../assets/Member/aditya.jpg";
 import Img36 from '../../assets/Member/IMG_20240912_222657 - Shreya Priyadarshni.jpg';
 import Img37 from '../../assets/Member/DSC_0217 - Danish Javed.jpg';
 import Img38 from '../../assets/Member/codqox - Ananya Kumar Lohia.jpg';
@@ -42,9 +42,8 @@ import Img39 from '../../assets/Member/IMG-20240516-WA0036~2 - MOUMITA MAJI.jpg'
 import Img40 from '../../assets/Member/IMG_20240912_213055 - Simran Gupta.jpg';
 import Img41 from '../../assets/Member/IMG20240703225006~3 - safi.jpg';
 import Img42 from '../../assets/Member/1726159904812 - Lanka Sri laxmi prasanna kumar.jpg';
-import Img43 from '../../assets/Member/PXL_20230920_084835000 - PRINCE AGASTYA JAISWAL.jpg';
-
-
+import Img43 from "../../assets/Member/prince.jpg"
+import hananiah from "../../assets/Member/hananiah.jpg"
 export const Batch2K25 = [
     {
         Name: "Ankit Kumar ",
@@ -169,6 +168,13 @@ export const Batch2K25 = [
 
 export const Batch2K26 = [
     {
+        Name: "L Prasanna Kumar",
+        POR: "Member",
+        Email: "lanka2003kumar@gmail.com",
+        LinkedIn: "https://www.linkedin.com/in/l-prasanna-kumar-755540252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        Img: Img42,
+    },
+    {
         Name: "Priyanshu Dev",
         POR: "Member",
         Email: "priyanshu.dev4396@gmail.com",
@@ -209,6 +215,13 @@ export const Batch2K26 = [
         Email: "majisubhomoy@gmail.com",
         LinkedIn: "",
         Img: Img23,
+    },
+    {
+        Name: "Hananiah Martin",
+        POR: "Member",
+        Email: "hananiahhoney5@gmail.com",
+        LinkedIn: "https://www.linkedin.com/in/athota-hananiah-martin-12267a248/",
+        Img: hananiah,
     },
     {
         Name: "Mayank Raj",
@@ -335,13 +348,6 @@ export const Batch2K26 = [
         Email: "simrangupta100029@gmail.com",
         LinkedIn: "https://www.linkedin.com/in/simran-gupta29",
         Img: Img40,
-    },
-    {
-        Name: "L Prasanna Kumar",
-        POR: "Member",
-        Email: "lanka2003kumar@gmail.com",
-        LinkedIn: "https://www.linkedin.com/in/l-prasanna-kumar-755540252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        Img: Img42,
     },
     {
         Name: "Prince Jaiswal",

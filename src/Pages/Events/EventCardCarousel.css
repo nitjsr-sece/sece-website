@@ -9,19 +9,19 @@
   color: #ff6347;
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 100%;
   transform: translateY(-50%);
   z-index: 1;
   transition: color 0.3s ease;
 }
 
-.custom-prev {
-  left: -50px;
+/* .custom-prev {
+  left: -00px;
 }
 
 .custom-next {
   right: -50px;
-}
+} */
 
 .custom-arrow:hover {
   color: #ff4500;

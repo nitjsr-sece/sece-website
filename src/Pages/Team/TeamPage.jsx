@@ -3,7 +3,7 @@ import "./TeamPage.css";
 import Footer from "../../components/Footer/Footer";
 import { FaEnvelope, FaLinkedin } from 'react-icons/fa'; 
 import { Batch2K25, Batch2K26 } from './index';
-
+import Navbar2 from "../../components/Navbar2.jsx"
 const TeamPage = () => {
   const batches = {
     'Batch 2K21-2K25': Batch2K25,
@@ -25,7 +25,8 @@ const TeamPage = () => {
 
   return (
     <div className="team-page scroll-smooth">
-      <section className="team-page__hero text-white py-20 flex flex-col items-center">
+        <Navbar2/>
+      <section className=" text-white  flex flex-col items-center">
         <div className="team-page__links flex space-x-6">
           <a
             href="#section1"
@@ -62,7 +63,7 @@ const TeamPage = () => {
             </select>
           </div>
 
-          <div className="flex flex-wrap gap-12 justify-center items-center mt-16">
+          <div className="flex flex-wrap gap-12 justify-center items-center mt-16 member-card">
             {batches[selectedBatch].map((member, index) => (
               <div
                 key={index}
@@ -73,16 +74,16 @@ const TeamPage = () => {
                 <div className="absolute top-8 z-10 bg-transparent">
                   <img
                     src={member.Img}
-                    alt={member.Name}
+                    alt={member.Name} loading='lazy'
                     className="object-cover object-top h-[175px] w-[175px] rounded-full group-hover:scale-110 transition-transform duration-500 ease-in-out"
                   />
                 </div>
 
                 <div className="h-[65%] w-full bg-gradient-to-r from-sky-500 to-blue-500 text-white flex flex-col items-center member-info">
-                  <h2 className="font-bold mb-2 member-name">{member.Name}</h2>
+                  <h2 className="font-bold mb-2 mt-5 member-name">{member.Name}</h2>
                   <p className="member-por">{member.POR}</p>
 
-                  <div className="flex gap-4 mt-2">
+                  <div className="flex gap-4 mt-5">
                     <a
                       href={`mailto:${member.Email}`}
                       className="text-white hover:text-gray-400 transition-colors"

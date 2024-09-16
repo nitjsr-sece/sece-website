@@ -45,10 +45,10 @@ const EventCardCarousel = () => {
 
       {/* Custom Arrows */}
       <div className="custom-arrow custom-prev" onClick={handlePrevClick}>
-        <ArrowBackIosIcon style={{ fontSize: 40 }} />
+        <ArrowBackIosIcon style={{ fontSize: 20 }} />
       </div>
       <div className="custom-arrow custom-next" onClick={handleNextClick}>
-        <ArrowForwardIosIcon style={{ fontSize: 40 }} />
+        <ArrowForwardIosIcon style={{ fontSize: 20 }} />
       </div>
     </div>
   );

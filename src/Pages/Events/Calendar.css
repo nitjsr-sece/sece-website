@@ -4,11 +4,11 @@
   align-items: center;
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
-  background-image: url("../../assets/about-bg.png"); /* Replace with your image path */
+  /* background-image: url("../../assets/about-bg.png");  */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .calendar-heading {

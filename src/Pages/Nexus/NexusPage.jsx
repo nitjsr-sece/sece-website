@@ -6,7 +6,7 @@ import MenuButton from "../../components/MenuButton/MenuButton";
 import "./NexusPage.css";
 import PhotoCarousel from "./PhotoCarousel";
 import EventCard from "./EventCard";
-
+import Navbar2 from "../../components/Navbar2.jsx"
 import sponsorLogo1 from "../../assets/NexusPage/sponsor1.png"
 import sponsorLogo2 from "../../assets/NexusPage/sponsor2.png";
 import sponsorLogo3 from "../../assets/NexusPage/sponsor3.png";
@@ -20,8 +20,9 @@ const NexusPage = () => {
   };
   return (
     <div className="nexus-container">
-      <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
-      <MenuButton onClick={() => toggleDrawer(true)} />
+      <Navbar2/>
+      {/* <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} /> */}
+      {/* <MenuButton onClick={() => toggleDrawer(true)} /> */}
       <section className="nexus-hero">
         <nav className="nexus-nav">
           <a href="#events">Events</a>

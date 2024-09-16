@@ -35,7 +35,7 @@ const Calendar = () => {
 
   return (
     <div className="calendar-container">
-      <h1 className="calendar-heading">Events Calendar</h1>
+      <h1 className="calendar-heading">Events Calendar </h1>
       <div className="calendar">
         {months.map((month, index) => (
           <div

@@ -7,16 +7,15 @@ import "./EventsPage.css"; // Import the CSS file for styling
 import EventCardCarousel from "./EventCardCarousel.jsx";
 import Calendar from "./Calendar.jsx";
 import CalendarCarousel from "./CalendarCarousel.jsx";
-
+import Navbar2 from "../../components/Navbar2.jsx";
 const EventsPage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const toggleDrawer = (isOpen) => {
     setDrawerOpen(isOpen);
   };
 
-  return (
+  return ( 
     <div className="events-page">
-      {/* Drawer */}
       <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
       <MenuButton onClick={() => toggleDrawer(true)} />
 
@@ -39,7 +38,7 @@ const EventsPage = () => {
 
       {/* Second Section: Events List */}
       <div className="events-page__content-section" id="events">
-        <h2 className="events-page__section-heading">Upcoming Events</h2>
+        <h2 className="events-page__section-heading">Events</h2>
         <EventCardCarousel />
         <CalendarCarousel />
       </div>

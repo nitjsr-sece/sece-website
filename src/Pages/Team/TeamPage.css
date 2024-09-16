@@ -5,7 +5,7 @@
 
 /* First section with background image */
 .team-page__hero {
-  background-image: url("../../assets/Member/Batch2k21-22.JPG"); /* Replace with your image path */
+  /* background-image: url("../../assets/Member/Batch2k21-22.JPG"); */
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -68,11 +68,12 @@
 }
 @media only screen and (max-width:850px){
   .member-info{
-    padding-top:12rem;
+    padding-top:10rem;
   }
   .member-name{
     font-size: 3.125rem;
     line-height: 2.75rem;
+    padding-top: 6rem;
   }
   .member-por{
     font-size: 1.875rem;

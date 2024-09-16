@@ -4,7 +4,6 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "./CalendarCarousel.css";
 
-
 const months = [
   {
     name: "January",
@@ -70,7 +69,7 @@ const CalendarCarousel = () => {
 
   return (
     <div className="calendar-carousel">
-      <h1 className="calendar-heading">Events Calendar 2023</h1>
+      <h1 className="calendar-heading">Events Calendar 2024</h1>
       <Slider {...settings} ref={sliderRef}>
         {months.map((month, index) => (
           <div key={index} className="month-card">
@@ -127,10 +126,10 @@ const CalendarCarousel = () => {
 
       {/* Custom Arrows */}
       <div className="custom-arrow custom-prev" onClick={handlePrevClick}>
-        <ArrowBackIosIcon style={{ fontSize: 40 }} />
+        <ArrowBackIosIcon style={{ fontSize: 20 }} />
       </div>
       <div className="custom-arrow custom-next" onClick={handleNextClick}>
-        <ArrowForwardIosIcon style={{ fontSize: 40 }} />
+        <ArrowForwardIosIcon style={{ fontSize: 20 }} />
       </div>
     </div>
   );

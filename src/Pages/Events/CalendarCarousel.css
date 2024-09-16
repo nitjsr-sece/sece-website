@@ -1,17 +1,17 @@
 .calendar-carousel {
   position: relative;
-  max-width: 800px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .calendar-heading {
   text-align: center;
   font-family: "Lobster", cursive;
-  font-size: 2.5rem;
+  font-size: 1.87rem;
   color: #333;
   margin-bottom: 20px;
 }
@@ -88,15 +88,14 @@
 
 .custom-arrow {
   position: absolute;
-  top: 27%;
-  transform: translateY(-50%);
+  top: 23%;
   cursor: pointer;
 }
 
 .custom-prev {
-  left: 150px;
+  left: 100px;
 }
 
 .custom-next {
-  right: 150px;
+  right: 100px;
 }

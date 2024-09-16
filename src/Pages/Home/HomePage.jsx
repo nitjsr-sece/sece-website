@@ -25,10 +25,10 @@ const HomePage = () => {
 
   return (
     <>
-
+       
       <div className="home-page">
+   
       <Navbar2/>
-
         {/* First Section */}
         <div className="h-[43.45rem] relative w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
       <div className="w-full absolute inset-0 h-screen">

@@ -55,14 +55,6 @@ const EventCardCarousel = () => {
           </div>
         ))}
       </Slider>
-
-
-      <div className="custom-arrow custom-prev" onClick={handlePrevClick}>
-        <ArrowBackIosIcon style={{ fontSize: 20 }} />
-      </div>
-      <div className="custom-arrow custom-next" onClick={handleNextClick}>
-        <ArrowForwardIosIcon style={{ fontSize: 20 }} />
-      </div>
     </div>
   );
 };

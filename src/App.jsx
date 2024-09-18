@@ -11,16 +11,16 @@ import Masterclass from "./Pages/Placement_masterclass/PMC.jsx";
 import "./index.css";
 
 function App() {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  // const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const toggleDrawer = (isOpen) => {
-    setDrawerOpen(isOpen);
-  };
+  // const toggleDrawer = (isOpen) => {
+  //   setDrawerOpen(isOpen);
+  // };
   return (
     <>
     <Router>
-    <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
-    <MenuButton onClick={() => toggleDrawer(true)} />
+    {/* <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} /> */}
+    {/* <MenuButton onClick={() => toggleDrawer(true)} /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/events" element={<EventsPage />} />

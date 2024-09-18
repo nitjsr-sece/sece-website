@@ -19,24 +19,15 @@ import { motion } from "framer-motion";
 import { SparklesCore } from "./meteors";
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-
 import Footer from "../../components/Footer/Footer";
 const HomePage = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
-  const toggleDrawer = (isOpen) => {
-    setDrawerOpen(isOpen);
-  };
 
   return (
     <>
-      {/* Drawer */}
-      <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
-      <MenuButton onClick={() => toggleDrawer(true)} />
-
+       
       <div className="home-page">
+   
       <Navbar2/>
-
         {/* First Section */}
         <div className="h-[43.45rem] relative w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
       <div className="w-full absolute inset-0 h-screen">
@@ -151,7 +142,7 @@ const HomePage = () => {
               <div className="event-btn-container">
               <a
                 href="/events"
-                className="events-button"
+                className="events-button transition-all ease-in duration-300"
               >
                 Explore Events
               </a>
@@ -199,7 +190,7 @@ const HomePage = () => {
               <div className="nexus-btn-container">
                 <a 
                   href="/nexus" 
-                  className="nexus-button"
+                  className="nexus-button transition-all ease-in duration-300"
                 >
                   Discover Nexus
                 </a>

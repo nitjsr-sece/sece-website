@@ -240,7 +240,7 @@ export const Batch2K26 = [
     {
         Name: "Jackline D Kerketta",
         POR: "Member",
-        Email: "2022ugec031@nitjsr.com",
+        Email: "2022ugec031@nitjsr.ac.in",
         LinkedIn: "https://www.linkedin.com/in/jackline-d-kerketta-3ba184268",
         Img: Img26,
     },

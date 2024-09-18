@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import MemoryIcon from "@mui/icons-material/Memory";
 import GroupsIcon from "@mui/icons-material/Groups";
+import WorkIcon from '@mui/icons-material/Work';
 import InfoIcon from "@mui/icons-material/Info";
 import HomeIcon from "@mui/icons-material/Home";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
@@ -24,6 +25,7 @@ const NavDrawer = ({ open, onClose }) => {
     { text: "Events", icon: <EmojiEventsIcon />, route: "/events" },
     { text: "Nexus", icon: <MemoryIcon />, route: "/nexus" },
     { text: "Team", icon: <GroupsIcon />, route: "/team" },
+    { text:"Placement Masterclass", icon: <WorkIcon />, route:"/placement_masterclass"}
   ];
 
   const drawerVariants = {

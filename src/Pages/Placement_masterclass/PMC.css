@@ -42,6 +42,8 @@
     z-index: 2;
   }
   .person-img {
+    object-fit: cover;
+    object-position: top;
     border-radius:8px;
     width: 80px;
     height: 80px;
@@ -67,6 +69,7 @@
     font-size: 0.9rem;
   }
   .company-logo{
+    object-fit: contain;
     width:20%;
     height:70%;
   }

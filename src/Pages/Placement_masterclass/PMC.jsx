@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import './PMC.css';
 import Navbar2 from "../../components/Navbar2";
 import Footer from '../../components/Footer/Footer';
@@ -27,121 +27,141 @@ import vikash_kumar from '../../assets/placement_masterclass/vikash-kumar.png';
 import vikash_kumar_pmc from '../../assets/placement_masterclass/vikash-kumar-pmc.jpg';
 import deshaw from '../../assets/placement_masterclass/deshaw.jpg';
 
-import { MoreVert } from '@mui/icons-material';
-const MasterclassCard = ({ name, image, logo ,pmc}) => {
+const MasterclassCard = ({ name, image, logo, pmc, index }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const openImage = () => {
-      setIsOpen(true);
+        setIsOpen(true);
     };
-  
-    const closeImage = () => {
-      setIsOpen(false);
-    };
-  return (
-    <>
-    <div className="masterclass-card border rounded-lg flex items-center justify-between p-4 shadow-lg">
-      <div className="flex items-center">
-        <img src={image} alt={name} className="person-img" />
-        <div>
-          <h3 className="text-lg font-semibold">{name}</h3>
-          <button className="mt-2 px-4 py-2 text-white rounded-lg shadow-md" onClick={openImage}>
-            Read More
-          </button>
-        </div>
-      </div>
-      <img src={logo} alt="Logo" className="company-logo" />
 
-    
-    </div>
-      {isOpen && (
-        <div className="overlay">
-          <span className="close-button" onClick={closeImage}>
-            &times;
-          </span>
-          <img 
-            src={pmc} 
-            alt="Large view" 
-            className="large-image" 
-          />
-        </div>
-      )}
-</>
-  );
+    const closeImage = () => {
+        setIsOpen(false);
+    };
+
+    const animationDirection = index % 2 === 0 ? { x: 500 } : { x: -500 };
+
+    return (
+        <>
+            <motion.div
+                className="masterclass-card border rounded-lg flex items-center justify-between p-4 shadow-lg mb-8"
+                initial={{ opacity: 0, ...animationDirection }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.75, delay: index * 0.2 }}
+            >
+                <div className="flex items-center">
+                    <img src={image} alt={name} className="person-img" />
+                    <div>
+                        <h3 className="text-lg font-semibold">{name}</h3>
+                        <button className="mt-2 px-4 py-2 text-white rounded-3xl shadow-md hover:scale-110 transition-all ease-in duration-300" onClick={openImage}>
+                            Read More
+                        </button>
+                    </div>
+                </div>
+                <img src={logo} alt="Logo" className="company-logo" />
+            </motion.div>
+
+            {isOpen && (
+                <motion.div
+                    className="overlay"
+                >
+                    <span className="close-button" onClick={closeImage}>
+                        &times;
+                    </span>
+                    <motion.img 
+                        src={pmc} 
+                        alt="Large view" 
+                        className="large-image"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1 }}
+                    />
+                </motion.div>
+            )}
+        </>
+    );
 };
 
 const Masterclass = () => {
-    const PMCData=[
+    const PMCData = [
         {
-            name:"Ronit Ranjan",
-            image:ronit,
-            logo:mv,
-            pmc:ronit_mv_pmc
+            name: "Ronit Ranjan",
+            image: ronit,
+            logo: mv,
+            pmc: ronit_mv_pmc
         },
         {
-            name:"Mohit Ranjan",
-            image:mohit_ranjan,
-            logo:paltech,
-            pmc:mohit_ranjan_pmc
+            name: "Mohit Ranjan",
+            image: mohit_ranjan,
+            logo: paltech,
+            pmc: mohit_ranjan_pmc
         },
         {
-          name:"Adiya Kumar",
-          image:aditya_kumar,
-          logo:intuit,
-          pmc:adiya_kumar_pmc
+            name: "Adiya Kumar",
+            image: aditya_kumar,
+            logo: intuit,
+            pmc: adiya_kumar_pmc
         },
         {
-          name:"Yogesh Kumar",
-          image:yogesh_kumar,
-          logo:arcesium,
-          pmc:yogesh_kumar_pmc
+            name: "Yogesh Kumar",
+            image: yogesh_kumar,
+            logo: arcesium,
+            pmc: yogesh_kumar_pmc
         },
         {
-          name:"Rohit Kumar",
-          image:rohit_kumar,
-          logo:Lowes,
-          pmc:rohit_kumar_pmc
+            name: "Rohit Kumar",
+            image: rohit_kumar,
+            logo: Lowes,
+            pmc: rohit_kumar_pmc
         },
         {
-          name:"Ishika Kumari",
-          image:ishika_kumari,
-          logo:invesco,
-          pmc:ishika_kumari_pmc
+            name: "Ishika Kumari",
+            image: ishika_kumari,
+            logo: invesco,
+            pmc: ishika_kumari_pmc
         },
         {
-          name:"Akanksha Priya",
-          image:akanksha_priya,
-          logo:Lowes,
-          pmc:akanksha_priya_pmc
+            name: "Akanksha Priya",
+            image: akanksha_priya,
+            logo: Lowes,
+            pmc: akanksha_priya_pmc
         },
         {
-          name:"Vikash Kumar",
-          image:vikash_kumar,
-          logo:deshaw,
-          pmc:vikash_kumar_pmc
+            name: "Vikash Kumar",
+            image: vikash_kumar,
+            logo: deshaw,
+            pmc: vikash_kumar_pmc
         }
-    ]
-  return (
-    <div className="masterclass-container">
-      <Navbar2/>
-      <h1 className=" pmc_heading">Placement Masterclass</h1>
-      <p className="text-center mb-8 by-sece">By SECE</p>
-      { 
-     PMCData.map((data,i)=>(
-       <MasterclassCard
-       name={data.name}
-       image={data.image}
-       logo={data.logo}
-       pmc={data.pmc}
-       />
-    
-      ))
-    
-}
-<Footer/>
-    </div>
-   
-  );
+    ];
+
+    return (
+        <div className="masterclass-container">
+            <Navbar2 />
+            <motion.h1 className="pmc_heading"
+            initial={{ opacity: 0, y: -200 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75 }}
+            >Placement Masterclass</motion.h1>
+            <motion.p className="text-center mb-12 by-sece"
+            initial={{ opacity: 0, y: -200 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            >By SECE</motion.p>
+            {PMCData.map((data, i) => (
+                <MasterclassCard
+                    key={i}
+                    index={i}
+                    name={data.name}
+                    image={data.image}
+                    logo={data.logo}
+                    pmc={data.pmc}
+                />
+            ))}
+            <div className='pt-12'>
+            <Footer />
+            </div>
+            
+        </div>
+    );
 };
 
 export default Masterclass;

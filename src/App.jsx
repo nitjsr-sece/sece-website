@@ -7,7 +7,7 @@ import NexusPage from "./Pages/Nexus/NexusPage.jsx";
 import TeamPage from "./Pages/Team/TeamPage.jsx";
 import NavDrawer from "./components/Navbar/NavDrawer.jsx";
 import MenuButton from "./components/MenuButton/MenuButton";
-
+import Masterclass from "./Pages/Placement_masterclass/PMC.jsx";
 import "./index.css";
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
         <Route path="/nexus" element={<NexusPage />} />
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/team" element={<TeamPage />} />
+        <Route path="/placement_masterclass" element={<Masterclass/>}/>
       </Routes>
     </Router>
     </>

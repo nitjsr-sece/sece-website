@@ -42,14 +42,14 @@ const EventCardCarousel = () => {
       <div className="event-card__right">
         <div className="event-card-header">
       <div className="custom-arrow custom-prev" onClick={handlePrevClick}>
-        <ArrowBackIosIcon style={{ fontSize:"2.5rem" }} />
+        <ArrowBackIosIcon style={{ fontSize:"1.5rem" }} />
       </div>
         <h3 className="event-card__heading">{event.name}</h3>
         <div className="custom-arrow custom-next" onClick={handleNextClick}>
-        <ArrowForwardIosIcon style={{ fontSize:"2.5rem" }} />
+        <ArrowForwardIosIcon style={{ fontSize:"1.5rem" }} />
       </div>
       </div>
-        <p className="event-card__content">{event.description}</p>
+        <p className="event-card__content" style={{paddingTop:"2rem"}}>{event.description}</p>
       </div>
     </div>
           </div>

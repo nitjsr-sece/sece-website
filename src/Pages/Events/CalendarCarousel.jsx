@@ -74,11 +74,11 @@ const CalendarCarousel = () => {
         {months.map((month, index) => (
           <div key={index} className="month-card">
             <div className="custom-arrow custom-prev" onClick={handlePrevClick} style={{marginRight:"3rem"}}>
-        <ArrowBackIosIcon style={{ fontSize: "2.5rem" }} />
+        <ArrowBackIosIcon style={{ fontSize: "1.5rem" }} />
       </div>
             <h2 className="month-name">{month.name}</h2>
             <div className="custom-arrow custom-next" onClick={handleNextClick} style={{marginLeft:"3rem"}}>
-        <ArrowForwardIosIcon style={{ fontSize: "2.5rem" }} />
+        <ArrowForwardIosIcon style={{ fontSize: "1.5rem" }} />
       </div>
             <div className="days-of-week">
               {daysOfWeek.map((day, index) => (

@@ -25,7 +25,8 @@ const NavDrawer = ({ open, onClose }) => {
     { text: "Events", icon: <EmojiEventsIcon />, route: "/events" },
     { text: "Nexus", icon: <MemoryIcon />, route: "/nexus" },
     { text: "Team", icon: <GroupsIcon />, route: "/team" },
-    { text:"Placement Masterclass", icon: <WorkIcon />, route:"/placement_masterclass"}
+    { text:"Placement Masterclass", icon: <WorkIcon />, route:"/placement_masterclass"},
+    { text:"Alumni", icon: <GroupsIcon/>, route:"/alumni"}
   ];
 
   const drawerVariants = {

@@ -1,0 +1,94 @@
+import { useState,useRef} from "react";
+import React from "react";
+import Navbar2 from "../../components/Navbar2";
+import { Batch2k19, Batch2k20 } from "../Team/index.js";
+const Alumni = () => {
+    const batches = {
+        'Batch 2K19-2K23': Batch2k19,
+        'Batch 2K20-2K24': Batch2k20,
+      };
+    const handleLinkClick = (batch) => {
+        setSelectedBatch(batch);
+        sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      };
+      const [selectedBatch, setSelectedBatch] = useState('Batch 2K19-2K23');
+      const sectionRef = useRef(null);
+    
+      const handleBatchChange = (e) => {
+        setSelectedBatch(e.target.value);
+      };
+  return (
+    <>
+    <Navbar2/>
+    <section className="text-white flex flex-col items-center">
+        
+        <div className="team-page__links flex space-x-6">
+          <a
+            href="#section1"
+            className="hover:underline hover:text-sky-500 text-lg cursor-pointer"
+            onClick={() => handleLinkClick('Batch 2K19-2K23')}
+          >
+            Batch 2K19-2k23
+          </a>
+          <a
+            href="#section2"
+            className="hover:underline hover:text-sky-500 text-lg cursor-pointer"
+            onClick={() => handleLinkClick('Batch 2K20-2K24')}
+          >
+            Batch 2K20-2k24
+          </a>
+        </div>
+      </section>
+      <div className="mb-6 flex justify-center items-center " style={{marginTop:"10rem"}}>
+            <select
+              className="px-6 py-3 rounded-full border border-gray-300 text-gray-700 text-xl bg-white transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
+              value={selectedBatch}
+              onChange={handleBatchChange}
+            >
+              {Object.keys(batches).map((batch) => (
+                <option key={batch} value={batch}>
+                  {batch}
+                </option>
+              ))}
+            </select>
+          </div>
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg" style={{width:"60rem",margin:"auto",marginTop:"5rem"}}>
+        
+    <h2 className='text-sky-500 text-xl font-bold tracking-wide mb-6 py-3' style={{textAlign:"center",margin:"auto"}}>Creators of Community, Architects of Tomorrow</h2>
+        
+      <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+            <th scope="col" class="px-6 py-3">
+              Name
+            </th>
+            <th scope="col" class="px-6 py-3">
+              POR
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+        {batches[selectedBatch].map((member, index) => (
+          <tr 
+            key={index} 
+            className={`${index % 2 === 0 ? 'odd:bg-white odd:dark:bg-gray-900' : 'even:bg-gray-50 even:dark:bg-gray-800'} border-b dark:border-gray-700`}
+          >
+            <th 
+              scope="row" 
+              className="px-6 py-4 font-bold text-black-900 whitespace-nowrap dark:text-white" 
+            >
+              {member.name}
+            </th>
+            <td class="px-6 py-4">
+                    {member.post}
+            </td>
+          </tr>
+        ))}
+        </tbody>
+      </table>
+    </div>
+    </>
+  );
+};
+
+export default Alumni;

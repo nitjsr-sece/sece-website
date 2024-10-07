@@ -44,6 +44,53 @@ import Img41 from '../../assets/Member/IMG20240703225006~3 - safi.jpg';
 import Img42 from '../../assets/Member/1726159904812 - Lanka Sri laxmi prasanna kumar.jpg';
 import Img43 from "../../assets/Member/prince.jpg"
 import hananiah from "../../assets/Member/hananiah.jpg"
+export const Batch2k19=[
+    {name:"Soumen Patra",post:"President"},
+    {name:"Trishurya Saha",post:"Vice President"},
+    {name:"Ayush Kumar Choudhary",post:"General Secretary"},
+    {name:"Aman Rajak",post:"Treasurer"},
+    {name:"Raman Kumar",post:"Technical Secretary"},
+    {name:"Indra Karan",post:"CA Head"},
+    {name:"Hitika Kumari",post:"CA Head"},
+    {name:"Aditya Raj Srivastava",post:"App Dev Head"},
+    {name:"Arpit Raj Ambasta",post:"Web dev Head"},
+    {name:"Naved Sohail",post:"CP Head"},
+    {name:"Ayushi Sinha",post:"Conent Head"},
+    {name:"Nidhi Bathwal",post:"PR Head"},
+    {name:"Yash Burnwal",post:"CP Head"},
+    {name:"Priya Singh",post:"Creative Head"},
+    {name:"Shashank Sagar",post:"Content Head"},
+    {name:"Prathyusha Madineni",post:"Content Head"},
+    {name:"Athota Sarala",post:"PR Head"},
+    {name:"Shivachandra",post:"EM Head"},
+    {name:"Mohit Mayank",post:"Member"},
+]
+export const Batch2k20=[
+    {name:"Mohit Ranjan",post:"President"},
+    {name:"Arpit Kumar",post:"Vice President"},
+    {name:"Shruthi Kumari",post:"General Secretary"},
+    {name:"Yogesh Kumar",post:"Treasurer"},
+    {name:"Vikash Kumar",post:"Technical Secretary"},
+    {name:"Ankit Kumar",post:"Web dev Head"},
+    {name:"Aditya Kumar",post:"CP Head"},
+    {name:"Akanksha Priya",post:"Conent Head"},
+    {name:"Omkar Kumar Pandey",post:"CA Head"},
+    {name:"Naman Raj",post:"Creative Head"},
+    {name:"Karan Kumar",post:"EM Head"},
+    {name:"Nadini Rastogi",post:"Member"},
+    {name:"Amitha",post:"Member"},
+    {name:"Gautam",post:"Member"},
+    {name:"Jaychandra",post:"Member"},
+    {name:"Nivedita",post:"Member"},
+    {name:"Rohit Kumar",post:"Member"},
+    {name:"Sumit",post:"Member"},
+    {name:"Nilesh Dawn",post:"Member"},
+    {name:"Pratik Kumar",post:"Member"},
+    {name:"Ishika Kumari",post:"Member"},
+    {name:"Skand Sharma",post:"Member"},
+    {name:"Ayush Ambasta",post:"Member"},
+    {name:"Rohith Kumar",post:"Member"}
+]
 export const Batch2K25 = [
     {
         Name: "Ankit Kumar ",

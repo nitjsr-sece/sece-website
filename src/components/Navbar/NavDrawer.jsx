@@ -21,7 +21,7 @@ const NavDrawer = ({ open, onClose }) => {
 
   // Menu items without the Calendar
   const menuItems = [
-    { text: "Home", icon: <HomeIcon />, route: "/" },
+    { text: "Home", icon: <HomeIcon/>, route: "/" },
     { text: "Events", icon: <EmojiEventsIcon />, route: "/events" },
     { text: "Nexus", icon: <MemoryIcon />, route: "/nexus" },
     { text: "Team", icon: <GroupsIcon />, route: "/team" },
@@ -77,11 +77,12 @@ const NavDrawer = ({ open, onClose }) => {
                 className="group cursor-pointer"
                 onClick={() => handleNavigation(item.route)} // Navigate on click
               >
-                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemIcon className="list-item-icon">{item.icon}</ListItemIcon>
                 <ListItemText
+                  disableTypography
                   primary={item.text}
-                  className="transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:text-gray-300 navbar-contents"
-                  style={{ padding: "0.2rem" }}
+                  className="transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:text-gray-300 navbar-contents list-item-text"
+                  style={{ padding: "0.2rem"}}
                 />
               </ListItem>
             </motion.div>

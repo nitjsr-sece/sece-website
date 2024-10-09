@@ -15,6 +15,15 @@ const months = [
     ],
   },
   {
+   name: "April",
+   days:31,
+   startDay:1,
+   events:[
+    {startDate: 6 , endDate:6, name:"Breadboard Blitz, IOT Innovate"},
+    {startDate:7 , endDate:7, name:"Maze Marathon"}
+   ]
+  },
+  {
     name: "June",
     days: 30,
     startDay: 3, // Wednesday

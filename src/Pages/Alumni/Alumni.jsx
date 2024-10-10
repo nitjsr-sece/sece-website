@@ -61,7 +61,7 @@ const Alumni = () => {
               ))}
             </select>
           </div>
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg" style={{width:"60rem",margin:"auto",marginTop:"5rem",zoom:"1.3"}}>
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg" style={{width:"60rem",margin:"auto",marginTop:"5rem",zoom:"1.0"}}>
         
     <h2 className='text-sky-500 text-xl font-bold tracking-wide mb-6 py-3' style={{textAlign:"center",margin:"auto"}}>Creators of Community, Architects of Tomorrow</h2>
         

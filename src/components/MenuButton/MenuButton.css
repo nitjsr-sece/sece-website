@@ -22,7 +22,7 @@
 .menu-line {
   width: 20px; /* Width of the lines */
   height: 3px; /* Thickness of the lines */
-  background-color: blue;/* Color of the lines */
+  background-color: rgb(7, 3, 62);/* Color of the lines */
   border-radius: 2px; /* Rounded corners for the lines */
   z-index: 1000;
 }

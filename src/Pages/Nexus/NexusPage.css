@@ -37,6 +37,8 @@
 }
 
 .nexus-content {
+  /* background-color: #ff6347; */
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   gap: 40px;

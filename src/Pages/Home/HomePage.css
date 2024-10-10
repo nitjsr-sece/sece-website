@@ -352,9 +352,9 @@ img {
     zoom: 1.5;
   } */
 }
-@media only screen and(max-width:450px) {
+@media only screen and  (max-width:450px) {
   .hero-heading{
-    margin: auto;
+    margin-left: 12rem;
   }
   
 }
@@ -393,6 +393,11 @@ img {
   font-size: 1.6rem;
   width:37rem;
 }
+/* @media only screen and (max-width:450px) {
+  .tagline{
+    padding-left: 10rem;
+  }
+} */
 .tagline:hover{
   cursor: pointer;
 }

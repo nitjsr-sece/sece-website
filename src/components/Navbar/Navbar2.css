@@ -4,3 +4,13 @@
 .nav-main{
     background-color: black;
 }
+@media only screen and (max-width: 450px){
+    #navbar{
+        display: none;
+    }
+  }
+/* @media only screen and (min-width: 1250px){
+    #navbar{
+        display: none;
+    }
+  } */

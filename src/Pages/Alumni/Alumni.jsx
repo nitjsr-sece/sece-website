@@ -1,6 +1,9 @@
 import { useState,useRef} from "react";
 import React from "react";
 import Navbar2 from "../../components/Navbar2";
+import MenuButton from "../../components/MenuButton/MenuButton";
+import NavDrawer from "../../components/Navbar/NavDrawer.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
 import { Batch2k19, Batch2k20 } from "../Team/index.js";
 const Alumni = () => {
     const batches = {
@@ -17,9 +20,15 @@ const Alumni = () => {
       const handleBatchChange = (e) => {
         setSelectedBatch(e.target.value);
       };
+      const [drawerOpen, setDrawerOpen] = useState(false);
+      const toggleDrawer = (isOpen) => {
+          setDrawerOpen(isOpen);
+      };
   return (
     <>
     <Navbar2/>
+    <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
+    <MenuButton onClick={() => toggleDrawer(true)} className="hamburger-home"/>
     <section className="text-white flex flex-col items-center">
         
         <div className="team-page__links flex space-x-6">
@@ -52,7 +61,7 @@ const Alumni = () => {
               ))}
             </select>
           </div>
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg" style={{width:"60rem",margin:"auto",marginTop:"5rem"}}>
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg" style={{width:"60rem",margin:"auto",marginTop:"5rem",zoom:"1.3"}}>
         
     <h2 className='text-sky-500 text-xl font-bold tracking-wide mb-6 py-3' style={{textAlign:"center",margin:"auto"}}>Creators of Community, Architects of Tomorrow</h2>
         
@@ -86,6 +95,9 @@ const Alumni = () => {
         ))}
         </tbody>
       </table>
+    </div>
+    <div className='pt-12'>
+        <Footer />
     </div>
     </>
   );

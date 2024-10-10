@@ -8,6 +8,7 @@ import EventCardCarousel from "./EventCardCarousel.jsx";
 import Calendar from "./Calendar.jsx";
 import CalendarCarousel from "./CalendarCarousel.jsx";
 import Navbar2 from "../../components/Navbar2.jsx";
+import EventsMenu from "./EventsMenu.jsx";
 const EventsPage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const toggleDrawer = (isOpen) => {
@@ -17,7 +18,7 @@ const EventsPage = () => {
   return ( 
     <div className="events-page">
       <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
-      <MenuButton onClick={() => toggleDrawer(true)} />
+      <EventsMenu onClick={() => toggleDrawer(true)} />
 
       {/* First Section */}
       <div className="events-page__hero-section">
@@ -26,11 +27,11 @@ const EventsPage = () => {
             Join the Excitement: SECE Society Events
           </h1>
           <div className="events-page__links-container">
+            <a href="/" className="events-page__nav-link">
+              Home
+            </a>
             <a href="#events" className="events-page__nav-link">
               Events
-            </a>
-            <a href="#footer" className="events-page__nav-link">
-              Contact
             </a>
           </div>
         </div>

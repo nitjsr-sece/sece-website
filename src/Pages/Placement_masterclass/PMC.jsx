@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './PMC.css';
+import NavDrawer from "../../components/Navbar/NavDrawer.jsx";
+import MenuButton from "../../components/MenuButton/MenuButton";
 import Navbar2 from "../../components/Navbar2";
 import Footer from '../../components/Footer/Footer';
 import ronit from '../../assets/placement_masterclass/ronit.png';
@@ -132,10 +134,16 @@ const Masterclass = () => {
             pmc: vikash_kumar_pmc
         }
     ];
+    const [drawerOpen, setDrawerOpen] = useState(false);
+    const toggleDrawer = (isOpen) => {
+        setDrawerOpen(isOpen);
+    };
 
     return (
         <div className="masterclass-container">
             <Navbar2 />
+            <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
+             <MenuButton onClick={() => toggleDrawer(true)} className="hamburger-home"/>
             <motion.h1 className="pmc_heading"
             initial={{ opacity: 0, y: -200 }}
             animate={{ opacity: 1, y: 0 }}

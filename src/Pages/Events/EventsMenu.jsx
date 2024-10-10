@@ -1,7 +1,7 @@
 import React from 'react'
-import "./MenuButton.css"
+import "./EventsMenu.css"
 
-const MenuButton = ({onClick}) => {
+const EventsMenu = ({onClick}) => {
   return (
     <>
     <div class="menu-button" onClick={() => {
@@ -17,4 +17,4 @@ const MenuButton = ({onClick}) => {
   )
 }
 
-export default MenuButton
+export default EventsMenu

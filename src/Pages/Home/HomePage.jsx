@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./HomePage.css";
-import logo from "../../assets/logo-moon.png";
+import logo from "../../assets/logo-white.png"
 import hand from "../../assets/hand.png";
 import about_logo from "../../assets/about-logo.png";
 import about_photo from "../../assets/about-photo.png";
 import nexus_photo from "../../assets/nexus-photo.png";
 import event_photos from "../../assets/event-photos.png";
-
-import Navbar2 from "../../components/Navbar2";
-import NavDrawer from "../../components/Navbar/NavDrawer";
+import NavDrawer from "../../components/Navbar/NavDrawer.jsx";
 import MenuButton from "../../components/MenuButton/MenuButton";
+import Navbar2 from "../../components/Navbar2";
 import { IoIosArrowRoundDown } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
@@ -21,12 +20,17 @@ import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrow
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Footer from "../../components/Footer/Footer";
 const HomePage = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const toggleDrawer = (isOpen) => {
+    setDrawerOpen(isOpen);
+  };
 
   return (
     <>
-       
+       <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
+       <MenuButton onClick={() => toggleDrawer(true)} className="hamburger-home"/>
       <div className="home-page">
-   
+    
       <Navbar2/>
         {/* First Section */}
         <div className="h-[43.45rem] relative w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
@@ -62,14 +66,14 @@ const HomePage = () => {
           <div className="logo-hand">
             <motion.div className="logo">
               <motion.img 
-              whileInView={{ opacity: 1, y: -25}}
+              whileInView={{ opacity: 1, y: -35}}
               initial={{ opacity: 0, y: -150}}
               transition={{ duration: 1}}
               src={logo} alt="Society Logo" />
             </motion.div>
             <div className="hand">
               <motion.img 
-              whileInView={{ opacity: 1, y: 0}}
+              whileInView={{ opacity: 1, y: 30}}
               initial={{ opacity: 0, y: 150}}
               transition={{ duration: 1}}
               src={hand} alt="hand image" />

@@ -1,0 +1,29 @@
+.menu-button {
+    position: fixed; /* Fixes the button's position relative to the viewport */
+    top: 15px; 
+    left: 10px; /* Distance from the left of the viewport */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+     background-color:transparent;
+    border: none;
+    z-index: 1008;
+    cursor: pointer;
+    padding-top: 10px;
+    display: none;
+  }
+  @media only screen and (max-width: 450px) {
+    .menu-button{
+      display: flex;
+    }
+  }
+  .menu-line {
+    width: 20px; /* Width of the lines */
+    height: 3px; /* Thickness of the lines */
+    background-color: blue;/* Color of the lines */
+    border-radius: 2px; /* Rounded corners for the lines */
+    z-index: 1000;
+  }
+  

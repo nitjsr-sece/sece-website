@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/logo-moon.png"
+import logo from "../assets/logo-white.png"
 import './Navbar/Navbar2.css'
 import { ElevatorSharp } from "@mui/icons-material";
 const Navbar2 = () => {
@@ -13,7 +13,7 @@ const Navbar2 = () => {
     }
   }
   return (
-<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0" style={{backgroundColor:"rgb(7, 3, 62)",width:"99%"}}>
+<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0" style={{backgroundColor:"rgb(7, 3, 62)",width:"99%"}} id="navbar">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src={logo} class="h-8" alt="Flowbite Logo"/>

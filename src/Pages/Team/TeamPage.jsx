@@ -5,11 +5,16 @@ import Footer from "../../components/Footer/Footer";
 import { FaEnvelope, FaLinkedin } from 'react-icons/fa'; 
 import { Batch2K25, Batch2K26 } from './index';
 import Navbar2 from "../../components/Navbar2.jsx";
-
+import NavDrawer from "../../components/Navbar/NavDrawer";
+import MenuButton from "../../components/MenuButton/MenuButton";
 const TeamPage = () => {
   const batches = {
     'Batch 2K21-2K25': Batch2K25,
     'Batch 2K22-2K26': Batch2K26,
+  };
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const toggleDrawer = (isOpen) => {
+    setDrawerOpen(isOpen);
   };
 
   const [selectedBatch, setSelectedBatch] = useState('Batch 2K21-2K25');
@@ -42,6 +47,8 @@ const TeamPage = () => {
   return (
     <div className="team-page scroll-smooth">
       <Navbar2 />
+      <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
+      <MenuButton onClick={() => toggleDrawer(true)} />
       <section className="text-white flex flex-col items-center">
         <div className="team-page__links flex space-x-6">
           <a

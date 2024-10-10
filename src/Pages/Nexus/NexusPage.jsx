@@ -21,8 +21,8 @@ const NexusPage = () => {
   return (
     <div className="nexus-container">
       <Navbar2/>
-      {/* <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} /> */}
-      {/* <MenuButton onClick={() => toggleDrawer(true)} /> */}
+      <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
+      <MenuButton onClick={() => toggleDrawer(true)} />
       <section className="nexus-hero">
         <nav className="nexus-nav">
           <a href="#events">Events</a>

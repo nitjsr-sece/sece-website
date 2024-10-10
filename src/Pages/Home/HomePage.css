@@ -35,7 +35,7 @@ html {
   gap: 0;
   /* align-items: center; */
   flex-flow: row wrap;
-  padding-left: 150px;
+  padding-left:0px;
   box-sizing: border-box;
   overflow: clip;
 }
@@ -399,4 +399,9 @@ img {
 } */
 .tagline:hover{
   cursor: pointer;
+}
+@media only screen and (max-width:450px){
+  .hero-content{
+    margin-left:-20px;
+  }
 }

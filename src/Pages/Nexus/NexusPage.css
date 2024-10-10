@@ -1,31 +1,11 @@
-/* NexusPage.css */
-/* body{
-  background-color: #333;
-  color: white;
-} */
 .nexus-container {
   font-family: "Arial", sans-serif;
-}
-
-.nexus-hero {
-  /* height: 100vh; 
-  width: 100vw; 
-  background-image: url("../../assets/NexusPage/nexusbg.jpg"); 
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position:left;
-  background-attachment: fixed;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 20px;
-  position: relative; */
 }
 .nexus-scroll{
   justify-self: center;
   align-self: flex-end;
   transform: translateX(-45vw) scale(3.5);
-  /* margin:0 auto; */
+
 }
 .nexus-nav {
   display: flex;
@@ -56,15 +36,6 @@
   width: 100%;
 }
 
-
-.nexus-section {
-  padding: 60px 40px;
-  /* background-image: url("../../assets/about-bg.png"); */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #333;
-}
 .nexus-content {
   display: flex;
   flex-direction: column;

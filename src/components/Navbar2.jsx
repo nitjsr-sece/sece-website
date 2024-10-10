@@ -3,7 +3,7 @@ import logo from "../assets/logo-moon.png"
 import './Navbar/Navbar2.css'
 import { ElevatorSharp } from "@mui/icons-material";
 const Navbar2 = () => {
-  const [visibility,changeVisibility]=useState("none");
+  const [visibility,changeVisibility]=useState("block");
   const toggleVisibility=()=>{
     if(visibility=="none"){
       changeVisibility("block");

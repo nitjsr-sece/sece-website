@@ -343,6 +343,12 @@ img {
   .nexus-photo{
     margin:0 auto;
   }
+  .events-content{
+    font-size: xx-large;
+  }
+  /* body{
+    zoom: 1.5;
+  } */
 }
 @media only screen and (min-width:400px) and (max-width:850px){
   .hero-section{

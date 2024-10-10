@@ -8,7 +8,11 @@
   margin-bottom: 25px;
   flex-flow: row wrap;
 }
-
+@media only screen and (max-width: 450px) {
+  .event-card  {
+      zoom:1.5
+  }
+}
 .event-card.reverse {
   flex-direction: row-reverse; /* Reverse the order of the carousel and content */
 }

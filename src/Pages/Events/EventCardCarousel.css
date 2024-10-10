@@ -5,6 +5,9 @@
   position: relative;
 }
 
+body{
+  zoom:1.2;
+}
 .custom-arrow {
   color: #ff6347;
   cursor: pointer;

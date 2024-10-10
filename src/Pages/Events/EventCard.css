@@ -15,10 +15,20 @@
 
 .event-card__image {
   width: 100%; /* Make sure the image takes up the full width of the left section */
-  height: 320px; /* Fixed height to ensure all images are the same size */
+  height: 320px; 
   object-fit: cover;
 }
-
+@media only screen and (min-width:400px) and (max-width:850px){
+  body{
+    background-color: blue;
+  }
+  .event-card__image{
+    zoom:1.2;
+  }
+  .event-card{
+    background-color: #333;
+  }
+}
 .event-card__right {
   flex: 1; /* Take up the remaining width */
   padding: 20px;

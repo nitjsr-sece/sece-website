@@ -352,6 +352,12 @@ img {
     zoom: 1.5;
   } */
 }
+@media only screen and(max-width:450px) {
+  .hero-heading{
+    margin: auto;
+  }
+  
+}
 @media only screen and (min-width:400px) and (max-width:850px){
   .hero-section{
     padding-left:0px;
@@ -381,7 +387,7 @@ img {
   text-align: left;
   padding: 1rem;
   line-height: 3rem;
-  border-radius: 20px;
+  border-radius: 10px;
   color:black;
   font-weight: bold;
   font-size: 1.6rem;

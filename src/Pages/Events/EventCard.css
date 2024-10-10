@@ -1,42 +1,38 @@
-.event-card {
+/* .event-card {
   display: flex;
   background-color: #ffffff;
   border-radius: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 100%; /* Ensure the card does not exceed container width */
+  max-width: 100%; 
   flex-flow:row wrap;
-}
+  flex-direction: column;
+} */
 
-.event-card__left {
-  flex: 0 0 42%; /* Fix the width of the left section to 40% of the card width */
+/* .event-card__left {
+  flex: 0 0 42%; 
   
-}
+} */
 
 .event-card__image {
   width: 100%; /* Make sure the image takes up the full width of the left section */
   height: 320px; 
   object-fit: cover;
 }
-@media only screen and (min-width:400px) and (max-width:850px){
-  body{
-    background-color: blue;
-  }
+@media only screen and (max-width:450px){
   .event-card__image{
+    height: 100px;
     zoom:1.2;
-  }
-  .event-card{
-    background-color: #333;
   }
 }
 .event-card__right {
-  flex: 1; /* Take up the remaining width */
+  flex: 1; 
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-height: 320px; /* Match the height of the image for consistent sizing */
-  overflow-y: auto; /* Add scroll if content exceeds height */
+  max-height: 320px; 
+  overflow-y: auto; 
 }
 
 .event-card__heading {

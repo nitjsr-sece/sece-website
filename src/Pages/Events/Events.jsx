@@ -27,12 +27,6 @@ const events = [
     image: pmrfWorkshopImage,
   },
   {
-    name: "Baigan Meme Quiz",
-    description:
-      "On January 20th, 2024, SECE hosted the 'Baigan Meme Quiz,' a fun and educational event exploring the world of internet memes. Participants delved into the history and evolution of memes, examined their cultural impact, and challenged themselves with trivia. This engaging quiz blended humor with learning, offering insights into the significance of digital humor.",
-    image: baiganMemeQuizImage,
-  },
-  {
     name: "Maze Marathon",
     description:
       "On April 7th, 2024, Maze Marathon brought together robotics enthusiasts in a challenging maze-based competition. Teams designed and programmed autonomous robots to navigate complex mazes with precision. The event tested technical skills and creativity, with teams demonstrating their ability to innovate and solve problems under pressure.",

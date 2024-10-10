@@ -265,6 +265,9 @@ img {
 #Nexus{
   margin-top: 8rem;
 }
+.mobile-view-logo{
+  display:none;
+}
 @media only screen and (max-width:850px){
   .footer-content-sece{
     display: none;
@@ -273,6 +276,19 @@ img {
   #Events{
     display: flex;
     flex-direction: column-reverse;
+  }
+  .hero-content{
+    position:relative;
+    justify-content: center;
+  }
+  .hero-heading{
+    margin-top:-100%;
+  }
+  .mobile-view-logo{
+    display:block;
+    position:absolute;
+    transform: scale(1);
+    /* margin-top:100%; */
   }
   .hand{
     display: none;
@@ -402,6 +418,11 @@ img {
 }
 @media only screen and (max-width:450px){
   .hero-content{
-    margin-left:-20px;
+    /* margin-left:-20px; */
   }
+  .hero-heading{
+    margin-left:-10px;
+
+  }
+ 
 }

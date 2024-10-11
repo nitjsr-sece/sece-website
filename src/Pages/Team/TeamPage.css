@@ -31,14 +31,14 @@
 .team-page__links a:hover {
   text-decoration: underline;
 }
-.member-info{
-  padding-top:6rem;
+.member-info {
+  padding-top: 6rem;
 }
-.member-name{
+.member-name {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
-.member-por{
+.member-por {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
@@ -66,19 +66,44 @@
   padding: 10px 20px;
   text-align: center;
 }
-@media only screen and (max-width:850px){
-  .member-info{
-    padding-top:10rem;
+
+@media only screen and (max-width: 850px) {
+  .member-info {
+    padding-top: 10rem; /* Increase the padding to shift the content down */
   }
-  .member-name{
-    font-size: 3.125rem;
-    line-height: 2.75rem;
-    padding-top: 6rem;
-    padding:1rem;
+
+  /* Increase member name size and shift it down */
+  .member-name {
+    font-size: 3.5rem; /* Keep the increased size */
+    line-height: 3.25rem;
+    margin-top: 6rem; /* Add margin to move the name down */
+    padding: 1rem;
   }
-  .member-por{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    padding:1rem;
+
+  /* Increase the size of the member-por text */
+  .member-por {
+    font-size: 2.5rem; /* Significantly increased font size */
+    line-height: 3rem;
+    padding: 1rem;
+  }
+
+  /* Make the icons larger and more prominent */
+  /* Specifically target Font Awesome icons */
+  .member-info a .h-6 {
+    height: 3rem; /* Increase icon height */
+    width: 3rem; /* Increase icon width */
+   
+  }
+
+
+  /* Ensure enough spacing between icons */
+  .member-info a {
+    margin: 0 12px; /* Increased spacing between the icons */
+    color: white; /* Ensure color contrast remains */
+  }
+
+  /* Optional: Add a slight hover effect for visual appeal */
+  .member-info a:hover {
+    color: #c0c0c0; /* Slight color change on hover */
   }
 }

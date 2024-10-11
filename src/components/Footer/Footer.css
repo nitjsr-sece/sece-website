@@ -1,39 +1,39 @@
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding-top: 40px;
-    text-align: center;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  
-  .footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
-  }
-  
-  .footer-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .footer-subtitle {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-  }
-  
-  .footer-email {
-    font-size: 1em;
-    margin-bottom: 20px;
-  }
-  
-  /* .footer-links {
+  background-color: #333;
+  color: #fff;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.footer-subtitle {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.footer-email {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+/* .footer-links {
     list-style: none;
     padding: 0;
   }
@@ -50,20 +50,75 @@
   .footer-links a:hover {
     text-decoration: underline;
   } */
-  
-  .social-footer{
-    display: flex;
-    justify-content: center;
-  }
-  
-  .social-footer a {
-    margin: 0 10px;
-    font-size: 1.5em;
-  }
-  
-  /* .footer-bottom {
+
+.social-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.social-footer a {
+  margin: 0 10px;
+  font-size: 1.5em;
+}
+
+/* .footer-bottom {
     border-top: 1px solid #444;
     padding-top: 20px;
     font-size: 0.9em;
   } */
-  
+
+/* Media query for devices below 550px */
+@media (max-width: 550px) {
+  .footer {
+    padding: 10px 20px; /* Reduced padding to keep things compact */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+    text-align: center; /* Center align text */
+  }
+
+  .footer-section {
+    margin: 8px 0; /* Reduced margin for a more compact layout */
+    width: 100%; /* Full width for sections */
+  }
+
+  .footer-title {
+    font-size: 2.4em; /* Increased title size (1.5x of previous size) */
+    margin-bottom: 8px; /* Adjusted margin below title */
+  }
+
+  .footer-subtitle {
+    font-size: 2.1em; /* Increased subtitle size (1.5x of previous size) */
+    margin-bottom: 6px; /* Adjusted margin below subtitle */
+  }
+
+  .footer-email {
+    font-size: 1.8em; /* Increased email font size */
+    margin-bottom: 6px; /* Reduced space below email */
+  }
+
+  .footer-links li {
+    margin-bottom: 6px; /* Slightly more space between links */
+  }
+
+  .footer-links a {
+    font-size: 1.65em; /* Increased link font size */
+  }
+
+  .social-footer {
+    margin-top: 12px; /* Space between content and social icons */
+  }
+
+  .social-footer a {
+    font-size: 2.5rem; /* Increase size of social icons */
+    margin: 0 12px; /* Adjust spacing between social icons */
+  }
+
+  .footer-bottom {
+    padding: 8px 0; /* Reduced padding */
+    font-size: 1.5em; /* Increased size for footer bottom text */
+    width: 100%; /* Full width */
+  }
+}

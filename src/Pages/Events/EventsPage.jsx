@@ -27,9 +27,6 @@ const EventsPage = () => {
             Join the Excitement: SECE Society Events
           </h1>
           <div className="events-page__links-container">
-            <a href="/" className="events-page__nav-link">
-              Home
-            </a>
             <a href="#events" className="events-page__nav-link">
               Events
             </a>

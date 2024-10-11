@@ -40,6 +40,12 @@ html {
   overflow: clip;
 }
 
+@media (max-width: 500px) {
+  .hero-section {
+    height: 75vh; /* Adjust height for mobile */
+  }
+}
+
 .hero-content {
   width: 50%;
   display: flex;

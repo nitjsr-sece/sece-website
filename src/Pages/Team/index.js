@@ -45,7 +45,11 @@ import Img40 from "../../assets/Member/IMG_20240912_213055 - Simran Gupta.jpg";
 import Img41 from "../../assets/Member/IMG20240703225006~3 - safi.jpg";
 import Img42 from "../../assets/Member/1726159904812 - Lanka Sri laxmi prasanna kumar.jpg";
 import Img43 from "../../assets/Member/prince.jpg";
+import Img44 from "../../assets/Member/Shresth.jpg";
 import hananiah from "../../assets/Member/hananiah.jpg";
+import imgv from "../../assets/Member/vivek.jpg";
+
+
 export const Batch2k19 = [
   { name: "Soumen Patra", post: "President" },
   { name: "Trishurya Saha", post: "Vice President" },
@@ -130,6 +134,14 @@ export const Batch2K25 = [
     Email: "rishavjha771@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/rishav-kumar-a96175190/",
     Img: Img4,
+  },
+  {
+    Name: "Vivek Rawani",
+    POR: "Web Head",
+    Email: "kumarrawanivivek@gmail.com",
+    LinkedIn:
+      "https://www.linkedin.com/in/vivek-rawani-70a856221",
+    Img: imgv,
   },
   {
     Name: "Kaif been jawed",
@@ -227,6 +239,14 @@ export const Batch2K25 = [
     LinkedIn:
       "https://www.linkedin.com/in/abhishek-deogharia-213941230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     Img: Img17,
+  },
+  {
+    Name: "Hemanth Kumar",
+    POR: "EM team",
+    Email: "hemanth.meesala2004@gmail.com",
+    LinkedIn:
+      "https://www.linkedin.com/in/hemanth-meesala/",
+    Img: Imgh,
   },
 ];
 
@@ -428,11 +448,11 @@ export const Batch2K26 = [
     Img: Img43,
   },
   {
-    Name: "Hemanth Kumar",
-    POR: "Member/EM team",
-    Email: "hemanth.meesala2004@gmail.com",
-    LinkedIn:
-      "https://www.linkedin.com/in/hemanth-meesala/",
-    Img: Imgh,
+    Name: "Shresth Prasad",
+    POR: "Member",
+    Email: "prasadshresth04@gmail.com",
+    LinkedIn: "https://www.linkedin.com/in/shresth-prasad-160059250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    Img: Img44,
   },
+  
 ];

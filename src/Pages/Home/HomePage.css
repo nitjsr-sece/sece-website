@@ -127,10 +127,7 @@ img {
   font-size: 3em;
   margin: 0;
 }
-.about-header{
-  /* transform:translateY(-30%); */
-  /* z-index:-1; */
-}
+
 .content-right{
   display: grid;
 }
@@ -234,7 +231,7 @@ img {
   border: 1px;
   border-color:grey;
   border-style: solid;
-  height: 30rem;
+  height: 25rem;
   width: 30rem;
   box-shadow: 0px 4px 8px rgba(64, 64, 64, 0.5);
 }
@@ -250,7 +247,7 @@ img {
   border: 1px;
   border-color:grey;
   border-style: solid;
-  height: 30rem;
+  height: 25rem;
   width: 30rem;
   box-shadow: 0px 4px 8px rgba(64, 64, 64, 0.5);
 }
@@ -259,7 +256,7 @@ img {
   border: 1px;
   border-color:grey;
   border-style: solid;
-  height: 30rem;
+  height: 25rem;
   width: 30rem;
   font-size: small;
   box-shadow: 0px 4px 8px rgba(64, 64, 64, 0.5);
@@ -274,6 +271,7 @@ img {
 .mobile-view-logo{
   display:none;
 }
+
 @media only screen and (max-width:850px){
   .footer-content-sece{
     display: none;

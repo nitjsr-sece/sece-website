@@ -61,7 +61,7 @@ const NavDrawer = ({ open, onClose }) => {
         initial="closed"
         animate={open ? "open" : "closed"}
         variants={drawerVariants}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.2 }}
       >
         <List>
           {menuItems.map((item, index) => (
@@ -70,7 +70,7 @@ const NavDrawer = ({ open, onClose }) => {
               variants={itemVariants}
               initial="hidden"
               animate="visible"
-              transition={{ delay: index * 0.2, duration: 0.3 }}
+              transition={{ delay: index * 0.2, duration: 0.2 }}
             >
               <ListItem
                 button

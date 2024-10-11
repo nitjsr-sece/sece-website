@@ -42,7 +42,7 @@ html {
 
 @media (max-width: 500px) {
   .hero-section {
-    height: 75vh; /* Adjust height for mobile */
+    height: 70vh; /* Adjust height for mobile */
   }
 }
 
@@ -294,6 +294,8 @@ img {
     display:block;
     position:absolute;
     transform: scale(1);
+    /* border: 2px solid white ; */
+    margin-left: 30px ;
     /* margin-top:100%; */
   }
   .hand{

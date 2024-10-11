@@ -1,6 +1,9 @@
 import Img1 from '../../assets/Member/PXL_20240911_162148868 - Ankit Kumar.jpg';
 import Img2 from '../../assets/Member/IMG_20240912_205949 - Manish Kumar.jpg';
 import Img3 from '../../assets/Member/anshu.jpg';
+import Imgr from '../../assets/Member/Ritwik_Ranjan.jpeg';
+
+
 import Img4 from '../../assets/Member/SECE - 043Rishav Kumar.jpg';
 import Img5 from '../../assets/Member/110346 - KAIF BEEN JAWED.jpg';
 import Img6 from "../../assets/Member/gipashu.jpg"
@@ -105,6 +108,13 @@ export const Batch2K25 = [
         Email: "mvsmanish07@gmail.com",
         LinkedIn: "https://www.linkedin.com/in/manish-kumar-59bb51223",
         Img: Img2,
+    },
+    {
+        Name: "Ritwik Ranjan Pathak",
+        POR: "General Secretary",
+        Email: "anshuk97984@gmail.com",
+        LinkedIn: "https://www.linkedin.com/in/ritwik-ranjan-pathak-a2076a25b/?originalSubdomain=in",
+        Img: Imgr,
     },
     {
         Name: "Anshu Kumari",

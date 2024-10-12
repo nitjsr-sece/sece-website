@@ -46,9 +46,9 @@ const NexusPage = () => {
       <section className="nexus-description" id="description">
         <div className="description-content">
           <div className="description-text">
-            <h2 className="funky-heading">
+            <h1 className="funky-heading">
               Nexus – Where Fun Meets Brilliance!
-            </h2>
+            </h1>
             <p className="nexus-desc">
               <strong>Nexus</strong> is the signature fest of the Electronics
               and Communication Engineering department at NIT Jamshedpur,

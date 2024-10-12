@@ -49,7 +49,7 @@ const NexusPage = () => {
             <h2 className="funky-heading">
               Nexus – Where Fun Meets Brilliance!
             </h2>
-            <p>
+            <p className="nexus-desc">
               <strong>Nexus</strong> is the signature fest of the Electronics
               and Communication Engineering department at NIT Jamshedpur,
               celebrated with unmatched enthusiasm every October or November.

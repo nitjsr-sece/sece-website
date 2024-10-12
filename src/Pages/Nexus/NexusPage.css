@@ -176,22 +176,26 @@ footer {
   margin-bottom: 10px;
 }
 
-
 /* Media Query for Mobile Devices */
 @media (max-width: 600px) {
   .description-content {
     flex-direction: column;
     align-items: center;
   }
-
+  .nexus-desc {
+    font-size: 1.5rem ;
+  }
+  .funky-heading {
+    font-size: 2rem;
+    font-weight: bold;
+  }
   .nexus-video {
     width: 100%;
     margin-top: 20px;
   }
 
   .nexus-video-player {
-    width: 80%; /* Adjust the size for smaller screens */
+    width: 90%; /* Adjust the size for smaller screens */
     max-width: none;
   }
 }
-

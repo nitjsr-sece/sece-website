@@ -6,38 +6,92 @@ import MenuButton from "../../components/MenuButton/MenuButton";
 import "./NexusPage.css";
 import PhotoCarousel from "./PhotoCarousel";
 import EventCard from "./EventCard";
-import Navbar2 from "../../components/Navbar2.jsx"
-import sponsorLogo1 from "../../assets/NexusPage/sponsor1.png"
+import Navbar2 from "../../components/Navbar2.jsx";
+import sponsorLogo1 from "../../assets/NexusPage/sponsor1.png";
 import sponsorLogo2 from "../../assets/NexusPage/sponsor2.png";
 import sponsorLogo3 from "../../assets/NexusPage/sponsor3.png";
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import events from "./Events";
+import nexusVideo from "../../assets/NexusPage/nexus-recap.mp4"; // Import your video file
 
 const NexusPage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const toggleDrawer = (isOpen) => {
     setDrawerOpen(isOpen);
   };
+
   return (
     <div className="nexus-container">
-      <Navbar2/>
+      <Navbar2 />
       <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
       <MenuButton onClick={() => toggleDrawer(true)} />
+
+      {/* Hero Section */}
       <section className="nexus-hero">
         <nav className="nexus-nav">
-          <a href="#events">Events</a>
+          <a href="#description">Nexus</a>
           <a href="#gallery">Gallery</a>
+          <a href="#events">Events</a>
           <a href="#sponsors">Sponsors</a>
         </nav>
-   <div className="nexus-scroll" style={{color:"white"}}>
-   <a href="#nexus-section" className="scroll-btn">
-              <ArrowDropDownIcon/>
-            </a>
-   </div>
+
+        <div className="nexus-scroll" style={{ color: "white" }}>
+          <a href="#nexus-section" className="scroll-btn">
+            <ArrowDropDownIcon />
+          </a>
+        </div>
       </section>
 
+      {/* Description Section */}
+      <section className="nexus-description" id="description">
+        <div className="description-content">
+          <div className="description-text">
+            <h2 className="funky-heading">
+              Nexus – Where Fun Meets Brilliance!
+            </h2>
+            <p>
+              <strong>Nexus</strong> is the signature fest of the Electronics
+              and Communication Engineering department at NIT Jamshedpur,
+              celebrated with unmatched enthusiasm every October or November.
+              This exhilarating three-day extravaganza brings the campus to life
+              with a perfect blend of technical brilliance and vibrant
+              entertainment .From coding challenges and robotics competitions to
+              quirky fun games, Nexus offers something for everyone. Signature
+              events like Talent Hunt, Perfect Pixel, Film Nexus, Digimon, and
+              Codexus further amplify the excitement, ensuring every participant
+              finds a platform to shine. The fest culminates in an electrifying
+              cultural night filled with music, dance, and captivating
+              performances.It’s not just an event – it’s an experience that
+              unites students, ignites talent, and creates memories that last a
+              lifetime. Be part of the magic. Be part of Nexus!
+            </p>
+          </div>
+
+          <div className="nexus-video">
+            <video
+              autoPlay
+              loop
+              muted
+              className="nexus-video-player"
+              controls={false}
+            >
+              <source src={nexusVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      {/* Nexus Sections */}
       <section className="nexus-section" id="nexus-section">
         <div className="nexus-content">
+          {/* Gallery Section */}
+          <div className="nexus-content-item" id="gallery">
+            <h2>Gallery</h2>
+            <PhotoCarousel />
+          </div>
+
+          {/* Events Section */}
           <div className="nexus-content-item" id="events">
             <h2>Events</h2>
             {events.map((event, index) => (
@@ -49,14 +103,9 @@ const NexusPage = () => {
             ))}
           </div>
 
-          <div className="nexus-content-item" id="gallery">
-            <h2>Gallery</h2>
-            <PhotoCarousel />
-          </div>
-
+          {/* Sponsors Section */}
           <div className="nexus-content-item" id="sponsors">
             <h2>Sponsors</h2>
-
             <div className="sponsor-logos">
               <div className="sponsor-logo-item">
                 <img src={sponsorLogo1} alt="Sponsor 1" />

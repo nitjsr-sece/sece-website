@@ -1,11 +1,10 @@
 .nexus-container {
   font-family: "Arial", sans-serif;
 }
-.nexus-scroll{
+.nexus-scroll {
   justify-self: center;
   align-self: flex-end;
   transform: translateX(-45vw) scale(3.5);
-
 }
 .nexus-nav {
   display: flex;
@@ -119,7 +118,6 @@
   margin-top: 10px;
 }
 
-
 /* footer  */
 
 footer {
@@ -128,3 +126,72 @@ footer {
   color: white;
   text-align: center;
 }
+
+/* Nexus Description Section Styling */
+.nexus-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  margin: 20px;
+}
+.nexus-description p {
+  text-align: justify;
+}
+
+.description-content {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.description-text {
+  flex: 1;
+}
+
+.nexus-video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nexus-video-player {
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Funky Heading Styling */
+.funky-heading {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 2rem;
+  color: #ff6347;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+  .description-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nexus-video {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .nexus-video-player {
+    width: 80%; /* Adjust the size for smaller screens */
+    max-width: none;
+  }
+}
+

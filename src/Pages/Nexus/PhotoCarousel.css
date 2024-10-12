@@ -15,11 +15,23 @@
 
 .photo-carousel-image {
   width: 100%;
-  aspect-ratio:0.8;
+  aspect-ratio: 0.8;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .photo-carousel-item:hover .photo-carousel-image {
   transform: scale(1.05); /* Slight zoom effect on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+/* Media Query for 800px+ devices */
+@media (min-width: 800px) {
+  .photo-carousel-item {
+    transform: scale(0.75);
+    width: fit-content; /* Adjust width to fit the image */
+  }
+
+  .photo-carousel-image {
+    width: 100%; /* Use 100% width to fill the div */
+    margin: 0; /* Remove margin to eliminate white space */
+  }
 }

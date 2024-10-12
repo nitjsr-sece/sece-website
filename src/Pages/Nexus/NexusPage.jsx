@@ -71,7 +71,6 @@ const NexusPage = () => {
             <video
               autoPlay
               loop
-              muted
               className="nexus-video-player"
               controls={false}
             >

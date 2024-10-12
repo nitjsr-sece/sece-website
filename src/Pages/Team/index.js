@@ -46,6 +46,7 @@ import Img41 from "../../assets/Member/IMG20240703225006~3 - safi.jpg";
 import Img42 from "../../assets/Member/1726159904812 - Lanka Sri laxmi prasanna kumar.jpg";
 import Img43 from "../../assets/Member/prince.jpg";
 import Img44 from "../../assets/Member/Shresth.jpg";
+import Img45 from "../../assets/Member/ankur.jpg";
 import hananiah from "../../assets/Member/hananiah.jpg";
 import imgv from "../../assets/Member/vivek.jpg";
 
@@ -144,6 +145,14 @@ export const Batch2K25 = [
     Img: imgv,
   },
   {
+    Name: "Ankur Kumar",
+    POR: "CP Head",
+    Email: "ankuraj2708@gmail.com",
+    LinkedIn:
+      "https://www.linkedin.com/in/ankur-kumar-686339235/",
+    Img: Img45,
+  },
+  {
     Name: "Kaif been jawed",
     POR: "Event head",
     Email: "mohammadkaif43530@gmail.com",
@@ -168,8 +177,8 @@ export const Batch2K25 = [
     Img: Img7,
   },
   {
-    Name: "CA head",
-    POR: "Technical Secretary",
+    Name: "Shashwat",
+    POR: "CA Head",
     Email: "Shashwat.18jan23@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/shashwat-31564a254",
     Img: Img8,

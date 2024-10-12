@@ -186,8 +186,9 @@ footer {
     font-size: 1.5rem ;
   }
   .funky-heading {
-    font-size: 2.4rem;
+    font-size: 3.2rem;
     font-weight: bold;
+    padding-top: 0;
   }
   .nexus-video {
     width: 100%;

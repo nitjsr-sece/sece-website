@@ -28,8 +28,8 @@ import aditya_raj_srivastava from '../../assets/placement_masterclass/batch_23/a
 import aditya_raj_srivastava_pmc from '../../assets/placement_masterclass/batch_23/aditya-raj-srivastava-pmc.jpg';
 import arpit_raj from '../../assets/placement_masterclass/batch_23/arpit-raj.jpg';
 import arpit_raj_pmc from '../../assets/placement_masterclass/batch_23/arpit-raj-pmc.jpg';
-import ayush_kr_chaudhary from '../../assets/placement_masterclass/batch_23/ayush-kr-chaudhary.jpg';
-import ayush_kr_chaudhary_pmc from '../../assets/placement_masterclass/batch_23/ayush-kr-chaudhary-pmc.jpg';
+import ayush_kr_chaudhary from '../../assets/placement_masterclass/batch_23/Ayush-kr-chaudhary.jpg';
+import ayush_kr_chaudhary_pmc from '../../assets/placement_masterclass/batch_23/Ayush-kr-chaudhary-pmc.jpg';
 import mohit_mayank from '../../assets/placement_masterclass/batch_23/mohit-mayank.jpg';
 import mohit_mayank_pmc from '../../assets/placement_masterclass/batch_23/mohit-mayank-pmc.jpg';
 import naved_sohail from '../../assets/placement_masterclass/batch_23/naved-sohail.jpg';

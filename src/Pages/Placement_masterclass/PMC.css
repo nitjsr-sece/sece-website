@@ -9,10 +9,32 @@
   display: block;
   font-weight: bold;
   font-size: 2rem;
+  position:relative;
+  top:0;
+}
+.pmc-select{
+  margin-top:10px;
 }
 .by-sece {
   color: rgb(38, 5, 91);
   font-weight: bold;
+}
+.read-more{
+  display:block;
+  /* width:100%; */
+  align-self: flex-end;
+  position:absolute;
+  margin-left:20%;
+
+}
+.pmc-name{
+  position:absolute;
+  text-align: left;
+  display: block;
+  width: 80%;
+  margin-left:20%;
+  margin-bottom:20px;
+  
 }
 .masterclass-card {
   position: relative;

@@ -27,13 +27,13 @@ const PhotoCarousel = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 4000,
-    slidesToShow: 3,
+    speed: 10000,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
     cssEase: "linear",
-    pauseOnHover: false,
+    pauseOnHover: true,
     arrows: false
   };
 

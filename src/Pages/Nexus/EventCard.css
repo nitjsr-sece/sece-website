@@ -1,6 +1,7 @@
 .event-card {
   display: flex;
-  border: 1px solid #ccc;
+  border: 1px solid violet;
+  box-shadow: 4px 4px 4px #9375c6;
   border-radius: 8px;
   overflow: hidden;
   max-width: 1200px; /* Adjust as needed */
@@ -10,7 +11,8 @@
 }
 @media only screen and (max-width: 450px) {
   .event-card  {
-      zoom:1.5
+      zoom:1.5;
+      box-shadow: 2px 2px 2px #9375c6;
   }
 }
 .event-card.reverse {

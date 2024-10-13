@@ -47,7 +47,7 @@ import Img42 from "../../assets/Member/1726159904812 - Lanka Sri laxmi prasanna 
 import Img43 from "../../assets/Member/prince.jpg";
 import Img44 from "../../assets/Member/Shresth.jpg";
 import Img45 from "../../assets/Member/ankur.jpg";
-import hananiah from "../../assets/Member/hananiah.jpg";
+import hananiah from "../../assets/Member/hananiahtwo.jpg";
 import imgv from "../../assets/Member/vivek.jpg";
 
 

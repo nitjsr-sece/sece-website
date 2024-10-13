@@ -1,0 +1,8 @@
+.alumni-name{
+    background-color: black;
+    color: violet;
+}
+.alumni-name:hover{
+    cursor: pointer;
+    color: white;
+}

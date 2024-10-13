@@ -72,7 +72,7 @@ const NexusPage = () => {
               autoPlay
               loop
               className="nexus-video-player"
-              controls={false}
+              controls={true}
             >
               <source src={nexusVideo} type="video/mp4" />
               Your browser does not support the video tag.

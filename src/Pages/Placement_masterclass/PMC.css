@@ -45,6 +45,7 @@
   padding: 20px;
   width: min(800px, 80%);
   margin: 20px auto;
+  background-color: black;
   background: linear-gradient(to right, #3d61c0, #ff00ff);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 120px;

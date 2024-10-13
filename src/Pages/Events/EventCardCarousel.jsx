@@ -49,7 +49,7 @@ const EventCardCarousel = () => {
         <ArrowForwardIosIcon style={{ fontSize:"1.5rem" }} />
       </div>
       </div>
-      <p className="event-card__content text-white font-sans font-normal" style={{paddingTop:"2rem"}}>{event.description}</p>
+      <p className="event-card__content text-white font-sans font-normal" style={{paddingTop:"2rem",textAlign:"left"}}>{event.description}</p>
       </div>
     </div>
           </div>

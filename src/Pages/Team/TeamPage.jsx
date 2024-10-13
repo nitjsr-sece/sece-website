@@ -74,7 +74,7 @@ const TeamPage = () => {
 
           <div className="mb-6 flex justify-center items-center mt-10">
             <select
-              className="px-6 py-3 rounded-full border border-gray-300 text-gray-700 text-xl bg-white transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
+              className="px-6 py-3 rounded-full border border-gray-300 text-gray-700 text-xl bg-white transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500" style={{backgroundColor:"black",color:"white",border:"solid 2px violet",boxShadow:"1px 1px 1px 1px violet"}}
               value={selectedBatch}
               onChange={handleBatchChange}
             >
@@ -99,7 +99,7 @@ const TeamPage = () => {
                 className="relative h-[350px] w-[275px] flex flex-col justify-center items-center shadow-lg rounded-2xl overflow-hidden group bg-white transition-all duration-300 hover:shadow-2xl"
                 variants={cardVariants} 
               >
-                <div className="h-[35%] w-full bg-gradient-to-br from-gray-600 to-gray-800 flex justify-center items-center"></div>
+                <div className="h-[35%] w-full bg-gradient-to-br from-gray-600 to-gray-800 flex justify-center items-center" style={{border:"solid 2px violet",boxShadow:"10px violet"}}></div>
 
                 <div className="absolute top-8 z-10 bg-transparent">
                   <img

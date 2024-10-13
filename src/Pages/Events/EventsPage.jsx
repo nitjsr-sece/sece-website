@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Footer from "../../components/Footer/Footer.jsx";
 import NavDrawer from "../../components/Navbar/NavDrawer.jsx";
 import MenuButton from "../../components/MenuButton/MenuButton";
-
+import { SparklesCore } from "../Home/meteors.jsx"
 import "./EventsPage.css"; // Import the CSS file for styling
 import EventCardCarousel from "./EventCardCarousel.jsx";
 import Calendar from "./Calendar.jsx";
@@ -16,16 +16,23 @@ const EventsPage = () => {
   };
 
   return ( 
-    <div className="events-page">
+    
+    <>
+    <Navbar2/>
+      <div className="events-page">
       <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
       <EventsMenu onClick={() => toggleDrawer(true)} />
 
       {/* First Section */}
       <div className="events-page__hero-section">
         <div className="events-page__hero-content">
+       
+          <div>
           <h1 className="events-page__hero-heading">
             Join the Excitement: SECE Events
           </h1>
+          <p className="events-para-content">The Society of Electronics and Communication Engineering (ECE) is dedicated to fostering technical innovation, creativity, and hands-on learning among students. Every year, the ECE Society organizes a diverse range of events that cater to the technical and creative interests of its members. From coding challenges to exciting electronics-based activities, the society's events are designed to engage students in real-world problem solving while promoting teamwork, innovation, and fun.</p>
+          </div>
           <div className="events-page__links-container">
             <a href="#events" className="events-page__nav-link">
               Events
@@ -46,6 +53,7 @@ const EventsPage = () => {
         <Footer />
       </div>
     </div>
+    </>
   );
 };
 

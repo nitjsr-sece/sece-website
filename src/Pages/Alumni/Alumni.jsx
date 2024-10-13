@@ -5,6 +5,7 @@ import MenuButton from "../../components/MenuButton/MenuButton";
 import NavDrawer from "../../components/Navbar/NavDrawer.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import { Batch2k19, Batch2k20 } from "../Team/index.js";
+import "./Alumni.css"
 const Alumni = () => {
     const batches = {
         'Batch 2K19-2K23': Batch2k19,
@@ -52,7 +53,7 @@ const Alumni = () => {
             <select
               className="px-6 py-3 rounded-full border border-gray-300 text-gray-700 text-xl bg-white transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
               value={selectedBatch}
-              onChange={handleBatchChange}
+              onChange={handleBatchChange} style={{backgroundColor:"black",color:"white",border:"solid 2px violet",boxShadow:"1px 1px 1px 1px violet"}}
             >
               {Object.keys(batches).map((batch) => (
                 <option key={batch} value={batch}>
@@ -65,8 +66,8 @@ const Alumni = () => {
         
     <h2 className='text-[#9375c6] text-xl font-bold tracking-wide mb-6 py-3' style={{textAlign:"center",margin:"auto"}}>Creators of Community, Architects of Tomorrow</h2>
         
-      <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400" style={{border:"solid 2px violet",boxShadow:"10px 10px 10px"}} >
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400" style={{backgroundColor:"black",color:"violet"}}>
           <tr>
             <th scope="col" class="px-6 py-3">
               Name
@@ -84,11 +85,11 @@ const Alumni = () => {
           >
             <th 
               scope="row" 
-              className="px-6 py-4 font-bold text-black-900 whitespace-nowrap dark:text-white" 
+              className="px-6 py-4 font-bold text-black-900 whitespace-nowrap dark:text-white alumni-name" 
             >
               {member.name}
             </th>
-            <td class="px-6 py-4">
+            <td class="px-6 py-4" style={{backgroundColor:"black",color:"violet"}} >
                     {member.post}
             </td>
           </tr>

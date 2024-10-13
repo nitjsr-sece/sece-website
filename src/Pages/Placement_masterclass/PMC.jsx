@@ -99,7 +99,7 @@ const Masterclass = () => {
         <select
               className="px-6 py-3 rounded-full border border-gray-300 text-gray-700 text-xl bg-white transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500 pmc-select"
               value={batch}
-              onChange={handleBatchChange}
+              onChange={handleBatchChange} style={{backgroundColor:"black",color:"white",border:"solid 2px violet",boxShadow:"1px 1px 1px 1px violet"}}
             >
               {Object.keys(batches).map((bt) => (
                 <option key={batches[bt]} value={batches[bt]}>

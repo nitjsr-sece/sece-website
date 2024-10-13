@@ -86,16 +86,16 @@ const Masterclass = () => {
             <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
              <MenuButton onClick={() => toggleDrawer(true)} className="hamburger-home"/>
 
-            <motion.h1 className="pmc_heading"
+            <motion.h1 className="pmc_heading mt-12 text-[#9375c6]"
             initial={{ opacity: 0, y: -200 }}
             animate={{ opacity: 1, y: 30 }}
             transition={{ duration: 0.75 }}
             >Placement Masterclass</motion.h1>
-            <motion.p className="text-center mb-12 by-sece"
+              <motion.p className="text-center mb-12 by-sece text-[#b6a3d8]"
             initial={{ opacity: 0, y: -200 }}
             animate={{ opacity: 1, y: 25 }}
             transition={{ duration: 0.5 }}
-            >By SECE</motion.p>
+            >BY SECE</motion.p>
         <select
               className="px-6 py-3 rounded-full border border-gray-300 text-gray-700 text-xl bg-white transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500 pmc-select"
               value={batch}

@@ -11,7 +11,7 @@ const events = [
   {
     name: "CP Contest",
     description:
-      "SECE organized an exhilarating competitive programming contest on 31st August 2024. The contest featured six brainstorming problems based on various concepts. It spanned two hours, with participants ranging from beginners to experts. Top performers received cash prizes, and the best female performer was also recognized. Detailed explanations of the problems were provided afterward to boost problem-solving skills.",
+    "SECE organized a thrilling competitive programming contest on August 31, 2024, featuring six challenging problems. Lasting two hours, participants included beginners and experts. Top performers received cash prizes, with recognition for the best female participant. Detailed explanations were provided afterward to enhance problem-solving skills.",
     image: cpContestImage,
   },
   {
@@ -23,7 +23,7 @@ const events = [
   {
     name: "PMRF Workshop",
     description:
-      "The IEEE PMRF Workshop on Computational Electromagnetics, held from January 29th to February 2nd, 2024, was hosted by SECE in collaboration with the IEEE Student Chapter. Led by Anand Kumar from IISc Bengaluru, the workshop focused on the FDTD method using MATLAB, covering key topics such as Telegrapher’s Equations and transmission line analysis. Participants engaged in practical sessions, learning how to apply these techniques in telecommunications and signal processing.",
+      "The IEEE PMRF Workshop on Computational Electromagnetics took place from January 29th to February 2nd, 2024, hosted by SECE with the IEEE Student Chapter. Led by Anand Kumar from IISc Bengaluru, the workshop focused on the FDTD method using MATLAB, covering Telegrapher’s Equations, transmission line analysis, and practical sessions.",
     image: pmrfWorkshopImage,
   },
   {
@@ -47,7 +47,7 @@ const events = [
   {
     name: "Codethon", 
     description:
-      "Codethon, organized by SECE on 18th February, was an adrenaline-fueled coding challenge that brought the best problem-solvers into the spotlight! It wasn’t just an event; it was an arena where students tested their logical brilliance and coding agility. The thrill of cracking complex problems under pressure created an atmosphere of intense excitement. With invaluable learning experiences and fierce competition, Codethon offered not just the chance to shine but also cash prizes for the winners.",
+      "Codethon, organized by SECE on February 18, was an exhilarating coding challenge that showcased top problem-solvers. Students tested their logical skills and coding agility in a competitive arena. The event fostered intense excitement, offering valuable learning experiences and cash prizes for winners, making it a memorable experience for all participants.",
     image: codethonImage, 
   },
 ];

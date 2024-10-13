@@ -1,6 +1,7 @@
 .nexus-container {
   font-family: "Arial", sans-serif;
 }
+
 .nexus-scroll {
   justify-self: center;
   align-self: flex-end;
@@ -46,19 +47,20 @@
 .nexus-content-item {
   padding: 30px;
   /* background-color: rgba(255, 255, 255, 0.9); Slight transparency */
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   /* background-image: url("../../assets/about-bg.png"); Apply background image */
   background-size: cover;
   background-position: center;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
 }
 
 .nexus-content-item h2 {
   margin-top: 0;
   font-size: 2.5rem;
-  font-family: "Lobster", cursive; /* Stylish font for headings */
-  color: #333;
+  color: #9375c6;
+  /* font-family: "Lobster", cursive; 
+  color: #333; */
   text-align: center;
   margin-bottom: 20px;
 }
@@ -68,7 +70,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background-color: #ff6347; /* Tomato color */
+  background-color: #9375c6; /* Tomato color */
   margin: 10px auto 0;
 }
 
@@ -169,9 +171,10 @@ footer {
 
 /* Funky Heading Styling */
 .funky-heading {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  /* font-family: "Comic Sans MS", cursive, sans-serif; */
   font-size: 2rem;
-  color: #ff6347;
+  color: #9375c6;
+  font-weight: bold;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }

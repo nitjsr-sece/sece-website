@@ -21,7 +21,7 @@ const NexusPage = () => {
   };
 
   return (
-    <div className="nexus-container">
+    <div className="nexus-container ">
       <Navbar2 />
       <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
       <MenuButton onClick={() => toggleDrawer(true)} />
@@ -43,7 +43,7 @@ const NexusPage = () => {
       </section>
 
       {/* Description Section */}
-      <section className="nexus-description" id="description">
+      <section className="nexus-description bg-black text-white drop-shadow-[0_4px_10px_#9375c6]" id="description">
         <div className="description-content">
           <div className="description-text">
             <h1 className="funky-heading">
@@ -92,7 +92,7 @@ const NexusPage = () => {
 
           {/* Events Section */}
           <div className="nexus-content-item" id="events">
-            <h2>Events</h2>
+          <h2 className="uppercase font-bold">EVENTS</h2>
             {events.map((event, index) => (
               <EventCard
                 key={index}

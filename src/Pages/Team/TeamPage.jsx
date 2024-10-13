@@ -53,14 +53,14 @@ const TeamPage = () => {
         <div className="team-page__links flex space-x-6">
           <a
             href="#section1"
-            className="hover:underline hover:text-sky-500 text-lg cursor-pointer"
+            className="hover:underline hover:text-[#9375c6] text-lg cursor-pointer"
             onClick={() => handleLinkClick('Batch 2K21-2K25')}
           >
             Batch 2K21-2K25
           </a>
           <a
             href="#section2"
-            className="hover:underline hover:text-sky-500 text-lg cursor-pointer"
+            className="hover:underline hover:text-[#9375c6] text-lg cursor-pointer"
             onClick={() => handleLinkClick('Batch 2K22-2K26')}
           >
             Batch 2K22-2K26
@@ -70,7 +70,7 @@ const TeamPage = () => {
 
       <section ref={sectionRef} className="team-page__content my-20">
         <div className="p-6 flex flex-col justify-center items-center">
-          <h2 className='text-sky-500 text-5xl font-extrabold tracking-wide mb-6'>MEMBERS</h2>
+        <h2 className='text-[#9375c6] text-5xl font-extrabold tracking-wide mb-6'>MEMBERS</h2>
 
           <div className="mb-6 flex justify-center items-center mt-10">
             <select
@@ -110,7 +110,7 @@ const TeamPage = () => {
                   />
                 </div>
 
-                <div className="h-[65%] w-full bg-gradient-to-r from-sky-500 to-blue-500 text-white flex flex-col items-center member-info">
+                <div className="h-[65%] w-full bg-gradient-to-r from-[#9375c6] to-[#9375c6] text-white flex flex-col items-center member-info">
                   <h2 className="font-bold mb-2 mt-5 member-name">{member.Name}</h2>
                   <p className="member-por">{member.POR}</p>
 

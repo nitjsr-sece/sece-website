@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./HomePage.css";
 import logo from "../../assets/logo-white.png";
-import hand from "../../assets/hand.png";
-import about_logo from "../../assets/about-logo.png";
+import hand from "../../assets/hand1.png";
+import about_logo from "../../assets/about-logo1.png";
 import about_photo from "../../assets/about-photo.png";
-import nexus_photo from "../../assets/nexus-photo.png";
-import event_photos from "../../assets/event-photos.png";
+import nexus_photo from "../../assets/nexus-photo1.png";
+import event_photos from "../../assets/event_photos1.png";
 import NavDrawer from "../../components/Navbar/NavDrawer.jsx";
 import MenuButton from "../../components/MenuButton/MenuButton";
 import Navbar2 from "../../components/Navbar2";
@@ -55,12 +55,12 @@ const HomePage = () => {
                 initial={{ opacity: 0, x: -200 }}
                 transition={{ duration: 1 }}
               >
-                <h4 className="hero-heading">
-                  Society of Electronics and Communication Engineering.
+                <h4 className="hero-heading font-sans font-semibold text-[#9375c6]">
+                Society of Electronics and Communication Engineering
                   <div className="x">
-                    <p className="tagline">
-                      Shaping Electronics,Transforming Communication,Connecting
-                      the Future.{" "}
+                    <p className="tagline font-light text-[white]">
+                      Shaping Electronics | Transforming Communication | Connecting
+                      the Future{" "}
                     </p>
                   </div>
                 </h4>
@@ -98,16 +98,22 @@ const HomePage = () => {
 
   
 
-        <div className="bg-gray-100 py-8 bg-cover bg-center" id="About">
-          <div className="text-center py-8">
+        <div className="py-8 bg-cover bg-center w-[90%] mx-auto" id="About">
+          <div className="text-center">
             <motion.img
               src={about_logo}
               alt="About Us"
-              className="mx-auto max-w-xs lg:max-w-md"
+              className="mx-auto w-[84%] md:w-[45%] my-4"
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: -100 }}
               transition={{ duration: 1 }}
             />
+             {/* <motion.h1
+              className="text-white text-center"
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1 }}
+            >ABOUT US</motion.h1> */}
           </div>
 
           <div className="flex flex-wrap items-center py-8 px-4 lg:px-8">
@@ -115,22 +121,22 @@ const HomePage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1 }}
-              className="w-full lg:w-1/2 px-4"
+              className="w-full lg:w-1/2 px-6 mt-4 lg:mt-0 drop-shadow-[0_4px_10px_#9375c6]"
             >
               <img
                 src={about_photo}
                 alt="About Us"
-                className="rounded-lg shadow-lg about-photo"
+                className="rounded-lg w-[100%] about-photo h-auto"
               />
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 150 }}
               transition={{ duration: 1 }}
-              className="w-full lg:w-1/2 px-4 mt-4 lg:mt-0"
+              className="w-full lg:w-1/2 px-6 mt-4 lg:mt-0 drop-shadow-[0_4px_10px_#9375c6]"
             >
               <div className="about-content-container">
-                <p className="text-lg leading-relaxed text-gray-700 about-content pt-5">
+                <p className="text-3xl md:text-base font-sans font-normal text-justify text-gray-400 about-content py-12 md:py-4">
                   Welcome to the Society of Electronics and Communication
                   Engineering, where innovation meets excellence in the realm of
                   advancing technology. Our vision is to create a space where
@@ -146,9 +152,10 @@ const HomePage = () => {
           </div>
 
           <div
-            className="flex flex-wrap items-center py-8 px-4 lg:px-8 event-container"
+            className="flex flex-wrap items-center py-8 px-4 lg:px-8 event-container w-[98%] m-auto mt-36"
             id="Events"
           >
+            
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
@@ -156,11 +163,12 @@ const HomePage = () => {
               className="w-full lg:w-1/2 px-4 mt-4 lg:mt-0"
             >
               <div className="text-center lg:text-left">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4 mt-5">
+                <h2 className="text-6xl mt-4 md:mt-0 md:text-3xl font-bold text-[#9375c6] mb-4">
                   Events
                 </h2>
-                <div className="content-right">
-                  <p className="text-lg leading-relaxed text-gray-700 mb-6 events-content">
+                <div className="content-right drop-shadow-[0_4px_10px_#9375c6]">
+                
+                  <p className="text-3xl md:text-base text-justify font-normal font-sans text-gray-400 mb-6 events-content ">
                     The Society of Electronics and Communication Engineering
                     (SECE) conducts a series of events throughout the year,
                     offering students a platform to showcase their talents and
@@ -173,9 +181,12 @@ const HomePage = () => {
                 <div className="event-btn-container">
                   <a
                     href="/events"
-                    className="events-button transition-all ease-in duration-300"
+                    className="text-4xl md:text-base p-2 border-[1px] border-[#9375c6]  px-4 rounded-md bg-[none] hover:bg-gradient-to-r hover:from-[#bb0cf0] hover:to-[#9375c6] text-white transition-all duration-300"
+
                   >
+                    
                     Explore Events
+                   
                   </a>
                 </div>
               </div>
@@ -189,38 +200,38 @@ const HomePage = () => {
               <img
                 src={event_photos}
                 alt="Events"
-                className="rounded-lg shadow-lg event-photo"
+                className="rounded-lg w-[100%] h-auto shadow-lg event-photo drop-shadow-[0_4px_10px_#9375c6]"
               />
             </motion.div>
           </div>
 
-          <div className=" py-8 px-4 lg:px-8" id="Nexus">
+          <div className="px-4 lg:px-8" id="Nexus">
             <div className="flex flex-wrap items-center">
               <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -150 }}
                 transition={{ duration: 1 }}
-                className="w-full lg:w-1/2 px-4 mb-6 lg:mb-0"
+                className="lg:w-1/2 px-4 mb-6 lg:mb-0"
               >
                 <img
                   src={nexus_photo}
                   alt="Nexus Event"
-                  className="rounded-lg shadow nexus-photo"
+                  className="rounded-lg h-auto shadow nexus-photo drop-shadow-[0_4px_10px_#9375c6] w-[100%]"
                 />
               </motion.div>
               <motion.div
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: 100 }}
                 transition={{ duration: 1 }}
-                className="w-full lg:w-1/2 px-4"
+                className="w-full lg:w-1/2 px-4 "
               >
                 <h2
-                  className="text-2xl font-bold text-gray-800 mb-4"
+                  className="text-6xl mt-4 md:mt-0 md:text-3xl font-bold text-[#9375c6] "
                   style={{ textAlign: "center" }}
                 >
                   Nexus
                 </h2>
-                <p className="text-lg leading-relaxed text-gray-700 mb-6 nexus-event-content">
+                <p className="text-3xl text-justify md:text-base font-normal font-sans text-gray-400 mb-6 events-content ">
                   Nexus is the official fest of Electronics and Communication
                   Engineering department at NIT Jamshedpur, usually held in
                   October or November. Nexus is known for its exclusive events
@@ -230,10 +241,12 @@ const HomePage = () => {
                   culminating with a vibrant cultural night.
                 </p>
                 <div className="nexus-btn-container">
-                  <a
+                <a
                     href="/nexus"
-                    className="nexus-button transition-all ease-in duration-300"
+                    className="p-2 text-4xl md:text-base border-[1px] border-[#9375c6]  px-4 rounded-md bg-[none] hover:bg-gradient-to-r hover:from-[#bb0cf0] hover:to-[#9375c6] text-white transition-all duration-300"
+
                   >
+                    
                     Discover Nexus
                   </a>
                 </div>

@@ -10,7 +10,7 @@ const EventCard = ({ event, position }) => {
       </div>
       <div className="event-card-content">
         <h2 className="event-heading">{event.name}</h2>
-        <p className="event-description">{event.description}</p>
+        <p className="event-description text-white font-sans font-normal">{event.description}</p>
       </div>
     </div>
   );

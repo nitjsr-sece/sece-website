@@ -36,10 +36,10 @@
 }
 
 .event-card__heading {
-  font-family: "Lobster", cursive;
+  /* font-family: "Lobster", cursive; */
   font-size: 1.5rem; /* Slightly smaller font size to fit better */
   margin: 0 0 10px 0;
-  color: #333;
+  color: #ffffff;
   position: relative;
   padding-bottom: 5px; /* Space for underline */
   width:60%;
@@ -53,5 +53,5 @@
   bottom: 0;
   width: 100%;
   height: 2px; /* Thickness of the underline */
-  background-color: orange; /* Color of the underline */
+  background-color: #9375c6;  /* Color of the underline */
 }

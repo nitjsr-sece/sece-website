@@ -24,7 +24,7 @@ const EventsPage = () => {
       <div className="events-page__hero-section">
         <div className="events-page__hero-content">
           <h1 className="events-page__hero-heading">
-            Join the Excitement: SECE Society Events
+            Join the Excitement: SECE Events
           </h1>
           <div className="events-page__links-container">
             <a href="#events" className="events-page__nav-link">

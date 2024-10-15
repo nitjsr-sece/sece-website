@@ -106,7 +106,7 @@ const NexusPage = () => {
             <h2>Sponsors</h2>
             <div className="sponsor-logos">
               <div className="sponsor-logo-item">
-                <img src={sponsorLogo1} alt="Sponsor 1" style={{height:"7rem",marginTop:"20px"}} />
+                <img src={sponsorLogo1} alt="Sponsor 1" id="sponsorlogo1" />
               </div>
               <div className="sponsor-logo-item">
                 <img src={sponsorLogo2} alt="Sponsor 2" />

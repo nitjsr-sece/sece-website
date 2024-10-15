@@ -12,6 +12,7 @@ import sponsorLogo3 from "../../assets/NexusPage/sponsor3.png";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import events from "./Events";
 import nexusVideo from "../../assets/NexusPage/nexus-recap.mp4"; // Import your video file
+import CountdownTimer from "./CountdownTimer.jsx";
 
 const NexusPage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -24,7 +25,7 @@ const NexusPage = () => {
       <Navbar2 />
       <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
       <MenuButton onClick={() => toggleDrawer(true)} />
-
+     
       {/* Hero Section */}
       <section className="nexus-hero">
         <nav className="nexus-nav">
@@ -33,7 +34,7 @@ const NexusPage = () => {
           <a href="#events">Events</a>
           <a href="#sponsors">Sponsors</a>
         </nav>
-
+        
         <div className="nexus-scroll" style={{ color: "white" }}>
           <a href="#nexus-section" className="scroll-btn">
             <ArrowDropDownIcon />
@@ -45,6 +46,7 @@ const NexusPage = () => {
       <section className="nexus-description bg-black text-white drop-shadow-[0_4px_10px_#9375c6]" id="description">
         <div className="description-content">
           <div className="description-text">
+          <CountdownTimer/>
             <h1 className="funky-heading">
               Nexus – Where Fun Meets Brilliance!
             </h1>

@@ -87,9 +87,9 @@ const Alumni = () => {
               scope="row" 
               className="px-6 py-4 font-bold text-black-900 whitespace-nowrap dark:text-white alumni-name" 
             >
-              {member.name}
+              <a href={member.linkedin}>{member.name}</a>
             </th>
-            <td class="px-6 py-4" style={{backgroundColor:"black",color:"violet"}} >
+            <td class="px-6 py-4" style={{backgroundColor:"black",color:"white"}} >
                     {member.post}
             </td>
           </tr>

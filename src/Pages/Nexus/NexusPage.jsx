@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import NavDrawer from "../../components/Navbar/NavDrawer";
 import MenuButton from "../../components/MenuButton/MenuButton";
-
 import "./NexusPage.css";
 import PhotoCarousel from "./PhotoCarousel";
 import EventCard from "./EventCard";
 import Navbar2 from "../../components/Navbar2.jsx";
-import sponsorLogo1 from "../../assets/NexusPage/sponsor1.png";
+import sponsorLogo1 from "../../assets/NexusPage/sponsor1logo.png";
 import sponsorLogo2 from "../../assets/NexusPage/sponsor2.png";
 import sponsorLogo3 from "../../assets/NexusPage/sponsor3.png";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -107,7 +106,7 @@ const NexusPage = () => {
             <h2>Sponsors</h2>
             <div className="sponsor-logos">
               <div className="sponsor-logo-item">
-                <img src={sponsorLogo1} alt="Sponsor 1" />
+                <img src={sponsorLogo1} alt="Sponsor 1" style={{height:"7rem",marginTop:"20px"}} />
               </div>
               <div className="sponsor-logo-item">
                 <img src={sponsorLogo2} alt="Sponsor 2" />

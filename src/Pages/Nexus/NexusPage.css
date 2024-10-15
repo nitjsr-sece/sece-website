@@ -1,11 +1,6 @@
 .nexus-container {
   font-family: "Arial", sans-serif;
 }
-#sponsorlogo1{
-    height: 7rem;
-    margin-top: 20px;
-    transition: transform 0.3s ease-in-out;
-}
 #sponsorlogo1:hover{
   transform: scale(1.1);
 }

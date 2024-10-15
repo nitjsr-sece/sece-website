@@ -140,6 +140,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 40px;
+  padding-top:0;
   background-color: #f9f9f9;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
@@ -182,8 +183,15 @@ footer {
   font-weight: bold;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
+  /* margin-top:-100px */
+  padding-top:40px;
 }
 
+@media (max-width:850px){
+  .funky-heading{
+    padding-top:40px;
+  }
+}
 /* Media Query for Mobile Devices */
 @media (max-width: 600px) {
   .description-content {
@@ -196,7 +204,7 @@ footer {
   .funky-heading {
     font-size: 3.2rem;
     font-weight: bold;
-    padding-top: 0;
+   
   }
   .nexus-video {
     width: 100%;

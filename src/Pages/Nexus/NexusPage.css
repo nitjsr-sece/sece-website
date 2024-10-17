@@ -1,7 +1,9 @@
 .nexus-container {
   font-family: "Arial", sans-serif;
 }
-
+#sponsorlogo1:hover{
+  transform: scale(1.1);
+}
 .nexus-scroll {
   justify-self: center;
   align-self: flex-end;
@@ -214,5 +216,10 @@ footer {
   .nexus-video-player {
     width: 90%; /* Adjust the size for smaller screens */
     max-width: none;
+  }
+  #sponsorlogo1{
+    width: 78rem;
+    height: 8rem;
+    margin-top: 10px;
   }
 }

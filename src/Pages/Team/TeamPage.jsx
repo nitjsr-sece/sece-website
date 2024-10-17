@@ -85,13 +85,14 @@ const TeamPage = () => {
                 </option>
               ))}
             </select>
+            
           </div>
           <motion.div
             className="flex flex-wrap gap-12 justify-center items-center mt-16 member-card"
             variants={containerVariants}
             initial="hidden" 
             animate="visible" 
-            key={selectedBatch} 
+            
           >
           <motion.div
                 

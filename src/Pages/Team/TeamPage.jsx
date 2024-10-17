@@ -7,6 +7,7 @@ import { Batch2K25, Batch2K26 } from './index';
 import Navbar2 from "../../components/Navbar2.jsx";
 import NavDrawer from "../../components/Navbar/NavDrawer";
 import MenuButton from "../../components/MenuButton/MenuButton";
+import faculty_image from '../../assets/Member/dr-surajit-kundu.jpg';
 const TeamPage = () => {
   const batches = {
     'Batch 2K21-2K25': Batch2K25,
@@ -85,7 +86,6 @@ const TeamPage = () => {
               ))}
             </select>
           </div>
-
           <motion.div
             className="flex flex-wrap gap-12 justify-center items-center mt-16 member-card"
             variants={containerVariants}
@@ -93,6 +93,53 @@ const TeamPage = () => {
             animate="visible" 
             key={selectedBatch} 
           >
+          <motion.div
+                
+                className="relative h-[350px] w-[275px] flex flex-col justify-center items-center shadow-lg rounded-2xl overflow-hidden group bg-white transition-all duration-300 hover:shadow-2xl"
+                variants={cardVariants} 
+              >
+                <div className="h-[35%] w-full bg-gradient-to-br from-gray-600 to-gray-800 flex justify-center items-center" style={{border:"solid 2px violet",boxShadow:"10px violet"}}></div>
+
+                <div className="absolute top-8 z-10 bg-transparent">
+                  <img
+                    src={faculty_image}
+                    alt="Dr Surajit Kundu"
+                    loading="lazy"
+                    className="object-cover object-top h-[175px] w-[175px] rounded-full group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                  />
+                </div>
+
+                <div className="h-[65%] w-full bg-gradient-to-r from-[#9375c6] to-[#9375c6] text-white flex flex-col items-center member-info">
+                  <h2 className="font-bold mb-2 mt-5 member-name">Dr Surajit Kundu</h2>
+                  <p className="member-por">Faculty Mentor</p>
+
+                  <div className="flex gap-4 mt-5">
+                    <a
+                      href={`mailto:surajitkundu.ece@nitjsr.ac.in`}
+                      className="text-white hover:text-gray-400 transition-colors"
+                    >
+                      <FaEnvelope className="h-6 w-6" />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/surajit-kundu-9ba194143/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-gray-400 transition-colors"
+                    >
+                      <FaLinkedin className="h-6 w-6" />
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+              </motion.div>
+          <motion.div
+            className="flex flex-wrap gap-12 justify-center items-center mt-16 member-card"
+            variants={containerVariants}
+            initial="hidden" 
+            animate="visible" 
+            key={selectedBatch} 
+          >
+             
             {batches[selectedBatch].map((member, index) => (
               <motion.div
                 key={index}

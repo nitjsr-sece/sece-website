@@ -13,7 +13,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import events from "./Events";
 import nexusVideo from "../../assets/NexusPage/nexus-recap.mp4"; // Import your video file
 import CountdownTimer from "./CountdownTimer.jsx";
-
+import nexus_logo from '../../assets/nexus-funky-logo.png';
 const NexusPage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const toggleDrawer = (isOpen) => {
@@ -46,6 +46,7 @@ const NexusPage = () => {
       <section className="nexus-description bg-black text-white drop-shadow-[0_4px_10px_#9375c6]" id="description">
         <div className="description-content">
           <div className="description-text">
+          <img src={nexus_logo} className="nexus-funky-logo"></img>
           <CountdownTimer/>
             <h1 className="funky-heading">
               Nexus – Where Fun Meets Brilliance!

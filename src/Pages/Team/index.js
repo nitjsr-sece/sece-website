@@ -65,10 +65,10 @@ import Rajneesh from "../../assets/Member/2K23/IMG_20240626_154554 - Rajneesh Ku
 import Bindu from "../../assets/Member/2K23/IMG-20240818-WA0012 - BINDU PRANAVI RAYA.jpg";
 import Shreya from "../../assets/Member/2K23/IMG-20231213-WA0098 - Shreya Sharma.jpg";
 import Devi from "../../assets/Member/2K23/IMG_20240818_195340 - Devi 1024.jpg";
-import Arsh from "../../assets/Member/2K23/arsh.JPG";
-import Garima from "../../assets/Member/2K23/IMG-20231001-WA0028 - Garima Singh.JPG";
-import Shayan from "../../assets/Member/2K23/IMG-20240511-WA0524 - SHAYAN ADHIKARY.JPG";
-import Amit from "../../assets/Member/2K23/IMG_20240913_065233 - AMIT KUMAR.JPG";
+import Arsh from "../../assets/Member/2K23/arsh.jpg"
+import Garima from "../../assets/Member/2K23/IMG-20231001-WA0028 - Garima Singh.jpg";
+import Shayan from "../../assets/Member/2K23/IMG-20240511-WA0524 - SHAYAN ADHIKARY.jpg";
+import Amit from "../../assets/Member/2K23/IMG_20240913_065233 - AMIT KUMAR.jpg";
 import Akshaya from "../../assets/Member/2K23/photo sece - VADAGAM AKSHAYA.jpg";
 import Sandeep from "../../assets/Member/2K23/Sandeep.jpg";
 import Debashis from "../../assets/Member/2K23/Debashis.jpg";

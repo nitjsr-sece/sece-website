@@ -52,7 +52,7 @@ import imgv from "../../assets/Member/vivek.jpg";
 
 import abhay from "../../assets/Member/2K23/abhay.jpg";
 import rituraj from "../../assets/Member/2K23/IMG_20231106_002527_642 - Rituraj Singh.jpg";
-import akshata from "../../assets/Member/2k23/-ewd1qk - Akshata Singh.jpg";
+import akshata from "../../assets/Member/2K23/akshata.jpg";
 import Jawanpuria from "../../assets/Member/2K23/IMG-20240901-WA0017 - abhishek jawanpuria.jpg";
 import Saumya from "../../assets/Member/2K23/IMG_20240912_231459 - SAUMYA PRAKASH.jpg";
 import Ansh from "../../assets/Member/2K23/IMG_20240729_204616_357 - Ansh Raj.jpg";

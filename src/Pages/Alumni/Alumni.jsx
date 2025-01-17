@@ -4,12 +4,13 @@ import Navbar2 from "../../components/Navbar2";
 import MenuButton from "../../components/MenuButton/MenuButton";
 import NavDrawer from "../../components/Navbar/NavDrawer.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
-import { Batch2k19, Batch2k20 } from "../Team/index.js";
+import { Batch2k19, Batch2k20 , Batch2K21} from "../Team/index.js";
 import "./Alumni.css"
 const Alumni = () => {
     const batches = {
         'Batch 2K19-2K23': Batch2k19,
         'Batch 2K20-2K24': Batch2k20,
+        'Batch 2K21-2K25': Batch2K21
       };
     const handleLinkClick = (batch) => {
         setSelectedBatch(batch);
@@ -46,6 +47,13 @@ const Alumni = () => {
             onClick={() => handleLinkClick('Batch 2K20-2K24')}
           >
             Batch 2K20-2k24
+          </a>
+          <a
+            href="#section3"
+            className="hover:underline hover:text-sky-500 text-lg cursor-pointer"
+            onClick={() => handleLinkClick('Batch 2K21-2K25')}
+          >
+            Batch 2K21-2k25
           </a>
         </div>
       </section>

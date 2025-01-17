@@ -3,6 +3,7 @@ import Footer from "../../components/Footer/Footer";
 import NavDrawer from "../../components/Navbar/NavDrawer";
 import MenuButton from "../../components/MenuButton/MenuButton";
 import "./NexusPage.css";
+import nexus_logo from '../../assets/nexus-funky-logo.png';
 import PhotoCarousel from "./PhotoCarousel";
 import EventCard from "./EventCard";
 import Navbar2 from "../../components/Navbar2.jsx";
@@ -46,6 +47,7 @@ const NexusPage = () => {
       <section className="nexus-description bg-black text-white drop-shadow-[0_4px_10px_#9375c6]" id="description">
         <div className="description-content">
           <div className="description-text">
+          <img src={nexus_logo} className="nexus-funky-logo"></img>
           <CountdownTimer/>
             <h1 className="funky-heading">
               Nexus – Where Fun Meets Brilliance!

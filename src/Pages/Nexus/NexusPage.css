@@ -1,6 +1,10 @@
 .nexus-container {
   font-family: "Arial", sans-serif;
 }
+.nexus-funky-logo{
+  height: 16rem;
+  transform:scale(0.4);
+}
 #sponsorlogo1:hover{
   transform: scale(1.1);
 }

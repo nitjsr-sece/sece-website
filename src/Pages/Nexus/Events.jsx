@@ -1,84 +1,72 @@
 // Import event photos
-import digimon1 from "../../assets/NexusPage/compressed_events/digimon1.jpg"
-import digimon2 from "../../assets/NexusPage/compressed_events/digimon2.jpg";
-import digimon3 from "../../assets/NexusPage/compressed_events/digimon3.jpg";
+import robo1 from "../../assets/NexusPage/compressed_events/robo1.jpg"
+import robo2 from "../../assets/NexusPage/compressed_events/robo2.jpg";
+import robo3 from "../../assets/NexusPage/compressed_events/robo3.jpg";
 
-import codexus1 from "../../assets/NexusPage/compressed_events/codexus1.jpg";
-import codexus2 from "../../assets/NexusPage/compressed_events/codexus2.jpg";
-import codexus3 from "../../assets/NexusPage/compressed_events/codexus3.jpg";
+import coden1 from "../../assets/NexusPage/compressed_events/codexus1.jpg";
+import coden2 from "../../assets/NexusPage/compressed_events/codexus2.jpg";
+import coden3 from "../../assets/NexusPage/compressed_events/codexus3.jpg";
 
 import pairup1 from "../../assets/NexusPage/compressed_events/pup1.jpg";
 import pairup2 from "../../assets/NexusPage/compressed_events/pup2.jpg";
 import pairup3 from "../../assets/NexusPage/compressed_events/pup3.jpg";
 
-import talenthunt1 from "../../assets/NexusPage/compressed_events/th1.jpg";
-import talenthunt2 from "../../assets/NexusPage/compressed_events/th2.jpg";
-import talenthunt3 from "../../assets/NexusPage/compressed_events/th3.jpg";
+import latent1 from "../../assets/NexusPage/compressed_events/th1.jpg";
+import latent2 from "../../assets/NexusPage/compressed_events/th2.jpg";
+import latent3 from "../../assets/NexusPage/compressed_events/th3.jpg";
 
 import perfectpixel1 from "../../assets/NexusPage/compressed_events/pp1.jpg";
 import perfectpixel2 from "../../assets/NexusPage/compressed_events/pp2.jpg";
 import perfectpixel3 from "../../assets/NexusPage/compressed_events/pp3.jpg";
 
-import crypticcircuit1 from "../../assets/NexusPage/compressed_events/cc1.jpg";
-import crypticcircuit2 from "../../assets/NexusPage/compressed_events/cc2.jpg";
-import crypticcircuit3 from "../../assets/NexusPage/compressed_events/cc3.jpg";
+import decodino1 from "../../assets/NexusPage/compressed_events/cc1.jpg";
+import decodino2 from "../../assets/NexusPage/compressed_events/cc2.jpg";
+import decodino3 from "../../assets/NexusPage/compressed_events/cc3.jpg";
 
-import filmnexus1 from "../../assets/NexusPage/compressed_events/fn1.jpg";
-import filmnexus2 from "../../assets/NexusPage/compressed_events/fn2.jpg";
-import filmnexus3 from "../../assets/NexusPage/compressed_events/fn3.jpg";
-
-import eboltbgmi1 from "../../assets/NexusPage/compressed_events/bgmi1.jpg";
-import eboltbgmi2 from "../../assets/NexusPage/compressed_events/bgmi2.jpg";
-import eboltbgmi3 from "../../assets/NexusPage/compressed_events/bgmi3.jpg";
+import jwg1 from "../../assets/NexusPage/compressed_events/jwg1.jpg";
+import jwg2 from "../../assets/NexusPage/compressed_events/jwg2.jpg";
+import jwg3 from "../../assets/NexusPage/compressed_events/jwg3.jpg";
 
 // Sample data for the events
 const events = [
   {
-    name: "Talent Hunt",
+    name: "Nexus Got Latent",
     description:
-      "Talent Hunt was an event designed to help students unleash their hidden talents. Participants dazzled the audience with their skills in singing, beatboxing, dancing, roasting, magic tricks, art and craft, and stand-up comedy. The competition spanned two thrilling rounds: an eliminatory round and a grand finale. Exciting prizes awaited the winners, adding to the competitive spirit. The students' enthusiasm and vibrant performances made this event unforgettable, creating a vivid tapestry of talent and creativity that captivated everyone.",
-    photos: [talenthunt1, talenthunt2, talenthunt3],
+      "Nexus Got Latent, the ultimate talent hunt of Nexus 2024, was a spectacular showcase of creativity and humor. From hilarious stand-up comedy to spot-on mimicry and other captivating acts, participants left the crowd in splits and awe. The event was a complete entertainment package, blending laughter, talent, and pure fun. With every performance, the stage came alive, making Nexus Got Latent an unforgettable highlight of the fest and a true celebration of diverse talents!",
+    photos: [latent1, latent2, latent3],
   },
   {
     name: "Perfect Pixel",
-    description:
-      "Perfect Pixel was an electrifying photography event at NEXUS, where budding photographers unleashed their creativity! The challenge? Capture the fest's vibrant essence in a single frame. From the beautiful decorations to the lively crowds, participants showcased stunning photos that made everyone stop and stare. It wasn't just about the pictures—it was about connecting through a shared passion for photography. With every click, Perfect Pixel became more than just an event; it became a memorable experience that brought talent, creativity, and community together.",
+    description: "In Nexus 2024, Perfect Pixel, the photography event showcased the creative flair of participants as they beautifully captured the essence of the fest. From candid moments to vibrant scenes, every frame told a unique story. This event celebrated the art of photography, bringing out the magic of Nexus through captivating visuals. With lenses focused and imaginations unleashed, Perfect Pixel was a canvas where creativity met celebration!",
     photos: [perfectpixel1, perfectpixel2, perfectpixel3],
   },
   {
-    name: "Cryptic Circuit",
-    description:
-      "At the NEXUS'23 Fest, a collaborative effort between Team Innoreva and SECE, the 'Robotic Renaissance' showcase took center stage. The highlight of the event was the Cryptic Circuit competition, where robotics enthusiasts demonstrated their expertise by programming autonomous robots to navigate complex mazes and overcome obstacles. The competition pushed participants to innovate and test the limits of robotics technology. In the end, the most skilled individuals were awarded the grand prize. The success of the Cryptic Circuit competition contributed to the overall triumph of the fest, making it a memorable experience for all involved.",
-    photos: [crypticcircuit1, crypticcircuit2, crypticcircuit3],
+    name: "Decoduino",
+    description: "Nexus'24 in collaboration with Team Innoreva organized Decoduino which was an IoT-based challenge. The competition featured three exciting rounds: the ultimate IoT Quiz Challenge that tested the foundational knowledge of IoT, the Implementation Round, where teams developed practical IoT-based solutions and the grand finale 'Decoding Challenge', where finalists used Arduino Uno to decode signals, with speed and accuracy determining the winners. The event showcased participants problem-solving abilities and technical knowledge, inspiring them to explore and excel in the field of electronics.",
+    photos: [decodino1, decodino2, decodino3],
   },
   {
-    name: "Film Nexus",
+    name: "CodeNexus",
     description:
-      "The Film Nexus event at Nexus'23 Fest brought out the creativity of aspiring filmmakers, offering a platform for them to showcase their cinematic skills. Participants were tasked with crafting a documentary that not only captured the events but also conveyed the emotions, energy, and unique connections of the fest. Each submission, limited to six minutes, had to be well-edited and include key moments from Nexus'23. Filmmakers worked to highlight the essence of the fest in their documentaries. The event celebrated storytelling through the lens, making Film Nexus a memorable addition to the festival lineup.",
-    photos: [filmnexus1, filmnexus2, filmnexus3],
+      "On October 18th, Nexus 2024 hosted CodeNexus, an exhilarating coding event on the Unstop platform. Participants showcased their critical thinking and problem-solving prowess, tackling challenging problems with precision and creativity. The competition was a thrilling test of logical ability, pushing coders to think outside the box. CodeNexus celebrated the spirit of technology and intellect, making itself the ultimate coding showdown.",
+    photos: [coden1, coden2, coden3],
   },
   {
-    name: "E-BOLT BGMI Tournament",
+    name: "Jab We Guess",
     description:
-      "The E-BOLT BGMI Tournament at Nexus'23 Fest electrified the gaming scene with fierce competition in Battlegrounds Mobile India (BGMI). In the thrilling first round, registered teams clashed in a high-stakes Erangel battle, where only the top 4 teams from each group advanced. Round 2 brought even greater intensity, as the remaining teams faced off in a single, nail-biting match, with victory going to the highest-scoring team. The tournament wasn't just about intense battles; it showcased extraordinary teamwork, strategy, and skill, drawing a captivated crowd of gaming enthusiasts and making it a standout moment of the fest.",
-    photos: [eboltbgmi1, eboltbgmi2, eboltbgmi3],
+      "Jab We Guess was a lively and engaging competition of Nexus'24 that saw enthusiastic participation from students across all years and departments. Teams competed in two thrilling rounds: in the first round, participants showcased their creativity through quick doodles while in the second they unleashed their acting skills by expressing movie scenes as their teammates tried to guess the movie. The atmosphere was filled with excitement, laughter, and competitive spirit as participants raced against time to outperform each other.",
+    photos: [ jwg2, jwg3, jwg1],
   },
   {
-    name: "Digimon",
+    name: "Robotics Renaissance",
     description:
-      "A premier event conducted for electronics enthusiasts which took place with the aim of encouraging students who are interested in the field of electronics. The event featured two dynamic rounds. Round 1 presented a rigorous quiz that mainly tested the basic electronics knowledge of students. Round 2 was all about solving electronics-based problem statements and implementing their ideas with provided components. Overall, the event was a great success, drawing significant participation.",
-    photos: [digimon1, digimon2, digimon3],
+      "In Nexus 2024, Robotics Renaissance, the ultimate line-tracing bot challenge, brought together innovation and engineering prowess. Teams designed and built autonomous robots to navigate a designated track with precision and speed. Every second counted as bots raced against time, facing strict penalties for deviations. This electrifying event, held in collaboration with OJASS’25, celebrated the fusion of creativity and technology, pushing participants to their limits. With circuits buzzing and strategies unfolding, Robotics Renaissance was a testament to the brilliance of automation and design!",
+    photos: [robo1, robo1, robo1],
   },
   {
-    name: "Codexus",
+    name: "Dare 2 Pair",
     description:
-      "A highly anticipated coding competition was organized that brought together students from all years and branches. The contest was hosted on the Coding Ninjas platform. This event provided an opportunity for participants to showcase their coding expertise. Apart from the top three prizes, a special reward was reserved exclusively for first-year students.",
-    photos: [codexus1, codexus2, codexus3],
-  },
-  {
-    name: "Pair Up and Break the Ice",
-    description:
-      "SECE hosted an entertaining event designed for students to connect with new people, enhance their interpersonal skills, and create lasting memories. The event featured three engaging rounds: finding your pair, a questionnaire where the couple with the most matching answers won, and a lively paper dance finale. Apart from exciting prizes for the top three winners, there was a special reward for first-year students.",
+      "DARE 2 PAIR at Nexus’24 was a great success as it brought participants together in a vibrant celebration of teamwork and chemistry. From testing connections with musical tuning in the first round to Paper Dance in the second while the final round stole the show as participants recreated iconic movie scenes. Altogether the event was packed with laughter, drama, and unforgettable moments, leaving everyone with cherished memories.",
     photos: [pairup1, pairup2, pairup3],
   },
 ];

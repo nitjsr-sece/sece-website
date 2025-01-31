@@ -33,11 +33,11 @@ const EventsPage = () => {
           </h1>
           <p className="events-para-content">The Society of Electronics and Communication Engineering (ECE) is dedicated to fostering technical innovation, creativity, and hands-on learning among students. Every year, the ECE Society organizes a diverse range of events that cater to the technical and creative interests of its members. From coding challenges to exciting electronics-based activities, the society's events are designed to engage students in real-world problem solving while promoting teamwork, innovation, and fun.</p>
           </div>
-          <div className="events-page__links-container">
+          {/* <div className="events-page__links-container">
             <a href="#events" className="events-page__nav-link">
               Events
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import NavDrawer from "../../components/Navbar/NavDrawer";
 import MenuButton from "../../components/MenuButton/MenuButton";
-
 import "./NexusPage.css";
+import nexus_logo from '../../assets/nexus-funky-logo.png';
 import PhotoCarousel from "./PhotoCarousel";
 import EventCard from "./EventCard";
 import Navbar2 from "../../components/Navbar2.jsx";
-import sponsorLogo1 from "../../assets/NexusPage/sponsor1.png";
+import sponsorLogo1 from "../../assets/NexusPage/sponsor1logo.png";
 import sponsorLogo2 from "../../assets/NexusPage/sponsor2.png";
 import sponsorLogo3 from "../../assets/NexusPage/sponsor3.png";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import events from "./Events";
 import nexusVideo from "../../assets/NexusPage/nexus-recap.mp4"; // Import your video file
-
+import CountdownTimer from "./CountdownTimer.jsx";
 const NexusPage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const toggleDrawer = (isOpen) => {
@@ -25,7 +25,7 @@ const NexusPage = () => {
       <Navbar2 />
       <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
       <MenuButton onClick={() => toggleDrawer(true)} />
-
+     
       {/* Hero Section */}
       <section className="nexus-hero">
         <nav className="nexus-nav">
@@ -34,7 +34,7 @@ const NexusPage = () => {
           <a href="#events">Events</a>
           <a href="#sponsors">Sponsors</a>
         </nav>
-
+        
         <div className="nexus-scroll" style={{ color: "white" }}>
           <a href="#nexus-section" className="scroll-btn">
             <ArrowDropDownIcon />
@@ -46,6 +46,8 @@ const NexusPage = () => {
       <section className="nexus-description bg-black text-white drop-shadow-[0_4px_10px_#9375c6]" id="description">
         <div className="description-content">
           <div className="description-text">
+          <img src={nexus_logo} className="nexus-funky-logo"></img>
+          <CountdownTimer/>
             <h1 className="funky-heading">
               Nexus – Where Fun Meets Brilliance!
             </h1>
@@ -107,7 +109,7 @@ const NexusPage = () => {
             <h2>Sponsors</h2>
             <div className="sponsor-logos">
               <div className="sponsor-logo-item">
-                <img src={sponsorLogo1} alt="Sponsor 1" />
+                <img src={sponsorLogo1} alt="Sponsor 1" id="sponsorlogo1" />
               </div>
               <div className="sponsor-logo-item">
                 <img src={sponsorLogo2} alt="Sponsor 2" />

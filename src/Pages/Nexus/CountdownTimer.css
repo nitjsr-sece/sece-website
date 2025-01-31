@@ -1,0 +1,22 @@
+
+  .nexus-funky-logo{
+    transform:scale(0.4);
+  }
+  .time-display {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    width:fit-content;
+    margin:0px auto;
+    color:white;
+    
+  }
+  @media (min-width:900px){
+    .time-display{
+        margin-top:-50px;
+    }
+  }

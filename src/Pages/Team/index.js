@@ -44,11 +44,12 @@ import Img39 from "../../assets/Member/IMG-20240516-WA0036~2 - MOUMITA MAJI.jpg"
 import Img40 from "../../assets/Member/IMG_20240912_213055 - Simran Gupta.jpg";
 import Img41 from "../../assets/Member/IMG20240703225006~3 - safi.jpg";
 import Img42 from "../../assets/Member/1726159904812 - Lanka Sri laxmi prasanna kumar.jpg";
-import Img43 from "../../assets/Member/prince.jpg";
 import Img44 from "../../assets/Member/Shresth.jpg";
 import Img45 from "../../assets/Member/ankur.jpg";
 import hananiah from "../../assets/Member/hananiahtwo.jpg";
 import imgv from "../../assets/Member/vivek.jpg";
+import PrinceAgastyaJaiswal from "../../assets/Member/Prince Agastya Jaiswal.jpeg";
+import NityanandKumar from "../../assets/Member/Nityanand Kumar.jpeg";
 
 import abhay from "../../assets/Member/2K23/abhay.jpg";
 import rituraj from "../../assets/Member/2K23/IMG_20231106_002527_642 - Rituraj Singh.jpg";
@@ -65,11 +66,8 @@ import Rajneesh from "../../assets/Member/2K23/IMG_20240626_154554 - Rajneesh Ku
 import Bindu from "../../assets/Member/2K23/IMG-20240818-WA0012 - BINDU PRANAVI RAYA.jpg";
 import Shreya from "../../assets/Member/2K23/IMG-20231213-WA0098 - Shreya Sharma.jpg";
 import Devi from "../../assets/Member/2K23/IMG_20240818_195340 - Devi 1024.jpg";
-import Arsh from "../../assets/Member/2K23/arsh.jpg"
-import Garima from "../../assets/Member/2K23/IMG-20231001-WA0028 - Garima Singh.jpg";
 import Shayan from "../../assets/Member/2K23/IMG-20240511-WA0524 - SHAYAN ADHIKARY.jpg";
 import Amit from "../../assets/Member/2K23/IMG_20240913_065233 - AMIT KUMAR.jpg";
-import Akshaya from "../../assets/Member/2K23/photo sece - VADAGAM AKSHAYA.jpg";
 import Sandeep from "../../assets/Member/2K23/Sandeep.jpg";
 import Debashis from "../../assets/Member/2K23/Debashis.jpg";
 
@@ -430,7 +428,7 @@ export const Batch2K22 = [
     POR: "President",
     Email: "princejaiswal5465@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/prince-jaiswal-425074250/",
-    Img: Img43,
+    Img: PrinceAgastyaJaiswal,
   },
   {
     Name: "Aanchal Sikarwar",
@@ -525,6 +523,13 @@ export const Batch2K22 = [
     Email: "ns924732@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/neha-singh-9619ab25a",
     Img: Img34,
+  },
+  {
+    Name: "Nityanand Kumar",
+    POR: "EM Head",
+    Email: "nityanandkumar752@gmail.com",
+    LinkedIn: "",
+    Img: NityanandKumar,
   },
   {
     Name: "Basundhara",
@@ -749,13 +754,6 @@ export const Batch2K23 = [
     Img: Devi,
   },
   {
-    Name: "Garima Singh",
-    POR: "Member",
-    Email: "Garimasingh0316@gmail.com ",
-    LinkedIn: "https://www.linkedin.com/in/garima-singh-87880728a/",
-    Img: Garima,
-  },
-  {
     Name: "Shayan Adhikary ",
     POR: "Member",
     Email: "2023ugec047@nitjsr.ac.in",
@@ -763,26 +761,11 @@ export const Batch2K23 = [
     Img: Shayan,
   },
   {
-    Name: "Arsh Khan",
-    POR: "Member",
-    Email: "arshrza18@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/arsh-khan-b66165280",
-    Img: Arsh,
-  },
-  {
     Name: "Amit Kumar",
     POR: "Member",
     Email: "amitkumar1553p@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/amit-kumar-97829029b/",
     Img: Amit,
-  },
-  {
-    Name: "Akshaya Vadagam",
-    POR: "Member",
-    Email: "2023ugec074@nitjsr.ac.in",
-    LinkedIn:
-      "https://www.linkedin.com/in/akshaya-vadagam-97087028a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BlEez8IvERVWcFJLid7TmtQ%3D%3D",
-    Img: Akshaya,
   },
   {
     Name: "Sandeep Kumar",

@@ -19,9 +19,9 @@
 
 /* First Section: Hero Section */
 .events-page__hero-section {
-  height: 90vh;
+  height: 70vh;
   width: 100%;
-  background-image: url("../../assets/EventsPage/bg-compressed.jpg");
+  /* background-image: url("../../assets/EventsPage/bg-compressed.jpg"); */
   background-size: cover;
   /* background-attachment: fixed; */
   display: flex;
@@ -36,10 +36,10 @@
 }
 
 .events-page__hero-heading {
-  font-family: "Lobster", cursive; /* Stylish font for the heading */
+  /* font-family: "Lobster", cursive;  */
   font-size: 4rem; /* Larger font size for prominence */
   margin: 0;
-  padding: 20px;
+  padding: 30px;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Add shadow effect */
   z-index: 1;
   font-weight: bolder;
@@ -96,7 +96,7 @@
 /* Second Section: Content Section */
 .events-page__content-section {
   padding: 20px;
-  background-color: #f5f5f5;
+  background-color: black;
   /* background-image: url("../../assets/about-bg.png"); */
   background-size: cover;
   background-position: center;
@@ -108,7 +108,8 @@
 .events-page__section-heading {
   font-family: "Lobster", cursive; /* Stylish font for the heading */
   font-size: 3rem; /* Larger font size */
-  color: #333;
+  color: #9375c6;
+  font-weight:bold;
   text-align: center;
   margin-bottom: 20px;
   position: relative;
@@ -121,13 +122,13 @@
   display: block;
   width: 80px;
   height: 4px;
-  background-color: #ff6347; /* Tomato color */
+  background-color: #9375c6;/* Tomato color */
   margin: 10px auto 0;
 }
 
 /* Footer Section */
 .events-page__footer-section {
-  background-color: #333;
+  background-color:#1f182a ;
   color: white;
   text-align: center;
   margin: 0;

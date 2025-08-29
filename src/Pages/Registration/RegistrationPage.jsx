@@ -37,9 +37,9 @@ const RegistrationPage = () => {
         setIsSubmitting(true); // <-- Starts the loading state
 
         // Your EmailJS credentials
-        const serviceId = 'service_coj0bden';
-        const templateId = 'template_c7um7hs';
-        const publicKey = 'kY03-3SS1uexpPEeV';
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
         // The parameters object must match the variables in your EmailJS template
         const data = {

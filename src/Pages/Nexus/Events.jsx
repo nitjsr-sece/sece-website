@@ -55,7 +55,7 @@ const events = [
     name: "Jab We Guess",
     description:
       "Jab We Guess was a lively and engaging competition of Nexus'24 that saw enthusiastic participation from students across all years and departments. Teams competed in two thrilling rounds: in the first round, participants showcased their creativity through quick doodles while in the second they unleashed their acting skills by expressing movie scenes as their teammates tried to guess the movie. The atmosphere was filled with excitement, laughter, and competitive spirit as participants raced against time to outperform each other.",
-    photos: [ jwg2, jwg3, jwg1],
+    photos: [jwg2, jwg3, jwg1],
   },
   {
     name: "Robotics Renaissance",

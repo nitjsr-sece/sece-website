@@ -2,6 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
     background-color: black;
+}
+
+/* Add this to your main CSS file, like index.css */
+
+html,
+body {
+    height: 100%;
+    overflow: auto !important;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Add this to index.css or your main stylesheet */
+.loading-overlay {
+    position: fixed;
+    /* Sit on top of the page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent black */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Ensure it's on top of everything */
+    color: white;
+}
+
+.loading-spinner {
+    border: 8px solid #f3f3f3;
+    /* Light grey */
+    border-top: 8px solid #9375c6;
+    /* Purple */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

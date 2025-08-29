@@ -48,6 +48,9 @@ const Navbar2 = () => {
             <li>
               <a href="/alumni" className="block py-2 px-3 text-white rounded hover:text-[#9375c6] md:p-0">Alumni</a>
             </li>
+            <li>
+              <a href="/registration" className="block py-2 px-3 text-white rounded hover:text-[#9375c6] md:p-0">Registration</a>
+            </li>
           </ul>
         </div>
       </div>

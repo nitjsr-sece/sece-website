@@ -56,7 +56,7 @@ const HomePage = () => {
                 transition={{ duration: 1 }}
               >
                 <h4 className="hero-heading font-sans font-semibold text-[#9375c6]">
-                Society of Electronics and Communication Engineering
+                  Society of Electronics and Communication Engineering
                   <div className="x">
                     <p className="tagline font-light text-[white]">
                       Shaping Electronics | Transforming Communication | Connecting
@@ -64,7 +64,7 @@ const HomePage = () => {
                     </p>
                   </div>
                 </h4>
-                <img src={logo} className="mobile-view-logo"/>
+                <img src={logo} className="mobile-view-logo" />
               </motion.h1>
             </div>
 
@@ -96,7 +96,7 @@ const HomePage = () => {
           </div>
         </div>
 
-  
+
 
         <div className="py-8 bg-cover bg-center w-[90%] mx-auto" id="About">
           <div className="text-center">
@@ -108,7 +108,7 @@ const HomePage = () => {
               initial={{ opacity: 0, y: -100 }}
               transition={{ duration: 1 }}
             />
-             {/* <motion.h1
+            {/* <motion.h1
               className="text-white text-center"
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: -100 }}
@@ -155,7 +155,7 @@ const HomePage = () => {
             className="flex flex-wrap items-center py-8 px-4 lg:px-8 event-container w-[98%] m-auto mt-36"
             id="Events"
           >
-            
+
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
@@ -167,7 +167,7 @@ const HomePage = () => {
                   Events
                 </h2>
                 <div className="content-right drop-shadow-[0_4px_10px_#9375c6]">
-                
+
                   <p className="text-3xl md:text-base text-justify font-normal font-sans text-gray-400 mb-6 events-content ">
                     The Society of Electronics and Communication Engineering
                     (SECE) conducts a series of events throughout the year,
@@ -184,9 +184,9 @@ const HomePage = () => {
                     className="text-4xl md:text-base p-2 border-[1px] border-[#9375c6]  px-4 rounded-md bg-[none] hover:bg-gradient-to-r hover:from-[#bb0cf0] hover:to-[#9375c6] text-white transition-all duration-300"
 
                   >
-                    
+
                     Explore Events
-                   
+
                   </a>
                 </div>
               </div>
@@ -241,12 +241,12 @@ const HomePage = () => {
                   culminating with a vibrant cultural night.
                 </p>
                 <div className="nexus-btn-container">
-                <a
+                  <a
                     href="/nexus"
                     className="p-2 text-4xl md:text-base border-[1px] border-[#9375c6]  px-4 rounded-md bg-[none] hover:bg-gradient-to-r hover:from-[#bb0cf0] hover:to-[#9375c6] text-white transition-all duration-300"
 
                   >
-                    
+
                     Discover Nexus
                   </a>
                 </div>

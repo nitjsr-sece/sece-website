@@ -7,9 +7,11 @@ import NexusPage from "./Pages/Nexus/NexusPage.jsx";
 import TeamPage from "./Pages/Team/TeamPage.jsx";
 import NavDrawer from "./components/Navbar/NavDrawer.jsx";
 import MenuButton from "./components/MenuButton/MenuButton";
+import RegistrationPage from "./Pages/Registration/RegistrationPage.jsx";
 import Masterclass from "./Pages/Placement_masterclass/PMC.jsx";
 import Alumni from "./Pages/Alumni/Alumni.jsx";
 import "./index.css";
+import Navbar2 from "./components/Navbar2.jsx";
 
 function App() {
   // const [drawerOpen, setDrawerOpen] = useState(false);
@@ -19,19 +21,21 @@ function App() {
   // };
   return (
     <>
-    <Router>
-    {/* <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} /> */}
-    {/* <MenuButton onClick={() => toggleDrawer(true)} /> */}
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/events" element={<EventsPage />} />
-        <Route path="/nexus" element={<NexusPage />} />
-        <Route path="/calendar" element={<CalendarPage />} />
-        <Route path="/team" element={<TeamPage />} />
-        <Route path="/placement_masterclass" element={<Masterclass/>}/>
-        <Route path="/alumni" element={<Alumni/>}/>
-      </Routes>
-    </Router>
+      <Router>
+        {/* <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} /> */}
+        {/* <MenuButton onClick={() => toggleDrawer(true)} /> */}
+        <Navbar2 />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/nexus" element={<NexusPage />} />
+          <Route path="/calendar" element={<CalendarPage />} />
+          <Route path="/team" element={<TeamPage />} />
+          <Route path="/placement_masterclass" element={<Masterclass />} />
+          <Route path="/alumni" element={<Alumni />} />
+          <Route path="/registration" element={<RegistrationPage />} />
+        </Routes>
+      </Router>
     </>
   );
 }

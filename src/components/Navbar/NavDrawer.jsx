@@ -15,18 +15,20 @@ import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "./NavDrawer.css";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 
 const NavDrawer = ({ open, onClose }) => {
   const navigate = useNavigate();
 
   // Menu items without the Calendar
   const menuItems = [
-    { text: "Home", icon: <HomeIcon/>, route: "/" },
+    { text: "Home", icon: <HomeIcon />, route: "/" },
     { text: "Events", icon: <EmojiEventsIcon />, route: "/events" },
     { text: "Nexus", icon: <MemoryIcon />, route: "/nexus" },
     { text: "Team", icon: <GroupsIcon />, route: "/team" },
-    { text:"Placement Masterclass", icon: <WorkIcon />, route:"/placement_masterclass"},
-    { text:"Alumni", icon: <GroupsIcon/>, route:"/alumni"}
+    { text: "Placement Masterclass", icon: <WorkIcon />, route: "/placement_masterclass" },
+    { text: "Alumni", icon: <GroupsIcon />, route: "/alumni" },
+    { text: "Registration", icon: <GroupsIcon />, route: "/registration" }
   ];
 
   const drawerVariants = {
@@ -82,7 +84,7 @@ const NavDrawer = ({ open, onClose }) => {
                   disableTypography
                   primary={item.text}
                   className="transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:text-gray-300 navbar-contents list-item-text"
-                  style={{ padding: "0.2rem"}}
+                  style={{ padding: "0.2rem" }}
                 />
               </ListItem>
             </motion.div>

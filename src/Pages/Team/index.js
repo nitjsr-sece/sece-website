@@ -56,8 +56,8 @@ import rituraj from "../../assets/Member/2K23/IMG_20231106_002527_642 - Rituraj 
 import akshata from "../../assets/Member/2K23/akshata.jpg";
 import Jawanpuria from "../../assets/Member/2K23/IMG-20240901-WA0017 - abhishek jawanpuria.jpg";
 import Saumya from "../../assets/Member/2K23/IMG_20240912_231459 - SAUMYA PRAKASH.jpg";
-import Ansh from "../../assets/Member/2K23/IMG_20240729_204616_357 - Ansh Raj.jpg";
-import SatwikPal from "../../assets/Member/2K23/20240912_230454 - SATWIK PAL.jpg";
+import Ansh from "../../assets/Member/2K23/IMG-20250825-WA0033 - Ansh Raj.jpg";
+import SatwikPal from "../../assets/Member/2K23/DSC_0576(1) - Satwik Pal.jpg";
 import Indira from "../../assets/Member/2K23/IMG-20240304-WA0145 - Indira Kumari.jpg";
 import reetika from "../../assets/Member/2K23/IMG-20240913-WA0004 - PENMATSA RETHIKA SURYA SRI.jpg";
 import Siddharth from "../../assets/Member/2K23/20240528_095540 - Siddharth Roy.jpg";
@@ -70,6 +70,39 @@ import Shayan from "../../assets/Member/2K23/IMG-20240511-WA0524 - SHAYAN ADHIKA
 import Amit from "../../assets/Member/2K23/IMG_20240913_065233 - AMIT KUMAR.jpg";
 import Sandeep from "../../assets/Member/2K23/Sandeep.jpg";
 import Debashis from "../../assets/Member/2K23/Debashis.jpg";
+import Ayush from "../../assets/Member/2K23/IMG-20241117-WA0067 - Ayush Singh.jpg"
+import AyushG from "../../assets/Member/2K23/IMG-20240816-WA0001 - Ayush Krishna Garg.jpg"
+import Muskan from "../../assets/Member/2K23/IMG-20250905-WA0006 - MUSKAN GUPTA.jpg"
+
+import Abhiraj_24 from "../../assets/Member/2K24/Abhiraj_Chouhan_2024ugec080.jpg"
+import Aditya_24 from "../../assets/Member/2K24/Aditya_kumar_2024ugec040.jpg"
+import Akanksha_24 from "../../assets/Member/2K24/Akanksha 2024UGEC112.jpg"
+import mit_24 from "../../assets/Member/2K24/Amit Kumar 2024UGEC016.jpg"
+import Ananya_24 from "../../assets/Member/2K24/Ananya 2024UGEC014.jpg"
+import Amay_24 from "../../assets/Member/2K24/amay.jpg"
+import Dhairya_24 from "../../assets/Member/2K24/Dhairya 2024UGEC068.jpg"
+import Eshan_24 from "../../assets/Member/2K24/Eshan Bamalia 2024UGEC064.jpg"
+import Deepika_24 from "../../assets/Member/2K24/Deepika_2024UGEC081.jpg"
+import HarshG_24 from "../../assets/Member/2K24/Harsh Gautam 2024UGEC113.jpg"
+import HarshS_24 from "../../assets/Member/2K24/harshS1.jpg"
+import Hemant_24 from "../../assets/Member/2K24/hemant_2024ugec109.png"
+import Himanshu_24 from "../../assets/Member/2K24/Himanshu 2024UGEC042.jpg"
+import SSV_24 from "../../assets/Member/2K24/Ssvprasad _2024ugec037.png"
+import Mohit_24 from "../../assets/Member/2K24/Mohit Kumar_2024UGEC017.jpg"
+import Nishtha_24 from "../../assets/Member/2K24/Nishtha 2024UGEC034.jpg"
+import OM_24 from "../../assets/Member/2K24/Ohm Tiwari .jpg"
+import Priyanshu_24 from "../../assets/Member/2K24/Priyanshu Kumar 2024UGEC046.jpg"
+import Rayan_24 from "../../assets/Member/2K24/Rayan Manzar Khan 2024ugec001 .jpg"
+import Risika_24 from "../../assets/Member/2K24/Risika 2024UGEC010.jpg"
+import Saniya_24 from "../../assets/Member/2K24/IMG-20250215-WA0018.jpg"
+import Satyam_24 from "../../assets/Member/2K24/Satyam Singh .jpg"
+import Prakash_24 from "../../assets/Member/2K24/Prakash 2024UGEC095 .jpg"
+import Shiwani_24 from "../../assets/Member/2K24/Shiwani 2024UGEC076.jpg"
+import Shruti_24 from "../../assets/Member/2K24/Shruti 2024UGEC062.jpg"
+import Srijan_24 from "../../assets/Member/2K24/Srijan 2024UGEC052.jpg"
+import Surbhi_24 from "../../assets/Member/2K24/Surbhi Kumari Oraon_2024UGEC061.jpg"
+import veer_24 from "../../assets/Member/2K24/2024_veer_pratap_singh_2024ugec080.jpg"
+import Tanushri_24 from "../../assets/Member/2K24/Tanusree_2024UGEC093.jpg"
 
 export const Batch2k19 = [
   {
@@ -782,5 +815,263 @@ export const Batch2K23 = [
     LinkedIn:
       "https://www.linkedin.com/in/debashis-baral-62433a1b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     Img: Debashis,
+  },
+  {
+    Name: "Ayush Singh",
+    POR: "Member",
+    Email: "ayushsingh28sep@gmail.com",
+    LinkedIn:
+      "https://www.linkedin.com/in/ayush-singh-925bb6286/",
+    Img: Ayush,
+  },
+  {
+    Name: "Ayush Garg",
+    POR: "Member",
+    Email: "017ayushgarg@gmail.com",
+    LinkedIn:
+      "http://linkedin.com/in/ayush-krishna-garg-7aa61a28a/",
+    Img: AyushG,
+  },
+  {
+    Name: "Muskan Gupta",
+    POR: "Member",
+    Email: "2023ugec064@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/muskan-gupta-8b280828a/",
+    Img: Muskan,
+  },
+];
+export const Batch2K24 = [
+  {
+    Name: "Abhiraj Chouhan",
+    POR: "Member",
+    Email: "2024ugec080@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/abhiraj-chouhan-157679325",
+    Img: Abhiraj_24,
+  },
+  {
+    Name: "Aditya Kumar",
+    POR: "Member",
+    Email: "2024ugec040@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/abhiraj-chohttps://www.linkedin.com/in/aditya-kumar-654973306/uhan-157679325",
+    Img: Aditya_24,
+  },
+  {
+    Name: "Akanksha Rani",
+    POR: "Member",
+    Email: "2024ugec112@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/akanksha-rani-8300243/",
+    Img: Akanksha_24,
+  },
+  {
+    Name: "Amay Agrawal",
+    POR: "Member",
+    Email: "2024ugec083@nitjsr.ac.in",
+    LinkedIn:
+      "",
+    Img: Amay_24,
+  },
+  {
+    Name: "Amit Kumar",
+    POR: "Member",
+    Email: "2024ugec016@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/amit-kumar-277957313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    Img: mit_24,
+  },
+  {
+    Name: "Ananya Anand",
+    POR: "Member",
+    Email: "2024ugec014@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/ananya-anand-644b7b327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    Img: Ananya_24,
+  },
+  {
+    Name: "Dhairya Agrawal",
+    POR: "Member",
+    Email: "2024ugec068@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/dhairya-agrawal-3b630b325",
+    Img: Dhairya_24,
+  },
+  {
+    Name: "Eshan Bamalia",
+    POR: "Member",
+    Email: "2024ugec064@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/eshan-bamalia-356821339",
+    Img: Eshan_24,
+  },
+  {
+    Name: "Hanumanthu Deepika",
+    POR: "Member",
+    Email: "2024ugec081@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/deepika-hanumanthu-27a822327",
+    Img: Deepika_24,
+  },
+  {
+    Name: "Harsh Gautam",
+    POR: "Member",
+    Email: "2024ugec113@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/harshgautam44/",
+    Img: HarshG_24,
+  },
+  {
+    Name: "Harsh Sahu",
+    POR: "Member",
+    Email: "2024ugec057@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/harsh-sahu-b94359335/",
+    Img: HarshS_24,
+  },
+  {
+    Name: "Hemant Kumar",
+    POR: "Member",
+    Email: "2024ugec109@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/hemant-kumar-07837a325 ",
+    Img: Hemant_24,
+  },
+  {
+    Name: "Himanshu kumar",
+    POR: "Member",
+    Email: "2024ugec042@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/himanshu-kumar-28a633313",
+    Img: Himanshu_24,
+  },
+  {
+    Name: "JSSV Prasad",
+    POR: "Member",
+    Email: "2024ugec037@nitjsr.ac.in",
+    LinkedIn:
+      "linkedin.com/in/jangam-shiva-shankara-varaprasad-6b137b382",
+    Img: SSV_24,
+  },
+  {
+    Name: "Mohit Kumar",
+    POR: "Member",
+    Email: "2024ugec017@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/mohit-kumar-533198328/",
+    Img: Mohit_24,
+  },
+  {
+    Name: "Nishtha Kumari",
+    POR: "Member",
+    Email: "2024ugec034@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/nishtha-kumari-9a0b8936b",
+    Img: Nishtha_24,
+  },
+  {
+    Name: "Om Tiwary",
+    POR: "Member",
+    Email: "2024ugec059@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/om-tiwary-9679ba313",
+    Img: OM_24,
+  },
+  {
+    Name: "Prakash.B",
+    POR: "Member",
+    Email: "2024ugec095@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/prakash-bodanapalli-7100a6325",
+    Img: Prakash_24,
+  },
+  {
+    Name: "Priyanshu Kumar",
+    POR: "Member",
+    Email: "2024ugec046@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/priyanshu-kumar-395492329",
+    Img: Priyanshu_24,
+  },
+  {
+    Name: "Rayan Manzar Khan",
+    POR: "Member",
+    Email: "2024ugec001@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/rayanmanzarkhan/",
+    Img: Rayan_24,
+  },
+  {
+    Name: "Risika",
+    POR: "Member",
+    Email: "2024ugec010@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/risika-bb681a327",
+    Img: Risika_24,
+  },
+  {
+    Name: "Saniya Jamal",
+    POR: "Member",
+    Email: "2024ugec086@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/saniya-jamal-98864a336/",
+    Img: Saniya_24,
+  },
+  {
+    Name: "Satyam Kumar Singh",
+    POR: "Member",
+    Email: "2024ugec072@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/satyam-kumar-singh-0b0368227",
+    Img: Satyam_24,
+  },
+  {
+    Name: "Shiwani Gorai",
+    POR: "Member",
+    Email: "2024ugec076@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/shiwani-gorai-4963a0327",
+    Img: Shiwani_24,
+  },
+  {
+    Name: "Shruti Kumari",
+    POR: "Member",
+    Email: "2024ugec062@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/shruti-kumari-321337335",
+    Img: Shruti_24,
+  },
+  {
+    Name: "Srijan Arya",
+    POR: "Member",
+    Email: "2024ugec052@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/srijan-arya-a4ba0a327",
+    Img: Srijan_24,
+  },
+  {
+    Name: "Surbhi Kumari Oraon",
+    POR: "Member",
+    Email: "2024ugec061@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/surbhi-oraon-048a6a328",
+    Img: Surbhi_24,
+  },
+  {
+    Name: "Veer Pratap Singh",
+    POR: "Member",
+    Email: "2024ugec084@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/veer-pratap-singh-a694aa325",
+    Img: veer_24,
+  },
+  {
+    Name: "Yenni Tanusree",
+    POR: "Member",
+    Email: "2024ugec093@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/tanusree-yenni/",
+    Img: Tanushri_24,
   },
 ];

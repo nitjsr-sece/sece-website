@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "./TeamPage.css";
 import Footer from "../../components/Footer/Footer";
 import { FaEnvelope, FaLinkedin } from "react-icons/fa";
-import { Batch2K22, Batch2K23 } from "./index";
+import { Batch2K22, Batch2K23, Batch2K24} from "./index";
 import Navbar2 from "../../components/Navbar2.jsx";
 import NavDrawer from "../../components/Navbar/NavDrawer";
 import MenuButton from "../../components/MenuButton/MenuButton";
@@ -12,6 +12,7 @@ const TeamPage = () => {
   const batches = {
     "Batch 2K22-2K26": Batch2K22,
     "Batch 2K23-2K27": Batch2K23,
+    "Batch 2K24-2K28": Batch2K24,
   };
   const [drawerOpen, setDrawerOpen] = useState(false);
   const toggleDrawer = (isOpen) => {
@@ -65,6 +66,13 @@ const TeamPage = () => {
             onClick={() => handleLinkClick("Batch 2K23-2K27")}
           >
             Batch 2K23-2K27
+          </a>
+          <a
+            href="#section3"
+            className="hover:underline hover:text-[#9375c6] text-lg cursor-pointer"
+            onClick={() => handleLinkClick("Batch 2K24-2K28")}
+          >
+            Batch 2K24-2K28
           </a>
         </div>
       </section>

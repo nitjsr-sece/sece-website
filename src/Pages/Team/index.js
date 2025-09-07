@@ -1059,7 +1059,7 @@ export const Batch2K24 = [
     Img: Surbhi_24,
   },
   {
-    Name: "veer pratap singh",
+    Name: "Veer Pratap Singh",
     POR: "Member",
     Email: "2024ugec084@nitjsr.ac.in",
     LinkedIn:

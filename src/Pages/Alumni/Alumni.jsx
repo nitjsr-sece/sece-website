@@ -61,7 +61,7 @@ const Alumni = () => {
             <select
               className="px-6 py-3 rounded-full border border-gray-300 text-gray-700 text-xl bg-white transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
               value={selectedBatch}
-              onChange={handleBatchChange} style={{backgroundColor:"black",color:"white",border:"solid 2px violet",boxShadow:"1px 1px 1px 1px violet"}}
+              onChange={handleBatchChange} style={{backgroundColor:"black",color:"white",border:"solid 2px #F2CC65",boxShadow:"1px 1px 1px 1px #F2CC65"}}
             >
               {Object.keys(batches).map((batch) => (
                 <option key={batch} value={batch}>
@@ -71,11 +71,11 @@ const Alumni = () => {
             </select>
           </div>
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg" style={{width:"60rem",margin:"auto",marginTop:"5rem",zoom:"1.0"}}>
-        
-    <h2 className='text-[#9375c6] text-xl font-bold tracking-wide mb-6 py-3' style={{textAlign:"center",margin:"auto"}}>Creators of Community, Architects of Tomorrow</h2>
-        
-      <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400" style={{border:"solid 2px violet",boxShadow:"10px 10px 10px"}} >
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400" style={{backgroundColor:"black",color:"violet"}}>
+
+    <h2 className='text-[#F2CC65] font-harry text-4xl tracking-wide mb-6 py-3' style={{textAlign:"center",margin:"auto"}}>Creators of Community, Architects of Tomorrow</h2>
+
+      <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400" style={{border:"solid 2px #F2CC65",boxShadow:"10px 10px 10px"}} >
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400" style={{backgroundColor:"black",color:"#F2CC65"}}>
           <tr>
             <th scope="col" class="px-6 py-3">
               Name

@@ -2,6 +2,7 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import colors from "tailwindcss/colors";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,11 +12,11 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
-  },
-  theme: {
-    // your existing config
     extend: {
+      fontFamily: {
+        lumos: ['"Lumos"', ...defaultTheme.fontFamily.sans],
+        harry: ['"Harry Potter"', 'sans-serif'],
+      },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
       },
@@ -32,16 +33,13 @@ module.exports = {
     },
   },
   plugins: [addVariablesForColors],
-  
 };
-
 
 function addVariablesForColors({ addBase, theme }) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
-
   addBase({
     ":root": newVars,
   });

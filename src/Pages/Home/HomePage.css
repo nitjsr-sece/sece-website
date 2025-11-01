@@ -1,5 +1,14 @@
 /* HomePage.css */
 
+/* Harry Potter Font */
+@font-face {
+  font-family: 'Harry Potter';
+  src: url('../../assets/fonts/HARRYP__.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* General styling */
 body,
 html {
@@ -134,7 +143,7 @@ img {
 }
 .content-right>p{
   justify-self: flex-end;
-  box-shadow: 0px 4px 8px #9375c6;
+  box-shadow: 0px 4px 8px #8f7e32;
 
 }
 /* Content Section */
@@ -168,7 +177,7 @@ img {
   border:solid 1px grey;
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: 0px 4px 10px #9375c6;
+  box-shadow: 0px 4px 10px #8f7e32;
 }
 .events-content{
   margin-top: 2rem;
@@ -178,7 +187,7 @@ img {
   border:solid 1px grey;
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: 0px 4px 8px #9375c6;
+  box-shadow: 0px 4px 8px #8f7e32;
 }
 
 .events-button{
@@ -206,7 +215,7 @@ img {
   border:solid 1px grey;
   border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0px 4px 8px #9375c6;
+  box-shadow: 0px 4px 8px #8f7e32;
 }
 .event-btn-container{
   margin-top: 2rem;

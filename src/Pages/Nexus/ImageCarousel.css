@@ -31,7 +31,7 @@
 }
 
 .arrow-button {
-  background-color: #9375c6; /* Red background for arrows */
+  background-color: #F2CC65; /* Red background for arrows */
   color: white; /* White color for arrows */
   border: none;
   padding:0.5rem;
@@ -45,5 +45,5 @@
 }
 
 .arrow-button:hover {
-  background-color: #692fcc;  /* Darker red on hover */
+  background-color: #d5c700;  /* Darker red on hover */
 }

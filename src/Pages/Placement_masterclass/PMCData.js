@@ -70,7 +70,7 @@ export const PMCData = [
         batch:24
     },
     {
-        name: "Adiya Kumar",
+        name: "Aditya Kumar",
         image: aditya_kumar,
         logo: intuit,
         pmc: adiya_kumar_pmc,

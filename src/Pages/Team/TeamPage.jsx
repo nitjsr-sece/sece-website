@@ -55,21 +55,21 @@ const TeamPage = () => {
         <div className="team-page__links flex space-x-6">
           <a
             href="#section1"
-            className="hover:underline hover:text-[#9375c6] text-lg cursor-pointer"
+            className="hover:underline hover:text-[#bea73e] text-lg cursor-pointer"
             onClick={() => handleLinkClick("Batch 2K22-2K26")}
           >
             Batch 2K22-2K23
           </a>
           <a
             href="#section2"
-            className="hover:underline hover:text-[#9375c6] text-lg cursor-pointer"
+            className="hover:underline hover:text-[#bea73e] text-lg cursor-pointer"
             onClick={() => handleLinkClick("Batch 2K23-2K27")}
           >
             Batch 2K23-2K27
           </a>
           <a
             href="#section3"
-            className="hover:underline hover:text-[#9375c6] text-lg cursor-pointer"
+            className="hover:underline hover:text-[#bea73e] text-lg cursor-pointer"
             onClick={() => handleLinkClick("Batch 2K24-2K28")}
           >
             Batch 2K24-2K28
@@ -79,7 +79,7 @@ const TeamPage = () => {
 
       <section ref={sectionRef} className="team-page__content my-20">
         <div className="p-6 flex flex-col justify-center items-center">
-          <h2 className="text-[#9375c6] text-5xl font-extrabold tracking-wide mb-6">
+          <h2 className="text-[#F2CC65] text-5xl font-harry tracking-wide mb-6">
             MEMBERS
           </h2>
 
@@ -89,8 +89,8 @@ const TeamPage = () => {
               style={{
                 backgroundColor: "black",
                 color: "white",
-                border: "solid 2px violet",
-                boxShadow: "1px 1px 1px 1px violet",
+                border: "solid 2px #F2CC65",
+                boxShadow: "1px 1px 1px 1px #F2CC65",
               }}
               value={selectedBatch}
               onChange={handleBatchChange}
@@ -114,7 +114,7 @@ const TeamPage = () => {
             >
               <div
                 className="h-[35%] w-full bg-gradient-to-br from-gray-600 to-gray-800 flex justify-center items-center"
-                style={{ border: "solid 2px violet", boxShadow: "10px violet" }}
+                style={{ border: "solid 2px #8f7e32", boxShadow: "10px #8f7e32" }}
               ></div>
 
               <div className="absolute top-8 z-10 bg-transparent">
@@ -126,7 +126,7 @@ const TeamPage = () => {
                 />
               </div>
 
-              <div className="h-[65%] w-full bg-gradient-to-r from-[#9375c6] to-[#9375c6] text-white flex flex-col items-center member-info">
+              <div className="h-[65%] w-full bg-gradient-to-r from-[#bea73e] to-[#bea73e] text-white flex flex-col items-center member-info">
                 <h2 className="font-bold mb-2 mt-5 member-name">
                   Dr Surajit Kundu
                 </h2>
@@ -167,8 +167,8 @@ const TeamPage = () => {
                 <div
                   className="h-[35%] w-full bg-gradient-to-br from-gray-600 to-gray-800 flex justify-center items-center"
                   style={{
-                    border: "solid 2px violet",
-                    boxShadow: "10px violet",
+                    border: "solid 2px #8f7e32",
+                    boxShadow: "10px #8f7e32",
                   }}
                 ></div>
 
@@ -181,7 +181,7 @@ const TeamPage = () => {
                   />
                 </div>
 
-                <div className="h-[65%] w-full bg-gradient-to-r from-[#9375c6] to-[#9375c6] text-white flex flex-col items-center member-info">
+                <div className="h-[65%] w-full bg-gradient-to-r from-[#bea73e] to-[#bea73e] text-white flex flex-col items-center member-info">
                   <h2 className="font-bold mb-2 mt-5 member-name">
                     {member.Name}
                   </h2>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./HomePage.css";
-import logo from "../../assets/logo-white.png";
-import hand from "../../assets/hand1.png";
-import about_logo from "../../assets/about-logo1.png";
-import about_photo from "../../assets/about-photo.png";
+import logo from "../../assets/sece_logo.png";
+import dumbledore from "../../assets/dumbledore_new.png";
+import about_logo from "../../assets/AboutUs.png";
+import about_photo from "../../assets/about-photo2.png";
 import nexus_photo from "../../assets/nexus-photo1.png";
 import event_photos from "../../assets/event_photos1.png";
 import NavDrawer from "../../components/Navbar/NavDrawer.jsx";
@@ -20,6 +20,7 @@ import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrow
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Footer from "../../components/Footer/Footer";
 import Card from "./Card.jsx";
+// font-sans
 const HomePage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const toggleDrawer = (isOpen) => {
@@ -34,10 +35,23 @@ const HomePage = () => {
         className="hamburger-home"
       />
       <div className="home-page">
-        <Navbar2 />
+        {/* Navbar - stays fixed on top */}
+        <nav className="fixed top-0 left-0 w-full z-50 bg-transparent">
+          <Navbar2 />
+        </nav>
+        
         {/* First Section */}
         <div className=" relative w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
-          <div className="w-full absolute inset-0 h-screen">
+          
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center h-screen z-0"
+            style={{
+              backgroundImage: "url('src/assets/harry_website.png')",
+            }}
+          ></div>
+          
+          <div className="w-full absolute inset-0 h-screen z-10">
             <SparklesCore
               id="tsparticlesfullpage"
               background="transparent"
@@ -48,17 +62,17 @@ const HomePage = () => {
               particleColor="#FFFFFF"
             />
           </div>
-          <div className="hero-section">
+          <div className="hero-section z-20 relative">
             <div className="hero-content">
               <motion.h1
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -200 }}
                 transition={{ duration: 1 }}
               >
-                <h4 className="hero-heading font-sans font-semibold text-[#9375c6]">
-                Society of Electronics and Communication Engineering
+                <h4 className="hero-heading font-semibold font-harry text-[#F2CC65] ">
+                <div className="text-6xl">Society of Electronics and Communication Engineering</div>
                   <div className="x">
-                    <p className="tagline font-light text-[white]">
+                    <p className="tagline font-light text-[white] text-4xl">
                       Shaping Electronics | Transforming Communication | Connecting
                       the Future{" "}
                     </p>
@@ -78,13 +92,14 @@ const HomePage = () => {
                   alt="Society Logo"
                 />
               </motion.div>
-              <div className="hand">
+              <div className="hand ">
                 <motion.img
                   whileInView={{ opacity: 1, y: 30 }}
                   initial={{ opacity: 0, y: 150 }}
                   transition={{ duration: 1 }}
-                  src={hand}
+                  src={dumbledore}
                   alt="hand image"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
@@ -121,7 +136,7 @@ const HomePage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1 }}
-              className="w-full lg:w-1/2 px-6 mt-4 lg:mt-0 drop-shadow-[0_4px_10px_#9375c6]"
+              className="w-full lg:w-1/2 px-6 mt-4 lg:mt-0 drop-shadow-[0_4px_10px_#8f7e32]"
             >
               <img
                 src={about_photo}
@@ -133,10 +148,10 @@ const HomePage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 150 }}
               transition={{ duration: 1 }}
-              className="w-full lg:w-1/2 px-6 mt-4 lg:mt-0 drop-shadow-[0_4px_10px_#9375c6]"
+              className="w-full lg:w-1/2 px-6 mt-4 lg:mt-0 drop-shadow-[0_4px_10px_#8f7e32]"
             >
-              <div className="about-content-container">
-                <p className="text-3xl md:text-base font-sans font-normal text-justify text-gray-400 about-content py-12 md:py-4">
+              <div className="about-content-container ">
+                <p className="text-5xl md:text-base font-sans font-normal text-justify text-gray-400 about-content py-12 md:py-4">
                   Welcome to the Society of Electronics and Communication
                   Engineering, where innovation meets excellence in the realm of
                   advancing technology. Our vision is to create a space where
@@ -163,12 +178,12 @@ const HomePage = () => {
               className="w-full lg:w-1/2 px-4 mt-4 lg:mt-0"
             >
               <div className="text-center lg:text-left">
-                <h2 className="text-6xl mt-4 md:mt-0 md:text-3xl font-bold text-[#9375c6] mb-4">
+                <h2 className="text-6xl mt-4 md:mt-0 md:text-3xl font-bold  text-[#F2CC65] mb-4">
                   Events
                 </h2>
-                <div className="content-right drop-shadow-[0_4px_10px_#9375c6]">
+                <div className="content-right drop-shadow-[0_4px_10px_#8f7e32]">
                 
-                  <p className="text-3xl md:text-base text-justify font-normal font-sans text-gray-400 mb-6 events-content ">
+                  <p className="text-5xl md:text-base text-justify font-normal font-sans text-gray-400 mb-6 events-content ">
                     The Society of Electronics and Communication Engineering
                     (SECE) conducts a series of events throughout the year,
                     offering students a platform to showcase their talents and
@@ -181,7 +196,7 @@ const HomePage = () => {
                 <div className="event-btn-container">
                   <a
                     href="/events"
-                    className="text-4xl md:text-base p-2 border-[1px] border-[#9375c6]  px-4 rounded-md bg-[none] hover:bg-gradient-to-r hover:from-[#bb0cf0] hover:to-[#9375c6] text-white transition-all duration-300"
+                    className="text-4xl md:text-base p-2 border-[1px] border-[#e7eca1]  px-4 rounded-md bg-[none] hover:bg-gradient-to-r hover:from-[#ecf00c] hover:to-[#8f7e32] text-white transition-all duration-300"
 
                   >
                     
@@ -200,7 +215,7 @@ const HomePage = () => {
               <img
                 src={event_photos}
                 alt="Events"
-                className="rounded-lg w-[100%] h-auto shadow-lg event-photo drop-shadow-[0_4px_10px_#9375c6]"
+                className="rounded-lg w-[100%] h-auto shadow-lg event-photo drop-shadow-[0_4px_10px_#8f7e32]"
               />
             </motion.div>
           </div>
@@ -216,7 +231,7 @@ const HomePage = () => {
                 <img
                   src={nexus_photo}
                   alt="Nexus Event"
-                  className="rounded-lg h-auto shadow nexus-photo drop-shadow-[0_4px_10px_#9375c6] w-[100%]"
+                  className="rounded-lg h-auto shadow nexus-photo drop-shadow-[0_4px_10px_#8f7e32] w-[100%]"
                 />
               </motion.div>
               <motion.div
@@ -226,12 +241,12 @@ const HomePage = () => {
                 className="w-full lg:w-1/2 px-4 "
               >
                 <h2
-                  className="text-6xl mt-4 md:mt-0 md:text-3xl font-bold text-[#9375c6] "
+                  className="text-6xl mt-4 md:mt-0 md:text-3xl font-bold text-[#F2CC65] "
                   style={{ textAlign: "center" }}
                 >
                   Nexus
                 </h2>
-                <p className="text-3xl text-justify md:text-base font-normal font-sans text-gray-400 mb-6 events-content ">
+                <p className="text-5xl text-justify md:text-base font-normal font-sans text-gray-400 mb-6 events-content ">
                   Nexus is the official fest of Electronics and Communication
                   Engineering department at NIT Jamshedpur, usually held in
                   October or November. Nexus is known for its exclusive events
@@ -243,7 +258,7 @@ const HomePage = () => {
                 <div className="nexus-btn-container">
                 <a
                     href="/nexus"
-                    className="p-2 text-4xl md:text-base border-[1px] border-[#9375c6]  px-4 rounded-md bg-[none] hover:bg-gradient-to-r hover:from-[#bb0cf0] hover:to-[#9375c6] text-white transition-all duration-300"
+                    className="p-2 text-4xl md:text-base border-[1px] border-[#8f7e32]  px-4 rounded-md bg-[none] hover:bg-gradient-to-r hover:from-[#ecf00c] hover:to-[#8f7e32] text-white transition-all duration-300"
 
                   >
                     

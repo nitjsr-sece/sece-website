@@ -16,7 +16,7 @@
   /* border: 2px solid black; */
   padding-top: 0;
   font-size: 3rem;
-  color: #9375c6;
+  color: #F2CC65;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin: 0; /* Removed default margin */
   margin-bottom: 20px; /* Adjusted spacing between heading and calendar */
@@ -67,7 +67,7 @@
   margin-bottom: 10px;
   font-size: 2rem;
   color: #333;
-  border-bottom: 2px solid #9375c6;
+  border-bottom: 2px solid #F2CC65;
   padding-bottom: 5px;
 }
 
@@ -87,6 +87,6 @@
   content: "•";
   position: absolute;
   left: -20px;
-  color: #9375c6;
+  color: #F2CC65;
   font-size: 1.5rem;
 }

@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: black;
+/* Harry Potter Font */
+@font-face {
+  font-family: 'Harry Potter';
+  src: url('/fonts/HARRYP__.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.cursor-pointer {
+  cursor: url('/assets/wand_pointer.png'), pointer;
+}
+
+body {
+  background-color: black;
 }

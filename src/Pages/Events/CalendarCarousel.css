@@ -6,8 +6,8 @@
   background-color:black;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: solid 2px violet;
-  box-shadow: 0px 4px 10px #9375c6;
+  border: solid 2px #F2CC65;
+  box-shadow: 0px 4px 10px #f5d784;
   margin-top: 2rem;
 }
 
@@ -15,7 +15,7 @@
   text-align: center;
   font-family: "Lobster", cursive;
   font-size: 1.87rem;
-  color: violet;
+  color: #F2CC65;
   margin-bottom: 20px;
 }
 
@@ -28,7 +28,7 @@
 .month-name {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: violet;
+  color: #F2CC65;
   width:fit-content;
   margin-right: auto;
   margin-left:auto;
@@ -46,7 +46,7 @@
 .day-name {
   font-weight: bold;
   text-align: center;
-  color: violet;
+  color: #F2CC65;
 }
 
 .calendar-grid {
@@ -70,7 +70,7 @@
 }
 
 .calendar-day.highlight {
-  background-color: #9375c6; /* Highlight color */
+  background-color: #f5d784;
   color: white;
 }
 

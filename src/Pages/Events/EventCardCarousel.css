@@ -9,7 +9,7 @@ body{
   zoom:1.2;
 }
 .custom-arrow {
-  color: #9375c6;
+  color: #f5d784;
   cursor: pointer;
   display:inline-block;
   z-index: 1;
@@ -26,11 +26,11 @@ body{
 } */
 
 .custom-arrow:hover {
-  color: #9375c6;
+  color: #f5d784;
 }
 
 .custom-arrow:active {
-  color: #9375c6;
+  color: #f5d784;
 }
 .custom-prev{
   /* margin-right:3rem; */

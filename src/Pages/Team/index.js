@@ -69,6 +69,7 @@ import Devi from "../../assets/Member/2K23/IMG_20240818_195340 - Devi 1024.jpg";
 import Shayan from "../../assets/Member/2K23/IMG-20240511-WA0524 - SHAYAN ADHIKARY.jpg";
 import Amit from "../../assets/Member/2K23/IMG_20240913_065233 - AMIT KUMAR.jpg";
 import Sandeep from "../../assets/Member/2K23/Sandeep.jpg";
+import keta from "../../assets/Member/2K23/keta.jpg";
 import Debashis from "../../assets/Member/2K23/Debashis.jpg";
 import Ayush from "../../assets/Member/2K23/IMG-20241117-WA0067 - Ayush Singh.jpg"
 import AyushG from "../../assets/Member/2K23/IMG-20240816-WA0001 - Ayush Krishna Garg.jpg"
@@ -839,6 +840,14 @@ export const Batch2K23 = [
     LinkedIn:
       "https://www.linkedin.com/in/muskan-gupta-8b280828a/",
     Img: Muskan,
+  },
+  // new member
+  {
+    Name: "Ketan Rawat",
+    POR: "Member",
+    Email: "2023ugec116@nitjsr.ac.in",
+    LinkedIn: "https://www.linkedin.com/in/ketan-rawat-97a8aa2a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    Img: keta,
   },
 ];
 export const Batch2K24 = [

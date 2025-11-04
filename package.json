@@ -16,6 +16,7 @@
     "@mui/icons-material": "^6.0.2",
     "@mui/material": "^6.0.2",
     "@react-spring/web": "^9.7.4",
+    "@tailwindcss/vite": "^4.1.16",
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.5.0",
@@ -44,7 +45,7 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
     "postcss": "^8.4.44",
-    "tailwindcss": "^3.4.10",
+    "tailwindcss": "^3.4.18",
     "typescript": "^5.5.4",
     "vite": "^5.4.19"
   }

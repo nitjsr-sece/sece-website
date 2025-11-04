@@ -4,8 +4,8 @@ import logo from "../../assets/sece_logo.png";
 import dumbledore from "../../assets/dumbledore_new.png";
 import about_logo from "../../assets/AboutUs.png";
 import about_photo from "../../assets/about-photo2.png";
-import nexus_photo from "../../assets/nexus-photo1.png";
-import event_photos from "../../assets/event_photos1.png";
+import nexus_photo from "../../assets/nexus-photo2.jpg";
+import event_photos from "../../assets/event_photos2.jpg";
 import NavDrawer from "../../components/Navbar/NavDrawer.jsx";
 import MenuButton from "../../components/MenuButton/MenuButton";
 import Navbar2 from "../../components/Navbar2";
@@ -257,7 +257,7 @@ const HomePage = () => {
                 </p>
                 <div className="nexus-btn-container">
                 <a
-                    href="/nexus"
+                    href="/nexus "
                     className="p-2 text-4xl md:text-base border-[1px] border-[#8f7e32]  px-4 rounded-md bg-[none] hover:bg-gradient-to-r hover:from-[#ecf00c] hover:to-[#8f7e32] text-white transition-all duration-300"
 
                   >

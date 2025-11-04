@@ -1,3 +1,21 @@
+//batch25
+import png1 from '../../assets/placement_masterclass/batch_25/1.png';
+import png2 from '../../assets/placement_masterclass/batch_25/2.png';
+import png3 from '../../assets/placement_masterclass/batch_25/3.png';
+import png4 from '../../assets/placement_masterclass/batch_25/4.png';
+import png5 from '../../assets/placement_masterclass/batch_25/5.png';
+import png6 from '../../assets/placement_masterclass/batch_25/6.png';
+import png7 from '../../assets/placement_masterclass/batch_25/7.png';
+import png8 from '../../assets/placement_masterclass/batch_25/8.png';
+import ashish from '../../assets/placement_masterclass/batch_25/Face/Ashish.jpeg';//
+import Shruti from '../../assets/placement_masterclass/batch_25/Face/Shruti Dwivedi .jpg';
+import Santosh from '../../assets/placement_masterclass/batch_25/Face/Santosh.jpg';
+import Diya from '../../assets/placement_masterclass/batch_25/Face/Diya.jpg';
+import AbhishekDeogharia from '../../assets/placement_masterclass/batch_25/Face/AbhishekDeogharia.jpg';
+import Mahi from '../../assets/placement_masterclass/batch_25/Face/Mahi.jpeg';
+import Shubaham from '../../assets/placement_masterclass/batch_25/Face/Shubaham.jpeg';
+import Ankit from '../../assets/placement_masterclass/batch_25/Face/Ankit.jpeg';
+
 //batch24
 import ronit from '../../assets/placement_masterclass/batch_24/ronit.png';
 import mv from '../../assets/placement_masterclass/company_logo/moneyview.png';
@@ -52,9 +70,74 @@ import oracle from '../../assets/placement_masterclass/company_logo/oracle.jpg';
 import Qualcomm from '../../assets/placement_masterclass/company_logo/Qualcomm.png';
 import vyapar from '../../assets/placement_masterclass/company_logo/vyapar.jpg';
 import yellowai from '../../assets/placement_masterclass/company_logo/yellowai.jpg';
+import Fastenal from '../../assets/placement_masterclass/company_logo/Fastenal.png';
+import nmtronics from '../../assets/placement_masterclass/company_logo/nmtronics.png';
+import logic from '../../assets/placement_masterclass/company_logo/logic.png';
+import gehealthcare from '../../assets/placement_masterclass/company_logo/ge-healthcare.png';
+import ubs from '../../assets/placement_masterclass/company_logo/ubs.jpg';
+// import logic from '../../assets/placement_masterclass/company_logo/logic.png';
 
 
 export const PMCData = [
+
+    {
+        name: "Ashish Satpathy",
+        image: ashish,
+        logo: Qualcomm,
+        pmc: png1,
+        batch: 25
+    },
+    {
+        name: "Shruti Dwivedi",
+        image: Shruti,
+        logo: Fastenal,
+        pmc: png2,
+        batch: 25
+    },
+    {
+        name: "Santosh Kumar",
+        image: Santosh,
+        logo: nmtronics,
+        pmc: png3,
+        batch: 25
+    },
+    {
+        name: "Diya Singh",
+        image: Diya,
+        logo: amazon,
+        pmc: png4,
+        batch: 25
+    },
+    {
+        name: "Abhishek Kumar",
+        image: AbhishekDeogharia,
+        logo: logic,
+        pmc: png5,
+        batch: 25
+    },
+    {
+        name: "Mahi Agarwal",
+        image: Mahi,
+        logo: gehealthcare,
+        pmc: png6,
+        batch: 25
+    },
+    {
+        name: "Shubham Kumar",
+        image: Shubaham,
+        logo: ubs,
+        pmc: png7,
+        batch: 25
+    },
+    {
+        name: "Ankit Kumar",
+        image: Ankit,
+        logo: atlassian,
+        pmc: png8,
+        batch: 25
+    },
+
+
     {
         name: "Ronit Ranjan",
         image: ronit,

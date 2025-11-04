@@ -12,7 +12,7 @@ import sponsorLogo2 from "../../assets/NexusPage/sponsor2.png";
 import sponsorLogo3 from "../../assets/NexusPage/sponsor3.png";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import events from "./Events";
-import nexusVideo from "../../assets/NexusPage/nexus-recap.mp4"; // Import your video file
+import nexusVideo from "../../assets/NexusPage/nexus-recap copy.mp4"; // Import your video file
 import CountdownTimer from "./CountdownTimer.jsx";
 const NexusPage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);

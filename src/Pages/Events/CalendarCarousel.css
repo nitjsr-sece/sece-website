@@ -69,10 +69,10 @@
   text-align: center;
 }
 
-/* .calendar-day.highlight {
-  background-color: #f5d784; Highlight color
+.calendar-day.highlight {
+  background-color: #f5d784;
   color: white;
-} */
+}
 
 .calendar-day.selected {
   border: 2px solid #333; /* Selected date border */

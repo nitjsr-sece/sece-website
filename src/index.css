@@ -10,6 +10,10 @@
   font-style: normal;
 }
 
+.cursor-pointer {
+  cursor: url('/assets/wand_pointer.png'), pointer;
+}
+
 body {
   background-color: black;
 }

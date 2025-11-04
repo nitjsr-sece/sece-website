@@ -70,6 +70,7 @@ const Masterclass = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
     const [batch,setBatch]=useState(24);
     const batches={
+        "Batch 2k21-2k25":25,
         "Batch 2k20-2k24":24,
         "Batch 2k19-2k23":23
     };

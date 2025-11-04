@@ -19,7 +19,7 @@ import perfectpixel1 from "../../assets/NexusPage/compressed_events/pp1.jpg";
 import perfectpixel2 from "../../assets/NexusPage/compressed_events/pp2.jpg";
 import perfectpixel3 from "../../assets/NexusPage/compressed_events/pp3.jpg";
 
-import decodino1 from "../../assets/NexusPage/compressed_events/cc1.jpg";
+import decodino1 from "../../assets/NexusPage/compressed_events/decodino1.jpg";
 import decodino2 from "../../assets/NexusPage/compressed_events/cc2.jpg";
 import decodino3 from "../../assets/NexusPage/compressed_events/cc3.jpg";
 
@@ -61,7 +61,7 @@ const events = [
     name: "Robotics Renaissance",
     description:
       "In Nexus 2024, Robotics Renaissance, the ultimate line-tracing bot challenge, brought together innovation and engineering prowess. Teams designed and built autonomous robots to navigate a designated track with precision and speed. Every second counted as bots raced against time, facing strict penalties for deviations. This electrifying event, held in collaboration with OJASS’25, celebrated the fusion of creativity and technology, pushing participants to their limits. With circuits buzzing and strategies unfolding, Robotics Renaissance was a testament to the brilliance of automation and design!",
-    photos: [robo1, robo1, robo1],
+    photos: [robo1, robo2, robo1],
   },
   {
     name: "Dare 2 Pair",

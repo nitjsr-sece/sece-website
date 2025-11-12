@@ -3,6 +3,7 @@
   width: 250px;
   height: 100%;
   padding: 20px;
+  gap: 0.2rem;
   background-color: black;
   color: white;
 }
@@ -12,7 +13,7 @@
 }
 
 .drawer-content .MuiListItem-root {
-  margin: 10px 0;
+  margin: 1px 0;
 }
 
 .drawer-content .MuiListItemIcon-root {
@@ -29,5 +30,20 @@
   .list-item-icon{
    transform: scale(2);
    margin-left: 10%;
+  }
+  
+  
+  .drawer-content .MuiListItemIcon-root {
+    min-width: 40px; /* Reduce from default 56px */
+    margin-right: -10px; /* Pull the text closer */
+  }
+  
+  .drawer-content .MuiListItem-root {
+    padding-left: 8px; /* Reduce left padding */
+  }
+  
+  .drawer-content {
+    gap: 0.01rem;
+    padding-bottom: 0;
   }
 }

@@ -126,7 +126,7 @@ const Alumni = () => {
                 </th>
                 <td
                   class="px-6 py-4 flex items-center justify-between"
-                  style={{ backgroundColor: "black", color: "white" }}
+                  style={{ backgroundColor: "black", color: "white" ,  paddingRight: "60px" }}
                 >
                   <span>{member.post}</span>
                   {member.linkedin && (

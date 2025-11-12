@@ -46,7 +46,7 @@ const NexusPage = () => {
       <section className="nexus-description bg-black text-white drop-shadow-[0_4px_10px_#8f7e32]" id="description">
         <div className="description-content">
           <div className="description-text">
-          <img src={nexus_logo} className="nexus-funky-logo w-80 sm:w-[500px] md:w-[700px] lg:w-[900px] h-auto"></img>
+          <img src={nexus_logo} className="nexus-funky-logo w-[200rem] h-auto"></img>
           <CountdownTimer/>
             <h1 className="funky-heading font-harry text-[#F2CC65] text-5xl">
               Nexus –  Where Fun Meets Brilliance!

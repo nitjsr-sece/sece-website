@@ -30,6 +30,9 @@ module.exports = {
           },
         },
       },
+      screens: {
+        'xs': '300px', 
+      },
     },
   },
   plugins: [addVariablesForColors],

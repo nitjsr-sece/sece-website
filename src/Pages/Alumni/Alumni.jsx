@@ -34,7 +34,7 @@ const Alumni = () => {
       <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
       <MenuButton onClick={() => toggleDrawer(true)} className="hamburger-home" />
       <section className="text-white flex flex-col items-center">
-        <div className="team-page__links flex space-x-6">
+        <div className="team-page__links flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-6">
           <a
             href="#section1"
             className="hover:underline hover:text-sky-500 text-lg cursor-pointer"
@@ -60,7 +60,7 @@ const Alumni = () => {
       </section>
       <div
         className="mb-6 flex justify-center items-center"
-        style={{ marginTop: "10rem" }}
+        style={{ marginTop: "8rem" }}
       >
         <select
           className="px-6 py-3 rounded-full border border-gray-300 text-gray-700 text-xl bg-white transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sky-500"
@@ -81,11 +81,11 @@ const Alumni = () => {
         </select>
       </div>
       <div
-        class="relative overflow-x-auto shadow-md sm:rounded-lg"
-        style={{ width: "60rem", margin: "auto", marginTop: "5rem", zoom: "1.0" }}
+        className="relative overflow-x-auto shadow-md rounded-lg w-full max-w-4xl mx-auto mt-20 px-4 md:px-8"
+        style={{ boxShadow: "none" }}
       >
         <h2
-          className="text-[#F2CC65] font-harry text-4xl tracking-wide mb-6 py-3"
+          className="text-[#F2CC65] font-harry text-3xl md:text-4xl tracking-wide mb-6 py-3"
           style={{ textAlign: "center", margin: "auto" }}
         >
           Creators of Community, Architects of Tomorrow
@@ -93,17 +93,17 @@ const Alumni = () => {
 
         <table
           class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
-          style={{ border: "solid 2px #F2CC65", boxShadow: "10px 10px 10px" }}
+          style={{ border: "solid 2px #F2CC65" }}
         >
           <thead
             class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
             style={{ backgroundColor: "black", color: "#F2CC65" }}
           >
             <tr>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class="px-10 py-3">
                 Name
               </th>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class="px-14 py-3">
                 POR
               </th>
             </tr>
@@ -125,20 +125,24 @@ const Alumni = () => {
                   {member.name}
                 </th>
                 <td
-                  class="px-6 py-4 flex items-center justify-between"
-                  style={{ backgroundColor: "black", color: "white" ,  paddingRight: "60px" }}
+                  class="px-6 py-4 flex items-center justify-between md:justify-center"
+                  style={{ backgroundColor: "black", color: "white", paddingRight: 0 }}
                 >
-                  <span>{member.post}</span>
-                  {member.linkedin && (
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="ml-3 text-[#F2CC65] hover:text-[#e7eca1]"
-                    >
-                      <FaLinkedin size={20} />
-                    </a>
-                  )}
+                  <div className="flex w-full items-center px-4 justify-center">
+                    <span className="mx-2">{member.post}</span>
+                    <div className="flex-1" />
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-auto text-[#F2CC65] hover:text-[#e7eca1] flex items-center justify-end"
+                        style={{ marginLeft: "auto" }}
+                      >
+                        <FaLinkedin size={20} />
+                      </a>
+                    )}
+                  </div>
                 </td>
               </tr>
             ))}

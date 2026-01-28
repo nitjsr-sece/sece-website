@@ -1,0 +1,457 @@
+/* HomePage.css */
+
+/* Harry Potter Font */
+@font-face {
+  font-family: 'Harry Potter';
+  src: url('../../assets/fonts/HARRYP__.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* General styling */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  scroll-behavior: smooth;
+}
+.hamburger-home{
+  display: none;
+}
+/* Home Page */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure the home page takes full width */
+}
+
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  /* background-image: url("../../assets/home-page-purple.png"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  /* align-items: center; */
+  flex-flow: row wrap;
+  padding-left:0px;
+  box-sizing: border-box;
+  overflow: clip;
+}
+
+@media (max-width: 500px) {
+  .hero-section {
+    height: 70vh; /* Adjust height for mobile */
+  }
+}
+
+.hero-content {
+  width: 50%;
+  display: flex;
+  align-content: center;
+  margin-right: -8%;
+}
+h1 {
+  text-align: center;
+  display: flex;
+  align-content: center;
+  box-sizing: border-box;
+  padding-top: 30%;
+  font-size:3rem;
+}
+.logo-hand {
+  width: 50%;
+  position: relative;
+  right: -15%;
+
+  transform: scale(1.4);
+
+  /* margin-left:-10%; */
+}
+.hand {
+  position: absolute;
+  top: 17%;
+  width: 65%;
+  height: 50%;
+  margin-top: 40%;
+  right:23%;
+}
+.logo {
+  position: absolute;
+  transform: scale(0.7);
+  width: 62%;
+  height:100%;
+  left: 9%;
+  top: 17%;
+
+}
+img {
+  max-height: 500px;
+}
+.scroll {
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  /* margin:-150px; */
+  transform: translate(-140px, 80%);
+  position: relative;
+  left: 0;
+}
+.social {
+  justify-self: flex-start;
+}
+.social > * {
+  display: inline-block;
+  margin: 10px;
+  transform: translateY(-50%);
+}
+.scroll > a {
+  text-decoration: none;
+  /* color: white;
+  border-radius: 50%; */
+  /* background-color: #0d0d0c; */
+  transform: scale(2.5);
+  width: 10px;
+  height: 30px;
+  margin: 0 auto;
+  /* box-shadow: 0 1px 2px darkslategray; */
+  transition: transform 1s;
+}
+.scroll-btn{
+  transform: scale(2.5);
+}
+.scroll > a:hover {
+  transform: translateY(-50%) scale(2.5);
+}
+.hero-section h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.content-right{
+  display: grid;
+}
+.content-right>p{
+  justify-self: flex-end;
+  box-shadow: 0px 4px 8px #8f7e32;
+
+}
+/* Content Section */
+
+.button {
+  background-color: #ff6347; /* Tomato color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px; /* Rounded corners */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background-color: #e53e43; /* Darker tomato color */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+/* Footer Section */
+
+.sece-about-image{
+  background-color: #e53e43;
+  font-size: 10px;
+}
+.about-content{
+  font-weight: bold;
+  letter-spacing: 1px;
+  border:solid 1px grey;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0px 4px 10px #8f7e32;
+}
+.events-content{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border:solid 1px grey;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0px 4px 8px #8f7e32;
+}
+
+.events-button{
+  padding-left: 1rem;
+  padding-right: 1rem;  
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-color: black;
+  border:solid 1px;
+  color: blue;
+  font-weight: bolder;
+  border-radius: 5rem;
+}
+.events-button:hover{
+  border-color: white;
+  border:solid 1px;
+  color: white;
+  background-color: rgb(48, 48, 62);
+}
+.nexus-event-content{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border:solid 1px grey;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0px 4px 8px #8f7e32;
+}
+.event-btn-container{
+  margin-top: 2rem;
+}
+.nexus-btn-container{
+  margin-top: 2.5rem;
+}
+.nexus-button{
+  padding-left: 1rem;
+  padding-right: 1rem;  
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-color: black;
+  border:solid 1px;
+  color: blue;
+  font-weight: bolder;
+  border-radius: 5rem;
+}
+.nexus-button:hover{
+  color: white;
+  background-color: rgb(48, 48, 62);
+}
+.event-photo{
+  border-radius: 75px;
+  border: 1px;
+  border-color:grey;
+  border-style: solid;
+  height: 25rem;
+  width: 30rem;
+  box-shadow: 0px 4px 8px rgba(64, 64, 64, 0.5);
+}
+.nexus-btn-container{
+  text-align: center;
+  margin-top: 5rem;
+}
+.event-container{
+  margin-top: 8rem;
+}
+.about-photo{
+  border-radius: 75px;
+  border: 1px;
+  border-color:grey;
+  border-style: solid;
+  height: 25rem;
+  width: 30rem;
+  box-shadow: 0px 4px 8px rgba(64, 64, 64, 0.5);
+}
+.nexus-photo{
+  border-radius: 75px;
+  border: 1px;
+  border-color:grey;
+  border-style: solid;
+  height: 25rem;
+  width: 30rem;
+  font-size: small;
+  box-shadow: 0px 4px 8px rgba(64, 64, 64, 0.5);
+}
+.hero-heading{
+  padding-top: 2rem;
+  text-align: left;
+  line-height: 4.8rem;
+}
+#Nexus{
+  margin-top: 8rem;
+}
+.mobile-view-logo{
+  display:none;
+}
+
+@media only screen and (max-width:850px){
+  .footer-content-sece{
+    display: none;
+    background-color: black;
+  }
+  #Events{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .hero-content{
+    position:relative;
+    justify-content: center;
+  }
+  .hero-heading{
+    margin-top:-100%;
+  }
+  .mobile-view-logo{
+    display:block;
+    position:absolute;
+    transform: scale(1);
+    /* border: 2px solid white ; */
+    margin-left: 7px ;
+    /* margin-top:100%; */
+  }
+  /* .hand{
+    display: none;
+  } */
+  .logo-hand{
+    width: 80%;
+    position: relative;
+    left:-1%;
+    top:25%;
+    transform: scale(0.8);
+    
+    height: fit-content;
+    margin:0 auto;
+    /* width: fit-content; */
+  }
+  .logo{
+    position:absolute;
+    left:50%;
+    display: none;
+  }
+  .hero-heading{
+    line-height: 5rem;
+    padding-bottom: 5rem;
+  }
+  h1{
+    padding-top: 60%;
+    box-sizing: border-box;
+  }
+  html{
+    font-size:6px;
+  }
+  .scroll>a{
+    width:fit-content;
+    height: fit-content;
+    display: none;
+    /* width: 10px;
+    height: 30px; */
+  }
+  .about-content-container{
+    margin-top: 6rem;
+  }
+  .scroll{
+    /* transform: translate(0px, 80%); */
+    /* display: none; */
+    align-self: flex-end;
+    justify-self: flex-end;
+    position:absolute;
+    top:90%;
+    transform: translateY(-90%);
+  }
+  .social{
+    display:none;
+    
+  }
+  .hero-section{
+    padding-left:0px;
+    flex-direction: column-reverse;
+
+  }
+  .hero-content{
+    margin:0 auto;
+    margin-bottom: 30px;
+  }
+  .about-photo{
+    margin:0 auto;
+  }
+  .event-photo{
+    margin: 0 auto;
+  }
+  .nexus-photo{
+    margin:0 auto;
+  }
+  .events-content{
+    font-size: xx-large;
+  }
+  /* body{
+    zoom: 1.5;
+  } */
+}
+@media only screen and  (max-width:450px) {
+  .hero-heading{
+    margin-left: 12rem;
+  }
+}
+@media only screen and (min-width:400px) and (max-width:850px){
+  .hero-section{
+    padding-left:0px;
+    flex-direction: column-reverse;
+
+  }
+  .hero-content{
+    margin:0 auto;
+    margin-bottom: 60px;
+  }
+  .scroll{
+    /* margin-top:20px; */
+  }
+  .logo-hand{
+    margin:0 auto;
+  }
+}
+@media only screen and (max-width:1300px){
+  .logo{
+    top:12%;
+  }
+}
+/* F */
+.tagline{
+  margin-top: r0em;
+  /* background-color:rgb(179, 178, 178); */
+  text-align: left;
+  /* padding: 1rem; */
+  line-height: 3rem;
+  border-radius: 10px;
+  /* color:black; */
+  color: azure;
+  /* font-weight: lighter; */
+  /* font-size: 1.6rem; */
+   font-size: 1.1rem;
+  width:37rem;
+}
+/* @media only screen and (max-width:450px) {
+  .tagline{
+    padding-left: 10rem;
+  }
+} */
+.tagline:hover{
+  cursor: pointer;
+}
+@media only screen and (max-width:450px){
+  .hero-content{
+    /* margin-left:-20px; */
+  }
+  .hero-heading{
+    margin-left:-10px;
+
+  }
+  .tagline{
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  .hero-heading{
+    font-size: 4.3rem;
+    margin-bottom: 1rem;
+  }
+ 
+}

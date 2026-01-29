@@ -10,7 +10,6 @@ import MenuButton from "../../components/MenuButton/MenuButton";
 import faculty_image from "../../assets/Member/dr-surajit-kundu.jpg";
 const TeamPage = () => {
   const batches = {
-    "Batch 2K22-2K26": Batch2K22,
     "Batch 2K23-2K27": Batch2K23,
     "Batch 2K24-2K28": Batch2K24,
   };
@@ -19,7 +18,7 @@ const TeamPage = () => {
     setDrawerOpen(isOpen);
   };
 
-  const [selectedBatch, setSelectedBatch] = useState("Batch 2K22-2K26");
+  const [selectedBatch, setSelectedBatch] = useState("Batch 2K23-2K27");
   const sectionRef = useRef(null);
 
   const handleBatchChange = (e) => {
@@ -53,13 +52,6 @@ const TeamPage = () => {
       <MenuButton onClick={() => toggleDrawer(true)} />
       <section className="text-white flex flex-col items-center">
         <div className="team-page__links flex space-x-6">
-          <a
-            href="#section1"
-            className="hover:underline hover:text-[#bea73e] text-lg cursor-pointer"
-            onClick={() => handleLinkClick("Batch 2K22-2K26")}
-          >
-            Batch 2K22-2K23
-          </a>
           <a
             href="#section2"
             className="hover:underline hover:text-[#bea73e] text-lg cursor-pointer"

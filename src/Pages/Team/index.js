@@ -68,12 +68,16 @@ import Shreya from "../../assets/Member/2K23/IMG-20231213-WA0098 - Shreya Sharma
 import Devi from "../../assets/Member/2K23/IMG_20240818_195340 - Devi 1024.jpg";
 import Shayan from "../../assets/Member/2K23/IMG-20240511-WA0524 - SHAYAN ADHIKARY.jpg";
 import Amit from "../../assets/Member/2K23/IMG_20240913_065233 - AMIT KUMAR.jpg";
-import Sandeep from "../../assets/Member/2K23/Sandeep.jpg";
+import Sandeep from "../../assets/Member/2K23/Sandeep.jpeg";
 import keta from "../../assets/Member/2K23/keta.jpg";
 import Debashis from "../../assets/Member/2K23/Debashis.jpg";
 import Ayush from "../../assets/Member/2K23/IMG-20241117-WA0067 - Ayush Singh.jpg"
 import AyushG from "../../assets/Member/2K23/IMG-20240816-WA0001 - Ayush Krishna Garg.jpg"
 import Muskan from "../../assets/Member/2K23/IMG-20250905-WA0006 - MUSKAN GUPTA.jpg"
+import AbhinavR from "../../assets/Member/2K23/AbhinavR.jpeg"
+import SubhodeepP from "../../assets/Member/2K23/SubhodeepP.jpeg"
+import AyushA from "../../assets/Member/2K23/AyushA.jpeg"
+import AnkitaB from "../../assets/Member/2K23/AnkitaB.jpeg"
 
 import Abhiraj_24 from "../../assets/Member/2K24/Abhiraj_Chouhan_2024ugec080.jpg"
 import Aditya_24 from "../../assets/Member/2K24/Aditya_kumar_2024ugec040.jpg"
@@ -86,7 +90,7 @@ import Eshan_24 from "../../assets/Member/2K24/Eshan Bamalia 2024UGEC064.jpg"
 import Deepika_24 from "../../assets/Member/2K24/Deepika_2024UGEC081.jpg"
 import HarshG_24 from "../../assets/Member/2K24/Harsh Gautam 2024UGEC113.jpg"
 import HarshS_24 from "../../assets/Member/2K24/harshS1.jpg"
-import Hemant_24 from "../../assets/Member/2K24/hemant_2024ugec109.png"
+import Hemant_24 from "../../assets/Member/2K24/hemant_2024ugec109.jpeg"
 import Himanshu_24 from "../../assets/Member/2K24/Himanshu 2024UGEC042.jpg"
 import SSV_24 from "../../assets/Member/2K24/Ssvprasad _2024ugec037.png"
 import Mohit_24 from "../../assets/Member/2K24/Mohit Kumar_2024UGEC017.jpg"
@@ -458,241 +462,342 @@ export const Batch2K21 = [
 ];
 export const Batch2K22 = [
   {
-    Name: "Prince Jaiswal",
-    POR: "President",
-    Email: "princejaiswal5465@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/prince-jaiswal-425074250/",
+    name: "Prince Jaiswal",
+    post: "President",
+    email: "princejaiswal5465@gmail.com",
+    linkedin: "https://www.linkedin.com/in/prince-jaiswal-425074250/",
     Img: PrinceAgastyaJaiswal,
   },
   {
-    Name: "Aanchal Sikarwar",
-    POR: "Vice President",
-    Email: "aanchal3104@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/aanchal-sikarwar-711223258",
+    name: "Aanchal Sikarwar",
+    post: "Vice President",
+    email: "aanchal3104@gmail.com",
+    linkedin: "https://www.linkedin.com/in/aanchal-sikarwar-711223258",
     Img: Img22,
   },
   {
-    Name: "Mayank Raj",
-    POR: "Treasurer",
-    Email: "rajmayank528@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/mayank-raj678",
+    name: "Mayank Raj",
+    post: "Treasurer",
+    email: "rajmayank528@gmail.com",
+    linkedin: "https://www.linkedin.com/in/mayank-raj678",
     Img: Img24,
   },
   {
-    Name: "Shresth Prasad",
-    POR: "General Secretary",
-    Email: "prasadshresth04@gmail.com",
-    LinkedIn:
-      "https://www.linkedin.com/in/shresth-prasad-160059250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    name: "Shresth Prasad",
+    post: "General Secretary",
+    email: "prasadshresth04@gmail.com",
+    linkedin: "https://www.linkedin.com/in/shresth-prasad-160059250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     Img: Img44,
   },
   {
-    Name: "Khushi",
-    POR: "Joint Secretary",
-    Email: "11e21khushi@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/khushi-585ba327b/",
+    name: "Khushi",
+    post: "Joint Secretary",
+    email: "11e21khushi@gmail.com",
+    linkedin: "https://www.linkedin.com/in/khushi-585ba327b/",
     Img: Img27,
   },
   {
-    Name: "Hrishita Singh",
-    POR: "Technical Secretary",
-    Email: "hrishitasingh373@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/hrishita-singh-a12741224/",
+    name: "Hrishita Singh",
+    post: "Technical Secretary",
+    email: "hrishitasingh373@gmail.com",
+    linkedin: "https://www.linkedin.com/in/hrishita-singh-a12741224/",
     Img: Img25,
   },
   {
-    Name: "Mainak Mishra",
-    POR: "CP Head",
-    Email: "mainakmishra00@gmail.com ",
-    LinkedIn: "https://www.linkedin.com/in/mainak-mishra-7761121b3",
+    name: "Mainak Mishra",
+    post: "CP Head",
+    email: "mainakmishra00@gmail.com ",
+    linkedin: "https://www.linkedin.com/in/mainak-mishra-7761121b3",
     Img: Img31,
   },
   {
-    Name: "M Yagnesh",
-    POR: "CP Head",
-    Email: "yagnesh1192005@gmail.com",
-    LinkedIn:
-      "https://www.linkedin.com/in/yagnesh-m-70b252258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    name: "M Yagnesh",
+    post: "CP Head",
+    email: "yagnesh1192005@gmail.com",
+    linkedin: "https://www.linkedin.com/in/yagnesh-m-70b252258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     Img: Img33,
   },
   {
-    Name: "Hananiah Martin",
-    POR: "Web Head",
-    Email: "hananiahhoney5@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/athota-hananiah-martin-12267a248/",
+    name: "Hananiah Martin",
+    post: "Web Head",
+    email: "hananiahhoney5@gmail.com",
+    linkedin: "https://www.linkedin.com/in/athota-hananiah-martin-12267a248/",
     Img: hananiah,
   },
   {
-    Name: "Ayush Raj",
-    POR: "CA Head",
-    Email: "ayushraj4435@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/ayush-raj-5327b42a5/",
+    name: "Ayush Raj",
+    post: "CA Head",
+    email: "ayushraj4435@gmail.com",
+    linkedin: "https://www.linkedin.com/in/ayush-raj-5327b42a5/",
     Img: Img21,
   },
   {
-    Name: "Priyanshu Dev",
-    POR: "Planning & Developement Head",
-    Email: "priyanshu.dev4396@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/priyanshu-dev29",
+    name: "Priyanshu Dev",
+    post: "Planning & Developement Head",
+    email: "priyanshu.dev4396@gmail.com",
+    linkedin: "https://www.linkedin.com/in/priyanshu-dev29",
     Img: Img18,
   },
   {
-    Name: "Subhomoy Maji",
-    POR: "PR Head",
-    Email: "majisubhomoy@gmail.com",
-    LinkedIn: "",
+    name: "Subhomoy Maji",
+    post: "PR Head",
+    email: "majisubhomoy@gmail.com",
+    linkedin: "https://www.linkedin.com/in/subhomoy-maji-a62a0538a/",
     Img: Img23,
   },
   {
-    Name: "Shreya Priyadarshni",
-    POR: "Creative Head",
-    Email: "2022ugec027@nitjsr.ac.in",
-    LinkedIn:
-      "https://www.linkedin.com/in/shreya-priyadarshni-aa323a270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    name: "Shreya Priyadarshni",
+    post: "Creative Head",
+    email: "2022ugec027@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/shreya-priyadarshni-aa323a270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     Img: Img36,
   },
   {
-    Name: "Neha Singh",
-    POR: "Content Head",
-    Email: "ns924732@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/neha-singh-9619ab25a",
+    name: "Neha Singh",
+    post: "Content Head",
+    email: "ns924732@gmail.com",
+    linkedin: "https://www.linkedin.com/in/neha-singh-9619ab25a",
     Img: Img34,
   },
   {
-    Name: "Nityanand Kumar",
-    POR: "EM Head",
-    Email: "nityanandkumar752@gmail.com",
-    LinkedIn: "",
+    name: "Nityanand Kumar",
+    post: "EM Head",
+    email: "nityanandkumar752@gmail.com",
+    linkedin: "https://www.linkedin.com/in/nityanand-kumar-7399942b5/",
     Img: NityanandKumar,
   },
   {
-    Name: "Basundhara",
-    POR: "Member",
-    Email: "singhdeobasundhara@gmail.com",
-    LinkedIn:
-      "https://www.linkedin.com/in/basundhara-singhdeo-b5a74925b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    name: "Basundhara",
+    post: "Member",
+    email: "singhdeobasundhara@gmail.com",
+    linkedin: "https://www.linkedin.com/in/basundhara-singhdeo-b5a74925b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     Img: Img20,
   },
   {
-    Name: "Ankit Singh",
-    POR: "Member",
-    Email: "ankitsingh2652003@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/ankit4026",
+    name: "Ankit Singh",
+    post: "Member",
+    email: "ankitsingh2652003@gmail.com",
+    linkedin: "https://www.linkedin.com/in/ankit4026",
     Img: Img19,
   },
   {
-    Name: "Jackline D Kerketta",
-    POR: "Member",
-    Email: "2022ugec031@nitjsr.ac.in",
-    LinkedIn: "https://www.linkedin.com/in/jackline-d-kerketta-3ba184268",
+    name: "Jackline D Kerketta",
+    post: "Member",
+    email: "2022ugec031@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/jackline-d-kerketta-3ba184268",
     Img: Img26,
   },
   {
-    Name: "Nikhil Nukala",
-    POR: "Member",
-    Email: "strawhatnikhil@gmail.com",
-    LinkedIn:
-      "https://www.linkedin.com/in/nikhilnukala?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    name: "Nikhil Nukala",
+    post: "Member",
+    email: "strawhatnikhil@gmail.com",
+    linkedin: "https://www.linkedin.com/in/nikhilnukala?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     Img: Img28,
   },
   {
-    Name: "Shrinkhala Shringar",
-    POR: "Member",
-    Email: "shrinkhalashringar.000@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/shrinkhala-shringar",
+    name: "Shrinkhala Shringar",
+    post: "Member",
+    email: "shrinkhalashringar.000@gmail.com",
+    linkedin: "https://www.linkedin.com/in/shrinkhala-shringar",
     Img: Img29,
   },
   {
-    Name: "Jaykant Mishra",
-    POR: "Member",
-    Email: "jaykantmishra88@gmail.com ",
-    LinkedIn: "https://www.linkedin.com/in/jaykant-mishra-a23934257/",
+    name: "Jaykant Mishra",
+    post: "Member",
+    email: "jaykantmishra88@gmail.com ",
+    linkedin: "https://www.linkedin.com/in/jaykant-mishra-a23934257/",
     Img: Img30,
   },
   {
-    Name: "Gautam Kumar",
-    POR: "Member",
-    Email: "gautamtherock239@gmail.com",
-    LinkedIn:
-      "https://www.linkedin.com/in/gautam-kumar-589103250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    name: "Gautam Kumar",
+    post: "Member",
+    email: "gautamtherock239@gmail.com",
+    linkedin: "https://www.linkedin.com/in/gautam-kumar-589103250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     Img: Img32,
   },
   {
-    Name: "N.V.Aditya",
-    POR: "Member",
-    Email: "2022ugec042@nitjsr.ac.in",
-    LinkedIn: "htpp://www.linkedin.com/in/aditya-n-aa632b27a",
+    name: "N.V.Aditya",
+    post: "Member",
+    email: "2022ugec042@nitjsr.ac.in",
+    linkedin: "htpp://www.linkedin.com/in/aditya-n-aa632b27a",
     Img: Img35,
   },
   {
-    Name: "Danish Javed",
-    POR: "Member",
-    Email: "danishjaved03191@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/danish-javed-68180825b/",
+    name: "Danish Javed",
+    post: "Member",
+    email: "danishjaved03191@gmail.com",
+    linkedin: "https://www.linkedin.com/in/danish-javed-68180825b/",
     Img: Img37,
   },
   {
-    Name: "Anany Lohia",
-    POR: "Member",
-    Email: "lohia.anany16@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/ananyakrlohia/",
+    name: "Anany Lohia",
+    post: "Member",
+    email: "lohia.anany16@gmail.com",
+    linkedin: "https://www.linkedin.com/in/ananyakrlohia/",
     Img: Img38,
   },
   {
-    Name: "Mohammad Wasif",
-    POR: "Member",
-    Email: "safiwasif101@gmail.com",
-    LinkedIn:
-      "https://www.linkedin.com/in/md-safi-wasif-161b222b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    name: "Mohammad Wasif",
+    post: "Member",
+    email: "safiwasif101@gmail.com",
+    linkedin: "https://www.linkedin.com/in/md-safi-wasif-161b222b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     Img: Img41,
   },
   {
-    Name: "Moumita Maji",
-    POR: "Member",
-    Email: "moumitamaji83@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/moumita-maji-761741271",
+    name: "Moumita Maji",
+    post: "Member",
+    email: "moumitamaji83@gmail.com",
+    linkedin: "https://www.linkedin.com/in/moumita-maji-761741271",
     Img: Img39,
   },
   {
-    Name: "Simran Gupta",
-    POR: "Member",
-    Email: "simrangupta100029@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/simran-gupta29",
+    name: "Simran Gupta",
+    post: "Member",
+    email: "simrangupta100029@gmail.com",
+    linkedin: "https://www.linkedin.com/in/simran-gupta29",
     Img: Img40,
   },
   {
-    Name: "L Prasanna Kumar",
-    POR: "Member",
-    Email: "lanka2003kumar@gmail.com",
-    LinkedIn:
-      "https://www.linkedin.com/in/l-prasanna-kumar-755540252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    name: "L Prasanna Kumar",
+    post: "Member",
+    email: "lanka2003kumar@gmail.com",
+    linkedin: "https://www.linkedin.com/in/l-prasanna-kumar-755540252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     Img: Img42,
   },
 ];
 
 export const Batch2K23 = [
   {
-    Name: "Abhay Topno",
-    POR: "Member",
-    Email: "abhaytopno999@gmail.com",
-    LinkedIn: "linkedin.com/in/abhay-topno-89761028a",
-    Img: abhay,
+    Name: "Abhinav Raj",
+    POR: "President",
+    Email: "abhinav.jee22@gmail.com",
+    LinkedIn:
+      "https://www.linkedin.com/in/abhinav-raj-57087b28a",
+    Img: AbhinavR,
+  },
+  {
+    Name: "Satwik Pal ",
+    POR: "Vice President",
+    Email: "2023UGEC052@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/satwik-pal-139468286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    Img: SatwikPal,
+  },
+   {
+    Name: "Rajneesh Kumar",
+    POR: "Treasurer",
+    Email: "2023ugec057@nitjsr.ac.in",
+    LinkedIn: "https://www.linkedin.com/in/rajneesh-kumar-8318032a9",
+    Img: Rajneesh,
   },
   {
     Name: "Rituraj Singh ",
-    POR: "Member",
+    POR: "General Secretary",
     Email: "riturajs379@gmail.com",
     LinkedIn:
       "https://www.linkedin.com/in/rituraj-singh-47779828a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     Img: rituraj,
   },
   {
+    Name: "Sandeep Kumar",
+    POR: "Joint Secretary",
+    Email: "sandeep16285uk@gmail.com",
+    LinkedIn:
+      "https://www.linkedin.com/in/sandeep-das-bb579028a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    Img: Sandeep,
+  },
+  {
+    Name: "Ansh Raj",
+    POR: "Technical Secretary",
+    Email: "theansraj@gmail.com",
+    LinkedIn:
+      "https://www.linkedin.com/in/anshrajnitjsr?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    Img: Ansh,
+  },
+  {
+    Name: "Ankita Bhattacharjee",
+    POR: "CA Head",
+    Email: "ankita82005@gmail.com",
+    LinkedIn:
+      "https://www.linkedin.com/in/ankita-bhattacharjee-92080528a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    Img: AnkitaB,
+  },
+  {
+    Name: "Amit Kumar",
+    POR: "Creative Head",
+    Email: "amitkumar1553p@gmail.com",
+    LinkedIn: "https://www.linkedin.com/in/amit-kumar-97829029b/",
+    Img: Amit,
+  },
+  {
+    Name: "Abhay Topno",
+    POR: "Web Head",
+    Email: "abhaytopno999@gmail.com",
+    LinkedIn: "linkedin.com/in/abhay-topno-89761028a",
+    Img: abhay,
+  },
+  {
+    Name: "Ayush Agrawal",
+    POR: "CP Head",
+    Email: "2023ugec049@nitjsr.ac.in",
+    LinkedIn:
+      "https://www.linkedin.com/in/ayush-agrawal-j3573r",
+    Img: AyushA,
+  },
+  {
+    Name: "Subhodeep Paramanik",
+    POR: "EM Head",
+    Email: "subhodeepparamanik22413@gmail.com@gmail.com",
+    LinkedIn:
+      "https://www.linkedin.com/in/subhodeep-paramanik-90981328a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    Img: SubhodeepP,
+  },
+   {
+    Name: "Ayush Singh",
+    POR: "EM Head",
+    Email: "ayushsingh28sep@gmail.com",
+    LinkedIn:
+      "https://www.linkedin.com/in/ayush-singh-925bb6286/",
+    Img: Ayush,
+  },
+  {
+    Name: "Saumya Prakash",
+    POR: "PR Head",
+    Email: "spjha1207@gmail.com",
+    LinkedIn: "http://www.linkedin.com/in/saumya-prakash-085a01229",
+    Img: Saumya,
+  },
+  {
+    Name: "Sidak Salujaa",
+    POR: "PR Head",
+    Email: "sidaksaluja07@gmail.com",
+    LinkedIn:
+      "https://www.linkedin.com/in/sidak-saluja-04b55b2b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    Img: Sidak,
+  },
+  {
+    Name: "Shreya Sharma ",
+    POR: "PnD Head",
+    Email: "shreyasharmavr@gmail.com",
+    LinkedIn:
+      "https://www.linkedin.com/in/shreya-sharma-231450289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    Img: Shreya,
+  },
+  {
     Name: "Akshata Singh ",
-    POR: "Member",
+    POR: "Content Head",
     Email: "2023ugec072@nitjsr.ac.in",
     LinkedIn:
       "https://www.linkedin.com/in/akshata-singh-a777b1268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     Img: akshata,
+  },
+  {
+    Name: "Ayush Garg",
+    POR: "Member",
+    Email: "017ayushgarg@gmail.com",
+    LinkedIn:
+      "http://linkedin.com/in/ayush-krishna-garg-7aa61a28a/",
+    Img: AyushG,
   },
   {
     Name: "Abhishek Jawanpuria",
@@ -700,29 +805,6 @@ export const Batch2K23 = [
     Email: "jawanpuriaabhishek@gmail.com",
     LinkedIn: "https://in.linkedin.com/in/abhishek-jawanpuria-930b92212",
     Img: Jawanpuria,
-  },
-  {
-    Name: "Saumya Prakash",
-    POR: "Member",
-    Email: "spjha1207@gmail.com",
-    LinkedIn: "http://www.linkedin.com/in/saumya-prakash-085a01229",
-    Img: Saumya,
-  },
-  {
-    Name: "Ansh Raj",
-    POR: "Member",
-    Email: "theansraj@gmail.com",
-    LinkedIn:
-      "https://www.linkedin.com/in/anshrajnitjsr?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    Img: Ansh,
-  },
-  {
-    Name: "Satwik Pal ",
-    POR: "Member",
-    Email: "2023UGEC052@nitjsr.ac.in",
-    LinkedIn:
-      "https://www.linkedin.com/in/satwik-pal-139468286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    Img: SatwikPal,
   },
   {
     Name: "Indira Mehta",
@@ -749,35 +831,12 @@ export const Batch2K23 = [
     Img: Siddharth,
   },
   {
-    Name: "Sidak Saluja",
-    POR: "Member",
-    Email: "sidaksaluja07@gmail.com",
-    LinkedIn:
-      "https://www.linkedin.com/in/sidak-saluja-04b55b2b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    Img: Sidak,
-  },
-  {
-    Name: "Rajneesh Kumar",
-    POR: "Member",
-    Email: "2023ugec057@nitjsr.ac.in",
-    LinkedIn: "https://www.linkedin.com/in/rajneesh-kumar-8318032a9",
-    Img: Rajneesh,
-  },
-  {
     Name: "Bindu Pranavi Raya ",
     POR: "Member",
     Email: "2023ugec063@nitjsr.ac.in",
     LinkedIn:
       "https://www.linkedin.com/in/bindu-pranavi-raya-392a1528a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     Img: Bindu,
-  },
-  {
-    Name: "Shreya Sharma ",
-    POR: "Member",
-    Email: "shreyasharmavr@gmail.com",
-    LinkedIn:
-      "https://www.linkedin.com/in/shreya-sharma-231450289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    Img: Shreya,
   },
   {
     Name: "Chinni Devi Manasa ",
@@ -795,43 +854,12 @@ export const Batch2K23 = [
     Img: Shayan,
   },
   {
-    Name: "Amit Kumar",
-    POR: "Member",
-    Email: "amitkumar1553p@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/amit-kumar-97829029b/",
-    Img: Amit,
-  },
-  {
-    Name: "Sandeep Kumar",
-    POR: "Member",
-    Email: "sandeep16285uk@gmail.com",
-    LinkedIn:
-      "https://www.linkedin.com/in/sandeep-das-bb579028a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    Img: Sandeep,
-  },
-  {
     Name: "Debashis Baral",
     POR: "Member",
     Email: "2023ugec023@gmail.com",
     LinkedIn:
       "https://www.linkedin.com/in/debashis-baral-62433a1b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     Img: Debashis,
-  },
-  {
-    Name: "Ayush Singh",
-    POR: "Member",
-    Email: "ayushsingh28sep@gmail.com",
-    LinkedIn:
-      "https://www.linkedin.com/in/ayush-singh-925bb6286/",
-    Img: Ayush,
-  },
-  {
-    Name: "Ayush Garg",
-    POR: "Member",
-    Email: "017ayushgarg@gmail.com",
-    LinkedIn:
-      "http://linkedin.com/in/ayush-krishna-garg-7aa61a28a/",
-    Img: AyushG,
   },
   {
     Name: "Muskan Gupta",
@@ -880,7 +908,7 @@ export const Batch2K24 = [
     POR: "Member",
     Email: "2024ugec083@nitjsr.ac.in",
     LinkedIn:
-      "",
+      "https://www.linkedin.com/in/amay-agrawal-12ba6939a/",
     Img: Amay_24,
   },
   {

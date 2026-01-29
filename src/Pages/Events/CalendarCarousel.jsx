@@ -8,22 +8,25 @@ import { green, red, blue } from "@mui/material/colors";
 const months = [
   {
     name: "August",
+    year: 2025,
     days: 31,
     startDay: 5, // Friday
     events: [
-      { startDate: 30, endDate: 31, name: "SECE Inductions (2024 Batch)"}, // Multi-day event
+      { startDate: 30, endDate: 31, name: "SECE Inductions (2024 Batch)" },
     ],
   },
   {
     name: "September",
+    year: 2025,
     days: 30,
     startDay: 1, // Monday
     events: [
-      { startDate: 6, endDate: 6, name: "CP Contest (Problem Solving ) (2024 Batch) " },
+      { startDate: 6, endDate: 6, name: "CP Contest (Problem Solving ) (2024 Batch)" },
     ],
   },
   {
     name: "October",
+    year: 2025,
     days: 31,
     startDay: 3, // Wednesday
     events: [
@@ -32,30 +35,33 @@ const months = [
   },
   {
     name: "November",
+    year: 2025,
     days: 30,
     startDay: 6, // Saturday
     events: [
-      { startDate: 12, endDate: 14, name: "Nexus Fest" }, // Multi-day event
+      { startDate: 12, endDate: 14, name: "Nexus Fest" },
     ],
   },
   {
     name: "December",
+    year: 2025,
     days: 31,
     startDay: 1, // Monday
-    events: [
-    ],
+    events: [],
   },
   {
     name: "January",
+    year: 2026,
     days: 31,
     startDay: 4, // Thursday
     events: [
       { startDate: 3, endDate: 3, name: "Intern Diaries" },
-      { startDate: 11, endDate: 11, name: "Core And Non-Core Workshop (2025 Batch) " },
+      { startDate: 11, endDate: 11, name: "Core And Non-Core Workshop (2025 Batch)" },
     ],
   },
   {
     name: "February",
+    year: 2026,
     days: 28,
     startDay: 0, // Sunday
     events: [
@@ -65,25 +71,28 @@ const months = [
   },
   {
     name: "March",
+    year: 2026,
     days: 31,
     startDay: 0, // Sunday
     events: [
       { startDate: 22, endDate: 22, name: "Sports Fun Event (SECE Members Only)" },
-      { startDate: 29, endDate: 29, name: "CP Workshop -1 (STL , Binary Search) " },
+      { startDate: 29, endDate: 29, name: "CP Workshop -1 (STL , Binary Search)" },
     ],
   },
   {
-   name: "April",
-   days:31,
-   startDay:3,
-   events:[
-    {startDate: 4 , endDate:4, name:"Cricket Tournament "},
-    {startDate:12 , endDate:12, name:"VLSI Workshop (2025 Batch)"},
-    {startDate: 17 , endDate:17, name:"CP Contest (Problem Solving ) (2025 Batch)"},
-   ]
+    name: "April",
+    year: 2026,
+    days: 31,
+    startDay: 3,
+    events: [
+      { startDate: 4, endDate: 4, name: "Cricket Tournament" },
+      { startDate: 12, endDate: 12, name: "VLSI Workshop (2025 Batch)" },
+      { startDate: 17, endDate: 17, name: "CP Contest (Problem Solving ) (2025 Batch)" },
+    ],
   },
   {
     name: "May",
+    year: 2026,
     days: 31,
     startDay: 5,
     events: [
@@ -96,13 +105,13 @@ const months = [
   },
   {
     name: "June",
+    year: 2026,
     days: 30,
     startDay: 1,
     events: [
       { startDate: 21, endDate: 22, name: "CP Workshop -2 (Advance Topics)" },
     ],
   },
-  // Add other months similarly
 ];
 
 const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -147,7 +156,7 @@ const CalendarCarousel = () => {
             <div className="custom-arrow custom-prev" onClick={handlePrevClick} style={{marginRight:"3rem"}}>
         <ArrowBackIosIcon style={{ fontSize: "1.5rem" }} />
       </div>
-            <h2 className="month-name">{month.name}</h2>
+            <h2 className="month-name">{month.name} {month.year}</h2>
             <div className="custom-arrow custom-next" onClick={handleNextClick} style={{marginLeft:"3rem"}}>
         <ArrowForwardIosIcon style={{ fontSize: "1.5rem" }} />
       </div>
@@ -198,7 +207,7 @@ const CalendarCarousel = () => {
               selectedEvent.endDate >= clickedDate && (
                 <div className="event-details">
                   <p>
-                    <strong>Date:</strong> {month.name} {clickedDate}
+                    <strong>Date:</strong> {month.name} {clickedDate}, {month.year}
                   </p>
                   <p>
                     <strong>Event:</strong> {selectedEvent.name}

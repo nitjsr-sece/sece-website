@@ -12,11 +12,15 @@
 }
 
 .calendar-heading {
-  text-align: center;
+  position: relative;
+  display: flex;         
+  justify-content: center;  
+  align-items: center;     
   font-family: "Lobster", cursive;
   font-size: 1.87rem;
   color: #F2CC65;
   margin-bottom: 20px;
+  text-align: center;    
 }
 
 .month-card {

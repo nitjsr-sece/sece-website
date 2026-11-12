@@ -201,11 +201,12 @@ const EventsPage = () => {
           <ParchmentScroll className="w-full">
             <div className="flex flex-col md:flex-row items-center gap-6 w-full py-1">
               {/* Left Column: Event Photo */}
-              <div className="w-full md:w-1/2 h-[260px] sm:h-[320px] rounded-xl overflow-hidden border-2 border-[#7a5423] shadow-md relative flex-shrink-0 bg-[#160f08]">
+              <div className="group w-full md:w-1/2 h-[260px] sm:h-[320px] rounded-xl overflow-hidden border-2 border-[#7a5423] shadow-md relative flex-shrink-0 bg-[#160f08]">
                 <img
                   src={activeEvent.image}
                   alt={activeEvent.name}
-                  className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+                  style={{ imageRendering: "-webkit-optimize-contrast" }}
                 />
               </div>
 
@@ -216,7 +217,7 @@ const EventsPage = () => {
                   <div className="flex items-center justify-between gap-3 pb-2.5 border-b border-[#8a602a]/40">
                     <button
                       onClick={handlePrevEvent}
-                      className="text-[#4a2e12] hover:text-black hover:scale-125 transition-transform p-2 cursor-pointer focus:outline-none"
+                      className="text-[#4a2e12] hover:text-[#966d31] hover:scale-125 active:scale-95 transition-all p-2 cursor-pointer focus:outline-none"
                       title="Previous Event"
                       aria-label="Previous Event"
                     >
@@ -232,7 +233,7 @@ const EventsPage = () => {
 
                     <button
                       onClick={handleNextEvent}
-                      className="text-[#4a2e12] hover:text-black hover:scale-125 transition-transform p-2 cursor-pointer focus:outline-none"
+                      className="text-[#4a2e12] hover:text-[#966d31] hover:scale-125 active:scale-95 transition-all p-2 cursor-pointer focus:outline-none"
                       title="Next Event"
                       aria-label="Next Event"
                     >

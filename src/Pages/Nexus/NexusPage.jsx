@@ -47,11 +47,12 @@ const NexusEventCard = ({ event, index }) => {
       >
         {/* Photo Column with Navigation Arrows Below */}
         <div className="w-full md:w-1/2 flex flex-col items-center flex-shrink-0">
-          <div className="w-full h-[260px] sm:h-[320px] rounded-xl overflow-hidden border-2 border-[#7a5423] shadow-md bg-[#160f08] relative">
+          <div className="group w-full h-[260px] sm:h-[320px] rounded-xl overflow-hidden border-2 border-[#7a5423] shadow-md bg-[#160f08] relative">
             <img
               src={photos[photoIdx]}
               alt={`${event.name} - Photo ${photoIdx + 1}`}
-              className="w-full h-full object-cover object-center transition-all duration-300 hover:scale-105"
+              className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+              style={{ imageRendering: "-webkit-optimize-contrast" }}
             />
           </div>
 
@@ -59,7 +60,7 @@ const NexusEventCard = ({ event, index }) => {
           <div className="flex items-center justify-center gap-6 mt-4">
             <button
               onClick={handlePrevPhoto}
-              className="w-9 h-9 rounded-full bg-[#633f15] hover:bg-[#855722] text-[#fff0c8] flex items-center justify-center font-bold shadow-md transition-transform hover:scale-110 active:scale-95 cursor-pointer focus:outline-none"
+              className="w-9 h-9 rounded-full bg-[#633f15] hover:bg-[#855722] text-[#fff0c8] flex items-center justify-center font-bold shadow-md transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer focus:outline-none"
               title="Previous picture"
               aria-label="Previous picture"
             >
@@ -72,7 +73,7 @@ const NexusEventCard = ({ event, index }) => {
 
             <button
               onClick={handleNextPhoto}
-              className="w-9 h-9 rounded-full bg-[#633f15] hover:bg-[#855722] text-[#fff0c8] flex items-center justify-center font-bold shadow-md transition-transform hover:scale-110 active:scale-95 cursor-pointer focus:outline-none"
+              className="w-9 h-9 rounded-full bg-[#633f15] hover:bg-[#855722] text-[#fff0c8] flex items-center justify-center font-bold shadow-md transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer focus:outline-none"
               title="Next picture"
               aria-label="Next picture"
             >

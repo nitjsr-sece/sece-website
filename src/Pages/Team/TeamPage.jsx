@@ -74,11 +74,12 @@ const TeamPage = () => {
         <div className="max-w-md mx-auto mb-10 relative z-10">
           <ParchmentScroll>
             <div className="flex flex-col items-center text-center">
-              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 sm:border-[3px] border-[#735227] shadow-md mb-3 bg-[#1a1209]">
+              <div className="group w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 sm:border-[3px] border-[#735227] shadow-md mb-3 bg-[#1a1209]">
                 <img
                   src={faculty_image}
                   alt="Dr. Surajit Kundu"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
+                  style={{ imageRendering: "-webkit-optimize-contrast" }}
                 />
               </div>
               <h3 className="font-cinzel font-bold text-xl sm:text-2xl text-[#1a1005] tracking-wide">
@@ -129,7 +130,8 @@ const TeamPage = () => {
                     <img
                       src={photo}
                       alt={name}
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out"
+                      style={{ imageRendering: "-webkit-optimize-contrast" }}
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-3xl text-[#d4af37]">

@@ -13,26 +13,27 @@ export const ScrollCard = ({
 }) => {
   return (
     <div
-      className={`group relative flex flex-col items-center w-full transition-all duration-300 hover:-translate-y-2 drop-shadow-[0_16px_32px_rgba(0,0,0,0.9)] ${className}`}
+      className={`group relative flex flex-col items-center w-full transition-all duration-300 ease-out hover:-translate-y-1.5 drop-shadow-[0_16px_32px_rgba(0,0,0,0.9)] hover:drop-shadow-[0_22px_40px_rgba(0,0,0,0.95)] ${className}`}
     >
       {/* Top Roll Cylinder */}
       <div className="w-full relative z-20 flex flex-col items-center select-none pointer-events-none flex-shrink-0">
         <img
           src={scrollRollTop}
           alt=""
-          className="w-full h-8 sm:h-12 object-fill drop-shadow-md"
+          className="w-full h-8 sm:h-12 object-fill drop-shadow-md select-none pointer-events-none"
+          style={{ imageRendering: "-webkit-optimize-contrast" }}
         />
       </div>
 
       {/* Main Parchment Paper Body */}
       <div
-        className="w-[96%] sm:w-[97%] relative -mt-1 -mb-1 px-4 sm:px-6 py-5 text-[#24160a] transition-all z-10 flex-1 flex flex-col justify-between items-center w-full"
+        className="w-[96%] sm:w-[97%] relative -mt-1.5 -mb-1.5 px-2.5 xs:px-4 sm:px-6 py-3.5 sm:py-5 text-[#24160a] transition-all duration-300 z-10 flex-1 flex flex-col justify-between items-center w-full"
         style={{
           backgroundImage: `url(${parchmentTexture})`,
           backgroundSize: "cover",
           backgroundColor: "#ecd6a4",
           boxShadow:
-            "inset 16px 0 24px -10px rgba(105, 68, 28, 0.45), inset -16px 0 24px -10px rgba(105, 68, 28, 0.45)",
+            "inset 12px 0 18px -10px rgba(105, 68, 28, 0.4), inset -12px 0 18px -10px rgba(105, 68, 28, 0.4)",
         }}
       >
         <div className="relative z-10 text-[#221408] w-full flex flex-col items-center text-center h-full justify-between">
@@ -45,7 +46,8 @@ export const ScrollCard = ({
         <img
           src={scrollRollBottom}
           alt=""
-          className="w-full h-9 sm:h-13 object-fill drop-shadow-md"
+          className="w-full h-9 sm:h-13 object-fill drop-shadow-md select-none pointer-events-none"
+          style={{ imageRendering: "-webkit-optimize-contrast" }}
         />
       </div>
     </div>

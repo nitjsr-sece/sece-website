@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base Smoothing & Optimization */
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #0a0705;
+  color: #e0d3bf;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Image Optimization & Sharp Rendering */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  content-visibility: auto;
+}
+
 /* Custom Pirate Nautical Scrollbars */
 ::-webkit-scrollbar {
   width: 7px;
@@ -15,17 +38,38 @@
 ::-webkit-scrollbar-thumb {
   background: #543d26;
   border-radius: 4px;
+  transition: background-color 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #9c7333;
 }
 
-body {
-  background-color: #0a0705;
-  color: #e0d3bf;
-  margin: 0;
-  padding: 0;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  overflow-x: hidden;
+/* Accessible focus outline with warm golden glow */
+:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+/* Smooth Interactive Utilities */
+.pirate-btn {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pirate-btn:hover {
+  transform: translateY(-1px);
+}
+.pirate-btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

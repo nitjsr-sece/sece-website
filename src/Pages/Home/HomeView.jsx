@@ -12,11 +12,11 @@ import { FaCalendarAlt, FaUsers, FaGraduationCap, FaMapMarkedAlt, FaCompass } fr
 const HomeView = () => {
   return (
     <PirateLayout activeNav="Home">
-      <div className="max-w-6xl mx-auto py-2 space-y-8">
+      <div className="max-w-6xl mx-auto py-2 space-y-8 animate-fade-in-up">
         {/* Hero Header */}
         <div className="text-center space-y-2">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#8a6839] bg-[#1a1208]/80 text-[#d4af37] text-xs font-cinzel">
-            <ShipWheelIcon className="w-3.5 h-3.5" color="#d4af37" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#8a6839] bg-[#1a1208]/80 text-[#d4af37] text-xs font-cinzel shadow-sm">
+            <ShipWheelIcon className="w-3.5 h-3.5 animate-[spin_40s_linear_infinite]" color="#d4af37" />
             <span>Official Flagship Basecamp</span>
           </div>
 
@@ -33,7 +33,7 @@ const HomeView = () => {
           <div className="pt-2 flex justify-center gap-3">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#20150b] border border-[#a67c38] text-[#f5ca73] hover:bg-[#8a6839] hover:text-[#140e08] font-cinzel text-xs font-bold transition-all shadow-lg hover:scale-105"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#20150b] border border-[#a67c38] text-[#f5ca73] hover:bg-[#8a6839] hover:text-[#140e08] font-cinzel text-xs font-bold transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:scale-105"
             >
               <FaMapMarkedAlt size={14} />
               <span>Explore Treasure Map</span>
@@ -71,13 +71,14 @@ const HomeView = () => {
                 </p>
               </div>
 
-              <div className="relative rounded-xl overflow-hidden border-2 border-[#735025] shadow-xl bg-[#1b1208]">
+              <div className="group relative rounded-xl overflow-hidden border-2 border-[#735025] shadow-xl bg-[#1b1208]">
                 <img
                   src={aboutPhoto}
                   alt="SECE Team and Department"
-                  className="w-full h-56 sm:h-64 object-cover object-center"
+                  className="w-full h-56 sm:h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+                  style={{ imageRendering: "-webkit-optimize-contrast" }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0e0a06]/80 via-transparent to-transparent flex items-end p-3">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0e0a06]/80 via-transparent to-transparent flex items-end p-3 pointer-events-none">
                   <span className="font-cinzel text-[11px] text-[#f5ca73] font-bold">
                     ECE Department • NIT Jamshedpur
                   </span>
@@ -115,20 +116,21 @@ const HomeView = () => {
                   <div className="mt-5 pt-3 border-t border-[#8a602a]/30 flex justify-end">
                     <Link
                       to="/nexus"
-                      className="px-4 py-2 rounded-lg bg-[#20150b] border border-[#a67c38] text-[#f5ca73] hover:bg-[#8a6839] hover:text-[#140e08] font-cinzel text-xs font-bold transition-all shadow-md hover:scale-105 inline-flex items-center gap-1.5"
+                      className="px-4 py-2 rounded-lg bg-[#20150b] border border-[#a67c38] text-[#f5ca73] hover:bg-[#8a6839] hover:text-[#140e08] font-cinzel text-xs font-bold transition-all shadow-md hover:scale-105 inline-flex items-center gap-1.5 group"
                     >
                       <span>Discover Nexus</span>
-                      <span>➔</span>
+                      <span className="group-hover:translate-x-1 transition-transform">➔</span>
                     </Link>
                   </div>
                 </div>
 
                 {/* Right Column: Photo */}
-                <div className="w-full md:w-1/2 h-[260px] sm:h-[320px] rounded-xl overflow-hidden border-2 border-[#7a5423] shadow-xl relative flex-shrink-0 bg-[#140e08]">
+                <div className="group w-full md:w-1/2 h-[260px] sm:h-[320px] rounded-xl overflow-hidden border-2 border-[#7a5423] shadow-xl relative flex-shrink-0 bg-[#140e08]">
                   <img
                     src={nexusPhoto}
                     alt="Nexus Fest"
-                    className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                    className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+                    style={{ imageRendering: "-webkit-optimize-contrast" }}
                   />
                 </div>
               </div>
@@ -162,20 +164,21 @@ const HomeView = () => {
                   <div className="mt-5 pt-3 border-t border-[#8a602a]/30 flex justify-end">
                     <Link
                       to="/events"
-                      className="px-4 py-2 rounded-lg bg-[#20150b] border border-[#a67c38] text-[#f5ca73] hover:bg-[#8a6839] hover:text-[#140e08] font-cinzel text-xs font-bold transition-all shadow-md hover:scale-105 inline-flex items-center gap-1.5"
+                      className="px-4 py-2 rounded-lg bg-[#20150b] border border-[#a67c38] text-[#f5ca73] hover:bg-[#8a6839] hover:text-[#140e08] font-cinzel text-xs font-bold transition-all shadow-md hover:scale-105 inline-flex items-center gap-1.5 group"
                     >
                       <span>Explore Events</span>
-                      <span>➔</span>
+                      <span className="group-hover:translate-x-1 transition-transform">➔</span>
                     </Link>
                   </div>
                 </div>
 
                 {/* Right Column: Photo */}
-                <div className="w-full md:w-1/2 h-[260px] sm:h-[320px] rounded-xl overflow-hidden border-2 border-[#7a5423] shadow-xl relative flex-shrink-0 bg-[#140e08]">
+                <div className="group w-full md:w-1/2 h-[260px] sm:h-[320px] rounded-xl overflow-hidden border-2 border-[#7a5423] shadow-xl relative flex-shrink-0 bg-[#140e08]">
                   <img
                     src={eventPhoto}
                     alt="SECE Events"
-                    className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                    className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+                    style={{ imageRendering: "-webkit-optimize-contrast" }}
                   />
                 </div>
               </div>

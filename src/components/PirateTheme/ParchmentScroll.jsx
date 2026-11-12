@@ -27,19 +27,20 @@ export const ParchmentScroll = ({
         <img
           src={scrollRollTop}
           alt=""
-          className="w-full h-10 sm:h-14 md:h-16 object-fill drop-shadow-md"
+          className="w-full h-10 sm:h-14 md:h-16 object-fill drop-shadow-md select-none pointer-events-none"
+          style={{ imageRendering: "-webkit-optimize-contrast" }}
         />
       </div>
 
       {/* Main Parchment Paper Body */}
       <div
-        className="w-[96%] sm:w-[97%] relative -mt-1.5 -mb-1.5 px-5 sm:px-9 py-6 text-[#24160a] transition-all z-10"
+        className="w-[96%] sm:w-[97%] relative -mt-1.5 sm:-mt-2 -mb-1.5 sm:-mb-2 px-2.5 xs:px-4 sm:px-9 py-3.5 sm:py-6 text-[#24160a] transition-all duration-300 z-10"
         style={{
           backgroundImage: `url(${parchmentTexture})`,
           backgroundSize: "cover",
           backgroundColor: "#ecd6a4",
           boxShadow:
-            "inset 18px 0 26px -10px rgba(105, 68, 28, 0.5), inset -18px 0 26px -10px rgba(105, 68, 28, 0.5)",
+            "inset 14px 0 20px -10px rgba(105, 68, 28, 0.45), inset -14px 0 20px -10px rgba(105, 68, 28, 0.45)",
           maxHeight: maxHeight || "none",
         }}
       >
@@ -70,7 +71,8 @@ export const ParchmentScroll = ({
         <img
           src={scrollRollBottom}
           alt=""
-          className="w-full h-11 sm:h-16 md:h-18 object-fill drop-shadow-md"
+          className="w-full h-11 sm:h-16 md:h-18 object-fill drop-shadow-md select-none pointer-events-none"
+          style={{ imageRendering: "-webkit-optimize-contrast" }}
         />
       </div>
     </div>

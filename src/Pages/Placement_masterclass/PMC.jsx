@@ -16,7 +16,8 @@ const HorizontalScrollCard = ({ member, onOpenModal }) => {
             <img
               src={member.image}
               alt={member.name}
-              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+              style={{ imageRendering: "-webkit-optimize-contrast" }}
             />
           </div>
 
@@ -28,7 +29,7 @@ const HorizontalScrollCard = ({ member, onOpenModal }) => {
 
             <button
               onClick={() => onOpenModal(member)}
-              className="mt-2.5 self-start px-4 py-1.5 rounded border border-[#6b4c23] bg-[#ddbe8a] hover:bg-[#c9a76d] text-[#1a1005] font-cinzel font-bold text-xs sm:text-sm tracking-wider transition-all shadow-md active:scale-95 cursor-pointer"
+              className="mt-2.5 self-start px-4 py-1.5 rounded-lg border border-[#6b4c23] bg-[#ddbe8a] hover:bg-[#c9a76d] text-[#1a1005] font-cinzel font-bold text-xs sm:text-sm tracking-wider transition-all duration-200 shadow-md hover:shadow-lg hover:scale-105 active:scale-95 cursor-pointer"
             >
               Read More
             </button>
@@ -41,7 +42,8 @@ const HorizontalScrollCard = ({ member, onOpenModal }) => {
             <img
               src={member.logo}
               alt="Company Logo"
-              className="max-h-10 sm:max-h-12 w-auto object-contain filter drop-shadow-sm"
+              className="max-h-10 sm:max-h-12 w-auto object-contain filter drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
+              style={{ imageRendering: "-webkit-optimize-contrast" }}
             />
           )}
         </div>

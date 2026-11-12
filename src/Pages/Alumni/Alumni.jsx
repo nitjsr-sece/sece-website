@@ -108,7 +108,7 @@ const Alumni = () => {
                           href={linkedinUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="w-6 h-6 rounded bg-[#1c1209] hover:bg-[#0077b5] text-[#ecd8b0] hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm"
+                          className="w-6 h-6 rounded bg-[#1c1209] hover:bg-[#0077b5] text-[#ecd8b0] hover:text-white flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm"
                           title={`LinkedIn profile of ${member.name || member.Name}`}
                         >
                           <FaLinkedin size={14} />

@@ -73,6 +73,25 @@ img {
 }
 
 /* Reduced Motion Support */
+@keyframes dash {
+  to {stroke-dashoffset: -100%;}
+}
+
+.stroke-gold-glow {
+  fill: none;
+  stroke: #d4af37; /* golden stroke */
+  stroke-width: 2;
+  stroke-dasharray: 6 4;
+  animation: dash 6s linear infinite;
+}
+
+.hotspot-glow {
+  box-shadow: 0 0 8px rgba(212,175,55,0.6);
+}
+.hotspot-glow:hover {
+  box-shadow: 0 0 12px rgba(245,202,115,0.9);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -34,25 +34,25 @@ export const ParchmentScroll = ({
 
       {/* Main Parchment Paper Body */}
       <div
-        className="w-[96%] sm:w-[97%] relative -mt-1.5 sm:-mt-2 -mb-1.5 sm:-mb-2 px-2.5 xs:px-4 sm:px-9 py-3.5 sm:py-6 text-[#24160a] transition-all duration-300 z-10"
+        className="w-[96%] sm:w-[97%] relative -mt-1.5 sm:-mt-2 -mb-1.5 sm:-mb-2 px-2 xs:px-3.5 sm:px-8 py-3 sm:py-6 text-[#24160a] transition-all duration-300 z-10 overflow-hidden"
         style={{
           backgroundImage: `url(${parchmentTexture})`,
           backgroundSize: "cover",
           backgroundColor: "#ecd6a4",
           boxShadow:
-            "inset 14px 0 20px -10px rgba(105, 68, 28, 0.45), inset -14px 0 20px -10px rgba(105, 68, 28, 0.45)",
+            "inset 12px 0 18px -10px rgba(105, 68, 28, 0.45), inset -12px 0 18px -10px rgba(105, 68, 28, 0.45)",
           maxHeight: maxHeight || "none",
         }}
       >
         {/* Optional Title Header */}
         {(title || extraHeader) && (
-          <div className="mb-4 text-center border-b border-[#8a602a]/35 pb-2.5">
+          <div className="mb-3 sm:mb-4 text-center border-b border-[#8a602a]/35 pb-2 sm:pb-2.5">
             {title && (
               <h2
-                className={`font-bold tracking-wide text-[#1b0f05] ${
+                className={`font-bold tracking-wide text-[#1b0f05] break-words ${
                   titleStyle === "cursive"
-                    ? "font-fondamento italic text-2xl sm:text-3xl text-[#3d240d]"
-                    : "font-cinzel text-2xl sm:text-3xl text-[#180d04]"
+                    ? "font-fondamento italic text-xl xs:text-2xl sm:text-3xl text-[#3d240d]"
+                    : "font-cinzel text-xl xs:text-2xl sm:text-3xl text-[#180d04]"
                 }`}
               >
                 {title}

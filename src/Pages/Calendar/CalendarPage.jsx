@@ -133,31 +133,31 @@ const CalendarPage = () => {
 
   return (
     <PirateLayout activeNav="Events">
-      <div className="max-w-2xl mx-auto py-4 animate-fade-in-up">
+      <div className="max-w-2xl mx-auto py-2 sm:py-4 px-1 xs:px-2 w-full animate-fade-in-up">
         <ParchmentScroll>
           <div className="text-center mb-3">
-            <h1 className="font-fondamento italic text-2xl sm:text-3xl font-bold text-[#2a1708]">
+            <h1 className="font-fondamento italic text-xl xs:text-2xl sm:text-3xl font-bold text-[#2a1708]">
               Events Calendar 2026-27
             </h1>
 
             {/* Month Navigator */}
-            <div className="flex items-center justify-center gap-5 mt-2.5 text-xs sm:text-sm font-cinzel font-bold text-[#1e1005]">
+            <div className="flex items-center justify-center gap-3 xs:gap-5 mt-2.5 text-xs sm:text-sm font-cinzel font-bold text-[#1e1005]">
               <button
                 onClick={handlePrevMonth}
-                className="hover:text-[#9c7333] transition-transform hover:scale-125 active:scale-95 p-1.5 cursor-pointer"
+                className="w-8 h-8 flex items-center justify-center hover:text-[#9c7333] transition-transform hover:scale-110 active:scale-95 cursor-pointer rounded-full"
                 title="Previous month"
                 aria-label="Previous month"
               >
                 <FaChevronLeft size={13} />
               </button>
 
-              <span className="tracking-wide min-w-[140px] text-center">
+              <span className="tracking-wide min-w-[130px] xs:min-w-[150px] text-center">
                 {currentMonth.name} {currentMonth.year}
               </span>
 
               <button
                 onClick={handleNextMonth}
-                className="hover:text-[#9c7333] transition-transform hover:scale-125 active:scale-95 p-1.5 cursor-pointer"
+                className="w-8 h-8 flex items-center justify-center hover:text-[#9c7333] transition-transform hover:scale-110 active:scale-95 cursor-pointer rounded-full"
                 title="Next month"
                 aria-label="Next month"
               >
@@ -167,7 +167,7 @@ const CalendarPage = () => {
           </div>
 
           {/* Days of week header */}
-          <div className="grid grid-cols-7 gap-1 text-center font-cinzel text-xs font-semibold text-[#543b22] py-1 border-b border-[#ab854a]/30">
+          <div className="grid grid-cols-7 gap-1 text-center font-cinzel text-[10px] xs:text-xs font-semibold text-[#543b22] py-1 border-b border-[#ab854a]/30">
             <span>Sun</span>
             <span>Mon</span>
             <span>Tue</span>
@@ -181,17 +181,17 @@ const CalendarPage = () => {
           <div className="grid grid-cols-7 gap-1 text-center text-xs sm:text-sm font-sans pt-2">
             {calendarDays.map((day, idx) => {
               if (day === null) {
-                return <div key={`empty-${idx}`} className="h-9" />;
+                return <div key={`empty-${idx}`} className="h-8 xs:h-9" />;
               }
 
               const eventOnDay = getEventForDay(day);
               const isSelected = selectedDay === day;
 
               return (
-                <div key={`day-${day}`} className="h-9 flex items-center justify-center">
+                <div key={`day-${day}`} className="h-8 xs:h-9 flex items-center justify-center">
                   <button
                     onClick={() => setSelectedDay(day)}
-                    className={`w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-lg font-medium transition-all duration-200 cursor-pointer ${
+                    className={`w-7 h-7 xs:w-8 xs:h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-lg font-medium transition-all duration-200 cursor-pointer text-xs ${
                       isSelected
                         ? "border-2 border-[#8a602a] bg-[#e8be70] text-[#1a0f05] font-bold shadow-md scale-105"
                         : eventOnDay

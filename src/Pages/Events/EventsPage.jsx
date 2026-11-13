@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PirateLayout from "../../components/PirateTheme/PirateLayout";
 import ParchmentScroll from "../../components/PirateTheme/ParchmentScroll";
 import events from "./Events";
-import { FaChevronLeft, FaChevronRight, FaCalendarAlt } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaCalendarAlt, FaCalendarCheck } from "react-icons/fa";
 
 const monthsData = [
   {
@@ -38,7 +38,7 @@ const monthsData = [
     days: 30,
     startDay: 0, // Sunday
     events: [
-      { startDate: 20, endDate: 22, name: "Nexus" },
+      { startDate: 20, endDate: 22, name: "Nexus Fest - Flagship Fest of ECE" },
     ],
   },
   {
@@ -171,23 +171,23 @@ const EventsPage = () => {
 
   return (
     <PirateLayout activeNav="Events">
-      <div className="max-w-6xl mx-auto py-3 px-2 sm:px-4 flex flex-col space-y-6 sm:space-y-10">
+      <div className="max-w-6xl mx-auto py-2 px-2 sm:px-4 flex flex-col space-y-6 sm:space-y-10 w-full">
         {/* ============================================================== */}
         {/* 1. TOP ROW: ABOUT SOCIETY (Authentic Parchment Scroll)          */}
         {/* ============================================================== */}
         <section className="w-full">
           <ParchmentScroll className="w-full">
-            <div className="text-center px-2 sm:px-6">
-              <h2 className="font-cinzel text-2xl sm:text-4xl font-extrabold text-[#1a0f05] tracking-wider mb-3 drop-shadow-sm">
+            <div className="text-center px-2 sm:px-6 py-1">
+              <h2 className="font-cinzel text-xl xs:text-2xl sm:text-4xl font-extrabold text-[#1a0f05] tracking-wider mb-2 sm:mb-3 drop-shadow-sm">
                 About ECE Society
               </h2>
 
-              <p className="text-[#2c1a0d] text-sm sm:text-base leading-relaxed text-center sm:text-justify max-w-5xl mx-auto font-sans font-medium">
+              <p className="text-[#2c1a0d] text-xs xs:text-sm sm:text-base leading-relaxed text-left sm:text-justify max-w-5xl mx-auto font-sans font-medium">
                 The Society of Electronics and Communication Engineering (ECE) is dedicated to
                 fostering technical innovation, creativity, and hands-on learning among
                 students. Every year, the ECE Society organizes a diverse range of events that
                 cater to the technical and creative interests of its members. From coding challenges
-                to exciting electronics-based activities, the society's events are designed to engage
+                to exciting electronics-based activities, the society&apos;s events are designed to engage
                 students in real-world problem solving while promoting teamwork, innovation, and fun.
               </p>
             </div>
@@ -199,9 +199,9 @@ const EventsPage = () => {
         {/* ============================================================== */}
         <section className="w-full">
           <ParchmentScroll className="w-full">
-            <div className="flex flex-col md:flex-row items-center gap-6 w-full py-1">
+            <div className="flex flex-col md:flex-row items-center gap-5 sm:gap-8 w-full py-1">
               {/* Left Column: Event Photo */}
-              <div className="group w-full md:w-1/2 h-[260px] sm:h-[320px] rounded-xl overflow-hidden border-2 border-[#7a5423] shadow-md relative flex-shrink-0 bg-[#160f08]">
+              <div className="group w-full md:w-1/2 h-[200px] xs:h-[240px] sm:h-[280px] md:h-[320px] rounded-xl overflow-hidden border-2 border-[#7a5423] shadow-md relative flex-shrink-0 bg-[#160f08]">
                 <img
                   src={activeEvent.image}
                   alt={activeEvent.name}
@@ -214,18 +214,18 @@ const EventsPage = () => {
               <div className="w-full md:w-1/2 flex flex-col justify-between self-stretch">
                 <div>
                   {/* Header with Previous arrow, Event Title with underline, Next arrow */}
-                  <div className="flex items-center justify-between gap-3 pb-2.5 border-b border-[#8a602a]/40">
+                  <div className="flex items-center justify-between gap-2 xs:gap-3 pb-2.5 border-b border-[#8a602a]/40">
                     <button
                       onClick={handlePrevEvent}
-                      className="text-[#4a2e12] hover:text-[#966d31] hover:scale-125 active:scale-95 transition-all p-2 cursor-pointer focus:outline-none"
+                      className="w-10 h-10 flex items-center justify-center text-[#4a2e12] hover:text-[#966d31] hover:scale-110 active:scale-95 transition-all cursor-pointer focus:outline-none rounded-full"
                       title="Previous Event"
                       aria-label="Previous Event"
                     >
-                      <FaChevronLeft size={20} />
+                      <FaChevronLeft size={18} />
                     </button>
 
-                    <div className="text-center flex-1">
-                      <h3 className="font-cinzel font-bold text-xl sm:text-2xl text-[#1a0f05] tracking-wide relative inline-block pb-1">
+                    <div className="text-center flex-1 px-1">
+                      <h3 className="font-cinzel font-bold text-lg xs:text-xl sm:text-2xl text-[#1a0f05] tracking-wide relative inline-block pb-1">
                         {activeEvent.name}
                         <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#7a5423] rounded-full" />
                       </h3>
@@ -233,22 +233,22 @@ const EventsPage = () => {
 
                     <button
                       onClick={handleNextEvent}
-                      className="text-[#4a2e12] hover:text-[#966d31] hover:scale-125 active:scale-95 transition-all p-2 cursor-pointer focus:outline-none"
+                      className="w-10 h-10 flex items-center justify-center text-[#4a2e12] hover:text-[#966d31] hover:scale-110 active:scale-95 transition-all cursor-pointer focus:outline-none rounded-full"
                       title="Next Event"
                       aria-label="Next Event"
                     >
-                      <FaChevronRight size={20} />
+                      <FaChevronRight size={18} />
                     </button>
                   </div>
 
                   {/* Event Description */}
-                  <p className="mt-4 text-[#2b1a0e] text-sm sm:text-[15px] leading-relaxed font-sans text-left font-medium">
+                  <p className="mt-3 sm:mt-4 text-[#2b1a0e] text-xs xs:text-sm sm:text-[15px] leading-relaxed font-sans text-left font-medium">
                     {activeEvent.description}
                   </p>
                 </div>
 
                 {/* Event Counter & Indicator Dots */}
-                <div className="mt-6 pt-3 border-t border-[#8a602a]/30 flex items-center justify-between text-xs text-[#5c3e1c]">
+                <div className="mt-5 pt-3 border-t border-[#8a602a]/30 flex items-center justify-between text-xs text-[#5c3e1c]">
                   <span className="font-cinzel font-bold">
                     Event {currentEventIdx + 1} of {events.length}
                   </span>
@@ -258,10 +258,10 @@ const EventsPage = () => {
                       <button
                         key={idx}
                         onClick={() => setCurrentEventIdx(idx)}
-                        className={`h-2 rounded-full transition-all cursor-pointer ${
+                        className={`h-2.5 rounded-full transition-all cursor-pointer ${
                           idx === currentEventIdx
                             ? "w-6 bg-[#634017]"
-                            : "w-2 bg-[#b89562] hover:bg-[#8a602a]"
+                            : "w-2.5 bg-[#b89562] hover:bg-[#8a602a]"
                         }`}
                         aria-label={`Jump to event ${idx + 1}`}
                       />
@@ -280,54 +280,54 @@ const EventsPage = () => {
           <ParchmentScroll className="w-full">
             <div className="w-full py-1">
               {/* Calendar Header: Title + Month Navigator */}
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-4 border-b border-[#8a602a]/35">
-                <div className="flex items-center gap-3">
-                  <FaCalendarAlt className="text-[#634017] text-2xl" />
-                  <h2 className="font-cinzel text-2xl sm:text-3xl font-extrabold text-[#1a0f05] tracking-wide">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 pb-3 sm:pb-4 border-b border-[#8a602a]/35">
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  <FaCalendarAlt className="text-[#634017] text-xl sm:text-2xl flex-shrink-0" />
+                  <h2 className="font-cinzel text-xl xs:text-2xl sm:text-3xl font-extrabold text-[#1a0f05] tracking-wide">
                     Events Calendar 2026-27
                   </h2>
                 </div>
 
                 {/* Month Navigator Controls */}
-                <div className="flex items-center gap-4 bg-[#ecd49d] px-5 py-1.5 rounded-full border border-[#8a602a] shadow-inner">
+                <div className="flex items-center gap-2 xs:gap-3 bg-[#ecd49d] px-3 xs:px-4 sm:px-5 py-1.5 rounded-full border border-[#8a602a] shadow-inner">
                   <button
                     onClick={handlePrevMonth}
-                    className="text-[#4a2e12] hover:text-black hover:scale-125 transition-transform p-1 cursor-pointer focus:outline-none"
+                    className="w-8 h-8 flex items-center justify-center text-[#4a2e12] hover:text-black hover:scale-110 active:scale-95 transition-transform cursor-pointer focus:outline-none"
                     title="Previous Month"
                     aria-label="Previous Month"
                   >
-                    <FaChevronLeft size={16} />
+                    <FaChevronLeft size={14} />
                   </button>
 
-                  <span className="font-cinzel text-base sm:text-lg font-bold text-[#1b0e04] min-w-[160px] text-center">
+                  <span className="font-cinzel text-sm sm:text-base md:text-lg font-bold text-[#1b0e04] min-w-[125px] xs:min-w-[145px] sm:min-w-[160px] text-center">
                     {currentMonth.name} {currentMonth.year}
                   </span>
 
                   <button
                     onClick={handleNextMonth}
-                    className="text-[#4a2e12] hover:text-black hover:scale-125 transition-transform p-1 cursor-pointer focus:outline-none"
+                    className="w-8 h-8 flex items-center justify-center text-[#4a2e12] hover:text-black hover:scale-110 active:scale-95 transition-transform cursor-pointer focus:outline-none"
                     title="Next Month"
                     aria-label="Next Month"
                   >
-                    <FaChevronRight size={16} />
+                    <FaChevronRight size={14} />
                   </button>
                 </div>
               </div>
 
               {/* Days of Week Header across full width */}
-              <div className="grid grid-cols-7 gap-2 sm:gap-3 text-center font-cinzel font-bold text-xs sm:text-sm text-[#4a2e12] pt-4 pb-2 border-b border-[#8a602a]/30">
+              <div className="grid grid-cols-7 gap-1 sm:gap-2 text-center font-cinzel font-bold text-[10px] xs:text-xs sm:text-sm text-[#4a2e12] pt-3 pb-2 border-b border-[#8a602a]/30">
                 {daysOfWeek.map((day) => (
-                  <div key={day} className="py-1">
+                  <div key={day} className="py-0.5">
                     {day}
                   </div>
                 ))}
               </div>
 
               {/* Day Cells across 7 full-width columns */}
-              <div className="grid grid-cols-7 gap-2 sm:gap-3 pt-3">
+              <div className="grid grid-cols-7 gap-1 sm:gap-2 pt-2.5">
                 {/* Empty padding days before start day */}
                 {[...Array(currentMonth.startDay)].map((_, idx) => (
-                  <div key={`empty-${idx}`} className="h-10 sm:h-14 rounded-lg bg-transparent" />
+                  <div key={`empty-${idx}`} className="h-9 xs:h-10 sm:h-12 md:h-14 rounded-lg bg-transparent" />
                 ))}
 
                 {/* Days of the month */}
@@ -347,25 +347,51 @@ const EventsPage = () => {
                           handleDateClick(eventsToday[0], currentDay);
                         }
                       }}
-                      className={`h-10 sm:h-14 rounded-lg flex flex-col items-center justify-center p-1 text-xs sm:text-sm font-semibold transition-all duration-150 ${
+                      className={`h-9 xs:h-10 sm:h-12 md:h-14 rounded-lg flex flex-col items-center justify-center p-0.5 sm:p-1 text-xs sm:text-sm font-semibold transition-all duration-150 ${
                         hasEvent
-                          ? "bg-[#633f15] text-[#fff0c8] font-bold shadow-[0_4px_10px_rgba(99,63,21,0.5)] hover:scale-105 cursor-pointer ring-2 ring-[#a37233]"
+                          ? "bg-[#633f15] text-[#fff0c8] font-bold shadow-[0_4px_10px_rgba(99,63,21,0.5)] hover:scale-105 active:scale-95 cursor-pointer ring-2 ring-[#a37233]"
                           : "bg-[#f5e3ba]/70 text-[#2c1a0c] hover:bg-[#ebd39d] cursor-default border border-[#caa165]/50"
                       } ${
                         isSelected && hasEvent
-                          ? "ring-4 ring-[#1b0e04] scale-105 z-10"
+                          ? "ring-3 sm:ring-4 ring-[#1b0e04] scale-105 z-10"
                           : ""
                       }`}
                     >
-                      <span className="leading-tight">{currentDay}</span>
+                      <span className="leading-tight text-[11px] xs:text-xs sm:text-sm font-bold">
+                        {currentDay}
+                      </span>
                       {hasEvent && (
-                        <span className="hidden sm:inline-block text-[10px] text-[#fde4aa] font-bold truncate max-w-full font-sans px-1 mt-0.5">
+                        <span className="hidden sm:inline-block text-[9px] md:text-[10px] text-[#fde4aa] font-bold truncate max-w-full font-sans px-1 mt-0.5">
                           {eventsToday[0].name.split("(")[0]}
                         </span>
                       )}
                     </button>
                   );
                 })}
+              </div>
+
+              {/* Selected Event Detail Banner */}
+              <div className="mt-4 pt-3 border-t border-[#ab854a]/30">
+                {selectedEvent ? (
+                  <div className="flex items-center gap-3 p-2.5 sm:p-3 rounded-lg bg-[#ecd49d]/80 border border-[#8a602a]/40 shadow-sm text-xs sm:text-sm text-[#2b1808]">
+                    <FaCalendarCheck className="text-[#633f15] text-base sm:text-lg flex-shrink-0" />
+                    <div>
+                      <span className="font-cinzel font-bold text-[#1b0f05]">
+                        {selectedEvent.startDate === selectedEvent.endDate
+                          ? `${currentMonth.name} ${selectedEvent.startDate}`
+                          : `${currentMonth.name} ${selectedEvent.startDate}–${selectedEvent.endDate}, ${currentMonth.year}`}
+                        :{" "}
+                      </span>
+                      <span className="font-semibold text-[#4a2e12]">
+                        {selectedEvent.name}
+                      </span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-center text-xs font-serif italic text-[#785938] py-1">
+                    Select a highlighted date to inspect society event details.
+                  </div>
+                )}
               </div>
             </div>
           </ParchmentScroll>

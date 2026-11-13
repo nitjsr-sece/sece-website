@@ -23,10 +23,11 @@ const TeamPage = () => {
     <div className="relative inline-block z-40">
       <button
         onClick={() => setDropdownOpen(!dropdownOpen)}
-        className="flex items-center gap-3 px-6 py-2 rounded-full border-2 border-[#8a6839] bg-[#160f08] text-[#f5ca73] text-sm font-cinzel font-semibold hover:border-[#d4af37] hover:bg-[#22160b] transition-all shadow-xl"
+        className="flex items-center gap-2.5 xs:gap-3 px-4 xs:px-6 py-2.5 rounded-full border-2 border-[#8a6839] bg-[#160f08] text-[#f5ca73] text-xs xs:text-sm font-cinzel font-semibold hover:border-[#d4af37] hover:bg-[#22160b] transition-all shadow-xl min-h-[44px] cursor-pointer"
+        aria-label="Select Batch"
       >
         <span>{selectedBatchKey}</span>
-        <span className="text-xs text-[#d4af37]">▼</span>
+        <span className="text-[10px] xs:text-xs text-[#d4af37]">▼</span>
       </button>
 
       {dropdownOpen && (
@@ -38,7 +39,7 @@ const TeamPage = () => {
                 setSelectedBatchKey(batch);
                 setDropdownOpen(false);
               }}
-              className={`w-full text-center px-4 py-2 text-xs font-cinzel transition-colors ${
+              className={`w-full text-center px-4 py-2.5 text-xs font-cinzel transition-colors cursor-pointer ${
                 selectedBatchKey === batch
                   ? "bg-[#2c1d0e] text-[#f5ca73] font-bold"
                   : "text-[#cbb89b] hover:bg-[#22160b] hover:text-[#f0cf85]"
@@ -54,10 +55,10 @@ const TeamPage = () => {
 
   return (
     <PirateLayout activeNav="Team">
-      <div className="max-w-6xl mx-auto py-2">
+      <div className="max-w-6xl mx-auto py-2 px-1 xs:px-2 sm:px-4 w-full">
         {/* Header */}
-        <div className="text-center mb-8 flex flex-col items-center relative z-30">
-          <h1 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-[#f3ca76] tracking-wider drop-shadow-md">
+        <div className="text-center mb-6 sm:mb-8 flex flex-col items-center relative z-30">
+          <h1 className="font-cinzel text-2xl xs:text-3xl sm:text-4xl font-extrabold text-[#f3ca76] tracking-wider drop-shadow-md">
             Our Crew & Leadership
           </h1>
           <p className="text-xs sm:text-sm font-serif text-[#ab9475] italic mt-1">
@@ -71,10 +72,10 @@ const TeamPage = () => {
         </div>
 
         {/* Faculty Mentor Spotlight */}
-        <div className="max-w-md mx-auto mb-10 relative z-10">
+        <div className="max-w-md mx-auto mb-8 sm:mb-10 relative z-10 px-2">
           <ParchmentScroll>
-            <div className="flex flex-col items-center text-center">
-              <div className="group w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 sm:border-[3px] border-[#735227] shadow-md mb-3 bg-[#1a1209]">
+            <div className="flex flex-col items-center text-center py-1">
+              <div className="group w-24 h-24 xs:w-28 xs:h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 sm:border-[3px] border-[#735227] shadow-md mb-3 bg-[#1a1209]">
                 <img
                   src={faculty_image}
                   alt="Dr. Surajit Kundu"
@@ -82,10 +83,10 @@ const TeamPage = () => {
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
                 />
               </div>
-              <h3 className="font-cinzel font-bold text-xl sm:text-2xl text-[#1a1005] tracking-wide">
+              <h3 className="font-cinzel font-bold text-lg xs:text-xl sm:text-2xl text-[#1a1005] tracking-wide">
                 Dr. Surajit Kundu
               </h3>
-              <p className="text-sm sm:text-base font-serif italic text-[#543b22] font-semibold mt-0.5">
+              <p className="text-xs xs:text-sm sm:text-base font-serif italic text-[#543b22] font-semibold mt-0.5">
                 Faculty Mentor
               </p>
               <p className="text-xs sm:text-sm text-[#3d240d] mt-1 max-w-sm font-sans font-medium">
@@ -94,8 +95,9 @@ const TeamPage = () => {
               <div className="flex gap-3.5 mt-4">
                 <a
                   href="mailto:surajitkundu.ece@nitjsr.ac.in"
-                  className="w-8 h-8 rounded-full bg-[#1b1208] text-[#f0cf85] flex items-center justify-center hover:bg-[#8a6839] hover:text-[#1b1208] transition-colors shadow-md"
-                  title="Email"
+                  className="w-9 h-9 rounded-full bg-[#1b1208] text-[#f0cf85] flex items-center justify-center hover:bg-[#8a6839] hover:text-[#1b1208] transition-colors shadow-md active:scale-95"
+                  title="Email Dr. Kundu"
+                  aria-label="Email Dr. Kundu"
                 >
                   <FaEnvelope size={14} />
                 </a>
@@ -103,8 +105,9 @@ const TeamPage = () => {
                   href="https://www.linkedin.com/in/surajit-kundu-9ba194143/"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-8 h-8 rounded-full bg-[#1b1208] text-[#f0cf85] flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-colors shadow-md"
-                  title="LinkedIn"
+                  className="w-9 h-9 rounded-full bg-[#1b1208] text-[#f0cf85] flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-colors shadow-md active:scale-95"
+                  title="LinkedIn profile"
+                  aria-label="LinkedIn profile"
                 >
                   <FaLinkedin size={15} />
                 </a>
@@ -113,8 +116,8 @@ const TeamPage = () => {
           </ParchmentScroll>
         </div>
 
-        {/* Members Grid (3 cards per row) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Members Grid (1 card mobile, 2 tablet, 3 desktop) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {currentMembers.map((member, index) => {
             const name = member.name || member.Name;
             const por = member.post || member.POR || "Core Team";
@@ -125,7 +128,7 @@ const TeamPage = () => {
             return (
               <ScrollCard key={index} className="h-full">
                 {/* Member Avatar */}
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 sm:border-[3px] border-[#735227] shadow-md mb-4 bg-[#1b1208] flex-shrink-0">
+                <div className="w-24 h-24 xs:w-28 xs:h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 sm:border-[3px] border-[#735227] shadow-md mb-3 sm:mb-4 bg-[#1b1208] flex-shrink-0">
                   {photo ? (
                     <img
                       src={photo}
@@ -141,20 +144,21 @@ const TeamPage = () => {
                 </div>
 
                 {/* Name & Role */}
-                <h4 className="font-cinzel font-bold text-base sm:text-lg text-[#180f05] leading-snug tracking-wider uppercase line-clamp-1">
+                <h4 className="font-cinzel font-bold text-sm xs:text-base sm:text-lg text-[#180f05] leading-snug tracking-wider uppercase line-clamp-2 min-h-[2.5rem] flex items-center justify-center">
                   {name}
                 </h4>
-                <p className="text-sm sm:text-base font-serif italic text-[#543b22] font-semibold mt-1 line-clamp-1">
+                <p className="text-xs xs:text-sm sm:text-base font-serif italic text-[#543b22] font-semibold mt-1 line-clamp-2 min-h-[2rem] flex items-center justify-center">
                   {por}
                 </p>
 
                 {/* Contact links */}
-                <div className="flex gap-3.5 mt-4">
+                <div className="flex gap-3 mt-3 sm:mt-4">
                   {email && (
                     <a
                       href={`mailto:${email}`}
-                      className="w-8 h-8 rounded-full bg-[#1c1209] text-[#ecd8b0] flex items-center justify-center hover:bg-[#8a6839] hover:text-[#1c1209] transition-colors shadow-md"
+                      className="w-9 h-9 rounded-full bg-[#1c1209] text-[#ecd8b0] flex items-center justify-center hover:bg-[#8a6839] hover:text-[#1c1209] transition-colors shadow-md active:scale-95"
                       title={email}
+                      aria-label={`Email ${name}`}
                     >
                       <FaEnvelope size={13} />
                     </a>
@@ -164,8 +168,9 @@ const TeamPage = () => {
                       href={linkedin}
                       target="_blank"
                       rel="noreferrer"
-                      className="w-8 h-8 rounded-full bg-[#1c1209] text-[#ecd8b0] flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-colors shadow-md"
-                      title="LinkedIn"
+                      className="w-9 h-9 rounded-full bg-[#1c1209] text-[#ecd8b0] flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-colors shadow-md active:scale-95"
+                      title={`LinkedIn profile of ${name}`}
+                      aria-label={`LinkedIn profile of ${name}`}
                     >
                       <FaLinkedin size={14} />
                     </a>

@@ -43,11 +43,11 @@ const NexusEventCard = ({ event, index }) => {
       <div
         className={`flex flex-col ${
           isReverse ? "md:flex-row-reverse" : "md:flex-row"
-        } items-center gap-6 sm:gap-8 w-full py-2`}
+        } items-center gap-5 sm:gap-8 w-full py-2`}
       >
         {/* Photo Column with Navigation Arrows Below */}
         <div className="w-full md:w-1/2 flex flex-col items-center flex-shrink-0">
-          <div className="group w-full h-[260px] sm:h-[320px] rounded-xl overflow-hidden border-2 border-[#7a5423] shadow-md bg-[#160f08] relative">
+          <div className="group w-full h-[200px] xs:h-[240px] sm:h-[280px] md:h-[320px] rounded-xl overflow-hidden border-2 border-[#7a5423] shadow-md bg-[#160f08] relative">
             <img
               src={photos[photoIdx]}
               alt={`${event.name} - Photo ${photoIdx + 1}`}
@@ -57,14 +57,14 @@ const NexusEventCard = ({ event, index }) => {
           </div>
 
           {/* Round Golden Arrow Buttons below the photo */}
-          <div className="flex items-center justify-center gap-6 mt-4">
+          <div className="flex items-center justify-center gap-4 xs:gap-6 mt-3 sm:mt-4">
             <button
               onClick={handlePrevPhoto}
-              className="w-9 h-9 rounded-full bg-[#633f15] hover:bg-[#855722] text-[#fff0c8] flex items-center justify-center font-bold shadow-md transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer focus:outline-none"
+              className="w-10 h-10 rounded-full bg-[#633f15] hover:bg-[#855722] text-[#fff0c8] flex items-center justify-center font-bold shadow-md transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer focus:outline-none"
               title="Previous picture"
               aria-label="Previous picture"
             >
-              <FaChevronLeft size={13} />
+              <FaChevronLeft size={14} />
             </button>
 
             <span className="text-xs font-cinzel font-bold text-[#4a2e12]">
@@ -73,25 +73,25 @@ const NexusEventCard = ({ event, index }) => {
 
             <button
               onClick={handleNextPhoto}
-              className="w-9 h-9 rounded-full bg-[#633f15] hover:bg-[#855722] text-[#fff0c8] flex items-center justify-center font-bold shadow-md transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer focus:outline-none"
+              className="w-10 h-10 rounded-full bg-[#633f15] hover:bg-[#855722] text-[#fff0c8] flex items-center justify-center font-bold shadow-md transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer focus:outline-none"
               title="Next picture"
               aria-label="Next picture"
             >
-              <FaChevronRight size={13} />
+              <FaChevronRight size={14} />
             </button>
           </div>
         </div>
 
         {/* Content Column: Centered Title + Gold Dash Underline + Description */}
         <div className="w-full md:w-1/2 flex flex-col items-center text-center p-2 sm:p-4">
-          <h3 className="font-cinzel font-bold text-2xl sm:text-3xl text-[#1a0f05] tracking-wide">
+          <h3 className="font-cinzel font-bold text-xl xs:text-2xl sm:text-3xl text-[#1a0f05] tracking-wide">
             {event.name}
           </h3>
 
           {/* Golden Dash Underline */}
-          <div className="w-14 h-0.5 bg-[#7a5423] rounded-full my-3" />
+          <div className="w-14 h-0.5 bg-[#7a5423] rounded-full my-2.5 sm:my-3" />
 
-          <p className="text-[#2b1a0e] text-sm sm:text-[15px] leading-relaxed text-justify font-sans font-medium mt-2">
+          <p className="text-[#2b1a0e] text-xs xs:text-sm sm:text-[15px] leading-relaxed text-left sm:text-justify font-sans font-medium mt-1">
             {event.description}
           </p>
         </div>
@@ -160,18 +160,18 @@ const NexusPage = () => {
 
   return (
     <PirateLayout activeNav="Nexus">
-      <div className="max-w-6xl mx-auto py-3 px-2 sm:px-4 flex flex-col space-y-8 sm:space-y-12">
+      <div className="max-w-6xl mx-auto py-2 px-2 sm:px-4 flex flex-col space-y-6 sm:space-y-10 w-full">
         {/* ============================================================== */}
         {/* 1. NEXUS INTRO SCROLL                                           */}
         {/* ============================================================== */}
         <section className="w-full">
           <ParchmentScroll className="w-full">
-            <div className="text-center px-2 sm:px-6">
-              <h2 className="font-cinzel text-2xl sm:text-4xl font-extrabold text-[#1a0f05] tracking-wider mb-3">
+            <div className="text-center px-2 sm:px-6 py-1">
+              <h2 className="font-cinzel text-xl xs:text-2xl sm:text-4xl font-extrabold text-[#1a0f05] tracking-wider mb-2.5 sm:mb-3">
                 Nexus – Where Fun Meets Brilliance!
               </h2>
 
-              <p className="text-[#2c1a0d] text-sm sm:text-base leading-relaxed text-center sm:text-justify max-w-5xl mx-auto font-sans font-medium">
+              <p className="text-[#2c1a0d] text-xs xs:text-sm sm:text-base leading-relaxed text-left sm:text-justify max-w-5xl mx-auto font-sans font-medium">
                 <strong>Nexus</strong> is the signature fest of the Electronics and Communication
                 Engineering department at NIT Jamshedpur, celebrated with unmatched enthusiasm
                 every year. This exhilarating three-day extravaganza brings the campus to life with
@@ -191,8 +191,8 @@ const NexusPage = () => {
         <section className="w-full">
           <ParchmentScroll className="w-full">
             <div className="w-full max-w-4xl mx-auto py-1">
-              <div className="text-center mb-4">
-                <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-[#1b1006]">
+              <div className="text-center mb-3 sm:mb-4">
+                <h3 className="font-cinzel text-lg xs:text-xl sm:text-2xl font-bold text-[#1b1006]">
                   Nexus Highlight Reel
                 </h3>
               </div>
@@ -212,64 +212,69 @@ const NexusPage = () => {
                 {!isPlaying && (
                   <button
                     onClick={togglePlay}
-                    className="absolute inset-0 m-auto w-14 h-14 rounded-full bg-[#1b120a]/80 border-2 border-[#d4af37] text-[#f7cd78] flex items-center justify-center hover:scale-110 transition-transform shadow-2xl z-20 pl-1 cursor-pointer"
+                    className="absolute inset-0 m-auto w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 rounded-full bg-[#1b120a]/85 border-2 border-[#d4af37] text-[#f7cd78] flex items-center justify-center hover:scale-110 active:scale-95 transition-transform shadow-2xl z-20 pl-1 cursor-pointer focus:outline-none"
                     aria-label="Play video"
                   >
-                    <FaPlay size={20} />
+                    <FaPlay size={18} />
                   </button>
                 )}
               </div>
 
               {/* Custom Nautical Video Controller Bar */}
-              <div className="mt-3 bg-[#110b06] border border-[#523d26] rounded-md p-2.5 flex flex-col gap-2 shadow-lg">
+              <div className="mt-3 bg-[#110b06] border border-[#523d26] rounded-lg p-2.5 flex flex-col gap-2 shadow-lg">
                 <div className="flex items-center justify-center gap-6 text-[#e8c782]">
                   <button
                     onClick={() => skipTime(-10)}
-                    className="flex items-center gap-1 text-xs hover:text-[#f7cd78] transition-colors p-1 cursor-pointer"
+                    className="w-9 h-9 rounded-full bg-[#1c1209] border border-[#3d2c1c] flex items-center justify-center text-xs hover:text-[#f7cd78] hover:border-[#8a6839] transition-all cursor-pointer active:scale-95"
                     title="Rewind 10 seconds"
+                    aria-label="Rewind 10 seconds"
                   >
-                    <FaUndo size={12} />
-                    <span className="text-[10px] font-bold">10</span>
+                    <FaUndo size={11} />
+                    <span className="text-[9px] font-bold ml-0.5">10</span>
                   </button>
 
                   <button
                     onClick={togglePlay}
-                    className="w-8 h-8 rounded-full bg-[#2a1a0f] border border-[#a67c38] flex items-center justify-center text-[#f7cd78] hover:bg-[#a67c38] hover:text-[#110b06] transition-all cursor-pointer"
+                    className="w-10 h-10 rounded-full bg-[#2a1a0f] border-2 border-[#a67c38] flex items-center justify-center text-[#f7cd78] hover:bg-[#a67c38] hover:text-[#110b06] transition-all cursor-pointer active:scale-95 shadow-md"
                     title={isPlaying ? "Pause" : "Play"}
+                    aria-label={isPlaying ? "Pause video" : "Play video"}
                   >
-                    {isPlaying ? <FaPause size={12} /> : <FaPlay size={12} className="pl-0.5" />}
+                    {isPlaying ? <FaPause size={13} /> : <FaPlay size={13} className="pl-0.5" />}
                   </button>
 
                   <button
                     onClick={() => skipTime(10)}
-                    className="flex items-center gap-1 text-xs hover:text-[#f7cd78] transition-colors p-1 cursor-pointer"
+                    className="w-9 h-9 rounded-full bg-[#1c1209] border border-[#3d2c1c] flex items-center justify-center text-xs hover:text-[#f7cd78] hover:border-[#8a6839] transition-all cursor-pointer active:scale-95"
                     title="Forward 10 seconds"
+                    aria-label="Forward 10 seconds"
                   >
-                    <span className="text-[10px] font-bold">10</span>
-                    <FaRedo size={12} />
+                    <span className="text-[9px] font-bold mr-0.5">10</span>
+                    <FaRedo size={11} />
                   </button>
                 </div>
 
-                <div className="flex items-center gap-3 text-[11px] text-[#baa171]">
+                <div className="flex items-center gap-2 xs:gap-3 text-[11px] text-[#baa171] pt-1">
                   <input
                     type="range"
                     min="0"
                     max={duration || 100}
                     value={currentTime}
                     onChange={handleSeek}
-                    className="flex-1 h-1 bg-[#3a2919] rounded-lg appearance-none cursor-pointer accent-[#c89d55]"
+                    className="flex-1 h-1.5 bg-[#3a2919] rounded-lg appearance-none cursor-pointer accent-[#c89d55]"
+                    aria-label="Seek video position"
                   />
 
-                  <span className="font-mono text-[10px] text-[#ab9475]">
+                  <span className="font-mono text-[10px] text-[#ab9475] whitespace-nowrap">
                     {formatTime(currentTime)} / {formatTime(duration)}
                   </span>
 
                   <button
                     onClick={toggleMute}
-                    className="text-[#baa171] hover:text-[#f7cd78] transition-colors cursor-pointer"
+                    className="p-1.5 text-[#baa171] hover:text-[#f7cd78] transition-colors cursor-pointer"
                     title={isMuted ? "Unmute" : "Mute"}
+                    aria-label={isMuted ? "Unmute audio" : "Mute audio"}
                   >
-                    {isMuted ? <FaVolumeMute size={13} /> : <FaVolumeUp size={13} />}
+                    {isMuted ? <FaVolumeMute size={14} /> : <FaVolumeUp size={14} />}
                   </button>
                 </div>
               </div>
@@ -281,8 +286,8 @@ const NexusPage = () => {
         {/* 3. SECTION HEADER: EVENTS OF NEXUS                             */}
         {/* ============================================================== */}
         <div className="text-center pt-2">
-          <div className="w-16 h-1 bg-[#f5d784] rounded-full mx-auto mb-4" />
-          <h2 className="font-cinzel text-3xl sm:text-5xl font-extrabold text-[#f3ca76] tracking-wider drop-shadow-md">
+          <div className="w-16 h-1 bg-[#f5d784] rounded-full mx-auto mb-3" />
+          <h2 className="font-cinzel text-2xl xs:text-3xl sm:text-5xl font-extrabold text-[#f3ca76] tracking-wider drop-shadow-md">
             Events of Nexus
           </h2>
           <p className="text-xs sm:text-sm font-serif text-[#ab9475] italic mt-1">
@@ -293,7 +298,7 @@ const NexusPage = () => {
         {/* ============================================================== */}
         {/* 4. ROW-WISE EVENTS STACK (Each Event in Its Own Row)           */}
         {/* ============================================================== */}
-        <section className="flex flex-col gap-8 sm:gap-10 w-full">
+        <section className="flex flex-col gap-6 sm:gap-10 w-full">
           {events.map((event, idx) => (
             <NexusEventCard key={event.name || idx} event={event} index={idx} />
           ))}

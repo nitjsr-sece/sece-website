@@ -8,6 +8,9 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -16,7 +19,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Plus Jakarta Sans', sans-serif;
+  max-width: 100vw;
   overflow-x: hidden;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Touch responsiveness: eliminate mobile tap delay */
+button, a, [role="button"] {
+  touch-action: manipulation;
 }
 
 /* Image Optimization & Sharp Rendering */

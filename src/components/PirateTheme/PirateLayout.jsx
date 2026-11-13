@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   ShipWheelIcon,
@@ -34,6 +34,18 @@ const PirateLayout = ({ children, activeNav, topBarExtras }) => {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // Prevent background body scroll when mobile drawer is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
   // Determine current active item
   const currentPath = location.pathname;
   const isItemActive = (item) => {
@@ -50,10 +62,10 @@ const PirateLayout = ({ children, activeNav, topBarExtras }) => {
       <header className="lg:hidden flex items-center justify-between px-3 xs:px-4 py-2.5 bg-[#110c08]/95 backdrop-blur-md border-b border-[#3d2c1c] z-40 sticky top-0 shadow-lg">
         <Link
           to="/"
-          className="flex items-center gap-2 group focus:outline-none"
+          className="flex items-center gap-2.5 group focus:outline-none"
           onClick={() => setMobileOpen(false)}
         >
-          <ShipWheelIcon className="w-7 h-7 xs:w-8 xs:h-8 animate-[spin_50s_linear_infinite]" color="#d4af37" />
+          <ShipWheelIcon className="w-7 h-7 xs:w-8 xs:h-8 animate-[spin_50s_linear_infinite] flex-shrink-0" color="#d4af37" />
           <div className="flex flex-col">
             <span className="font-cinzel font-bold text-lg xs:text-xl tracking-wider text-[#e8c782] leading-none">
               SECE
@@ -67,11 +79,11 @@ const PirateLayout = ({ children, activeNav, topBarExtras }) => {
           {topBarExtras}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#1a130b] border border-[#523d26] text-[#e8c782] active:scale-95 transition-transform cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+            className="w-11 h-11 flex items-center justify-center rounded-lg bg-[#1a130b] border border-[#523d26] text-[#e8c782] active:scale-95 transition-transform cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
             aria-label={mobileOpen ? "Close menu" : "Open navigation menu"}
             aria-expanded={mobileOpen}
           >
-            {mobileOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
+            {mobileOpen ? <FaTimes size={19} /> : <FaBars size={19} />}
           </button>
         </div>
       </header>
@@ -88,7 +100,7 @@ const PirateLayout = ({ children, activeNav, topBarExtras }) => {
 
         {/* Left Sidebar (Desktop persistent, Mobile sliding drawer) */}
         <aside
-          className={`fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] bg-[#0e0a07] border-r border-[#2d2116] flex flex-col justify-between py-4 px-3 transform transition-transform duration-300 ease-in-out lg:static lg:translate-x-0 ${
+          className={`fixed inset-y-0 left-0 z-50 w-72 sm:w-80 max-w-[85vw] lg:w-64 xl:w-72 bg-[#0e0a07] border-r border-[#2d2116] flex flex-col justify-between py-4 px-3 transform transition-transform duration-300 ease-in-out lg:static lg:translate-x-0 ${
             mobileOpen ? "translate-x-0 shadow-[0_0_50px_rgba(0,0,0,0.9)]" : "-translate-x-full lg:translate-x-0"
           } overflow-y-auto`}
         >
@@ -119,10 +131,10 @@ const PirateLayout = ({ children, activeNav, topBarExtras }) => {
               {/* Mobile Drawer Close Button */}
               <button
                 onClick={() => setMobileOpen(false)}
-                className="lg:hidden w-8 h-8 rounded-full bg-[#1a130b] border border-[#523d26] text-[#e8c782] flex items-center justify-center hover:bg-[#2e1d0f] transition-colors"
+                className="lg:hidden w-9 h-9 rounded-full bg-[#1a130b] border border-[#523d26] text-[#e8c782] flex items-center justify-center hover:bg-[#2e1d0f] transition-colors focus:outline-none"
                 aria-label="Close navigation"
               >
-                <FaTimes size={14} />
+                <FaTimes size={15} />
               </button>
             </div>
 
@@ -140,7 +152,7 @@ const PirateLayout = ({ children, activeNav, topBarExtras }) => {
                     key={item.name}
                     to={item.path}
                     onClick={() => setMobileOpen(false)}
-                    className={`flex items-center gap-3.5 px-3.5 py-2.5 min-h-[44px] rounded-lg text-sm font-medium transition-all duration-200 ease-out group ${
+                    className={`flex items-center gap-3.5 px-3.5 py-3 min-h-[46px] rounded-lg text-sm font-medium transition-all duration-200 ease-out group ${
                       active
                         ? "bg-gradient-to-r from-[#2a1c10] to-[#1c1209] border border-[#a67c38] text-[#f7cd78] shadow-[0_0_15px_rgba(166,124,56,0.22)] font-semibold translate-x-1"
                         : "text-[#c2af94] hover:text-[#f3d48d] hover:bg-[#18110b] hover:translate-x-1 border border-transparent"
@@ -176,55 +188,55 @@ const PirateLayout = ({ children, activeNav, topBarExtras }) => {
             </p>
 
             {/* Social Icons - Touch Friendly */}
-            <div className="flex items-center justify-center gap-2.5 mb-2.5">
+            <div className="flex items-center justify-center gap-3 mb-2.5">
               <a
                 href="https://www.youtube.com/@sece_nitjsr"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-[#4a3724] bg-[#140e09] flex items-center justify-center text-[#ab9475] hover:text-[#f5c767] hover:border-[#966d31] transition-all hover:scale-110 active:scale-95"
+                className="w-9 h-9 rounded-full border border-[#4a3724] bg-[#140e09] flex items-center justify-center text-[#ab9475] hover:text-[#f5c767] hover:border-[#966d31] transition-all hover:scale-110 active:scale-95"
                 title="YouTube"
                 aria-label="YouTube"
               >
-                <FaYoutube size={13} />
+                <FaYoutube size={14} />
               </a>
               <a
                 href="https://www.linkedin.com/company/society-of-electronics-and-communication-engineering-nit-jamshedpur/"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-[#4a3724] bg-[#140e09] flex items-center justify-center text-[#ab9475] hover:text-[#f5c767] hover:border-[#966d31] transition-all hover:scale-110 active:scale-95"
+                className="w-9 h-9 rounded-full border border-[#4a3724] bg-[#140e09] flex items-center justify-center text-[#ab9475] hover:text-[#f5c767] hover:border-[#966d31] transition-all hover:scale-110 active:scale-95"
                 title="LinkedIn"
                 aria-label="LinkedIn"
               >
-                <FaLinkedinIn size={12} />
+                <FaLinkedinIn size={13} />
               </a>
               <a
                 href="https://www.facebook.com/sece.nitjsr/"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-[#4a3724] bg-[#140e09] flex items-center justify-center text-[#ab9475] hover:text-[#f5c767] hover:border-[#966d31] transition-all hover:scale-110 active:scale-95"
+                className="w-9 h-9 rounded-full border border-[#4a3724] bg-[#140e09] flex items-center justify-center text-[#ab9475] hover:text-[#f5c767] hover:border-[#966d31] transition-all hover:scale-110 active:scale-95"
                 title="Facebook"
                 aria-label="Facebook"
               >
-                <FaFacebookF size={12} />
+                <FaFacebookF size={13} />
               </a>
               <a
                 href="https://www.instagram.com/sece_nitjsr/"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-[#4a3724] bg-[#140e09] flex items-center justify-center text-[#ab9475] hover:text-[#f5c767] hover:border-[#966d31] transition-all hover:scale-110 active:scale-95"
+                className="w-9 h-9 rounded-full border border-[#4a3724] bg-[#140e09] flex items-center justify-center text-[#ab9475] hover:text-[#f5c767] hover:border-[#966d31] transition-all hover:scale-110 active:scale-95"
                 title="Instagram"
                 aria-label="Instagram"
               >
-                <FaInstagram size={13} />
+                <FaInstagram size={14} />
               </a>
             </div>
 
             {/* Email link */}
             <a
               href="mailto:sece.student@nitjsr.ac.in"
-              className="flex items-center justify-center gap-1.5 text-[10px] text-[#8f7960] hover:text-[#e4c278] transition-colors py-1"
+              className="flex items-center justify-center gap-1.5 text-[10px] text-[#8f7960] hover:text-[#e4c278] transition-colors py-1.5"
             >
-              <FaEnvelope size={10} />
+              <FaEnvelope size={11} />
               <span className="truncate max-w-[200px]">sece.student@nitjsr.ac.in</span>
             </a>
           </div>
@@ -242,7 +254,7 @@ const PirateLayout = ({ children, activeNav, topBarExtras }) => {
           )}
 
           {/* Children View Content with responsive horizontal padding */}
-          <div className="flex-1 px-2.5 xs:px-3 sm:px-6 pb-10 pt-2 sm:pt-4 max-w-full">
+          <div className="flex-1 px-2 xs:px-3 sm:px-6 lg:px-8 pb-12 pt-2 sm:pt-4 max-w-full">
             {children}
           </div>
         </main>

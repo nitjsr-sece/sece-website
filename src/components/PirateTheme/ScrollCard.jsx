@@ -27,7 +27,7 @@ export const ScrollCard = ({
 
       {/* Main Parchment Paper Body */}
       <div
-        className="w-[96%] sm:w-[97%] relative -mt-1.5 -mb-1.5 px-2.5 xs:px-4 sm:px-6 py-3.5 sm:py-5 text-[#24160a] transition-all duration-300 z-10 flex-1 flex flex-col justify-between items-center w-full"
+        className="w-[96%] sm:w-[97%] relative -mt-1.5 -mb-1.5 px-2 xs:px-3 sm:px-6 py-3 sm:py-5 text-[#24160a] transition-all duration-300 z-10 flex-1 flex flex-col justify-between items-center w-full overflow-hidden"
         style={{
           backgroundImage: `url(${parchmentTexture})`,
           backgroundSize: "cover",
@@ -36,7 +36,7 @@ export const ScrollCard = ({
             "inset 12px 0 18px -10px rgba(105, 68, 28, 0.4), inset -12px 0 18px -10px rgba(105, 68, 28, 0.4)",
         }}
       >
-        <div className="relative z-10 text-[#221408] w-full flex flex-col items-center text-center h-full justify-between">
+        <div className="relative z-10 text-[#221408] w-full flex flex-col items-center text-center h-full justify-between overflow-hidden">
           {children}
         </div>
       </div>

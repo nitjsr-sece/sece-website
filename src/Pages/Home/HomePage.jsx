@@ -2,8 +2,15 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PirateLayout from "../../components/PirateTheme/PirateLayout";
 import mapImage from "../../assets/pirate_theme/treasure_map_cropped.jpg";
-import { ShipWheelIcon } from "../../components/PirateTheme/PirateIcons";
-import { FaCompass } from "react-icons/fa";
+import { CrossedSwordsIcon } from "../../components/PirateTheme/PirateIcons";
+import {
+  FaCompass,
+  FaSearchPlus,
+  FaSearchMinus,
+  FaUndo,
+  FaArrowRight,
+  FaInfoCircle,
+} from "react-icons/fa";
 
 const ISLAND_PINS = [
   {
@@ -89,102 +96,222 @@ const ISLAND_PINS = [
 const HomePage = () => {
   const navigate = useNavigate();
   const [activeIsland, setActiveIsland] = useState(null);
+  const [zoomLevel, setZoomLevel] = useState(1);
 
   const handlePinClick = (pin) => {
     navigate(pin.path);
   };
 
+  const zoomIn = () => {
+    setZoomLevel((prev) => Math.min(prev + 0.25, 1.75));
+  };
+
+  const zoomOut = () => {
+    setZoomLevel((prev) => Math.max(prev - 0.25, 1));
+  };
+
+  const resetZoom = () => {
+    setZoomLevel(1);
+  };
+
   return (
     <PirateLayout activeNav="Map">
-      <div className="max-w-7xl mx-auto py-1 flex flex-col items-center animate-fade-in-up">
+      <div className="max-w-7xl mx-auto py-1 flex flex-col items-center animate-fade-in-up w-full">
         {/* Antique Nautical Header Banner */}
-        <div className="w-full flex flex-wrap items-center justify-between gap-2 px-3 py-2 mb-2 rounded-xl bg-gradient-to-r from-[#140e08]/90 via-[#1c130b]/80 to-[#140e08]/90 border border-[#4a341e]/60 shadow-lg text-xs">
+        <div className="w-full flex flex-wrap items-center justify-between gap-2.5 px-3 xs:px-4 py-2.5 mb-3 rounded-xl bg-gradient-to-r from-[#140e08]/95 via-[#1c130b]/90 to-[#140e08]/95 border border-[#4a341e]/70 shadow-lg text-xs">
           <div className="flex items-center gap-2 text-[#cbb89b]">
-            <FaCompass className="text-[#d4af37] animate-[spin_30s_linear_infinite]" size={16} />
-            <span className="font-cinzel text-xs font-bold text-[#f5ca73] tracking-wider uppercase">
-              SECE Archipelago Navigational Chart
-            </span>
+            <FaCompass className="text-[#d4af37] animate-[spin_35s_linear_infinite] flex-shrink-0" size={17} />
+            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+              <span className="font-cinzel text-xs font-bold text-[#f5ca73] tracking-wider uppercase">
+                SECE Archipelago Navigational Chart
+              </span>
+              <span className="text-[10px] text-[#9e886d] hidden md:inline font-sans">
+                (Interactive Antique Cartography)
+              </span>
+            </div>
           </div>
 
-          <div className="flex items-center gap-3 text-[11px] font-sans text-[#a89274]">
-            <span className="hidden sm:inline-block font-mono text-[#d4af37]/80">
-              22.7758° N, 86.1439° E
-            </span>
-            <span className="text-[#6d5130] hidden sm:inline">•</span>
-            <span className="italic text-[#cbb89b]">
-              Click any island to set sail
-            </span>
+          {/* Interactive Map Controls: Zoom In / Out / Reset & Coordinate */}
+          <div className="flex items-center gap-2 xs:gap-3">
+            <div className="hidden sm:flex items-center gap-2 text-[11px] font-sans text-[#a89274]">
+              <span className="font-mono text-[#d4af37]/80">22.7758° N, 86.1439° E</span>
+              <span className="text-[#6d5130]">•</span>
+            </div>
+
+            {/* Zoom Controls */}
+            <div className="flex items-center bg-[#100b07] border border-[#523d26] rounded-lg p-0.5 shadow-inner">
+              <button
+                onClick={zoomOut}
+                disabled={zoomLevel <= 1}
+                className="w-7 h-7 flex items-center justify-center rounded text-[#d6c4ac] hover:text-[#f5ca73] hover:bg-[#20150b] disabled:opacity-35 disabled:hover:bg-transparent disabled:hover:text-[#d6c4ac] transition-all cursor-pointer focus:outline-none"
+                title="Zoom Out"
+                aria-label="Zoom Out"
+              >
+                <FaSearchMinus size={11} />
+              </button>
+              <span className="px-1.5 text-[10px] font-mono font-semibold text-[#f5ca73]">
+                {Math.round(zoomLevel * 100)}%
+              </span>
+              <button
+                onClick={zoomIn}
+                disabled={zoomLevel >= 1.75}
+                className="w-7 h-7 flex items-center justify-center rounded text-[#d6c4ac] hover:text-[#f5ca73] hover:bg-[#20150b] disabled:opacity-35 disabled:hover:bg-transparent disabled:hover:text-[#d6c4ac] transition-all cursor-pointer focus:outline-none"
+                title="Zoom In"
+                aria-label="Zoom In"
+              >
+                <FaSearchPlus size={11} />
+              </button>
+              {zoomLevel > 1 && (
+                <button
+                  onClick={resetZoom}
+                  className="w-7 h-7 flex items-center justify-center rounded text-[#d6c4ac] hover:text-[#f5ca73] hover:bg-[#20150b] transition-all cursor-pointer border-l border-[#3d2c1c] ml-0.5"
+                  title="Reset Zoom"
+                  aria-label="Reset Zoom"
+                >
+                  <FaUndo size={10} />
+                </button>
+              )}
+            </div>
           </div>
         </div>
 
         {/* Map Container framed in layered antique brass & timber border */}
-        <div className="relative w-full p-[3px] rounded-2xl bg-gradient-to-b from-[#8a632c] via-[#2a1a0b] to-[#8a632c] shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_35px_rgba(156,115,51,0.18)] transition-all duration-300">
-          <div className="relative w-full aspect-[1024/558] overflow-hidden rounded-[13px] bg-[#0c0906] select-none">
-            {/* Main Map Image - Refined High-Definition Texture */}
-            <img
-              src={mapImage}
-              alt="SECE Treasure Map - Different Islands Same Crew Bigger Dreams"
-              className="w-full h-full object-cover object-center transition-transform duration-700 ease-out"
-              style={{
-                imageRendering: "-webkit-optimize-contrast",
-              }}
-            />
-
-            {/* Subtle Vignette & Atmospheric Ambient Lighting Overlay to eliminate box edges */}
+        <div className="relative w-full p-[3px] rounded-2xl bg-gradient-to-b from-[#8a632c] via-[#2a1a0b] to-[#8a632c] shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_35px_rgba(156,115,51,0.18)] transition-all duration-300 overflow-hidden">
+          {/* Scrollable container when zoomed */}
+          <div className="w-full overflow-auto rounded-[13px] bg-[#0c0906] select-none scrollbar-thin">
             <div
-              className="absolute inset-0 pointer-events-none rounded-[13px] z-10"
+              className="relative w-full aspect-[1024/558] min-w-[320px] transition-transform duration-300 ease-out origin-top-left"
               style={{
-                boxShadow:
-                  "inset 0 0 50px 14px rgba(12, 9, 6, 0.78), inset 0 0 18px 4px rgba(12, 9, 6, 0.95)",
-                background:
-                  "radial-gradient(ellipse at 50% 50%, rgba(245, 202, 115, 0.03) 0%, rgba(12, 9, 6, 0) 65%, rgba(12, 9, 6, 0.45) 100%)",
+                transform: `scale(${zoomLevel})`,
+                width: zoomLevel > 1 ? `${zoomLevel * 100}%` : "100%",
               }}
-            />
+            >
+              {/* Main Map Image - Rich, detailed antique pirate map with deep teal-blue ocean */}
+              <img
+                src={mapImage}
+                alt="SECE Treasure Map - Different Islands Same Crew Bigger Dreams"
+                className="w-full h-full object-cover object-center transition-all duration-700 ease-out"
+                style={{
+                  imageRendering: "-webkit-optimize-contrast",
+                  /* Rich antique palette: deep teal-blue ocean, rich greenery, crisp mountains & coastlines */
+                  filter: "saturate(0.92) contrast(1.10) brightness(1.03) sepia(0.06) hue-rotate(-2deg)",
+                }}
+              />
 
-            {/* Clickable Island Hotspots Overlay over text & banners */}
+              {/* Subtle Perimeter Vignette for smooth frame integration without darkening or fading the map */}
+              <div
+                className="absolute inset-0 pointer-events-none rounded-[13px] z-10"
+                style={{
+                  boxShadow: "inset 0 0 24px 3px rgba(12, 9, 6, 0.35)",
+                }}
+              />
+
+              {/* Clickable Island Hotspots Overlay over text & banners */}
+              {ISLAND_PINS.map((pin) => (
+                <button
+                  key={pin.id}
+                  onClick={() => handlePinClick(pin)}
+                  onMouseEnter={() => setActiveIsland(pin)}
+                  onMouseLeave={() => setActiveIsland(null)}
+                  onFocus={() => setActiveIsland(pin)}
+                  onBlur={() => setActiveIsland(null)}
+                  style={{
+                    left: pin.left,
+                    top: pin.top,
+                    width: pin.width,
+                    height: pin.height,
+                  }}
+                  className="absolute -translate-x-1/2 -translate-y-1/2 z-20 group cursor-pointer focus:outline-none rounded-xl min-w-[44px] min-h-[44px] transition-all duration-300 ease-out hover:scale-105 hover:bg-[radial-gradient(circle,_rgba(245,202,115,0.24)_0%,_transparent_75%)] hover:shadow-[0_0_24px_rgba(245,202,115,0.4)] flex items-center justify-center"
+                  title={`Click to sail to ${pin.title}`}
+                  aria-label={`Sail to ${pin.title}`}
+                >
+                  {/* Subtle red pulse ring near the X mark */}
+                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#d64045]/40 animate-ping opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none duration-300" />
+                  <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#e63946]/80 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none duration-300 shadow-[0_0_8px_#e63946]" />
+
+                  {/* Accessible text */}
+                  <span className="sr-only">Go to {pin.title} page</span>
+
+                  {/* Hover/Focus Popover Tooltip Card */}
+                  {activeIsland?.id === pin.id && (
+                    <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-3 w-48 sm:w-60 p-3 rounded-xl bg-gradient-to-b from-[#18110b]/98 to-[#100b07]/98 border border-[#c89d55] shadow-[0_12px_28px_rgba(0,0,0,0.9),0_0_15px_rgba(200,157,85,0.25)] z-30 text-center animate-fade-in-up pointer-events-auto">
+                      <div className="flex items-center justify-center gap-1.5 border-b border-[#3d2c1c] pb-1.5 mb-1.5">
+                        <span className="text-base">{pin.badge}</span>
+                        <h4 className="font-cinzel font-bold text-xs sm:text-sm text-[#f5ca73] tracking-wide">
+                          {pin.title}
+                        </h4>
+                      </div>
+                      <p className="text-[11px] sm:text-xs text-[#d6c4ac] leading-relaxed font-sans">
+                        {pin.desc}
+                      </p>
+                      <div className="mt-2 pt-1.5 border-t border-[#3d2c1c]/50 text-center">
+                        <span className="text-[9px] uppercase font-cinzel font-bold text-[#e5be73] tracking-widest inline-flex items-center gap-1 group-hover:text-[#f8d488]">
+                          <span>Sail to Island</span>
+                          <span>➔</span>
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile/Tablet Touch Assistance Notice */}
+        <div className="w-full flex items-center justify-between text-[11px] text-[#9e886d] mt-2 px-2 sm:hidden">
+          <span className="inline-flex items-center gap-1.5">
+            <FaInfoCircle className="text-[#c89d55]" size={11} />
+            <span>Tap any island pin to sail, or choose from deck below</span>
+          </span>
+          {zoomLevel > 1 && (
+            <span className="font-mono text-[#d4af37]">Drag to explore</span>
+          )}
+        </div>
+
+        {/* ============================================================== */}
+        {/* RESPONSIVE ARCHIPELAGO DESTINATIONS DECK                       */}
+        {/* Provides full touch accessibility on Mobile & Tablet          */}
+        {/* ============================================================== */}
+        <div className="w-full mt-6 sm:mt-8">
+          <div className="flex items-center justify-between mb-3 px-1 border-b border-[#3d2c1b] pb-2">
+            <div className="flex items-center gap-2">
+              <CrossedSwordsIcon className="w-4 h-4 text-[#d4af37]" color="#d4af37" />
+              <h3 className="font-cinzel font-bold text-sm sm:text-base text-[#f5ca73] tracking-wider uppercase">
+                Archipelago Destinations
+              </h3>
+            </div>
+            <span className="text-[11px] text-[#a89274] font-sans">
+              7 charted islands
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {ISLAND_PINS.map((pin) => (
-              <button
+              <div
                 key={pin.id}
                 onClick={() => handlePinClick(pin)}
-                onMouseEnter={() => setActiveIsland(pin)}
-                onMouseLeave={() => setActiveIsland(null)}
-                style={{
-                  left: pin.left,
-                  top: pin.top,
-                  width: pin.width,
-                  height: pin.height,
-                }}
-                className="absolute -translate-x-1/2 -translate-y-1/2 z-20 group cursor-pointer focus:outline-none rounded-full transition-all duration-300 ease-out hover:scale-105 hover:bg-[radial-gradient(circle,_rgba(245,202,115,0.22)_0%,_transparent_75%)] hover:shadow-[0_0_24px_rgba(245,202,115,0.35)]"
-                title={`Click to sail to ${pin.title}`}
+                className="group p-3 rounded-xl bg-gradient-to-b from-[#18110b] to-[#100b07] border border-[#3d2c1c] hover:border-[#a67c38] hover:shadow-[0_4px_20px_rgba(166,124,56,0.22)] transition-all duration-300 cursor-pointer flex flex-col justify-between"
               >
-                {/* Subtle red pulse ring on hover near the X mark */}
-                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#e63946]/35 animate-ping opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none duration-300" />
-                <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#e63946]/70 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none duration-300" />
-
-                {/* Accessible text */}
-                <span className="sr-only">Go to {pin.title} page</span>
-
-                {/* Hover Popover Tooltip Card */}
-                {activeIsland?.id === pin.id && (
-                  <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-3 w-48 sm:w-60 p-3 rounded-xl bg-gradient-to-b from-[#18110b]/98 to-[#100b07]/98 border border-[#c89d55] shadow-[0_12px_28px_rgba(0,0,0,0.9),0_0_15px_rgba(200,157,85,0.25)] z-30 pointer-events-none text-center animate-fade-in-up">
-                    <div className="flex items-center justify-center gap-1.5 border-b border-[#3d2c1c] pb-1.5 mb-1.5">
-                      <span className="text-base">{pin.badge}</span>
-                      <h4 className="font-cinzel font-bold text-xs sm:text-sm text-[#f5ca73] tracking-wide">
-                        {pin.title}
-                      </h4>
-                    </div>
-                    <p className="text-[11px] sm:text-xs text-[#d6c4ac] leading-relaxed font-sans">
-                      {pin.desc}
-                    </p>
-                    <div className="mt-2 pt-1.5 border-t border-[#3d2c1c]/50 text-center">
-                      <span className="text-[9px] uppercase font-cinzel font-bold text-[#e5be73] tracking-widest inline-flex items-center gap-1">
-                        <span>Sail to Island</span>
-                        <span>➔</span>
-                      </span>
-                    </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="text-lg p-1.5 rounded-lg bg-[#24170d] border border-[#523d26]">
+                      {pin.badge}
+                    </span>
+                    <h4 className="font-cinzel font-bold text-sm text-[#f5ca73] group-hover:text-[#fde29f] transition-colors">
+                      {pin.title}
+                    </h4>
                   </div>
-                )}
-              </button>
+                  <p className="text-[11px] text-[#baa386] font-sans leading-relaxed line-clamp-2">
+                    {pin.desc}
+                  </p>
+                </div>
+
+                <div className="mt-3 pt-2 border-t border-[#2d2014] flex items-center justify-between text-[10px] font-cinzel font-semibold text-[#c89d55] group-hover:text-[#f5ca73]">
+                  <span>Set Sail</span>
+                  <FaArrowRight size={9} className="group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
             ))}
           </div>
         </div>

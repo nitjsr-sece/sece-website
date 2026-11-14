@@ -1,4 +1,6 @@
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import HomePage from "./Pages/Home/HomePage.jsx";
 import HomeView from "./Pages/Home/HomeView.jsx";
 import CalendarPage from "./Pages/Calendar/CalendarPage.jsx";
@@ -7,6 +9,7 @@ import NexusPage from "./Pages/Nexus/NexusPage.jsx";
 import TeamPage from "./Pages/Team/TeamPage.jsx";
 import Masterclass from "./Pages/Placement_masterclass/PMC.jsx";
 import Alumni from "./Pages/Alumni/Alumni.jsx";
+
 import "./index.css";
 
 function App() {

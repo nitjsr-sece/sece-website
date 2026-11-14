@@ -1,15 +1,12 @@
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PirateLayout from "../../components/PirateTheme/PirateLayout";
-// Using public image path for the vibrant pirate map
-import { CrossedSwordsIcon } from "../../components/PirateTheme/PirateIcons";
 import {
   FaCompass,
   FaSearchPlus,
   FaSearchMinus,
   FaUndo,
-  FaArrowRight,
-  FaInfoCircle,
 } from "react-icons/fa";
 
 const ISLAND_PINS = [
@@ -21,7 +18,6 @@ const ISLAND_PINS = [
     top: "31.5%",
     width: "16%",
     height: "13%",
-    badge: "⚔️",
     desc: "The Annual Flagship Fest of ECE: 3 days of techno-cultural brilliance, coding battles & fun!",
   },
   {
@@ -32,7 +28,6 @@ const ISLAND_PINS = [
     top: "44.5%",
     width: "15%",
     height: "13%",
-    badge: "💣",
     desc: "Coding challenges, technical workshops, robotics contests, and fun tournaments.",
   },
   {
@@ -43,7 +38,6 @@ const ISLAND_PINS = [
     top: "41.0%",
     width: "15%",
     height: "13%",
-    badge: "👥",
     desc: "Meet the crew: student leaders, heads, and members driving the society forward.",
   },
   {
@@ -54,7 +48,6 @@ const ISLAND_PINS = [
     top: "56.0%",
     width: "17%",
     height: "14%",
-    badge: "🎓",
     desc: "Alumni wisdom, placement stories, preparation roadmaps & top company interview tips.",
   },
   {
@@ -65,7 +58,6 @@ const ISLAND_PINS = [
     top: "76.8%",
     width: "16%",
     height: "13%",
-    badge: "⚓",
     desc: "Legacy records of past batches: creators of community, architects of tomorrow.",
   },
   {
@@ -76,7 +68,6 @@ const ISLAND_PINS = [
     top: "81.2%",
     width: "16%",
     height: "14%",
-    badge: "☸️",
     desc: "Society of Electronics & Communication basecamp: history, vision & community.",
   },
 ];
@@ -105,23 +96,39 @@ const HomePage = () => {
   return (
     <PirateLayout activeNav="Map">
       <div className="max-w-7xl mx-auto py-1 flex flex-col items-center animate-fade-in-up w-full">
+
         {/* Header Banner */}
         <div className="w-full flex flex-wrap items-center justify-between gap-2.5 px-3 xs:px-4 py-2.5 mb-3 rounded-xl bg-gradient-to-r from-[#140e08]/95 via-[#1c130b]/90 to-[#140e08]/95 border border-[#4a341e]/70 shadow-lg text-xs">
+
           <div className="flex items-center gap-2 text-[#cbb89b]">
-            <FaCompass className="text-[#d4af37] animate-[spin_35s_linear_infinite] flex-shrink-0" size={17} />
+            <FaCompass
+              className="text-[#d4af37] animate-[spin_35s_linear_infinite] flex-shrink-0"
+              size={17}
+            />
+
             <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-              <span className="font-cinzel text-xs font-bold text-[#f5ca73] tracking-wider uppercase">SECE Archipelago Navigational Chart</span>
-              <span className="text-[10px] text-[#9e886d] hidden md:inline font-sans">(Interactive Antique Cartography)</span>
+              <span className="font-cinzel text-xs font-bold text-[#f5ca73] tracking-wider uppercase">
+                SECE Archipelago Navigational Chart
+              </span>
+
+              <span className="text-[10px] text-[#9e886d] hidden md:inline font-sans">
+                (Interactive Antique Cartography)
+              </span>
             </div>
           </div>
 
           {/* Map Controls */}
           <div className="flex items-center gap-2 xs:gap-3">
+
             <div className="hidden sm:flex items-center gap-2 text-[11px] font-sans text-[#a89274]">
-              <span className="font-mono text-[#d4af37]/80">22.7758° N, 86.1439° E</span>
+              <span className="font-mono text-[#d4af37]/80">
+                22.7758° N, 86.1439° E
+              </span>
               <span className="text-[#6d5130]">•</span>
             </div>
+
             <div className="flex items-center bg-[#100b07] border border-[#523d26] rounded-lg p-0.5 shadow-inner">
+
               <button
                 onClick={zoomOut}
                 disabled={zoomLevel <= 1}
@@ -131,7 +138,11 @@ const HomePage = () => {
               >
                 <FaSearchMinus size={11} />
               </button>
-              <span className="px-1.5 text-[10px] font-mono font-semibold text-[#f5ca73]">{Math.round(zoomLevel * 100)}%</span>
+
+              <span className="px-1.5 text-[10px] font-mono font-semibold text-[#f5ca73]">
+                {Math.round(zoomLevel * 100)}%
+              </span>
+
               <button
                 onClick={zoomIn}
                 disabled={zoomLevel >= 1.75}
@@ -141,6 +152,7 @@ const HomePage = () => {
               >
                 <FaSearchPlus size={11} />
               </button>
+
               {zoomLevel > 1 && (
                 <button
                   onClick={resetZoom}
@@ -151,13 +163,16 @@ const HomePage = () => {
                   <FaUndo size={10} />
                 </button>
               )}
+
             </div>
           </div>
         </div>
 
         {/* Map Container */}
         <div className="relative w-full p-[3px] rounded-2xl bg-gradient-to-b from-[#8a632c] via-[#2a1a0b] to-[#8a632c] shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_35px_rgba(156,115,51,0.18)] transition-all duration-300 overflow-hidden">
+
           <div className="w-full overflow-auto rounded-[13px] bg-[#0c0906] select-none scrollbar-thin">
+
             <div
               className="relative w-full aspect-[1024/576] min-w-[320px] transition-transform duration-300 ease-out origin-top-left"
               style={{
@@ -165,6 +180,7 @@ const HomePage = () => {
                 width: zoomLevel > 1 ? `${zoomLevel * 100}%` : "100%",
               }}
             >
+
               {/* Main Map Image */}
               <img
                 src={`${import.meta.env.BASE_URL}images/nexus-pirate-map.png`}
@@ -176,11 +192,16 @@ const HomePage = () => {
               {/* Perimeter Vignette */}
               <div
                 className="absolute inset-0 pointer-events-none rounded-[13px] z-10"
-                style={{ boxShadow: "inset 0 0 24px 3px rgba(12, 9, 6, 0.35)" }}
+                style={{
+                  boxShadow: "inset 0 0 24px 3px rgba(12, 9, 6, 0.35)",
+                }}
               />
 
-              {/* SVG sailing routes with golden glow */}
-              <svg viewBox="0 0 1024 576" className="absolute inset-0 pointer-events-none z-20">
+              {/* SVG Sailing Routes */}
+              <svg
+                viewBox="0 0 1024 576"
+                className="absolute inset-0 pointer-events-none z-20"
+              >
                 <path d="M 205 440 Q 320 380, 440 290" className="stroke-gold-glow" />
                 <path d="M 420 260 C 355 265, 335 240, 290 215" className="stroke-gold-glow" />
                 <path d="M 345 140 C 470 105, 590 130, 680 190" className="stroke-gold-glow" />
@@ -189,7 +210,7 @@ const HomePage = () => {
                 <path d="M 710 470 C 560 435, 380 480, 220 475" className="stroke-gold-glow" />
               </svg>
 
-              {/* Clickable island hotspots */}
+              {/* Clickable Island Hotspots */}
               {ISLAND_PINS.map((pin) => (
                 <button
                   key={pin.id}
@@ -198,78 +219,107 @@ const HomePage = () => {
                   onMouseLeave={() => setActiveIsland(null)}
                   onFocus={() => setActiveIsland(pin)}
                   onBlur={() => setActiveIsland(null)}
-                  style={{ left: pin.left, top: pin.top, width: pin.width, height: pin.height }}
+                  style={{
+                    left: pin.left,
+                    top: pin.top,
+                    width: pin.width,
+                    height: pin.height,
+                  }}
                   className="absolute -translate-x-1/2 -translate-y-1/2 z-20 group cursor-pointer focus:outline-none rounded-xl min-w-[44px] min-h-[44px] transition-all duration-300 ease-out hover:scale-105 hotspot-glow"
                   title={`Click to sail to ${pin.title}`}
                   aria-label={`Sail to ${pin.title}`}
                 >
-                  {/* Red pulse rings */}
+
                   <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#d64045]/40 animate-ping opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none duration-300" />
+
                   <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#e63946]/80 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none duration-300 shadow-[0_0_8px_#e63946]" />
-                  <span className="sr-only">Go to {pin.title}</span>
+
+                  <span className="sr-only">
+                    Go to {pin.title}
+                  </span>
+
                   {activeIsland?.id === pin.id && (
                     <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-3 w-48 sm:w-60 p-3 rounded-xl bg-gradient-to-b from-[#18110b]/98 to-[#100b07]/98 border border-[#c89d55] shadow-[0_12px_28px_rgba(0,0,0,0.9),0_0_15px_rgba(200,157,85,0.25)] z-30 text-center animate-fade-in-up pointer-events-auto">
-                      <div className="flex items-center justify-center gap-1.5 border-b border-[#3d2c1c] pb-1.5 mb-1.5">
-                        <span className="text-base">{pin.badge}</span>
-                        <h4 className="font-cinzel font-bold text-xs sm:text-sm text-[#f5ca73] tracking-wide">{pin.title}</h4>
+
+                      <div className="flex items-center justify-center border-b border-[#3d2c1c] pb-1.5 mb-1.5">
+                        <h4 className="font-cinzel font-bold text-xs sm:text-sm text-[#f5ca73] tracking-wide">
+                          {pin.title}
+                        </h4>
                       </div>
-                      <p className="text-[11px] sm:text-xs text-[#d6c4ac] leading-relaxed font-sans">{pin.desc}</p>
+
+                      <p className="text-[11px] sm:text-xs text-[#d6c4ac] leading-relaxed font-sans">
+                        {pin.desc}
+                      </p>
+
                       <div className="mt-2 pt-1.5 border-t border-[#3d2c1c]/50 text-center">
-                        <span className="text-[9px] uppercase font-cinzel font-bold text-[#e5be73] tracking-widest inline-flex items-center gap-1 group-hover:text-[#f8d488]">
-                          <span>Sail to Island</span>
-                          <span>➔</span>
+                        <span className="text-[9px] uppercase font-cinzel font-bold text-[#e5be73] tracking-widest">
+                          Sail to Island
                         </span>
                       </div>
+
                     </div>
                   )}
                 </button>
               ))}
+
             </div>
           </div>
         </div>
 
-        {/* Mobile assistance note */}
+        {/* Mobile Assistance Note */}
         <div className="w-full flex items-center justify-between text-[11px] text-[#9e886d] mt-2 px-2 sm:hidden">
-          <span className="inline-flex items-center gap-1.5">
-            <FaInfoCircle className="text-[#c89d55]" size={11} />
-            <span>Tap any island pin to sail, or choose from deck below</span>
+          <span>
+            Tap any island pin to explore destinations below.
           </span>
+
           {zoomLevel > 1 && (
-            <span className="font-mono text-[#d4af37]">Drag to explore</span>
+            <span className="font-mono text-[#d4af37]">
+              Drag to explore
+            </span>
           )}
         </div>
 
-        {/* Destinations Deck */}
-        <div className="w-full mt-6 sm:mt-8">
-          <div className="flex items-center justify-between mb-3 px-1 border-b border-[#3d2c1b] pb-2">
-            <div className="flex items-center gap-2">
-              <CrossedSwordsIcon className="w-4 h-4 text-[#d4af37]" color="#d4af37" />
-              <h3 className="font-cinzel font-bold text-sm sm:text-base text-[#f5ca73] tracking-wider uppercase">Archipelago Destinations</h3>
-            </div>
-            <span className="text-[11px] text-[#a89274] font-sans">7 charted islands</span>
-          </div>
-          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {ISLAND_PINS.map((pin) => (
-              <div
-                key={pin.id}
-                onClick={() => handlePinClick(pin)}
-                className="group p-3 rounded-xl bg-gradient-to-b from-[#18110b] to-[#100b07] border border-[#3d2c1c] hover:border-[#a67c38] hover:shadow-[0_4px_20px_rgba(166,124,56,0.22)] transition-all duration-300 cursor-pointer flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className="text-lg p-1.5 rounded-lg bg-[#24170d] border border-[#523d26]">{pin.badge}</span>
-                    <h4 className="font-cinzel font-bold text-sm text-[#f5ca73] group-hover:text-[#fde29f] transition-colors">{pin.title}</h4>
-                  </div>
-                  <p className="text-[11px] text-[#baa386] font-sans leading-relaxed line-clamp-2">{pin.desc}</p>
-                </div>
-                <div className="mt-3 pt-2 border-t border-[#2d2014] flex items-center justify-between text-[10px] font-cinzel font-semibold text-[#c89d55] group-hover:text-[#f5ca73]">
-                  <span>Set Sail</span>
-                  <FaArrowRight size={9} className="group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            ))}
-          </div>
+       
+{/* Destinations Deck */}
+<div className="w-full mt-6 sm:mt-8">
+
+  <div className="flex items-center justify-between mb-3 px-1 border-b border-[#3d2c1b] pb-2">
+    <h3 className="font-cinzel font-bold text-sm sm:text-base text-[#f5ca73] tracking-wider uppercase">
+      Archipelago Destinations
+    </h3>
+
+    <span className="text-[11px] text-[#a89274] font-sans">
+      6 destinations
+    </span>
+  </div>
+
+  <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+    {ISLAND_PINS.map((pin) => (
+      <button
+        key={pin.id}
+        type="button"
+        onClick={() => handlePinClick(pin)}
+        className="group text-left p-4 rounded-lg bg-[#18110b] border border-[#3d2c1c] hover:border-[#a67c38] hover:bg-[#20170e] transition-all duration-300 flex flex-col justify-between"
+      >
+        <div>
+          <h4 className="font-cinzel font-bold text-sm text-[#f5ca73] group-hover:text-[#fde29f] mb-2">
+            {pin.title}
+          </h4>
+
+          <p className="text-[11px] text-[#baa386] font-sans leading-relaxed line-clamp-2">
+            {pin.desc}
+          </p>
         </div>
+
+        <div className="mt-3 pt-2 border-t border-[#2d2014] text-[10px] font-cinzel font-semibold text-[#c89d55] group-hover:text-[#f5ca73]">
+          Explore
+        </div>
+      </button>
+    ))}
+  </div>
+</div>
+
+
       </div>
     </PirateLayout>
   );

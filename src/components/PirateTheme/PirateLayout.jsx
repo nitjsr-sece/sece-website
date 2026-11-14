@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -21,247 +22,280 @@ import {
 } from "react-icons/fa";
 
 export const NAV_ITEMS = [
-  { name: "Map", path: "/", icon: ShipWheelIcon },
+  { name: "Home", path: "/home", icon: FaHome },
   { name: "Events", path: "/events", icon: FaCalendarAlt },
+  { name: "Nexus", path: "/nexus", icon: CrossedSwordsIcon },
   { name: "Team", path: "/team", icon: FaUsers },
   { name: "Placement Masterclass", path: "/placement_masterclass", icon: FaGraduationCap },
   { name: "Alumni", path: "/alumni", icon: FaIdBadge },
-  { name: "Nexus", path: "/nexus", icon: CrossedSwordsIcon },
-  { name: "Home", path: "/home", icon: FaHome },
+  { name: "Map", path: "/", icon: ShipWheelIcon },
 ];
-
 const PirateLayout = ({ children, activeNav, topBarExtras }) => {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  // Prevent background body scroll when mobile drawer is open
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [mobileOpen]);
 
-  // Determine current active item
   const currentPath = location.pathname;
+
   const isItemActive = (item) => {
-    if (activeNav) return activeNav.toLowerCase() === item.name.toLowerCase();
+    if (activeNav) {
+      return activeNav.toLowerCase() === item.name.toLowerCase();
+    }
     if (item.path === "/" && (currentPath === "/" || currentPath === "/map")) return true;
     if (item.path === "/home" && currentPath === "/home") return true;
     if (item.path !== "/" && currentPath.startsWith(item.path)) return true;
     return false;
   };
 
+  const renderNavItem = (item) => {
+    const active = isItemActive(item);
+    const Icon = item.icon;
+
+    return (
+      <Link
+        key={item.name}
+        to={item.path}
+        onClick={() => setMobileOpen(false)}
+        className={`flex items-center gap-2.5 px-4 py-2.5 rounded-lg text-sm whitespace-nowrap transition-all duration-200 ${
+          active
+            ? "bg-[#2a1c10] border border-[#a67c38] text-[#f7cd78]"
+            : "border border-transparent text-[#c2af94] hover:text-[#f3d48d] hover:bg-[#18110b]"
+        }`}
+      >
+        {Icon === ShipWheelIcon || Icon === CrossedSwordsIcon ? (
+          <Icon
+            className="w-4 h-4 flex-shrink-0"
+            color={active ? "#f7cd78" : "#c2af94"}
+          />
+        ) : (
+          <Icon size={15} />
+        )}
+        <span>{item.name}</span>
+      </Link>
+    );
+  };
+
   return (
-    <div className="min-h-screen bg-[#0a0705] text-[#e0d3bf] flex flex-col font-sans overflow-x-hidden selection:bg-[#966d31] selection:text-[#0b0806]">
-      {/* Top Mobile Bar - Touch Friendly & Sticky */}
-      <header className="lg:hidden flex items-center justify-between px-3 xs:px-4 py-2.5 bg-[#110c08]/95 backdrop-blur-md border-b border-[#3d2c1c] z-40 sticky top-0 shadow-lg">
-        <Link
-          to="/"
-          className="flex items-center gap-2.5 group focus:outline-none"
-          onClick={() => setMobileOpen(false)}
-        >
-          <ShipWheelIcon className="w-7 h-7 xs:w-8 xs:h-8 animate-[spin_50s_linear_infinite] flex-shrink-0" color="#d4af37" />
-          <div className="flex flex-col">
-            <span className="font-cinzel font-bold text-lg xs:text-xl tracking-wider text-[#e8c782] leading-none">
-              SECE
-            </span>
-            <span className="text-[9px] text-[#9e886d] tracking-tight leading-none">
-              NIT Jamshedpur
-            </span>
-          </div>
-        </Link>
-        <div className="flex items-center gap-2">
-          {topBarExtras}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="w-11 h-11 flex items-center justify-center rounded-lg bg-[#1a130b] border border-[#523d26] text-[#e8c782] active:scale-95 transition-transform cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-            aria-label={mobileOpen ? "Close menu" : "Open navigation menu"}
-            aria-expanded={mobileOpen}
+    <div className="min-h-screen bg-[#0a0705] text-[#e0d3bf] flex flex-col font-sans overflow-x-hidden">
+
+      {/* TOP NAVBAR */}
+      <header className="sticky top-0 z-50 w-full bg-[#110c08]/95 backdrop-blur-md border-b border-[#3d2c1c] shadow-lg">
+
+        <div className="max-w-full px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+
+          {/* BRAND */}
+          <Link
+            to="/"
+            onClick={() => setMobileOpen(false)}
+            className="flex items-center gap-2.5 flex-shrink-0"
           >
-            {mobileOpen ? <FaTimes size={19} /> : <FaBars size={19} />}
-          </button>
+            <ShipWheelIcon
+              className="w-8 h-8"
+              color="#d4af37"
+            />
+            <div className="flex flex-col">
+              <span className="font-cinzel font-extrabold text-xl tracking-widest text-[#f0cb79] leading-none">
+                SECE
+              </span>
+              <span className="text-[9px] text-[#ab9475] tracking-tight mt-1">
+                NIT Jamshedpur
+              </span>
+            </div>
+          </Link>
+
+          {/* DESKTOP NAVIGATION */}
+          <nav className="hidden xl:flex items-center gap-3 2xl:gap-4">
+            {NAV_ITEMS.map(renderNavItem)}
+          </nav>
+
+          {/* RIGHT SIDE */}
+          <div className="flex items-center gap-3 flex-shrink-0">
+            {topBarExtras}
+
+            {/* SOCIAL LINKS - DESKTOP */}
+            <div className="hidden lg:flex items-center gap-2 border-l border-[#453422] pl-3">
+              <a href="https://www.youtube.com/@sece_nitjsr" target="_blank" rel="noreferrer"
+                className="text-[#ab9475] hover:text-[#f5c767]">
+                <FaYoutube size={16} />
+              </a>
+              <a href="https://www.linkedin.com/company/society-of-electronics-and-communication-engineering-nit-jamshedpur/" target="_blank" rel="noreferrer"
+                className="text-[#ab9475] hover:text-[#f5c767]">
+                <FaLinkedinIn size={16} />
+              </a>
+              <a href="https://www.instagram.com/sece_nitjsr/" target="_blank" rel="noreferrer"
+                className="text-[#ab9475] hover:text-[#f5c767]">
+                <FaInstagram size={16} />
+              </a>
+            </div>
+
+            {/* MOBILE MENU BUTTON */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="xl:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-[#1a130b] border border-[#523d26] text-[#e8c782]"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+            >
+              {mobileOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
+            </button>
+          </div>
         </div>
+
+        {/* TABLET NAVIGATION */}
+        <nav className="hidden lg:flex xl:hidden items-center justify-center gap-3 px-4 pb-3 flex-wrap">
+          {NAV_ITEMS.map(renderNavItem)}
+        </nav>
+
+        {/* MOBILE / SMALL SCREEN MENU */}
+        {mobileOpen && (
+          <div className="xl:hidden border-t border-[#3d2c1c] bg-[#0e0a07] px-4 py-4">
+            <nav className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              {NAV_ITEMS.map(renderNavItem)}
+            </nav>
+
+            <div className="mt-4 pt-3 border-t border-[#3d2c1c] flex items-center justify-center gap-5">
+              <a href="https://www.youtube.com/@sece_nitjsr" target="_blank" rel="noreferrer" className="text-[#ab9475] hover:text-[#f5c767]">
+                <FaYoutube size={18} />
+              </a>
+              <a href="https://www.linkedin.com/company/society-of-electronics-and-communication-engineering-nit-jamshedpur/" target="_blank" rel="noreferrer" className="text-[#ab9475] hover:text-[#f5c767]">
+                <FaLinkedinIn size={18} />
+              </a>
+              <a href="https://www.facebook.com/sece.nitjsr/" target="_blank" rel="noreferrer" className="text-[#ab9475] hover:text-[#f5c767]">
+                <FaFacebookF size={18} />
+              </a>
+              <a href="https://www.instagram.com/sece_nitjsr/" target="_blank" rel="noreferrer" className="text-[#ab9475] hover:text-[#f5c767]">
+                <FaInstagram size={18} />
+              </a>
+              <a href="mailto:sece.student@nitjsr.ac.in" className="text-[#ab9475] hover:text-[#f5c767]">
+                <FaEnvelope size={18} />
+              </a>
+            </div>
+          </div>
+        )}
       </header>
 
-      <div className="flex flex-1 relative overflow-hidden">
-        {/* Mobile Backdrop Overlay */}
-        {mobileOpen && (
-          <div
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 lg:hidden transition-opacity duration-300"
-            onClick={() => setMobileOpen(false)}
-            aria-hidden="true"
-          />
-        )}
+      {/* MAIN PAGE CONTENT */}
+      <main className="flex-1 w-full min-w-0 bg-[#0b0806]">
+        <div className="w-full px-2 xs:px-3 sm:px-6 lg:px-8 pb-12 pt-3 sm:pt-5">
+          {children}
+        </div>
+      </main>
+      
+{/* FOOTER */}
 
-        {/* Left Sidebar (Desktop persistent, Mobile sliding drawer) */}
-        <aside
-          className={`fixed inset-y-0 left-0 z-50 w-72 sm:w-80 max-w-[85vw] lg:w-64 xl:w-72 bg-[#0e0a07] border-r border-[#2d2116] flex flex-col justify-between py-4 px-3 transform transition-transform duration-300 ease-in-out lg:static lg:translate-x-0 ${
-            mobileOpen ? "translate-x-0 shadow-[0_0_50px_rgba(0,0,0,0.9)]" : "-translate-x-full lg:translate-x-0"
-          } overflow-y-auto`}
+<footer className="w-full bg-[#100c08] border-t border-[#6b4c27]/60 text-[#d8c5a5] px-6 sm:px-10 lg:px-16 pt-12 pb-6">
+
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 text-center">
+
+    {/* ABOUT SECE */}
+    <div className="flex flex-col items-center">
+      <h2 className="font-cinzel text-xl sm:text-2xl leading-relaxed text-[#e8c782] max-w-sm">
+        Society of Electronics and Communications Engineering
+      </h2>
+
+      <a
+        href="mailto:sece.student@nitjsr.ac.in"
+        className="mt-4 text-sm sm:text-base text-[#b9a487] hover:text-[#f0cb79] transition-colors"
+      >
+        sece.student@nitjsr.ac.in
+      </a>
+    </div>
+
+    {/* QUICK LINKS */}
+    <div className="flex flex-col items-center">
+      <h3 className="font-cinzel text-xl sm:text-2xl text-[#e8c782] mb-4">
+        Quick Links
+      </h3>
+
+      <nav className="flex flex-col items-center gap-2">
+        {[
+          { name: "Home", path: "/home" },
+          { name: "Events", path: "/events" },
+          { name: "Nexus", path: "/nexus" },
+          { name: "Team", path: "/team" },
+          { name: "Placement Masterclass", path: "/placement_masterclass" },
+          { name: "Alumni", path: "/alumni" },
+        ].map((item) => (
+          <Link
+            key={item.name}
+            to={item.path}
+            className="text-sm sm:text-base text-[#c5b294] hover:text-[#f0cb79] hover:translate-x-1 transition-all duration-200"
+          >
+            {item.name}
+          </Link>
+        ))}
+      </nav>
+    </div>
+
+    {/* FOLLOW US */}
+    <div className="flex flex-col items-center">
+      <h3 className="font-cinzel text-xl sm:text-2xl text-[#e8c782] mb-5">
+        Follow Us
+      </h3>
+
+      <div className="flex items-center gap-6 sm:gap-7">
+
+        <a
+          href="https://www.instagram.com/secenitjsr/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          className="text-[#c9a66b] hover:text-[#f0cb79] hover:scale-110 transition-all"
         >
-          {/* Top Brand Header */}
-          <div>
-            <div className="flex items-center justify-between px-2 py-1">
-              <Link
-                to="/"
-                onClick={() => setMobileOpen(false)}
-                className="flex items-center gap-3 group hover:opacity-90 transition-opacity"
-              >
-                <div className="w-10 h-10 flex-shrink-0 relative flex items-center justify-center">
-                  <ShipWheelIcon className="w-9 h-9 animate-[spin_60s_linear_infinite]" color="#d4af37" />
-                </div>
-                <div className="flex flex-col">
-                  <div className="flex items-center gap-1.5">
-                    <span className="font-cinzel font-extrabold text-2xl tracking-widest text-[#f0cb79] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                      SECE
-                    </span>
-                    <span className="text-[#a67c38] text-sm italic font-serif">~</span>
-                  </div>
-                  <span className="text-[10px] text-[#ab9475] tracking-tight leading-tight font-sans">
-                    Society of Electronics and Communication
-                  </span>
-                </div>
-              </Link>
+          <FaInstagram size={27} />
+        </a>
 
-              {/* Mobile Drawer Close Button */}
-              <button
-                onClick={() => setMobileOpen(false)}
-                className="lg:hidden w-9 h-9 rounded-full bg-[#1a130b] border border-[#523d26] text-[#e8c782] flex items-center justify-center hover:bg-[#2e1d0f] transition-colors focus:outline-none"
-                aria-label="Close navigation"
-              >
-                <FaTimes size={15} />
-              </button>
-            </div>
+        <a
+          href="https://www.linkedin.com/company/sece-nitjsr"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          className="text-[#c9a66b] hover:text-[#f0cb79] hover:scale-110 transition-all"
+        >
+          <FaLinkedinIn size={27} />
+        </a>
 
-            {/* Subtle Divider */}
-            <div className="my-3 h-px bg-gradient-to-r from-transparent via-[#453422] to-transparent"></div>
+        <a
+          href="https://www.youtube.com/@SECENITJamshedpur"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+          className="text-[#c9a66b] hover:text-[#f0cb79] hover:scale-110 transition-all"
+        >
+          <FaYoutube size={29} />
+        </a>
 
-            {/* Navigation Menu */}
-            <nav className="space-y-1">
-              {NAV_ITEMS.map((item) => {
-                const active = isItemActive(item);
-                const Icon = item.icon;
+        <a
+          href="https://www.facebook.com/secenitjsr/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+          className="text-[#c9a66b] hover:text-[#f0cb79] hover:scale-110 transition-all"
+        >
+          <FaFacebookF size={27} />
+        </a>
 
-                return (
-                  <Link
-                    key={item.name}
-                    to={item.path}
-                    onClick={() => setMobileOpen(false)}
-                    className={`flex items-center gap-3.5 px-3.5 py-3 min-h-[46px] rounded-lg text-sm font-medium transition-all duration-200 ease-out group ${
-                      active
-                        ? "bg-gradient-to-r from-[#2a1c10] to-[#1c1209] border border-[#a67c38] text-[#f7cd78] shadow-[0_0_15px_rgba(166,124,56,0.22)] font-semibold translate-x-1"
-                        : "text-[#c2af94] hover:text-[#f3d48d] hover:bg-[#18110b] hover:translate-x-1 border border-transparent"
-                    }`}
-                  >
-                    <span className="w-5 flex justify-center text-base transition-transform duration-200 group-hover:scale-110 flex-shrink-0">
-                      {typeof Icon === "function" && Icon === ShipWheelIcon ? (
-                        <Icon className="w-4 h-4" color={active ? "#f7cd78" : "#c2af94"} />
-                      ) : typeof Icon === "function" && Icon === CrossedSwordsIcon ? (
-                        <Icon className="w-4 h-4" color={active ? "#f7cd78" : "#c2af94"} />
-                      ) : (
-                        <Icon size={16} />
-                      )}
-                    </span>
-                    <span className="tracking-wide">{item.name}</span>
-                  </Link>
-                );
-              })}
-            </nav>
-          </div>
-
-          {/* Bottom Sidebar Elements */}
-          <div className="pt-3 border-t border-[#261c13] mt-4">
-            {/* Anchor ornament */}
-            <div className="flex items-center justify-center gap-2 mb-2.5">
-              <div className="h-px bg-[#3b2b1b] flex-1"></div>
-              <AnchorIcon className="w-3.5 h-3.5 text-[#8a6839]" color="#8a6839" />
-              <div className="h-px bg-[#3b2b1b] flex-1"></div>
-            </div>
-
-            <p className="text-center text-[10px] uppercase tracking-wider text-[#937b60] mb-2 font-cinzel">
-              Follow our voyage
-            </p>
-
-            {/* Social Icons - Touch Friendly */}
-            <div className="flex items-center justify-center gap-3 mb-2.5">
-              <a
-                href="https://www.youtube.com/@sece_nitjsr"
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-full border border-[#4a3724] bg-[#140e09] flex items-center justify-center text-[#ab9475] hover:text-[#f5c767] hover:border-[#966d31] transition-all hover:scale-110 active:scale-95"
-                title="YouTube"
-                aria-label="YouTube"
-              >
-                <FaYoutube size={14} />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/society-of-electronics-and-communication-engineering-nit-jamshedpur/"
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-full border border-[#4a3724] bg-[#140e09] flex items-center justify-center text-[#ab9475] hover:text-[#f5c767] hover:border-[#966d31] transition-all hover:scale-110 active:scale-95"
-                title="LinkedIn"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedinIn size={13} />
-              </a>
-              <a
-                href="https://www.facebook.com/sece.nitjsr/"
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-full border border-[#4a3724] bg-[#140e09] flex items-center justify-center text-[#ab9475] hover:text-[#f5c767] hover:border-[#966d31] transition-all hover:scale-110 active:scale-95"
-                title="Facebook"
-                aria-label="Facebook"
-              >
-                <FaFacebookF size={13} />
-              </a>
-              <a
-                href="https://www.instagram.com/sece_nitjsr/"
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-full border border-[#4a3724] bg-[#140e09] flex items-center justify-center text-[#ab9475] hover:text-[#f5c767] hover:border-[#966d31] transition-all hover:scale-110 active:scale-95"
-                title="Instagram"
-                aria-label="Instagram"
-              >
-                <FaInstagram size={14} />
-              </a>
-            </div>
-
-            {/* Email link */}
-            <a
-              href="mailto:sece.student@nitjsr.ac.in"
-              className="flex items-center justify-center gap-1.5 text-[10px] text-[#8f7960] hover:text-[#e4c278] transition-colors py-1.5"
-            >
-              <FaEnvelope size={11} />
-              <span className="truncate max-w-[200px]">sece.student@nitjsr.ac.in</span>
-            </a>
-          </div>
-        </aside>
-
-        {/* Main Content Area */}
-        <main className="flex-1 flex flex-col min-w-0 min-h-[calc(100vh-56px)] lg:min-h-screen lg:h-screen overflow-y-auto relative bg-[#0b0806] scroll-smooth">
-          {/* Top Bar for Desktop */}
-          {topBarExtras && (
-            <header className="sticky top-0 z-20 hidden lg:flex items-center justify-end px-6 py-2.5 bg-gradient-to-b from-[#0e0a07]/90 to-transparent backdrop-blur-[2px]">
-              <div className="flex items-center gap-4">
-                {topBarExtras}
-              </div>
-            </header>
-          )}
-
-          {/* Children View Content with responsive horizontal padding */}
-          <div className="flex-1 px-2 xs:px-3 sm:px-6 lg:px-8 pb-12 pt-2 sm:pt-4 max-w-full">
-            {children}
-          </div>
-        </main>
       </div>
+    </div>
+
+  </div>
+
+  {/* COPYRIGHT */}
+  <div className="max-w-7xl mx-auto mt-12 pt-5 border-t border-[#49351f] text-center">
+    <p className="text-sm sm:text-base text-[#a99070]">
+      © {new Date().getFullYear()} SECE. All rights reserved.
+    </p>
+  </div>
+
+</footer>
+
     </div>
   );
 };
 
 export default PirateLayout;
-

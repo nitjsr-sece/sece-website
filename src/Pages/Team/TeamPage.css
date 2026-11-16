@@ -1,112 +1,283 @@
+
+/* Main Team Page */
 .team-page {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  padding: 30px 20px 50px;
+  box-sizing: border-box;
+  color: #f5ca73;
 }
 
-/* First section with background image */
-.team-page__hero {
-  /* background-image: url("../../assets/Member/Batch2k21-22.JPG"); */
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
+/* Header */
+.team-header {
   width: 100%;
-  height: 100vh;
-  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(166, 124, 56, 0.5);
 }
 
-.team-page__links {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: none;
+.team-header h1 {
+  font-family: "Cinzel", serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #f3ca76;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  display: block;
+  letter-spacing: 2px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
 }
 
-.team-page__links a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-size: 18px;
+/* Batch Dropdown */
+.team-header select {
+  min-width: 190px;
+  max-width: 100%;
+  padding: 11px 15px;
+  background: #20150b;
+  color: #f5ca73;
+  border: 1px solid #a67c38;
+  border-radius: 8px;
+  font-family: "Cinzel", serif;
+  font-size: 13px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
   transition: all 0.3s ease;
-  display: none;
 }
 
-.team-page__links a:hover {
-  text-decoration: underline;
+.team-header select:hover,
+.team-header select:focus {
+  border-color: #e5be73;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
 }
-.member-info {
-  border: solid 2px white;
-  padding-top: 6rem;
+
+.team-header select option {
+  background: #20150b;
+  color: #f5ca73;
 }
-.member-name {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+
+/* Team Grid */
+.team-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
 }
-.member-por {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-/* .team-page__content {
-  background-image: url("../../assets/about-bg.png");
-  background-size: cover;
-  background-position: top;
-  padding: 40px 20px;
+
+/* Individual Member Card */
+.team-card {
+  position: relative;
+  min-width: 0;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-} */
 
-/* .team-page__content h2 {
-  margin-bottom: 20px;
-  font-size: 28px;
+  background: linear-gradient(
+    145deg,
+    #261a0e,
+    #140e08
+  );
+
+  border: 1px solid #71502b;
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.45),
+    inset 0 0 15px rgba(166, 124, 56, 0.05);
+
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-.team-page__content p {
-  font-size: 16px;
+.team-card:hover {
+  transform: translateY(-6px);
+  border-color: #d4af37;
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.6),
+    0 0 15px rgba(212, 175, 55, 0.12);
+}
+
+/* Member Image */
+.team-card img {
+  width: 155px;
+  height: 155px;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 3px solid #a67c38;
+  margin-bottom: 18px;
+  background: #100b07;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.04);
+  border-color: #e5be73;
+}
+
+/* Member Name */
+.team-card h3 {
+  font-family: "Cinzel", serif;
+  font-size: 17px;
   line-height: 1.5;
-} */
-
-.team-page__footer {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
+  font-weight: 700;
+  color: #f5ca73;
+  margin: 5px 0 8px;
+  overflow-wrap: anywhere;
 }
 
-@media only screen and (max-width: 850px) {
-  .member-info {
-    padding-top: 10rem; /* Increase the padding to shift the content down */
+/* Member POR */
+.team-por {
+  font-family: serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d6c19f;
+  margin: 0 0 12px;
+}
+
+/* Member Email */
+.team-email {
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #a89274;
+  overflow-wrap: anywhere;
+  margin: 0 0 14px;
+}
+
+/* LinkedIn Button */
+.team-linkedin {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding: 8px 20px;
+
+  background: #20150b;
+  border: 1px solid #a67c38;
+  border-radius: 7px;
+
+  color: #f5ca73;
+  font-family: "Cinzel", serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.team-linkedin:hover {
+  background: #d4af37;
+  color: #140e08;
+  border-color: #e5be73;
+  transform: scale(1.05);
+}
+
+/* Empty State */
+.team-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 50px 15px;
+  color: #cbb89b;
+  font-family: serif;
+  font-size: 16px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
   }
 
-  /* Increase member name size and shift it down */
-  .member-name {
-    font-size: 3.5rem; /* Keep the increased size */
-    line-height: 3.25rem;
-    margin-top: 6rem; /* Add margin to move the name down */
-    padding: 1rem;
+  .team-card img {
+    width: 135px;
+    height: 135px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+  .team-page {
+    padding: 20px 12px 35px;
   }
 
-  /* Increase the size of the member-por text */
-  .member-por {
-    font-size: 2.5rem; /* Significantly increased font size */
-    line-height: 3rem;
-    padding: 1rem;
+  .team-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 25px;
   }
 
-  /* Make the icons larger and more prominent */
-  /* Specifically target Font Awesome icons */
-  .member-info a .h-6 {
-    height: 3rem; /* Increase icon height */
-    width: 3rem; /* Increase icon width */
-   
+  .team-header h1 {
+    font-size: 1.8rem;
+    text-align: center;
   }
 
-
-  /* Ensure enough spacing between icons */
-  .member-info a {
-    margin: 0 12px; /* Increased spacing between the icons */
-    color: white; /* Ensure color contrast remains */
+  .team-header select {
+    width: 100%;
+    font-size: 12px;
   }
 
-  /* Optional: Add a slight hover effect for visual appeal */
-  .member-info a:hover {
-    color: #c0c0c0; /* Slight color change on hover */
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .team-card {
+    padding: 16px 9px;
+    border-radius: 11px;
+  }
+
+  .team-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 12px;
+  }
+
+  .team-card h3 {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .team-por {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .team-email {
+    font-size: 9px;
+  }
+
+  .team-linkedin {
+    font-size: 10px;
+    padding: 7px 12px;
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 350px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card img {
+    width: 125px;
+    height: 125px;
   }
 }

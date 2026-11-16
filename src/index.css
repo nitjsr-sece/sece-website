@@ -78,11 +78,7 @@ img {
 }
 
 .stroke-gold-glow {
-  fill: none;
-  stroke: #d4af37; /* golden stroke */
-  stroke-width: 2;
-  stroke-dasharray: 6 4;
-  animation: dash 6s linear infinite;
+  display: none !important;
 }
 
 .hotspot-glow {

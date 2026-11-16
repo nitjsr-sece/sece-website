@@ -118,21 +118,6 @@ const PirateLayout = ({ children, activeNav, topBarExtras }) => {
           <div className="flex items-center gap-3 flex-shrink-0">
             {topBarExtras}
 
-            {/* SOCIAL LINKS - DESKTOP */}
-            <div className="hidden lg:flex items-center gap-2 border-l border-[#453422] pl-3">
-              <a href="https://www.youtube.com/@sece_nitjsr" target="_blank" rel="noreferrer"
-                className="text-[#ab9475] hover:text-[#f5c767]">
-                <FaYoutube size={16} />
-              </a>
-              <a href="https://www.linkedin.com/company/society-of-electronics-and-communication-engineering-nit-jamshedpur/" target="_blank" rel="noreferrer"
-                className="text-[#ab9475] hover:text-[#f5c767]">
-                <FaLinkedinIn size={16} />
-              </a>
-              <a href="https://www.instagram.com/sece_nitjsr/" target="_blank" rel="noreferrer"
-                className="text-[#ab9475] hover:text-[#f5c767]">
-                <FaInstagram size={16} />
-              </a>
-            </div>
 
             {/* MOBILE MENU BUTTON */}
             <button

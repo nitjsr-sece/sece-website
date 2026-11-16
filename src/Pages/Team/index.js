@@ -1112,3 +1112,7 @@ export const Batch2K24 = [
     Img: Tanushri_24,
   },
 ];
+  export const Batch2K25 = [
+  // Batch 2K25 members will be added here
+];
+

@@ -15,7 +15,7 @@ const ISLAND_PINS = [
     title: "Nexus",
     path: "/nexus",
     left: "27.5%",
-    top: "31.5%",
+    top: "29.5%",
     width: "16%",
     height: "13%",
     desc: "The Annual Flagship Fest of ECE: 3 days of techno-cultural brilliance, coding battles & fun!",
@@ -25,7 +25,7 @@ const ISLAND_PINS = [
     title: "Events",
     path: "/events",
     left: "45.5%",
-    top: "44.5%",
+    top: "34.5%",
     width: "15%",
     height: "13%",
     desc: "Coding challenges, technical workshops, robotics contests, and fun tournaments.",
@@ -35,7 +35,7 @@ const ISLAND_PINS = [
     title: "Team",
     path: "/team",
     left: "70.2%",
-    top: "41.0%",
+    top: "31.0%",
     width: "15%",
     height: "13%",
     desc: "Meet the crew: student leaders, heads, and members driving the society forward.",
@@ -45,7 +45,7 @@ const ISLAND_PINS = [
     title: "Placement Masterclass",
     path: "/placement_masterclass",
     left: "86.0%",
-    top: "56.0%",
+    top: "45.0%",
     width: "17%",
     height: "14%",
     desc: "Alumni wisdom, placement stories, preparation roadmaps & top company interview tips.",
@@ -55,7 +55,7 @@ const ISLAND_PINS = [
     title: "Alumni",
     path: "/alumni",
     left: "73.5%",
-    top: "76.8%",
+    top: "67.8%",
     width: "16%",
     height: "13%",
     desc: "Legacy records of past batches: creators of community, architects of tomorrow.",
@@ -65,7 +65,7 @@ const ISLAND_PINS = [
     title: "Home",
     path: "/home",
     left: "16.5%",
-    top: "81.2%",
+    top: "75.2%",
     width: "16%",
     height: "14%",
     desc: "Society of Electronics & Communication basecamp: history, vision & community.",
@@ -239,7 +239,7 @@ const HomePage = () => {
                   </span>
 
                   {activeIsland?.id === pin.id && (
-                    <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-3 w-48 sm:w-60 p-3 rounded-xl bg-gradient-to-b from-[#18110b]/98 to-[#100b07]/98 border border-[#c89d55] shadow-[0_12px_28px_rgba(0,0,0,0.9),0_0_15px_rgba(200,157,85,0.25)] z-30 text-center animate-fade-in-up pointer-events-auto">
+                    <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 w-48 sm:w-60 p-3 rounded-xl ...">
 
                       <div className="flex items-center justify-center border-b border-[#3d2c1c] pb-1.5 mb-1.5">
                         <h4 className="font-cinzel font-bold text-xs sm:text-sm text-[#f5ca73] tracking-wide">

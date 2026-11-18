@@ -142,24 +142,6 @@ const PirateLayout = ({ children, activeNav, topBarExtras }) => {
             <nav className="grid grid-cols-2 sm:grid-cols-3 gap-2">
               {NAV_ITEMS.map(renderNavItem)}
             </nav>
-
-            <div className="mt-4 pt-3 border-t border-[#3d2c1c] flex items-center justify-center gap-5">
-              <a href="https://www.youtube.com/@sece_nitjsr" target="_blank" rel="noreferrer" className="text-[#ab9475] hover:text-[#f5c767]">
-                <FaYoutube size={18} />
-              </a>
-              <a href="https://www.linkedin.com/company/society-of-electronics-and-communication-engineering-nit-jamshedpur/" target="_blank" rel="noreferrer" className="text-[#ab9475] hover:text-[#f5c767]">
-                <FaLinkedinIn size={18} />
-              </a>
-              <a href="https://www.facebook.com/sece.nitjsr/" target="_blank" rel="noreferrer" className="text-[#ab9475] hover:text-[#f5c767]">
-                <FaFacebookF size={18} />
-              </a>
-              <a href="https://www.instagram.com/sece_nitjsr/" target="_blank" rel="noreferrer" className="text-[#ab9475] hover:text-[#f5c767]">
-                <FaInstagram size={18} />
-              </a>
-              <a href="mailto:sece.student@nitjsr.ac.in" className="text-[#ab9475] hover:text-[#f5c767]">
-                <FaEnvelope size={18} />
-              </a>
-            </div>
           </div>
         )}
       </header>

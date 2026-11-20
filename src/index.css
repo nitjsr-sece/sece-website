@@ -2,18 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Harry Potter Font */
-@font-face {
-  font-family: 'Harry Potter';
-  src: url('/fonts/HARRYP__.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.cursor-pointer {
-  cursor: url('/assets/wand_pointer.png'), pointer;
+/* Base Smoothing & Optimization */
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
-  background-color: black;
+  background-color: #0a0705;
+  color: #e0d3bf;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Touch responsiveness: eliminate mobile tap delay */
+button, a, [role="button"] {
+  touch-action: manipulation;
+}
+
+/* Image Optimization & Sharp Rendering */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  content-visibility: auto;
+}
+
+/* Custom Pirate Nautical Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #110c08;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #543d26;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9c7333;
+}
+
+/* Accessible focus outline with warm golden glow */
+:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+/* Smooth Interactive Utilities */
+.pirate-btn {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pirate-btn:hover {
+  transform: translateY(-1px);
+}
+.pirate-btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Reduced Motion Support */
+@keyframes dash {
+  to {stroke-dashoffset: -100%;}
+}
+
+.stroke-gold-glow {
+  display: none !important;
+}
+
+.hotspot-glow {
+  box-shadow: 0 0 8px rgba(212,175,55,0.6);
+}
+.hotspot-glow:hover {
+  box-shadow: 0 0 12px rgba(245,202,115,0.9);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

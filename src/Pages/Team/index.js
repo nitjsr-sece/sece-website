@@ -108,6 +108,42 @@ import Srijan_24 from "../../assets/Member/2K24/Srijan 2024UGEC052.jpg"
 import Surbhi_24 from "../../assets/Member/2K24/Surbhi Kumari Oraon_2024UGEC061.jpg"
 import veer_24 from "../../assets/Member/2K24/2024_veer_pratap_singh_2024ugec080.jpg"
 import Tanushri_24 from "../../assets/Member/2K24/Tanusree_2024UGEC093.jpg"
+import priyanshu from "../../assets/Member/2K24/priyanshu.jpg"
+import abhinaba from "../../assets/Member/2K24/abhinaba.jpg"
+import rohitranjan from "../../assets/Member/2K24/rohitranjan.jpg"
+
+import img1 from "../../assets/Member/2K25/image1.jpeg";
+import img2 from "../../assets/Member/2K25/image2.jpeg";
+import img3 from "../../assets/Member/2K25/image3.jpeg";
+import img4 from "../../assets/Member/2K25/image4.jpeg";
+import img5 from "../../assets/Member/2K25/image5.jpeg";
+import img6 from "../../assets/Member/2K25/image6.jpeg";
+import img7 from "../../assets/Member/2K25/image7.jpeg";
+import img8 from "../../assets/Member/2K25/image8.jpeg";
+import img9 from "../../assets/Member/2K25/image9.jpeg";
+import img10 from "../../assets/Member/2K25/image10.jpeg";
+import img11 from "../../assets/Member/2K25/image11.jpeg";
+import img12 from "../../assets/Member/2K25/image12.jpeg";
+import img13 from "../../assets/Member/2K25/image13.jpeg";
+import img14 from "../../assets/Member/2K25/image14.jpeg";
+import img15 from "../../assets/Member/2K25/image15.jpeg";
+import img16 from "../../assets/Member/2K25/image16.jpeg";
+import img17 from "../../assets/Member/2K25/image17.jpeg";
+import img18 from "../../assets/Member/2K25/image18.jpeg";
+import img19 from "../../assets/Member/2K25/image19.jpeg";
+import img20 from "../../assets/Member/2K25/image20.jpeg";
+import img21 from "../../assets/Member/2K25/image21.jpeg";
+import img22 from "../../assets/Member/2K25/image22.jpeg";
+import img23 from "../../assets/Member/2K25/image23.jpeg";
+import img24 from "../../assets/Member/2K25/image24.jpeg";
+import img25 from "../../assets/Member/2K25/image25.jpeg";
+import img26 from "../../assets/Member/2K25/image26.jpeg";
+import img27 from "../../assets/Member/2K25/image27.jpeg";
+import img28 from "../../assets/Member/2K25/image28.jpeg";
+import img29 from "../../assets/Member/2K25/image29.jpeg";
+import img30 from "../../assets/Member/2K25/image30.jpeg";
+import img31 from "../../assets/Member/2K25/image31.jpeg";
+
 
 export const Batch2k19 = [
   {
@@ -1110,5 +1146,235 @@ export const Batch2K24 = [
     LinkedIn:
       "https://www.linkedin.com/in/tanusree-yenni/",
     Img: Tanushri_24,
+  },
+   {
+    Name: "Rohit Ranjan",
+    POR: "Member",
+    Email: "",
+    LinkedIn:
+      "",
+    Img: rohitranjan,
+  },{
+    Name: "Abhinaba Dasa",
+    POR: "Member",
+    Email: "",
+    LinkedIn:
+      "",
+    Img: abhinaba,
+  },{
+    Name: "Priyanshu Singh",
+    POR: "Member",
+    Email: "",
+    LinkedIn:
+      "",
+    Img: priyanshu,
+  }
+
+];
+
+
+export const Batch2K25 = [
+  {
+    name: "Sanchita Gupta",
+    post: "Member",
+    Email: "2025ugec080@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/sanchita-gupta-a179b9379?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    Img: img1,
+  },
+  {
+    name: "Shivani Sinha",
+    post: "Member",
+    Email: "2025ugec005@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/shivani-sinha-ab8a423aa/",
+    Img: img2,
+  },
+  {
+    name: "Anisha Choudhary",
+    post: "Member",
+    Email: "anishachoudhary233@gmail.com",
+    linkedin: "https://www.linkedin.com/in/anisha-choudhary-6246463a7",
+    Img: img3,
+  },
+  {
+    name: "Isha Roy",
+    post: "Member",
+    Email: "2025ugec044@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/isha-roy-ab62683a8?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    Img: img4,
+  },
+  {
+    name: "Prachi Shandilya",
+    post: "Member",
+    Email: "prachishandilya893@gmail.com",
+    linkedin: "https://www.linkedin.com/in/prachi-shandilya-b6797041a",
+    Img: img5,
+  },
+  {
+    name: "Prachi Karnwal",
+    post: "Member",
+    Email: "karnwalprachi@gmail.com",
+    linkedin: "https://www.linkedin.com/in/prachi-karnwal-943990392",
+    Img: img6,
+  },
+  {
+    name: "Arpit Kumar",
+    post: "Member",
+    Email: "2025ugec035@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/arpit-lakra-9b9b26322?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    Img: img7,
+  },
+  {
+    name: "Abhinav Kumar",
+    post: "Member",
+    Email: "abhinav.official1726@gmail.com",
+    linkedin: "https://www.linkedin.com/in/abhinav-kumar-925192394",
+    Img: img8,
+  },
+  {
+    name: "Harish Poonar",
+    post: "Member",
+    Email: "harishpoonar06@gmail.com",
+    linkedin: "https://www.linkedin.com/in/haresh-lal-990224386?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    Img: img9,
+  },
+  {
+    name: "Inayat",
+    post: "Member",
+    Email: "2025ugec002@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/inayat-alam-a583243a2",
+    Img: img10,
+  },
+  {
+    name: "Bibrita",
+    post: "Member",
+    Email: "",
+    linkedin: "",
+    Img: img11,
+  },
+  {
+    name: "Aditya Kumar",
+    post: "Member",
+    Email: "2025ugec069@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/aditya-kumar-a683a8386?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    Img: img12,
+  },
+  {
+    name: "Sachin Kumar Sajan",
+    post: "Member",
+    Email: "sachinkrsajan@gmail.com",
+    linkedin: "https://www.linkedin.com/in/sachin-kumar-sajan-a4bb70351",
+    Img: img13,
+  },
+  {
+    name: "Akash pradhan",
+    post: "Member",
+    Email: "pradhan240608@gmail.com",
+    linkedin: "https://www.linkedin.com/in/akash-pradhan-355077393",
+    Img: img14,
+  },
+  {
+    name: "SATYAM KRISHNAN DUTTA",
+    post: "Member",
+    Email: "satyamkrishnandutta@gmail.com",
+    linkedin: "https://www.linkedin.com/in/satyam-dutta-a65948382",
+    Img: img15,
+  },
+  {
+    name: "Shubham Dey",
+    post: "Member",
+    Email: "2025ugec@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/shubham-dey-12738043a",
+    Img: img16,
+  },
+  {
+    name: "Bhanu Prakash Nutakki",
+    post: "Member",
+    Email: "2025ugec049@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/bhanuprakash-nutakki-5a44733ab",
+    Img: img17,
+  },
+  {
+    name: "Swaraj Sinha",
+    post: "Member",
+    Email: "2025ugec052@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/swaraj-sinha-12b663450",
+    Img: img18,
+  },
+  {
+    name: "Sneh Suman",
+    post: "Member",
+    Email: "snehsuman412@gmail.com",
+    linkedin: "https://www.linkedin.com/in/sneh-suman-a93ab339a",
+    Img: img19,
+  },
+  {
+    name: "Huzaifa Iman",
+    post: "Member",
+    Email: "imanhuzaifa2712@gmail.com",
+    linkedin: "https://www.linkedin.com/in/huzaifa-iman-b96a5a386",
+    Img: img20,
+  },
+  {
+    name: "Kumar Gaurav",
+    post: "Member",
+    Email: "2025ugec012@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/kumar-gaurav-1baa083a1",
+    Img: img21,
+  },
+  {
+    name: "Gaurav Kumar",
+    post: "Member",
+    Email: "2025ugec025@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/gaurav-kumar-b76a25434?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    Img: img22,
+  },
+  {
+    name: "Shikha Raunak Munda",
+    post: "Member",
+    Email: "shikhamunda2006@gmail.com",
+    linkedin: "https://www.linkedin.com/in/shikha-raunak-munda-9a1a51336",
+    Img: img23,
+  },
+  {
+    name: "Yash Munda",
+    post: "Member",
+    Email: "2025ugec076@gmail.com",
+    linkedin: "https://www.linkedin.com/in/yash-munda-5294b1292",
+    Img: img24,
+  },
+  {
+    name: "Kushagra Kumar",
+    post: "Member",
+    Email: "2025ugec051@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/kushagra-kumar-tripathi-07ba53386",
+    Img: img25,
+  },
+  {
+    name: "Rahul Suman",
+    post: "Member",
+    Email: "rahulsuman9204@gmail.com",
+    linkedin: "https://www.linkedin.com/in/rahul-suman-b42670366",
+    Img: img28,
+  },
+   {
+    name: "ADITYA CHOUDHARY",
+    post: "Member",
+    Email: "2025ugec113@nitjsr.ac.in",
+    linkedin: "https://www.linkedin.com/in/aditya-choudhary-767332412",
+    Img: img29,
+  },
+  {
+    name: "Piyush Singh",
+    post: "Member",
+    Email: "",
+    linkedin: "",
+    Img:img30 ,
+  },
+  {
+    name: "Shivam Kumar",
+    post: "Member",
+    Email: "2025ugec006@gmail.com",
+    linkedin: "https://www.linkedin.com/in/shivam-kumar-35a8073aa",
+    Img: img31,
   },
 ];

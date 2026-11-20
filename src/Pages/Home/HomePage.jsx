@@ -1,278 +1,327 @@
-import React, { useState, useEffect } from "react";
-import "./HomePage.css";
-import logo from "../../assets/sece_logo.png";
-import dumbledore from "../../assets/dumbledore_new.png";
-import about_logo from "../../assets/AboutUs.png";
-import about_photo from "../../assets/about-photo2.png";
-import nexus_photo from "../../assets/nexus-photo2.jpg";
-import event_photos from "../../assets/event_photos2.jpg";
-import NavDrawer from "../../components/Navbar/NavDrawer.jsx";
-import MenuButton from "../../components/MenuButton/MenuButton";
-import Navbar2 from "../../components/Navbar2";
-import { IoIosArrowRoundDown } from "react-icons/io";
-import { FaInstagram } from "react-icons/fa";
-import { CiLinkedin } from "react-icons/ci";
-import { AiOutlineYoutube } from "react-icons/ai";
-import { CiFacebook } from "react-icons/ci";
-import { motion } from "framer-motion";
-import { SparklesCore } from "./meteors";
-import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import Footer from "../../components/Footer/Footer";
-import Card from "./Card.jsx";
-// font-sans
+
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import PirateLayout from "../../components/PirateTheme/PirateLayout";
+import {
+  FaCompass,
+  FaSearchPlus,
+  FaSearchMinus,
+  FaUndo,
+} from "react-icons/fa";
+
+const ISLAND_PINS = [
+  {
+    id: "nexus",
+    title: "Nexus",
+    path: "/nexus",
+    left: "27.5%",
+    top: "29.5%",
+    width: "16%",
+    height: "13%",
+    desc: "The Annual Flagship Fest of ECE: 3 days of techno-cultural brilliance, coding battles & fun!",
+  },
+  {
+    id: "events",
+    title: "Events",
+    path: "/events",
+    left: "45.5%",
+    top: "34.5%",
+    width: "15%",
+    height: "13%",
+    desc: "Coding challenges, technical workshops, robotics contests, and fun tournaments.",
+  },
+  {
+    id: "team",
+    title: "Team",
+    path: "/team",
+    left: "70.2%",
+    top: "31.0%",
+    width: "15%",
+    height: "13%",
+    desc: "Meet the crew: student leaders, heads, and members driving the society forward.",
+  },
+  {
+    id: "pmc",
+    title: "Placement Masterclass",
+    path: "/placement_masterclass",
+    left: "86.0%",
+    top: "45.0%",
+    width: "17%",
+    height: "14%",
+    desc: "Alumni wisdom, placement stories, preparation roadmaps & top company interview tips.",
+  },
+  {
+    id: "alumni",
+    title: "Alumni",
+    path: "/alumni",
+    left: "73.5%",
+    top: "67.8%",
+    width: "16%",
+    height: "13%",
+    desc: "Legacy records of past batches: creators of community, architects of tomorrow.",
+  },
+  {
+    id: "home",
+    title: "Home",
+    path: "/home",
+    left: "16.5%",
+    top: "75.2%",
+    width: "16%",
+    height: "14%",
+    desc: "Society of Electronics & Communication basecamp: history, vision & community.",
+  },
+];
+
 const HomePage = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const toggleDrawer = (isOpen) => {
-    setDrawerOpen(isOpen);
+  const navigate = useNavigate();
+  const [activeIsland, setActiveIsland] = useState(null);
+  const [zoomLevel, setZoomLevel] = useState(1);
+
+  const handlePinClick = (pin) => {
+    navigate(pin.path);
+  };
+
+  const zoomIn = () => {
+    setZoomLevel((prev) => Math.min(prev + 0.25, 1.75));
+  };
+
+  const zoomOut = () => {
+    setZoomLevel((prev) => Math.max(prev - 0.25, 1));
+  };
+
+  const resetZoom = () => {
+    setZoomLevel(1);
   };
 
   return (
-    <>
-      <NavDrawer open={drawerOpen} onClose={() => toggleDrawer(false)} />
-      <MenuButton
-        onClick={() => toggleDrawer(true)}
-        className="hamburger-home"
-      />
-      <div className="home-page">
-        {/* Navbar - stays fixed on top */}
-        <nav className="fixed top-0 left-0 w-full z-50 bg-transparent">
-          <Navbar2 />
-        </nav>
-        
-        {/* First Section */}
-        <div className=" relative w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
-          
-          {/* Background Image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center h-screen z-0"
-            style={{
-              backgroundImage: "url('src/assets/harry_website.png')",
-            }}
-          ></div>
-          
-          <div className="w-full absolute inset-0 h-screen z-10">
-            <SparklesCore
-              id="tsparticlesfullpage"
-              background="transparent"
-              minSize={0.6}
-              maxSize={1.4}
-              particleDensity={100}
-              className="w-full h-full"
-              particleColor="#FFFFFF"
+    <PirateLayout activeNav="Map">
+      <div className="max-w-7xl mx-auto py-1 flex flex-col items-center animate-fade-in-up w-full">
+
+        {/* Header Banner */}
+        <div className="w-full flex flex-wrap items-center justify-between gap-2.5 px-3 xs:px-4 py-2.5 mb-3 rounded-xl bg-gradient-to-r from-[#140e08]/95 via-[#1c130b]/90 to-[#140e08]/95 border border-[#4a341e]/70 shadow-lg text-xs">
+
+          <div className="flex items-center gap-2 text-[#cbb89b]">
+            <FaCompass
+              className="text-[#d4af37] animate-[spin_35s_linear_infinite] flex-shrink-0"
+              size={17}
             />
-          </div>
-          <div className="hero-section z-20 relative">
-            <div className="hero-content">
-              <motion.h1
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: -200 }}
-                transition={{ duration: 1 }}
-              >
-                <h4 className="hero-heading font-semibold font-harry text-[#F2CC65] ">
-                <div className="text-6xl">Society of Electronics and Communication Engineering</div>
-                  <div className="x">
-                    <p className="tagline font-light text-[white] text-4xl">
-                      Shaping Electronics | Transforming Communication | Connecting
-                      the Future{" "}
-                    </p>
-                  </div>
-                </h4>
-                <img src={logo} className="mobile-view-logo"/>
-              </motion.h1>
-            </div>
 
-            <div className="logo-hand">
-              <motion.div className="logo">
-                <motion.img
-                  whileInView={{ opacity: 1, y: -35 }}
-                  initial={{ opacity: 0, y: -150 }}
-                  transition={{ duration: 1 }}
-                  src={logo}
-                  alt="Society Logo"
-                />
-              </motion.div>
-              <div className="hand ">
-                <motion.img
-                  whileInView={{ opacity: 1, y: 30 }}
-                  initial={{ opacity: 0, y: 150 }}
-                  transition={{ duration: 1 }}
-                  src={dumbledore}
-                  alt="hand image"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
-            <div className="scroll">
-              <a href="#About" className="scroll-btn">
-                <ArrowDropDownIcon />
-              </a>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+              <span className="font-cinzel text-xs font-bold text-[#f5ca73] tracking-wider uppercase">
+                SECE Archipelago Navigational Chart
+              </span>
+
+              <span className="text-[10px] text-[#9e886d] hidden md:inline font-sans">
+                (Interactive Antique Cartography)
+              </span>
             </div>
           </div>
-        </div>
 
-  
+          {/* Map Controls */}
+          <div className="flex items-center gap-2 xs:gap-3">
 
-        <div className="py-8 bg-cover bg-center w-[90%] mx-auto" id="About">
-          <div className="text-center">
-            <motion.img
-              src={about_logo}
-              alt="About Us"
-              className="mx-auto w-[84%] md:w-[45%] my-4"
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: -100 }}
-              transition={{ duration: 1 }}
-            />
-             {/* <motion.h1
-              className="text-white text-center"
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: -100 }}
-              transition={{ duration: 1 }}
-            >ABOUT US</motion.h1> */}
-          </div>
+            <div className="hidden sm:flex items-center gap-2 text-[11px] font-sans text-[#a89274]">
+              <span className="font-mono text-[#d4af37]/80">
+                22.7758° N, 86.1439° E
+              </span>
+              <span className="text-[#6d5130]">•</span>
+            </div>
 
-          <div className="flex flex-wrap items-center py-8 px-4 lg:px-8">
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/2 px-6 mt-4 lg:mt-0 drop-shadow-[0_4px_10px_#8f7e32]"
-            >
-              <img
-                src={about_photo}
-                alt="About Us"
-                className="rounded-lg w-[100%] about-photo h-auto"
-              />
-            </motion.div>
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 150 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/2 px-6 mt-4 lg:mt-0 drop-shadow-[0_4px_10px_#8f7e32]"
-            >
-              <div className="about-content-container ">
-                <p className="text-5xl md:text-base font-sans font-normal text-justify text-gray-400 about-content py-12 md:py-4">
-                  Welcome to the Society of Electronics and Communication
-                  Engineering, where innovation meets excellence in the realm of
-                  advancing technology. Our vision is to create a space where
-                  fresh ideas can be turned into reality through passion and
-                  determination. We organize a variety of events, workshops, and
-                  webinars throughout the year to keep students informed about
-                  the latest industry trends in the field of electronics and
-                  software. This enables students to explore both domains and
-                  gain a clear understanding of their career paths.
-                </p>
-              </div>
-            </motion.div>
-          </div>
+            <div className="flex items-center bg-[#100b07] border border-[#523d26] rounded-lg p-0.5 shadow-inner">
 
-          <div
-            className="flex flex-wrap items-center py-8 px-4 lg:px-8 event-container w-[98%] m-auto mt-36"
-            id="Events"
-          >
-            
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/2 px-4 mt-4 lg:mt-0"
-            >
-              <div className="text-center lg:text-left">
-                <h2 className="text-6xl mt-4 md:mt-0 md:text-3xl font-bold  text-[#F2CC65] mb-4">
-                  Events
-                </h2>
-                <div className="content-right drop-shadow-[0_4px_10px_#8f7e32]">
-                
-                  <p className="text-5xl md:text-base text-justify font-normal font-sans text-gray-400 mb-6 events-content ">
-                    The Society of Electronics and Communication Engineering
-                    (SECE) conducts a series of events throughout the year,
-                    offering students a platform to showcase their talents and
-                    unlock their potential. We organize a variety of workshops,
-                    webinars, and competitions on diverse topics ranging from
-                    electronics, coding to fun events designed to enhance the
-                    technical and programming skills of students.
-                  </p>
-                </div>
-                <div className="event-btn-container">
-                  <a
-                    href="/events"
-                    className="text-4xl md:text-base p-2 border-[1px] border-[#e7eca1]  px-4 rounded-md bg-[none] hover:bg-gradient-to-r hover:from-[#ecf00c] hover:to-[#8f7e32] text-white transition-all duration-300"
-
-                  >
-                    
-                    Explore Events
-                   
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 150 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/2 px-4 mt-4 lg:mt-0 flex justify-end"
-            >
-              <img
-                src={event_photos}
-                alt="Events"
-                className="rounded-lg w-[100%] h-auto shadow-lg event-photo drop-shadow-[0_4px_10px_#8f7e32]"
-              />
-            </motion.div>
-          </div>
-
-          <div className="px-4 lg:px-8" id="Nexus">
-            <div className="flex flex-wrap items-center">
-              <motion.div
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: -150 }}
-                transition={{ duration: 1 }}
-                className="lg:w-1/2 px-4 mb-6 lg:mb-0"
+              <button
+                onClick={zoomOut}
+                disabled={zoomLevel <= 1}
+                className="w-7 h-7 flex items-center justify-center rounded text-[#d6c4ac] hover:text-[#f5ca73] hover:bg-[#20150b] disabled:opacity-35 disabled:hover:bg-transparent disabled:hover:text-[#d6c4ac] transition-all cursor-pointer focus:outline-none"
+                title="Zoom Out"
+                aria-label="Zoom Out"
               >
-                <img
-                  src={nexus_photo}
-                  alt="Nexus Event"
-                  className="rounded-lg h-auto shadow nexus-photo drop-shadow-[0_4px_10px_#8f7e32] w-[100%]"
-                />
-              </motion.div>
-              <motion.div
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: 100 }}
-                transition={{ duration: 1 }}
-                className="w-full lg:w-1/2 px-4 "
+                <FaSearchMinus size={11} />
+              </button>
+
+              <span className="px-1.5 text-[10px] font-mono font-semibold text-[#f5ca73]">
+                {Math.round(zoomLevel * 100)}%
+              </span>
+
+              <button
+                onClick={zoomIn}
+                disabled={zoomLevel >= 1.75}
+                className="w-7 h-7 flex items-center justify-center rounded text-[#d6c4ac] hover:text-[#f5ca73] hover:bg-[#20150b] disabled:opacity-35 disabled:hover:bg-transparent disabled:hover:text-[#d6c4ac] transition-all cursor-pointer focus:outline-none"
+                title="Zoom In"
+                aria-label="Zoom In"
               >
-                <h2
-                  className="text-6xl mt-4 md:mt-0 md:text-3xl font-bold text-[#F2CC65] "
-                  style={{ textAlign: "center" }}
+                <FaSearchPlus size={11} />
+              </button>
+
+              {zoomLevel > 1 && (
+                <button
+                  onClick={resetZoom}
+                  className="w-7 h-7 flex items-center justify-center rounded text-[#d6c4ac] hover:text-[#f5ca73] hover:bg-[#20150b] transition-all cursor-pointer border-l border-[#3d2c1c] ml-0.5"
+                  title="Reset Zoom"
+                  aria-label="Reset Zoom"
                 >
-                  Nexus
-                </h2>
-                <p className="text-5xl text-justify md:text-base font-normal font-sans text-gray-400 mb-6 events-content ">
-                  Nexus is the official fest of Electronics and Communication
-                  Engineering department at NIT Jamshedpur, usually held in
-                  October or November. Nexus is known for its exclusive events
-                  that attract participants across the campus. This three-day
-                  fest offers a variety of events and competitions ranging from
-                  technical challenges and coding competitions to fun games,
-                  culminating with a vibrant cultural night.
-                </p>
-                <div className="nexus-btn-container">
-                <a
-                    href="/nexus "
-                    className="p-2 text-4xl md:text-base border-[1px] border-[#8f7e32]  px-4 rounded-md bg-[none] hover:bg-gradient-to-r hover:from-[#ecf00c] hover:to-[#8f7e32] text-white transition-all duration-300"
+                  <FaUndo size={10} />
+                </button>
+              )}
 
-                  >
-                    
-                    Discover Nexus
-                  </a>
-                </div>
-              </motion.div>
             </div>
           </div>
         </div>
-        {/* Third Section - Footer */}
-        <Footer />
+
+        {/* Map Container */}
+        <div className="relative w-full p-[3px] rounded-2xl bg-gradient-to-b from-[#8a632c] via-[#2a1a0b] to-[#8a632c] shadow-[0_25px_60px_rgba(0,0,0,0.95),0_0_35px_rgba(156,115,51,0.18)] transition-all duration-300 overflow-hidden">
+
+          <div className="w-full overflow-auto rounded-[13px] bg-[#0c0906] select-none scrollbar-thin">
+
+            <div
+              className="relative w-full aspect-[1024/576] min-w-[320px] transition-transform duration-300 ease-out origin-top-left"
+              style={{
+                transform: `scale(${zoomLevel})`,
+                width: zoomLevel > 1 ? `${zoomLevel * 100}%` : "100%",
+              }}
+            >
+
+              {/* Main Map Image */}
+              <img
+                src={`${import.meta.env.BASE_URL}images/nexus-pirate-map.png`}
+                alt="SECE Treasure Map - Different Islands Same Crew Bigger Dreams"
+                className="w-full h-full object-cover object-center transition-all duration-700 ease-out"
+                style={{ imageRendering: "-webkit-optimize-contrast" }}
+              />
+
+              {/* Perimeter Vignette */}
+              <div
+                className="absolute inset-0 pointer-events-none rounded-[13px] z-10"
+                style={{
+                  boxShadow: "inset 0 0 24px 3px rgba(12, 9, 6, 0.35)",
+                }}
+              />
+
+              {/* SVG Sailing Routes */}
+              <svg
+                viewBox="0 0 1024 576"
+                className="absolute inset-0 pointer-events-none z-20"
+              >
+                <path d="M 205 440 Q 320 380, 440 290" className="stroke-gold-glow" />
+                <path d="M 420 260 C 355 265, 335 240, 290 215" className="stroke-gold-glow" />
+                <path d="M 345 140 C 470 105, 590 130, 680 190" className="stroke-gold-glow" />
+                <path d="M 750 255 Q 795 285, 840 325" className="stroke-gold-glow" />
+                <path d="M 850 360 Q 820 405, 765 435" className="stroke-gold-glow" />
+                <path d="M 710 470 C 560 435, 380 480, 220 475" className="stroke-gold-glow" />
+              </svg>
+
+              {/* Clickable Island Hotspots */}
+              {ISLAND_PINS.map((pin) => (
+                <button
+                  key={pin.id}
+                  onClick={() => handlePinClick(pin)}
+                  onMouseEnter={() => setActiveIsland(pin)}
+                  onMouseLeave={() => setActiveIsland(null)}
+                  onFocus={() => setActiveIsland(pin)}
+                  onBlur={() => setActiveIsland(null)}
+                  style={{
+                    left: pin.left,
+                    top: pin.top,
+                    width: pin.width,
+                    height: pin.height,
+                  }}
+                  className="absolute -translate-x-1/2 -translate-y-1/2 z-20 group cursor-pointer focus:outline-none rounded-xl min-w-[44px] min-h-[44px] transition-all duration-300 ease-out hover:scale-105 hotspot-glow"
+                  title={`Click to sail to ${pin.title}`}
+                  aria-label={`Sail to ${pin.title}`}
+                >
+
+                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#d64045]/40 animate-ping opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none duration-300" />
+
+                  <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#e63946]/80 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none duration-300 shadow-[0_0_8px_#e63946]" />
+
+                  <span className="sr-only">
+                    Go to {pin.title}
+                  </span>
+
+                  {activeIsland?.id === pin.id && (
+                    <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1 w-48 sm:w-60 p-3 rounded-xl ...">
+
+                      <div className="flex items-center justify-center border-b border-[#3d2c1c] pb-1.5 mb-1.5">
+                        <h4 className="font-cinzel font-bold text-xs sm:text-sm text-[#f5ca73] tracking-wide">
+                          {pin.title}
+                        </h4>
+                      </div>
+
+                      <p className="text-[11px] sm:text-xs text-[#d6c4ac] leading-relaxed font-sans">
+                        {pin.desc}
+                      </p>
+
+                      <div className="mt-2 pt-1.5 border-t border-[#3d2c1c]/50 text-center">
+                        <span className="text-[9px] uppercase font-cinzel font-bold text-[#e5be73] tracking-widest">
+                          Sail to Island
+                        </span>
+                      </div>
+
+                    </div>
+                  )}
+                </button>
+              ))}
+
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Assistance Note */}
+        <div className="w-full flex items-center justify-between text-[11px] text-[#9e886d] mt-2 px-2 sm:hidden">
+          <span>
+            Tap any island pin to explore destinations below.
+          </span>
+
+          {zoomLevel > 1 && (
+            <span className="font-mono text-[#d4af37]">
+              Drag to explore
+            </span>
+          )}
+        </div>
+
+       
+{/* Destinations Deck */}
+<div className="w-full mt-6 sm:mt-8">
+
+  <div className="flex items-center justify-between mb-3 px-1 border-b border-[#3d2c1b] pb-2">
+    <h3 className="font-cinzel font-bold text-sm sm:text-base text-[#f5ca73] tracking-wider uppercase">
+      Archipelago Destinations
+    </h3>
+
+    <span className="text-[11px] text-[#a89274] font-sans">
+      6 destinations
+    </span>
+  </div>
+
+  <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+    {ISLAND_PINS.map((pin) => (
+      <button
+        key={pin.id}
+        type="button"
+        onClick={() => handlePinClick(pin)}
+        className="group text-left p-4 rounded-lg bg-[#18110b] border border-[#3d2c1c] hover:border-[#a67c38] hover:bg-[#20170e] transition-all duration-300 flex flex-col justify-between"
+      >
+        <div>
+          <h4 className="font-cinzel font-bold text-sm text-[#f5ca73] group-hover:text-[#fde29f] mb-2">
+            {pin.title}
+          </h4>
+
+          <p className="text-[11px] text-[#baa386] font-sans leading-relaxed line-clamp-2">
+            {pin.desc}
+          </p>
+        </div>
+
+        <div className="mt-3 pt-2 border-t border-[#2d2014] text-[10px] font-cinzel font-semibold text-[#c89d55] group-hover:text-[#f5ca73]">
+          Explore
+        </div>
+      </button>
+    ))}
+  </div>
+</div>
+
+
       </div>
-    </>
+    </PirateLayout>
   );
 };
 

@@ -32,7 +32,7 @@ const Footer = () => {
           <a 
               className="hover:text-white text-[#e41146] transition-all ease-in-out duration-500"
               href="https://www.instagram.com/secenitjsr/" target="_blank">
-                <FaInstagram style={{ fontSize: "2rem" }} />
+                
               </a>
               <a
                 className="hover:text-white text-[#0A66C2] transition-all ease-in-out duration-500"
